@@ -1,0 +1,276 @@
+#STANDARD
+#########
+
+
+civic_stupid_sexy_xenophobes = { #Stupid Sexy Xenophobes - This society seems to be highly attractive to other cultures - despite being disgusted by them.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_stupid_sexy_xenophobes_effects #You suffer no Diplomatic Malus for being a Xenophobe.
+}
+
+civic_star_wanderers = { #Star Wanderers - This society was destined to travel among the stars.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	modifier = {
+		ship_windup_mult = -0.2
+		ship_winddown_mult = -0.2
+		ship_speed_mult = 0.2
+	}
+}
+
+civic_forces_of_darkness = { #Forces of Darkness - This society has made a pact with the Dark Ones - immense power and unstoppable armies at their command, in exchange for their blood...
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+			value = civic_dark_influence
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_forces_of_darkness_effects #While the Dark Ones are pleased on a Planet, you can recruit Special Armies. Increased Army Damage and Health.
+	
+	modifier = {
+		army_health = 0.15
+		army_damage_mult = 0.15
+	}
+}
+
+civic_free_love = { #Free Love - This society diesn't care who their citizens are or where they come from - love is love, and everyone is free to love who they please.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	modifier = {
+		planet_migration_xeno_pull = 1
+		pop_citizen_happiness = 0.1
+	}
+}
+
+civic_big_brother = { #Big Brother - This stratified society strictly adheres to their founding beliefs. Correction facilities are commonplace in many of the cities, and non-conformists and enemies of the state have been known to disappear.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			value = ethic_fanatic_authoritarian
+			value = ethic_xenophobe
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_big_brother_effects #Unique Building: Correction Facility. Grants Governing Ethics Attraction, and a Unique Planet Edict that will execute a Pop that is either a Xeno or does not have your Governing Ethics.
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.2
+	}
+}
+
+civic_interstellar_dominion = { #Interstellar Dominion - This society governs over a large number of subjugated states acquired through conquest. They will not allow any of their subjects to become full citizens - their place is to serve.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	modifier = {
+		country_vassal_naval_capacity_contribution_mult = 0.15
+		subject_tribute_mult = 0.15
+		subject_integration_influence_cost_mult = -0.2
+		country_integration_cooldown_mult = 0.2
+	}
+}
+
+#HIVEMIND
+#########
+
+civic_nest_builders = { #Nest Builders - The Hive Mind is adept at creating new nests and worlds which it can control.
+	modification = no
+	
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_purifying_presense
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_nest_builders_effects #Begin the game with a second planet. +25% Colonization Speed.
+	
+	modifier = {
+		planet_colony_development_speed_mult = 0.25
+	}
+}
+
+civic_purifying_presense = { #Purifying Presense - The mere presense of the Hive Mind's drones causes the ecology of a planet to improve (cap at gaia)
+	modification = no
+	
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_nest_builders
+				value = civic_living_core
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_purifying_presense_effects #Begin the game on a 25-Tile Gaia World with extra resources. Planets in your border have a chance each month to move one step closer towards being a Gaia planet.
+}
+

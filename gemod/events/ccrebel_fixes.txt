@@ -1,0 +1,187 @@
+namespace = rebellionscript
+
+#Theoretically, I'd add the new ethics to my solution. But since the Vanilla one is much easier to do this with, I took Vanilla. RIP non-randomised rebel ethics.
+
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+
+country_event = {
+	id = rebellionscript.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			num_ethics = 0
+			AND = {
+				num_ethics = 2
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				num_ethics = 2
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_militarist
+			}
+			random_list = {
+				50 = {
+					country_remove_ethic = ethic_militarist
+					country_add_ethic = ethic_fanatic_militarist
+					country_add_ethic = ethic_pluralist
+				}
+				50 = {
+					country_add_ethic = ethic_fanatic_pluralist
+				}
+			}
+		}
+			
+			
+		if = {
+			limit = { num_ethics = 0 }
+	
+			random_list = {
+				60 = { # 2x fanatic 1x non-fanatic
+					random_list = {
+						1 = { country_add_ethic = ethic_fanatic_materialist }
+						1 = { country_add_ethic = ethic_fanatic_spiritualist }
+						1 = { country_add_ethic = ethic_fanatic_militarist }
+						1 = { country_add_ethic = ethic_fanatic_pacifist }
+						1 = { country_add_ethic = ethic_fanatic_xenophile }
+						1 = { country_add_ethic = ethic_fanatic_xenophobe }
+						1 = { country_add_ethic = ethic_fanatic_egalitarian }
+						1 = { country_add_ethic = ethic_fanatic_authoritarian }
+						1 = { country_add_ethic = ethic_fanatic_green }
+						1 = { country_add_ethic = ethic_fanatic_industrial }
+						1 = { country_add_ethic = ethic_fanatic_capitalism }
+						1 = { country_add_ethic = ethic_fanatic_socialism }
+						1 = { country_add_ethic = ethic_fanatic_elitism }
+						1 = { country_add_ethic = ethic_fanatic_pluralism }
+					}
+					random_list = {
+						1 = { country_add_ethic = ethic_fanatic_materialist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_materialist   has_ethic = ethic_fanatic_spiritualist } } }
+						1 = { country_add_ethic = ethic_fanatic_spiritualist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_fanatic_materialist } } }
+						1 = { country_add_ethic = ethic_fanatic_militarist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_militarist    has_ethic = ethic_fanatic_pacifist } } }
+						1 = { country_add_ethic = ethic_fanatic_pacifist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_fanatic_militarist } } }
+						1 = { country_add_ethic = ethic_fanatic_xenophile 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_fanatic_xenophobe } } }
+						1 = { country_add_ethic = ethic_fanatic_xenophobe 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_fanatic_xenophile } } }
+						1 = { country_add_ethic = ethic_fanatic_egalitarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_fanatic_authoritarian } } }
+						1 = { country_add_ethic = ethic_fanatic_authoritarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_fanatic_egalitarian } } }
+						1 = { country_add_ethic = ethic_fanatic_green 			modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_green         has_ethic = ethic_fanatic_industrial } } }
+						1 = { country_add_ethic = ethic_fanatic_industrial 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_industrial    has_ethic = ethic_fanatic_green } } }
+						1 = { country_add_ethic = ethic_fanatic_capitalism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_fanatic_socialism } } }
+						1 = { country_add_ethic = ethic_fanatic_socialism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_socialism     has_ethic = ethic_fanatic_capitalism } } }
+						1 = { country_add_ethic = ethic_fanatic_elitism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_elitism       has_ethic = ethic_fanatic_pluralism } } }
+						1 = { country_add_ethic = ethic_fanatic_pluralism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_fanatic_elitism } } }
+					}
+					random_list = {
+						1 = { country_add_ethic = ethic_materialist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_materialist   has_ethic = ethic_fanatic_spiritualist } } }
+						1 = { country_add_ethic = ethic_spiritualist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_fanatic_materialist } } }
+						1 = { country_add_ethic = ethic_militarist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_militarist    has_ethic = ethic_fanatic_pacifist } } }
+						1 = { country_add_ethic = ethic_pacifist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_fanatic_militarist } } }
+						1 = { country_add_ethic = ethic_xenophile 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_fanatic_xenophobe } } }
+						1 = { country_add_ethic = ethic_xenophobe 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_fanatic_xenophile } } }
+						1 = { country_add_ethic = ethic_egalitarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_fanatic_authoritarian } } }
+						1 = { country_add_ethic = ethic_authoritarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_fanatic_egalitarian } } }
+						1 = { country_add_ethic = ethic_green 			modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_green         has_ethic = ethic_fanatic_industrial } } }
+						1 = { country_add_ethic = ethic_industrial 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_industrial    has_ethic = ethic_fanatic_green } } }
+						1 = { country_add_ethic = ethic_capitalism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_fanatic_socialism } } }
+						1 = { country_add_ethic = ethic_socialism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_socialism     has_ethic = ethic_fanatic_capitalism } } }
+						1 = { country_add_ethic = ethic_elitism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_elitism       has_ethic = ethic_fanatic_pluralism } } }
+						1 = { country_add_ethic = ethic_pluralism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_fanatic_elitism } } }
+					}
+				}
+				40 = { # 1x fanatic 3x non-fanatic
+					random_list = {
+						1 = { country_add_ethic = ethic_fanatic_materialist }
+						1 = { country_add_ethic = ethic_fanatic_spiritualist }
+						1 = { country_add_ethic = ethic_fanatic_militarist }
+						1 = { country_add_ethic = ethic_fanatic_pacifist }
+						1 = { country_add_ethic = ethic_fanatic_xenophile }
+						1 = { country_add_ethic = ethic_fanatic_xenophobe }
+						1 = { country_add_ethic = ethic_fanatic_egalitarian }
+						1 = { country_add_ethic = ethic_fanatic_authoritarian }
+						1 = { country_add_ethic = ethic_fanatic_green }
+						1 = { country_add_ethic = ethic_fanatic_industrial }
+						1 = { country_add_ethic = ethic_fanatic_capitalism }
+						1 = { country_add_ethic = ethic_fanatic_socialism }
+						1 = { country_add_ethic = ethic_fanatic_elitism }
+						1 = { country_add_ethic = ethic_fanatic_pluralism }
+					}
+					random_list = {
+						1 = { country_add_ethic = ethic_materialist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_materialist   has_ethic = ethic_fanatic_spiritualist } } }
+						1 = { country_add_ethic = ethic_spiritualist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_fanatic_materialist } } }
+						1 = { country_add_ethic = ethic_militarist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_militarist    has_ethic = ethic_fanatic_pacifist } } }
+						1 = { country_add_ethic = ethic_pacifist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_fanatic_militarist } } }
+						1 = { country_add_ethic = ethic_xenophile 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_fanatic_xenophobe } } }
+						1 = { country_add_ethic = ethic_xenophobe 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_fanatic_xenophile } } }
+						1 = { country_add_ethic = ethic_egalitarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_fanatic_authoritarian } } }
+						1 = { country_add_ethic = ethic_authoritarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_fanatic_egalitarian } } }
+						1 = { country_add_ethic = ethic_green 			modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_green         has_ethic = ethic_fanatic_industrial } } }
+						1 = { country_add_ethic = ethic_industrial 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_industrial    has_ethic = ethic_fanatic_green } } }
+						1 = { country_add_ethic = ethic_capitalism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_fanatic_socialism } } }
+						1 = { country_add_ethic = ethic_socialism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_socialism     has_ethic = ethic_fanatic_capitalism } } }
+						1 = { country_add_ethic = ethic_elitism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_elitism       has_ethic = ethic_fanatic_pluralism } } }
+						1 = { country_add_ethic = ethic_pluralism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_fanatic_elitism } } }
+					}
+					random_list = {
+						1 = { country_add_ethic = ethic_materialist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_materialist   has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_materialist   has_ethic = ethic_spiritualist } } }
+						1 = { country_add_ethic = ethic_spiritualist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_fanatic_materialist   has_ethic = ethic_spiritualist  has_ethic = ethic_materialist } } }
+						1 = { country_add_ethic = ethic_militarist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_militarist    has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_militarist    has_ethic = ethic_pacifist } } }
+						1 = { country_add_ethic = ethic_pacifist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_fanatic_militarist    has_ethic = ethic_pacifist      has_ethic = ethic_militarist } } }
+						1 = { country_add_ethic = ethic_xenophile 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_xenophile     has_ethic = ethic_xenophobe } } }
+						1 = { country_add_ethic = ethic_xenophobe 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_xenophobe     has_ethic = ethic_xenophile } } }
+						1 = { country_add_ethic = ethic_egalitarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_egalitarian   has_ethic = ethic_authoritarian } } }
+						1 = { country_add_ethic = ethic_authoritarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_authoritarian has_ethic = ethic_egalitarian } } }
+						1 = { country_add_ethic = ethic_green 			modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_green         has_ethic = ethic_fanatic_industrial    has_ethic = ethic_green         has_ethic = ethic_industrial } } }
+						1 = { country_add_ethic = ethic_industrial 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_industrial    has_ethic = ethic_fanatic_green         has_ethic = ethic_green         has_ethic = ethic_industrial } } }
+						1 = { country_add_ethic = ethic_capitalism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_fanatic_socialism     has_ethic = ethic_socialism     has_ethic = ethic_capitalism } } }
+						1 = { country_add_ethic = ethic_socialism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_socialism     has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_socialism     has_ethic = ethic_capitalism } } }
+						1 = { country_add_ethic = ethic_elitism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_elitism       has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_elitism       has_ethic = ethic_pluralism } } }
+						1 = { country_add_ethic = ethic_pluralism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_fanatic_elitism       has_ethic = ethic_elitism       has_ethic = ethic_pluralism } } }
+					}
+					random_list = {
+						1 = { country_add_ethic = ethic_materialist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_materialist   has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_materialist   has_ethic = ethic_spiritualist } } }
+						1 = { country_add_ethic = ethic_spiritualist 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_spiritualist  has_ethic = ethic_fanatic_materialist   has_ethic = ethic_spiritualist  has_ethic = ethic_materialist } } }
+						1 = { country_add_ethic = ethic_militarist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_militarist    has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_militarist    has_ethic = ethic_pacifist } } }
+						1 = { country_add_ethic = ethic_pacifist 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pacifist      has_ethic = ethic_fanatic_militarist    has_ethic = ethic_pacifist      has_ethic = ethic_militarist } } }
+						1 = { country_add_ethic = ethic_xenophile 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_xenophile     has_ethic = ethic_xenophobe } } }
+						1 = { country_add_ethic = ethic_xenophobe 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_xenophobe     has_ethic = ethic_fanatic_xenophile     has_ethic = ethic_xenophobe     has_ethic = ethic_xenophile } } }
+						1 = { country_add_ethic = ethic_egalitarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_egalitarian   has_ethic = ethic_authoritarian } } }
+						1 = { country_add_ethic = ethic_authoritarian 	modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_authoritarian has_ethic = ethic_fanatic_egalitarian   has_ethic = ethic_authoritarian has_ethic = ethic_egalitarian } } }
+						1 = { country_add_ethic = ethic_green 			modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_green         has_ethic = ethic_fanatic_industrial    has_ethic = ethic_green         has_ethic = ethic_industrial } } }
+						1 = { country_add_ethic = ethic_industrial 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_industrial    has_ethic = ethic_fanatic_green         has_ethic = ethic_green         has_ethic = ethic_industrial } } }
+						1 = { country_add_ethic = ethic_capitalism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_fanatic_socialism     has_ethic = ethic_socialism     has_ethic = ethic_capitalism } } }
+						1 = { country_add_ethic = ethic_socialism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_socialism     has_ethic = ethic_fanatic_capitalism    has_ethic = ethic_socialism     has_ethic = ethic_capitalism } } }
+						1 = { country_add_ethic = ethic_elitism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_elitism       has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_elitism       has_ethic = ethic_pluralism } } }
+						1 = { country_add_ethic = ethic_pluralism 		modifier = { factor = 0 OR = { has_ethic = ethic_fanatic_pluralism     has_ethic = ethic_fanatic_elitism       has_ethic = ethic_elitism       has_ethic = ethic_pluralism } } }
+					}
+				}
+			}
+		}
+				
+				
+				
+		country_event = { id = rebellionscript.364 }
+	}
+}
+
+country_event = {
+	id = rebellionscript.364
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		change_government = {
+			authority = random
+			civics = random
+		}
+		set_name = random
+	}
+}

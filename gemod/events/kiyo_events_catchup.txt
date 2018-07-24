@@ -1,0 +1,997 @@
+namespace = kiyo_event_catchup
+
+#Give irrelevance flag
+country_event = {
+	id = kiyo_event_catchup.1
+	title = kiyo_event_catchup.1.title
+	desc = kiyo_event_catchup.1.desc
+	picture = GFX_evt_throne_room
+	#is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+				has_country_flag = kiyo_event_catchup_irr
+			}
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				OR = {
+					AND = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value >= superior
+						}
+						relative_power = {
+							who = prev
+							category = technology
+							value >= superior
+						}
+					}
+					relative_power = {
+						who = prev
+						category = fleet
+						value >= overwhelming
+					}
+					relative_power = {
+						who = prev
+						category = capacity
+						value >= overwhelming
+					}
+					relative_power = {
+						who = prev
+						category = technology
+						value >= overwhelming
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+		
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = kiyo_event_catchup_irr_start
+				days = 900
+			}
+			set_country_flag = kiyo_event_catchup_irr
+		}
+	}
+	
+}
+
+#Remove irrelevance flag
+country_event = {
+	id = kiyo_event_catchup.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+			}
+			has_country_flag = kiyo_event_catchup_irr
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				NOR = {
+					AND = {
+						relative_power = {
+							who = prev
+							category = fleet
+							value >= superior
+						}
+						relative_power = {
+							who = prev
+							category = technology
+							value >= superior
+						}
+					}
+					relative_power = {
+						who = prev
+						category = fleet
+						value >= overwhelming
+					}
+					relative_power = {
+						who = prev
+						category = capacity
+						value >= overwhelming
+					}
+					relative_power = {
+						who = prev
+						category = technology
+						value >= overwhelming
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		remove_country_flag = kiyo_event_catchup_irr
+	}
+}
+
+#Successful Raiding
+country_event = {
+	id = kiyo_event_catchup.121
+	title = kiyo_event_catchup.raid.title
+	desc = kiyo_event_catchup.raid.good.desc
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+#Unsuccessful Raiding
+country_event = {
+	id = kiyo_event_catchup.122
+	title = kiyo_event_catchup.raid.title
+	desc = kiyo_event_catchup.raid.bad.desc
+	picture = GFX_evt_ship_in_orbit
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#Successful Raided
+country_event = {
+	id = kiyo_event_catchup.131
+	title = kiyo_event_catchup.raided.title
+	desc = kiyo_event_catchup.raided.good.desc
+	picture = GFX_evt_space_station
+	is_triggered_only = yes
+	
+	option = {
+		name = WORRYING
+	}
+}
+
+#Unsuccessful Raided
+country_event = {
+	id = kiyo_event_catchup.132
+	title = kiyo_event_catchup.raided.title
+	desc = kiyo_event_catchup.raided.bad.desc
+	picture = GFX_evt_ship_in_orbit
+	is_triggered_only = yes
+	
+	option = {
+		name = WORRYING
+	}
+}
+
+#Check general irrelevance
+country_event = {
+	id = kiyo_event_catchup.2
+	title = kiyo_event_catchup.2.title
+	desc = kiyo_event_catchup.2.desc
+	picture = GFX_evt_throne_room
+	#is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+			}
+			has_country_flag = kiyo_event_catchup_irr
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value >= superior
+					}
+					relative_power = {
+						who = prev
+						category = technology
+						value >= superior
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value >= superior
+					}
+					relative_power = {
+						who = prev
+						category = technology
+						value >= superior
+					}
+				}
+			}
+			save_event_target_as = superiorVictim
+			kiyo_catchup_calculate_minerals = yes
+		}
+		kiyo_catchup_calculate_minerals = yes
+		set_timed_country_flag = {
+			flag = kiyo_event_catchup_irr_end
+			days = 3600
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.a
+		custom_tooltip = kiyo_event_catchup.a.irr
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+			add_modifier = {
+				modifier = kiyo_catchup_irr_good
+				days = 1800
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.b
+		custom_tooltip = kiyo_event_catchup.b.irr
+		ai_chance = {
+			factor = 80
+		}
+		
+		trigger = {
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					relative_power = {
+						who = prev
+						category = fleet
+						value >= superior
+					}
+					relative_power = {
+						who = prev
+						category = technology
+						value >= superior
+					}
+				}
+			}
+			kiyo_catchup_compare_minerals = yes
+		}
+		
+		hidden_effect = {
+			event_target:superiorVictim = {
+				add_modifier = {
+					modifier = kiyo_catchup_irr_stolen
+					days = 3600
+				}
+			}
+			random_list = {
+				67 = {
+					add_modifier = {
+						modifier = kiyo_catchup_irr_bad
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.122 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.131 }
+					}
+				}
+				33 = {
+					add_modifier = {
+						modifier = kiyo_catchup_irr_great
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.121 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.132 }
+					}
+				}
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+}
+
+#Check fleet irrelevance
+country_event = {
+	id = kiyo_event_catchup.3
+	title = kiyo_event_catchup.3.title
+	desc = kiyo_event_catchup.3.desc
+	picture = GFX_evt_federation_fleet
+	#is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+			}
+			has_country_flag = kiyo_event_catchup_irr
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = fleet
+					value >= overwhelming
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = fleet
+					value >= overwhelming
+				}
+			}
+			save_event_target_as = superiorVictim
+			kiyo_catchup_calculate_minerals = yes
+		}
+		kiyo_catchup_calculate_minerals = yes
+		set_timed_country_flag = {
+			flag = kiyo_event_catchup_irr_end
+			days = 3600
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.a
+		custom_tooltip = kiyo_event_catchup.a.fleet
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+			add_modifier = {
+				modifier = kiyo_catchup_fleet_good
+				days = 1800
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.b
+		custom_tooltip = kiyo_event_catchup.b.fleet
+		ai_chance = {
+			factor = 80
+		}
+		
+		trigger = {
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = fleet
+					value >= overwhelming
+				}
+			}
+			kiyo_catchup_compare_minerals = yes
+		}
+		
+		hidden_effect = {
+			event_target:superiorVictim = {
+				add_modifier = {
+					modifier = kiyo_catchup_fleet_stolen
+					days = 3600
+				}
+			}
+			random_list = {
+				67 = {
+					add_modifier = {
+						modifier = kiyo_catchup_fleet_bad
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.122 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.131 }
+					}
+				}
+				33 = {
+					add_modifier = {
+						modifier = kiyo_catchup_fleet_good
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.121 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.132 }
+					}
+				}
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+}
+
+#Check navy cap irrelevance
+country_event = {
+	id = kiyo_event_catchup.4
+	title = kiyo_event_catchup.4.title
+	desc = kiyo_event_catchup.4.desc
+	picture = GFX_evt_victorious_army
+	#is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+			}
+			has_country_flag = kiyo_event_catchup_irr
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = capacity
+					value >= overwhelming
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					relative_power = {
+						who = prev
+						category = capacity
+						value >= overwhelming
+					}
+				}
+			}
+			save_event_target_as = superiorVictim
+		}
+		set_timed_country_flag = {
+			flag = kiyo_event_catchup_irr_end
+			days = 3600
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.a
+		custom_tooltip = kiyo_event_catchup.a.navy
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+			add_modifier = {
+				modifier = kiyo_catchup_navy_good
+				days = 1800
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.b
+		custom_tooltip = kiyo_event_catchup.b.navy
+		ai_chance = {
+			factor = 80
+		}
+		
+		trigger = {
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = capacity
+					value >= overwhelming
+				}
+			}
+		}
+		
+		hidden_effect = {
+			event_target:superiorVictim = {
+				add_modifier = {
+					modifier = kiyo_catchup_navy_stolen
+					days = 3600
+				}
+			}
+			random_list = {
+				67 = {
+					add_modifier = {
+						modifier = kiyo_catchup_navy_bad
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.122 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.131 }
+					}
+				}
+				33 = {
+					add_modifier = {
+						modifier = kiyo_catchup_navy_great
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.121 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.132 }
+					}
+				}
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+}
+
+#Check tech irrelevance
+country_event = {
+	id = kiyo_event_catchup.5
+	title = kiyo_event_catchup.5.title
+	desc = kiyo_event_catchup.5.desc
+	picture = GFX_evt_engineering_research
+	#is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			NOR = {
+				has_country_flag = kiyo_event_catchup_irr_start
+				has_country_flag = kiyo_event_catchup_irr_end
+			}
+			has_country_flag = kiyo_event_catchup_irr
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = technology
+					value >= overwhelming
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = technology
+					value >= overwhelming
+				}
+			}
+			save_event_target_as = superiorVictim
+		}
+		set_timed_country_flag = {
+			flag = kiyo_event_catchup_irr_end
+			days = 3600
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.a
+		custom_tooltip = kiyo_event_catchup.a.tech
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+			add_modifier = {
+				modifier = kiyo_catchup_tech_good
+				days = 1800
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+	
+	option = {
+		name = kiyo_event_catchup.b
+		custom_tooltip = kiyo_event_catchup.b.tech
+		ai_chance = {
+			factor = 80
+		}
+		
+		trigger = {
+			any_neighbor_country = {
+				is_country_type = default
+				has_communications = prev
+				NOR = {
+					has_non_aggression_pact = prev
+					has_defensive_pact = prev
+					is_in_federation_with = prev
+					has_association_status = prev
+					is_guaranteeing = prev
+					root = { is_guaranteeing = prev }
+				}
+				root = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							OR = {
+								is_subject_type = protectorate
+								AND = {
+									NOT = { is_subject_type = protectorate }
+									is_ai = yes
+									is_disloyal_to = prev
+								}
+							}
+						}
+					}
+				}
+				relative_power = {
+					who = prev
+					category = technology
+					value >= overwhelming
+				}
+			}
+		}
+		
+		hidden_effect = {
+			event_target:superiorVictim = {
+				add_modifier = {
+					modifier = kiyo_catchup_tech_stolen
+					days = 3600
+				}
+			}
+			random_list = {
+				67 = {
+					add_modifier = {
+						modifier = kiyo_catchup_tech_bad
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.122 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.131 }
+					}
+				}
+				33 = {
+					add_modifier = {
+						modifier = kiyo_catchup_tech_great
+						days = 3600
+					}
+					country_event = { id = kiyo_event_catchup.121 }
+					event_target:superiorVictim = {
+						country_event = { id = kiyo_event_catchup.132 }
+					}
+				}
+			}
+			remove_country_flag = kiyo_event_catchup_irr
+		}
+	}
+}

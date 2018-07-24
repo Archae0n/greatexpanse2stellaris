@@ -1,0 +1,862 @@
+##########################################################################
+# Diplomatic Missions Events
+# by Lucas Pinheiro Silva
+##########################################################################
+
+namespace = diplomatic_missions
+
+###############################
+##### Country Inspection ######
+###############################
+
+### Explanation and options
+country_event = {
+  id = diplomatic_missions.100
+  title = "diplomatic_missions.100.name"
+  desc = "diplomatic_missions.100.desc"
+  picture = GFX_evt_metropolis
+
+  is_triggered_only = yes
+
+  # Inspect slavery/purge
+  option = {
+    name = diplomatic_missions.100.a
+    custom_tooltip = diplomatic_missions.100.a.tooltip
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.103 days = 15 }
+    }
+  }
+
+  # Return to the Diplomatic Missions "menu"
+  option = {
+    name = diplomatic_missions.100.z
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.11 }
+    }
+  }
+}
+
+### Abrupt end
+country_event = {
+  id = diplomatic_missions.101
+  title = "diplomatic_missions.101.name"
+  desc = "diplomatic_missions.101.desc"
+  picture = GFX_evt_hangar_bay
+  show_sound = event_radio_chatter_02
+
+  is_triggered_only = yes
+
+  immediate = {
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.101.a
+    event_target:DiplomaticTarget = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_political_interference
+      }
+    }
+  }
+}
+
+### Force demand
+country_event = {
+  id = diplomatic_missions.102
+  title = "diplomatic_missions.102.name"
+  desc = "diplomatic_missions.102.desc"
+  picture = GFX_evt_ship_in_orbit
+  location = event_target:DiplomaticTarget
+
+  is_triggered_only = yes
+
+  diplomatic = yes
+
+  picture_event_data = {
+    portrait = event_target:DiplomaticTarget
+    planet_background = event_target:DiplomaticTarget
+    graphical_culture = event_target:DiplomaticTarget
+    city_level = event_target:DiplomaticTarget
+    room = event_target:DiplomaticTarget
+  }
+
+  immediate = {
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.102.a
+    event_target:DiplomaticTarget = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_political_interference
+      }
+    }
+  }
+}
+
+### Verify if Diplomatic Ship is still in system and edict is active
+country_event = {
+  id = diplomatic_missions.103
+
+  is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    if = {
+      limit = {
+        has_country_edict = "diplomatic_missions"
+        event_target:DiplomaticShip = {
+          exists = solar_system
+          solar_system = {
+            exists = space_owner
+            space_owner = { is_country = event_target:DiplomaticTarget }
+            any_planet = {
+              is_capital = yes
+            }
+          }
+        }
+      }
+      country_event = { id = diplomatic_missions.110 }
+      else = {
+        country_event = { id = diplomatic_missions.101 }
+      }
+    }
+  }
+}
+
+### Slavery/purge inspection
+country_event = {
+  id = diplomatic_missions.110
+  title = "diplomatic_missions.110.name"
+  desc = { # Slaver and Purger
+    text = "diplomatic_missions.110.desc.slaver_purger"
+    trigger = {
+      event_target:DiplomaticTarget = {
+        NOT = {
+          has_policy_flag = "slavery_not_allowed"
+          has_policy_flag = "purge_not_allowed"
+        }
+      }
+    }
+  }
+  desc = { # Slaver
+    text = "diplomatic_missions.110.desc.slaver"
+    trigger = {
+      event_target:DiplomaticTarget = {
+        NOT = { has_policy_flag = "slavery_not_allowed" }
+        has_policy_flag = "purge_not_allowed"
+      }
+    }
+  }
+  desc = { # Purger
+    text = "diplomatic_missions.110.desc.purger"
+    trigger = {
+      event_target:DiplomaticTarget = {
+        NOT = { has_policy_flag = "purge_not_allowed" }
+        has_policy_flag = "slavery_not_allowed"
+      }
+    }
+  }
+  desc = { # No atrocities
+    text = "diplomatic_missions.110.desc.no_atrocities"
+    trigger = {
+      event_target:DiplomaticTarget = {
+        has_policy_flag = "purge_not_allowed"
+        has_policy_flag = "slavery_not_allowed"
+      }
+    }
+  }
+  picture = GFX_evt_throne_room
+  show_sound = event_default
+
+  is_triggered_only = yes
+
+  # Negotiate the end of atrocities
+  option = {
+    name = diplomatic_missions.110.a
+    custom_tooltip = diplomatic_missions.110.a.tooltip
+    trigger = {
+      event_target:DiplomaticTarget = {
+        OR = {
+          NOT = { has_policy_flag = slavery_not_allowed }
+          NOT = { has_policy_flag = purge_not_allowed }
+        }
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.111 days = 60 }
+    }
+  }
+
+  # Demand the end of atrocities
+  option = {
+    name = diplomatic_missions.110.b
+    trigger = {
+      event_target:DiplomaticTarget = {
+        OR = {
+          NOT = { has_policy_flag = slavery_not_allowed }
+          NOT = { has_policy_flag = purge_not_allowed }
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      set_policy = {
+        policy = slavery
+        option = slavery_not_allowed
+        cooldown = yes
+      }
+      set_policy = {
+        policy = purge
+        option = purge_not_allowed
+        cooldown = yes
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.102 }
+    }
+  }
+
+  # Do nothing
+  option = {
+    name = diplomatic_missions.110.c
+    custom_tooltip = diplomatic_missions.110.c.tooltip
+    trigger = {
+      event_target:DiplomaticTarget = {
+        OR = {
+          NOT = { has_policy_flag = slavery_not_allowed }
+          NOT = { has_policy_flag = purge_not_allowed }
+        }
+      }
+    }
+    hidden_effect = {
+      remove_country_flag = ongoing_diplomatic_mission
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = recent_diplomatic_mission
+          who = ROOT
+          days = 360
+        }
+      }
+      every_owned_pop = {
+        limit = {
+          OR = {
+            pop_has_ethic = ethic_egalitarian
+            pop_has_ethic = ethic_fanatic_egalitarian
+            pop_has_ethic = ethic_xenophile
+            pop_has_ethic = ethic_fanatic_xenophile
+            pop_has_ethic = ethic_pacifist
+            pop_has_ethic = ethic_fanatic_pacifist
+          }
+        }
+        add_modifier = {
+          modifier = "pop_atrocious_subject"
+          days = 180
+        }
+      }
+    }
+  }
+
+  # Everything ok!
+  option = {
+    name = diplomatic_missions.110.z
+    trigger = {
+      event_target:DiplomaticTarget = {
+        has_policy_flag = slavery_not_allowed
+        has_policy_flag = purge_not_allowed
+      }
+    }
+    hidden_effect = {
+      remove_country_flag = ongoing_diplomatic_mission
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = recent_diplomatic_mission
+          who = ROOT
+          days = 360
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+}
+
+### End of atrocities negotiation ###
+
+### Helper event
+country_event = {
+  id = diplomatic_missions.111
+
+  is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    if = {
+      limit = {
+        NOT = {
+          has_country_edict = "diplomatic_missions"
+          event_target:DiplomaticShip = {
+            exists = solar_system
+            solar_system = {
+              exists = space_owner
+              space_owner = { is_country = event_target:DiplomaticTarget }
+              any_planet = {
+                is_capital = yes
+              }
+            }
+          }
+        }
+      }
+      event_target:DiplomaticTarget = {
+        remove_country_flag = atrocities_negotiation_1
+        remove_country_flag = atrocities_negotiation_2
+      }
+      country_event = { id = diplomatic_missions.101 }
+      else = {
+        if = {
+          limit = {
+            event_target:DiplomaticTarget = {
+              NOT = { has_policy_flag = slavery_not_allowed }
+              NOT = { has_country_flag = atrocities_negotiation_1 }
+            }
+          }
+          country_event = { id = diplomatic_missions.1110 }
+          else = {
+            if = {
+              limit = {
+                event_target:DiplomaticTarget = {
+                  NOT = { has_policy_flag = purge_not_allowed  }
+                  NOT = { has_country_flag = atrocities_negotiation_2 }
+                }
+              }
+              country_event = { id = diplomatic_missions.1111 }
+              else = {
+                country_event = { id = diplomatic_missions.1112 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+### Slaves indemnity
+country_event = {
+  id = diplomatic_missions.1110
+  title = "diplomatic_missions.1110.name"
+  desc = "diplomatic_missions.1110.desc"
+  picture = GFX_evt_colony_settlement
+  show_sound = event_planetary_riot
+
+  is_triggered_only = yes
+
+  # Pay indemnity
+  option = {
+    name = diplomatic_missions.1110.a
+    add_influence = -100
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_country_flag = atrocities_negotiation_1
+        every_owned_pop = {
+          limit = { is_enslaved = yes }
+          ROOT = {
+            add_minerals = -20
+            add_energy = -10
+          }
+        }
+      }
+      country_event = { id = diplomatic_missions.111 days = 60 }
+    }
+  }
+
+  # Step back
+  option = {
+    name = diplomatic_missions.1110.b
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = recent_diplomatic_mission
+          who = ROOT
+          days = 360
+        }
+      }
+      country_event = { id = diplomatic_missions.101 }
+    }
+  }
+}
+
+### Xenophobic unrest
+country_event = {
+  id = diplomatic_missions.1111
+  title = "diplomatic_missions.1111.name"
+  desc = "diplomatic_missions.1111.desc"
+  picture = GFX_evt_interior_battle
+  show_sound = event_planetary_riot_02
+
+  is_triggered_only = yes
+
+  # Help them
+  option = {
+    name = diplomatic_missions.1111.a
+    add_influence = -100
+    add_modifier = {
+      modifier = "funding_armies"
+      days = 60
+    }
+    event_target:DiplomaticTarget = {
+      add_modifier = {
+        modifier = "armies_being_funded"
+        days = 60
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.111 days = 60 }
+      event_target:DiplomaticTarget = {
+        set_country_flag = atrocities_negotiation_2
+      }
+    }
+  }
+
+  # Fuck them!
+  option = {
+    name = diplomatic_missions.1111.b
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        remove_country_flag = atrocities_negotiation_1
+      }
+      country_event = { id = diplomatic_missions.101 }
+    }
+  }
+}
+
+### End of negotiations
+country_event = {
+  id = diplomatic_missions.1112
+  title = "diplomatic_missions.1112.name"
+  desc = "diplomatic_missions.1112.desc"
+  picture = GFX_evt_metropolis
+  show_sound = event_celebration
+
+  is_triggered_only = yes
+
+  immediate = {
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      remove_country_flag = atrocities_negotiation_1
+      remove_country_flag = atrocities_negotiation_2
+      set_policy = {
+        policy = slavery
+        option = slavery_not_allowed
+        cooldown = yes
+      }
+      set_policy = {
+        policy = purge
+        option = purge_not_allowed
+        cooldown = yes
+      }
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.1112.a
+  }
+}
+
+###############################
+########### Marches ###########
+###############################
+
+### Explanation and options
+country_event = {
+  id = diplomatic_missions.200
+  title = "diplomatic_missions.200.name"
+  desc = "diplomatic_missions.200.desc"
+  picture = GFX_evt_fleet_good
+
+  is_triggered_only = yes
+
+  # Begin negotiations
+  option = {
+    name = diplomatic_missions.200.a
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.210 }
+    }
+  }
+
+  # Return to the "menu"
+  option = {
+    name = diplomatic_missions.200.z
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.11 }
+    }
+  }
+}
+
+### Turned into March! (maybe)
+country_event = {
+  id = diplomatic_missions.210
+  title = "diplomatic_missions.210.name"
+  desc = {
+    trigger = {
+      hidden:event_target:DiplomaticTarget = {
+        switch = {
+          trigger = has_ethic
+          ethic_fanatic_pacifist = { text = diplomatic_missions.210.desc.pacifist }
+          ethic_pacifist = { text = diplomatic_missions.210.desc.pacifist }
+          default = { text = diplomatic_missions.210.desc.not_pacifist }
+        }
+      }
+    }
+  }
+  picture = GFX_evt_ship_in_orbit
+  location = event_target:DiplomaticTarget
+
+  is_triggered_only = yes
+
+  diplomatic = yes
+
+  picture_event_data = {
+    portrait = event_target:DiplomaticTarget
+    planet_background = event_target:DiplomaticTarget
+    graphical_culture = event_target:DiplomaticTarget
+    city_level = event_target:DiplomaticTarget
+    room = event_target:DipomaticTarget
+  }
+
+  immediate = {
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.210.a
+    trigger = {
+      event_target:DiplomaticTarget = {
+        NOT = {
+          OR = {
+            has_ethic = "ethic_pacifist"
+            has_ethic = "ethic_fanatic_pacifist"
+          }
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      set_subject_of = {
+        who = ROOT
+        subject_type = march
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_march
+      }
+    }
+  }
+
+  # Refuse if pacifist
+  option = {
+    name = diplomatic_missions.210.b
+    trigger = {
+      event_target:DiplomaticTarget = {
+        OR = {
+          has_ethic = "ethic_pacifist"
+          has_ethic = "ethic_fanatic_pacifist"
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+}
+
+### Status revokation
+country_event = {
+  id = diplomatic_missions.220
+  title = "diplomatic_missions.220.name"
+  desc = "diplomatic_missions.220.desc"
+  picture = GFX_evt_fleet_evil
+
+  is_triggered_only = yes
+
+  # Revoke status!
+  option  = {
+    name = diplomatic_missions.220.a
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      set_subject_of = {
+        who = ROOT
+        subject_type = vassal
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_political_interference
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_march
+      }
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+    }
+    country_event = { id = diplomatic_missions.221 }
+  }
+
+  # Thinking better...
+  option = {
+    name = diplomatic_missions.220.b
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.11 }
+    }
+  }
+}
+
+### March status revoked
+country_event = {
+  id = diplomatic_missions.221
+  title = "diplomatic_missions.221.name"
+  desc = "diplomatic_missions.221.desc"
+  picture = GFX_evt_ship_in_orbit
+  location = event_target:DiplomaticTarget
+
+  is_triggered_only = yes
+
+  diplomatic = yes
+
+  picture_event_data = {
+    portrait = event_target:DiplomaticTarget
+    planet_background = event_target:DiplomaticTarget
+    graphical_culture = event_target:DiplomaticTarget
+    city_level = event_target:DiplomaticTarget
+    room = event_target:DipomaticTarget
+  }
+
+  option = {
+    name = diplomatic_missions.221.a
+  }
+}
+
+###############################
+######### Tributaries #########
+###############################
+
+### Give tax exemption - Explanation and options
+
+country_event = {
+  id = diplomatic_missions.300
+  title = "diplomatic_missions.300.name"
+  desc = "diplomatic_missions.300.desc"
+  picture = GFX_evt_smugglers_in_bar
+
+  is_triggered_only = yes
+
+  # Exempt
+  option = {
+    name = diplomatic_missions.300.a
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.301 }
+    }
+  }
+
+  # Thinking better...
+  option = {
+    name = diplomatic_missions.300.z
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.11 }
+    }
+  }
+}
+
+country_event = {
+  id = diplomatic_missions.301
+  title = "diplomatic_missions.301.name"
+  desc = "diplomatic_missions.301.desc"
+  picture = GFX_evt_ship_in_orbit
+  location = event_target:DiplomaticTarget
+
+  is_triggered_only = yes
+
+  diplomatic = yes
+
+  picture_event_data = {
+    portrait = event_target:DiplomaticTarget
+    planet_background = event_target:DiplomaticTarget
+    graphical_culture = event_target:DiplomaticTarget
+    city_level = event_target:DiplomaticTarget
+    room = event_target:DiplomaticTarget
+  }
+
+  immediate = {
+    remove_country_flag = ongoing_diplomatic_mission
+    event_target:DiplomaticTarget = {
+      set_timed_relation_flag = {
+        flag = recent_diplomatic_mission
+        who = ROOT
+        days = 360
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+
+  # Exempt for 10 years
+  option = {
+    name = diplomatic_missions.301.a
+    response_text = diplomatic_missions.301.a.response
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = tax_exemption
+          who = ROOT
+          days = 3600
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      if = {
+        limit = { is_subject_type = "tvassal" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = vassal
+        }
+      }
+      if = {
+        limit = { is_subject_type = "tprotectorate" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = protectorate
+        }
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.301.b
+    response_text = diplomatic_missions.301.a.response
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = tax_exemption
+          who = ROOT
+          days = 5400
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      if = {
+        limit = { is_subject_type = "tvassal" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = vassal
+        }
+      }
+      if = {
+        limit = { is_subject_type = "tprotectorate" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = protectorate
+        }
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+
+  option = {
+    name = diplomatic_missions.301.c
+    response_text = diplomatic_missions.301.a.response
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = tax_exemption
+          who = ROOT
+          days = 10800
+        }
+      }
+    }
+    event_target:DiplomaticTarget = {
+      if = {
+        limit = { is_subject_type = "tvassal" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = vassal
+        }
+      }
+      if = {
+        limit = { is_subject_type = "tprotectorate" }
+        set_subject_of = {
+          who = ROOT
+          subject_type = protectorate
+        }
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+}

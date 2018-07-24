@@ -1,0 +1,106 @@
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = 1100
+	cost = 400
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m carrier_dreadnought executor }
+	upgrades_to = "AUTO_DREADNOUGHT_FUSION_REACTOR"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = 1450
+	cost = 450
+	
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m executor carrier_dreadnought }
+	upgrades_to = "AUTO_DREADNOUGHT_COLD_FUSION_REACTOR"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = 1900
+	cost = 500
+	
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m executor carrier_dreadnought }
+	upgrades_to = "AUTO_DREADNOUGHT_ANTIMATTER_REACTOR"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = 2500
+	cost = 550
+	
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m executor carrier_dreadnought }
+	upgrades_to = "AUTO_DREADNOUGHT_ZERO_POINT_REACTOR"
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = 3200
+	cost = 1054
+	
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m executor carrier_dreadnought }
+	upgrades_to = "AUTO_DREADNOUGHT_DARK_MATTER_REACTOR"
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = 4200
+	cost = 1370
+	
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { buildable_dreadnought buildable_dreadnought_m executor carrier_dreadnought }
+	
+	ai_weight = {
+		weight = 6
+	}
+}

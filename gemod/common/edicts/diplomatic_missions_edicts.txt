@@ -1,0 +1,22 @@
+##########################################################################
+# Diplomatic Missions Edicts
+##########################################################################
+
+country_edict = {
+	name = "diplomatic_missions"
+	length = 3600
+	cost = { influence = 1 }
+
+	effect = {
+		country_event = { id = diplomatic_missions.1 }
+	}
+
+	allow = {
+		is_overlord = yes
+	}
+
+	ai_weight = {
+		weight = -1
+	}
+
+}

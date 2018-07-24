@@ -1,0 +1,24 @@
+#Advanced Networking - Buffs for each type of empire
+networked_exterminators = {
+	starbase_shipyard_build_cost_mult = -0.15
+}
+
+networked_assimilators = {
+	pop_robot_upkeep_mult = -0.15
+}
+
+networked_servitors = {
+	pop_consumer_goods_mult = -0.15
+}
+
+networked_expansion = {
+	country_starbase_influence_cost_mult = -0.2
+}
+
+neurotoxins_released = {
+	icon = gfx/interface/icons/planet_modifiers/pm_bleak.dds
+	icon_frame = 3
+	
+	pop_environment_tolerance = -0.25
+	pop_growth_speed = -0.25
+}

@@ -1,0 +1,91 @@
+#
+###############
+####  Memo  ###
+###############
+#	
+#	
+#	Vanilla
+#		Create Fleet for Prethoryn (Including Feral One)
+#			
+#			Create Vangurd
+#				swarm_vanguard Called by crisis.17
+#				
+#			Create Main Invension (Initial/Rainforced)
+#				swarm_brood Called by crisis.19, 207
+#				
+#			Army (Initial/Rainforced)
+#				swarm_armies Called by crisis.19
+#				crisis.240
+#				
+#			Create Constractor
+#				crisis.17, 19, 205, 207
+#					207: surely need???
+#				
+#			Create Colonizer (infestor)
+#				Created in crisis.19, 204, 207
+#					207: surely need???
+#				
+#				
+#		Create Fleet for Feral Prethoryn
+#		
+#			Crate Home Base
+#				feral_prethoryn_garrison_1, _2 Called by crisis.120
+#			
+#			Roaming
+#				feral_prethoryn_roaming_1 Called by crisis.122
+#			
+#			Fight Each Other crisis.124 (controled by 123, Not Modified Yet)
+#			
+#			About Captured Queen
+#				crisis.105, 106
+#			
+#		Create Fleet for Sentinels
+#			Battle Fleet (Initial/Reinforced)
+#				crisis_initializers.txt
+#				crisis.60
+#			
+#			Donate Ship to General Empire
+#				crisis.71
+#			
+#			
+#		Create Fleet for Extradimensionals
+#			Guradian of Portal
+#				crisis.1000
+#				crisis.1100
+#				crisis.1200
+#				
+#			Vanguard
+#				crisis.1003
+#				crisis.1103
+#				crisis.1203
+#			
+#			Reinforcement
+#				crisis.1265 (controled by 1260)
+#				crisis.1267
+#			
+#			Initial Constructor
+#				crisis.1006
+#				crisis.1106
+#				crisis.1206
+#				crisis.1266
+#		
+#		Create Fleet for Contingency
+#			Initialization of Matchine World
+#				create_ai_planet_defense, create_ai_fleet Called by crisis.2025, 2028, 2027, 2028
+#			
+#			Rainforcement (Combat Fleet, Constructor)
+#				crisis.2051 called by 2050
+#				crisis.2053 called by 2052
+#		
+#		Cybrex
+#			Initial/Reinforced
+#				crisis_initializers.txt
+#				crisis.2420
+#				crisis.2421
+#			
+#			Donate Ship to General Empire
+#				crisis.2473
+#		
+#
+#	effect every_country = { set_country_type = shroud }
+#

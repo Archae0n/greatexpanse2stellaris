@@ -1,0 +1,2195 @@
+kiyo_spy_calculate_ascension = {
+	if = {
+		limit = { num_ascension_perk_slots < 1}
+		set_variable = {
+			which = ascensionVal
+			value = -1
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 1}
+		set_variable = {
+			which = ascensionVal
+			value = 1
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 2}
+		set_variable = {
+			which = ascensionVal
+			value = 2
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 3}
+		set_variable = {
+			which = ascensionVal
+			value = 3
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 4}
+		set_variable = {
+			which = ascensionVal
+			value = 4
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 5}
+		set_variable = {
+			which = ascensionVal
+			value = 5
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 6}
+		set_variable = {
+			which = ascensionVal
+			value = 6
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots = 7}
+		set_variable = {
+			which = ascensionVal
+			value = 7
+		}
+	}
+	else_if = {
+		limit = { num_ascension_perk_slots > 7}
+		set_variable = {
+			which = ascensionVal
+			value = 8
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { which = intrigue value < 1 }
+		}
+		set_variable = {
+			which = ascensionVal
+			value = 0
+		}
+	}
+}
+
+kiyo_spy_calculate_fleet = {
+	if = {
+		limit = { fleet_power < 100 }
+		set_variable = {
+			which = fleetVal
+			value = 50
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 100
+				fleet_power < 500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 300
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 500
+				fleet_power < 1000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 1000
+				fleet_power < 1500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 1250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 1500
+				fleet_power < 2000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 1750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 2000
+				fleet_power < 3000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 2250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 2500
+				fleet_power < 3000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 2750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 3000
+				fleet_power < 3500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 3250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 3500
+				fleet_power < 4000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 3750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 4000
+				fleet_power < 4500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 4250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 4500
+				fleet_power < 5000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 4750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 5000
+				fleet_power < 6000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 5500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 6000
+				fleet_power < 7000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 6500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 7000
+				fleet_power < 8000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 7500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 8000
+				fleet_power < 9000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 8500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 9000
+				fleet_power < 10000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 10000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 10000
+				fleet_power < 12500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 11250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 12500
+				fleet_power < 15000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 13750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 15000
+				fleet_power < 17500
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 16250
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 17500
+				fleet_power < 20000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 18750
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 20000
+				fleet_power < 25000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 22500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 25000
+				fleet_power < 30000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 27500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 30000
+				fleet_power < 35000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 32500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 35000
+				fleet_power < 40000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 37500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 40000
+				fleet_power < 50000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 45000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 50000
+				fleet_power < 60000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 55000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 60000
+				fleet_power < 70000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 65000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 70000
+				fleet_power < 80000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 75000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 80000
+				fleet_power < 90000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 85000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 90000
+				fleet_power < 100000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 95000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 100000
+				fleet_power < 125000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 112500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 125000
+				fleet_power < 150000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 137500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 150000
+				fleet_power < 175000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 162500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 175000
+				fleet_power < 200000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 187500
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 200000
+				fleet_power < 250000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 225000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 250000
+				fleet_power < 300000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 275000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 300000
+				fleet_power < 350000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 325000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 350000
+				fleet_power < 400000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 375000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 400000
+				fleet_power < 450000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 425000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 450000
+				fleet_power < 500000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 475000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 500000
+				fleet_power < 600000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 550000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 600000
+				fleet_power < 700000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 650000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 700000
+				fleet_power < 800000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 750000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 800000
+				fleet_power < 900000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 850000
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				fleet_power >= 900000
+				fleet_power < 1000000
+			}
+		}
+		set_variable = {
+			which = fleetVal
+			value = 950000
+		}
+	}
+	else_if = {
+		limit = {
+			fleet_power >= 1000000
+		}
+		set_variable = {
+			which = fleetVal
+			value = 1000001
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { which = intrigue value < 4 }
+		}
+		set_variable = {
+			which = fleetVal
+			value = 0
+		}
+	}
+}
+
+kiyo_spy_blowup_planet = {
+	set_variable = { which = kiyo_spy_num_buildings value = 0 }
+	set_variable = { which = kiyo_spy_num_pops value = 0 }
+	every_tile = {
+		limit = {
+			has_building = yes
+		}
+		prev = { change_variable = { which = kiyo_spy_num_buildings value = 1 } }
+	}
+	every_tile = {
+		limit = {
+			has_pop = yes
+		}
+		prev = { change_variable = { which = kiyo_spy_num_pops value = 1 } }
+	}
+	set_variable = { which = kiyo_spy_half_pops value = kiyo_spy_num_pops }
+	divide_variable = { which = kiyo_spy_half_pops value = 2 }
+	kiyo_spy_blowup_planet_looper = yes
+}
+
+kiyo_spy_blowup_planet_looper = {
+	log = "Buildings [this.kiyo_spy_num_buildings]"
+	log = "Pops [this.kiyo_spy_half_pops]"
+	if = {
+		limit = {
+			check_variable = { which = kiyo_spy_num_buildings value > 0 }
+			check_variable = { which = kiyo_spy_half_pops value > 0 }
+		}
+		if = {
+			limit = {
+				OR = {
+					check_variable = { which = kiyo_spy_half_pops value > 0 }
+					AND = {
+						is_capital = yes
+						num_pops > 8
+					}
+				}
+			}
+			random_tile = {
+				limit = { has_building = yes }
+				set_blocker = tb_bombarded_land
+			}
+		}
+		subtract_variable = { which = kiyo_spy_num_buildings value = 1 }
+		subtract_variable = { which = kiyo_spy_half_pops value = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { which = kiyo_spy_num_buildings value > 0 }
+			check_variable = { which = kiyo_spy_half_pops value > 0 }
+		}
+		kiyo_spy_blowup_planet_looper = yes
+	}
+}
+
+kiyo_spy_destroy_ships = {
+	if = {
+		limit = { years_passed = 0 }
+		set_variable = { which = fleetSizeDestroy value = 0 }
+	}
+	else_if = {
+		limit = { years_passed = 1 }
+		set_variable = { which = fleetSizeDestroy value = 1 }
+	}
+	else_if = {
+		limit = { years_passed = 2 }
+		set_variable = { which = fleetSizeDestroy value = 2 }
+	}
+	else_if = {
+		limit = { years_passed = 3 }
+		set_variable = { which = fleetSizeDestroy value = 3 }
+	}
+	else_if = {
+		limit = { years_passed = 4 }
+		set_variable = { which = fleetSizeDestroy value = 4 }
+	}
+	else_if = {
+		limit = { years_passed = 5 }
+		set_variable = { which = fleetSizeDestroy value = 5 }
+	}
+	else_if = {
+		limit = { years_passed = 6 }
+		set_variable = { which = fleetSizeDestroy value = 6 }
+	}
+	else_if = {
+		limit = { years_passed = 7 }
+		set_variable = { which = fleetSizeDestroy value = 7 }
+	}
+	else_if = {
+		limit = { years_passed = 8 }
+		set_variable = { which = fleetSizeDestroy value = 8 }
+	}
+	else_if = {
+		limit = { years_passed = 9 }
+		set_variable = { which = fleetSizeDestroy value = 9 }
+	}
+	else_if = {
+		limit = { years_passed = 10 }
+		set_variable = { which = fleetSizeDestroy value = 10 }
+	}
+	else_if = {
+		limit = { years_passed = 11 }
+		set_variable = { which = fleetSizeDestroy value = 11 }
+	}
+	else_if = {
+		limit = { years_passed = 12 }
+		set_variable = { which = fleetSizeDestroy value = 12 }
+	}
+	else_if = {
+		limit = { years_passed = 13 }
+		set_variable = { which = fleetSizeDestroy value = 13 }
+	}
+	else_if = {
+		limit = { years_passed = 14 }
+		set_variable = { which = fleetSizeDestroy value = 14 }
+	}
+	else_if = {
+		limit = { years_passed = 15 }
+		set_variable = { which = fleetSizeDestroy value = 15 }
+	}
+	else_if = {
+		limit = { years_passed = 16 }
+		set_variable = { which = fleetSizeDestroy value = 16 }
+	}
+	else_if = {
+		limit = { years_passed = 17 }
+		set_variable = { which = fleetSizeDestroy value = 17 }
+	}
+	else_if = {
+		limit = { years_passed = 18 }
+		set_variable = { which = fleetSizeDestroy value = 18 }
+	}
+	else_if = {
+		limit = { years_passed = 19 }
+		set_variable = { which = fleetSizeDestroy value = 19 }
+	}
+	else_if = {
+		limit = { years_passed = 20 }
+		set_variable = { which = fleetSizeDestroy value = 20 }
+	}
+	else_if = {
+		limit = { years_passed = 21 }
+		set_variable = { which = fleetSizeDestroy value = 21 }
+	}
+	else_if = {
+		limit = { years_passed = 22 }
+		set_variable = { which = fleetSizeDestroy value = 22 }
+	}
+	else_if = {
+		limit = { years_passed = 23 }
+		set_variable = { which = fleetSizeDestroy value = 23 }
+	}
+	else_if = {
+		limit = { years_passed = 24 }
+		set_variable = { which = fleetSizeDestroy value = 24 }
+	}
+	else_if = {
+		limit = { years_passed = 25 }
+		set_variable = { which = fleetSizeDestroy value = 25 }
+	}
+	else_if = {
+		limit = { years_passed = 26 }
+		set_variable = { which = fleetSizeDestroy value = 26 }
+	}
+	else_if = {
+		limit = { years_passed = 27 }
+		set_variable = { which = fleetSizeDestroy value = 27 }
+	}
+	else_if = {
+		limit = { years_passed = 28 }
+		set_variable = { which = fleetSizeDestroy value = 28 }
+	}
+	else_if = {
+		limit = { years_passed = 29 }
+		set_variable = { which = fleetSizeDestroy value = 29 }
+	}
+	else_if = {
+		limit = { years_passed = 30 }
+		set_variable = { which = fleetSizeDestroy value = 30 }
+	}
+	else_if = {
+		limit = { years_passed = 31 }
+		set_variable = { which = fleetSizeDestroy value = 31 }
+	}
+	else_if = {
+		limit = { years_passed = 32 }
+		set_variable = { which = fleetSizeDestroy value = 32 }
+	}
+	else_if = {
+		limit = { years_passed = 33 }
+		set_variable = { which = fleetSizeDestroy value = 33 }
+	}
+	else_if = {
+		limit = { years_passed = 34 }
+		set_variable = { which = fleetSizeDestroy value = 34 }
+	}
+	else_if = {
+		limit = { years_passed = 35 }
+		set_variable = { which = fleetSizeDestroy value = 35 }
+	}
+	else_if = {
+		limit = { years_passed = 36 }
+		set_variable = { which = fleetSizeDestroy value = 36 }
+	}
+	else_if = {
+		limit = { years_passed = 37 }
+		set_variable = { which = fleetSizeDestroy value = 37 }
+	}
+	else_if = {
+		limit = { years_passed = 38 }
+		set_variable = { which = fleetSizeDestroy value = 38 }
+	}
+	else_if = {
+		limit = { years_passed = 39 }
+		set_variable = { which = fleetSizeDestroy value = 39 }
+	}
+	else_if = {
+		limit = { years_passed = 40 }
+		set_variable = { which = fleetSizeDestroy value = 40 }
+	}
+	else_if = {
+		limit = { years_passed = 41 }
+		set_variable = { which = fleetSizeDestroy value = 41 }
+	}
+	else_if = {
+		limit = { years_passed = 42 }
+		set_variable = { which = fleetSizeDestroy value = 42 }
+	}
+	else_if = {
+		limit = { years_passed = 43 }
+		set_variable = { which = fleetSizeDestroy value = 43 }
+	}
+	else_if = {
+		limit = { years_passed = 44 }
+		set_variable = { which = fleetSizeDestroy value = 44 }
+	}
+	else_if = {
+		limit = { years_passed = 45 }
+		set_variable = { which = fleetSizeDestroy value = 45 }
+	}
+	else_if = {
+		limit = { years_passed = 46 }
+		set_variable = { which = fleetSizeDestroy value = 46 }
+	}
+	else_if = {
+		limit = { years_passed = 47 }
+		set_variable = { which = fleetSizeDestroy value = 47 }
+	}
+	else_if = {
+		limit = { years_passed = 48 }
+		set_variable = { which = fleetSizeDestroy value = 48 }
+	}
+	else_if = {
+		limit = { years_passed = 49 }
+		set_variable = { which = fleetSizeDestroy value = 49 }
+	}
+	else_if = {
+		limit = { years_passed = 50 }
+		set_variable = { which = fleetSizeDestroy value = 50 }
+	}
+	else_if = {
+		limit = { years_passed = 51 }
+		set_variable = { which = fleetSizeDestroy value = 51 }
+	}
+	else_if = {
+		limit = { years_passed = 52 }
+		set_variable = { which = fleetSizeDestroy value = 52 }
+	}
+	else_if = {
+		limit = { years_passed = 53 }
+		set_variable = { which = fleetSizeDestroy value = 53 }
+	}
+	else_if = {
+		limit = { years_passed = 54 }
+		set_variable = { which = fleetSizeDestroy value = 54 }
+	}
+	else_if = {
+		limit = { years_passed = 55 }
+		set_variable = { which = fleetSizeDestroy value = 55 }
+	}
+	else_if = {
+		limit = { years_passed = 56 }
+		set_variable = { which = fleetSizeDestroy value = 56 }
+	}
+	else_if = {
+		limit = { years_passed = 57 }
+		set_variable = { which = fleetSizeDestroy value = 57 }
+	}
+	else_if = {
+		limit = { years_passed = 58 }
+		set_variable = { which = fleetSizeDestroy value = 58 }
+	}
+	else_if = {
+		limit = { years_passed = 59 }
+		set_variable = { which = fleetSizeDestroy value = 59 }
+	}
+	else_if = {
+		limit = { years_passed = 60 }
+		set_variable = { which = fleetSizeDestroy value = 60 }
+	}
+	else_if = {
+		limit = { years_passed = 61 }
+		set_variable = { which = fleetSizeDestroy value = 61 }
+	}
+	else_if = {
+		limit = { years_passed = 62 }
+		set_variable = { which = fleetSizeDestroy value = 62 }
+	}
+	else_if = {
+		limit = { years_passed = 63 }
+		set_variable = { which = fleetSizeDestroy value = 63 }
+	}
+	else_if = {
+		limit = { years_passed = 64 }
+		set_variable = { which = fleetSizeDestroy value = 64 }
+	}
+	else_if = {
+		limit = { years_passed = 65 }
+		set_variable = { which = fleetSizeDestroy value = 65 }
+	}
+	else_if = {
+		limit = { years_passed = 66 }
+		set_variable = { which = fleetSizeDestroy value = 66 }
+	}
+	else_if = {
+		limit = { years_passed = 67 }
+		set_variable = { which = fleetSizeDestroy value = 67 }
+	}
+	else_if = {
+		limit = { years_passed = 68 }
+		set_variable = { which = fleetSizeDestroy value = 68 }
+	}
+	else_if = {
+		limit = { years_passed = 69 }
+		set_variable = { which = fleetSizeDestroy value = 69 }
+	}
+	else_if = {
+		limit = { years_passed = 70 }
+		set_variable = { which = fleetSizeDestroy value = 70 }
+	}
+	else_if = {
+		limit = { years_passed = 71 }
+		set_variable = { which = fleetSizeDestroy value = 71 }
+	}
+	else_if = {
+		limit = { years_passed = 72 }
+		set_variable = { which = fleetSizeDestroy value = 72 }
+	}
+	else_if = {
+		limit = { years_passed = 73 }
+		set_variable = { which = fleetSizeDestroy value = 73 }
+	}
+	else_if = {
+		limit = { years_passed = 74 }
+		set_variable = { which = fleetSizeDestroy value = 74 }
+	}
+	else_if = {
+		limit = { years_passed = 75 }
+		set_variable = { which = fleetSizeDestroy value = 75 }
+	}
+	else_if = {
+		limit = { years_passed = 76 }
+		set_variable = { which = fleetSizeDestroy value = 76 }
+	}
+	else_if = {
+		limit = { years_passed = 77 }
+		set_variable = { which = fleetSizeDestroy value = 77 }
+	}
+	else_if = {
+		limit = { years_passed = 78 }
+		set_variable = { which = fleetSizeDestroy value = 78 }
+	}
+	else_if = {
+		limit = { years_passed = 79 }
+		set_variable = { which = fleetSizeDestroy value = 79 }
+	}
+	else_if = {
+		limit = { years_passed = 80 }
+		set_variable = { which = fleetSizeDestroy value = 80 }
+	}
+	else_if = {
+		limit = { years_passed = 81 }
+		set_variable = { which = fleetSizeDestroy value = 81 }
+	}
+	else_if = {
+		limit = { years_passed = 82 }
+		set_variable = { which = fleetSizeDestroy value = 82 }
+	}
+	else_if = {
+		limit = { years_passed = 83 }
+		set_variable = { which = fleetSizeDestroy value = 83 }
+	}
+	else_if = {
+		limit = { years_passed = 84 }
+		set_variable = { which = fleetSizeDestroy value = 84 }
+	}
+	else_if = {
+		limit = { years_passed = 85 }
+		set_variable = { which = fleetSizeDestroy value = 85 }
+	}
+	else_if = {
+		limit = { years_passed = 86 }
+		set_variable = { which = fleetSizeDestroy value = 86 }
+	}
+	else_if = {
+		limit = { years_passed = 87 }
+		set_variable = { which = fleetSizeDestroy value = 87 }
+	}
+	else_if = {
+		limit = { years_passed = 88 }
+		set_variable = { which = fleetSizeDestroy value = 88 }
+	}
+	else_if = {
+		limit = { years_passed = 89 }
+		set_variable = { which = fleetSizeDestroy value = 89 }
+	}
+	else_if = {
+		limit = { years_passed = 90 }
+		set_variable = { which = fleetSizeDestroy value = 90 }
+	}
+	else_if = {
+		limit = { years_passed = 91 }
+		set_variable = { which = fleetSizeDestroy value = 91 }
+	}
+	else_if = {
+		limit = { years_passed = 92 }
+		set_variable = { which = fleetSizeDestroy value = 92 }
+	}
+	else_if = {
+		limit = { years_passed = 93 }
+		set_variable = { which = fleetSizeDestroy value = 93 }
+	}
+	else_if = {
+		limit = { years_passed = 94 }
+		set_variable = { which = fleetSizeDestroy value = 94 }
+	}
+	else_if = {
+		limit = { years_passed = 95 }
+		set_variable = { which = fleetSizeDestroy value = 95 }
+	}
+	else_if = {
+		limit = { years_passed = 96 }
+		set_variable = { which = fleetSizeDestroy value = 96 }
+	}
+	else_if = {
+		limit = { years_passed = 97 }
+		set_variable = { which = fleetSizeDestroy value = 97 }
+	}
+	else_if = {
+		limit = { years_passed = 98 }
+		set_variable = { which = fleetSizeDestroy value = 98 }
+	}
+	else_if = {
+		limit = { years_passed = 99 }
+		set_variable = { which = fleetSizeDestroy value = 99 }
+	}
+	else_if = {
+		limit = { years_passed = 100 }
+		set_variable = { which = fleetSizeDestroy value = 100 }
+	}
+	else_if = {
+		limit = { years_passed = 101 }
+		set_variable = { which = fleetSizeDestroy value = 101 }
+	}
+	else_if = {
+		limit = { years_passed = 102 }
+		set_variable = { which = fleetSizeDestroy value = 102 }
+	}
+	else_if = {
+		limit = { years_passed = 103 }
+		set_variable = { which = fleetSizeDestroy value = 103 }
+	}
+	else_if = {
+		limit = { years_passed = 104 }
+		set_variable = { which = fleetSizeDestroy value = 104 }
+	}
+	else_if = {
+		limit = { years_passed = 105 }
+		set_variable = { which = fleetSizeDestroy value = 105 }
+	}
+	else_if = {
+		limit = { years_passed = 106 }
+		set_variable = { which = fleetSizeDestroy value = 106 }
+	}
+	else_if = {
+		limit = { years_passed = 107 }
+		set_variable = { which = fleetSizeDestroy value = 107 }
+	}
+	else_if = {
+		limit = { years_passed = 108 }
+		set_variable = { which = fleetSizeDestroy value = 108 }
+	}
+	else_if = {
+		limit = { years_passed = 109 }
+		set_variable = { which = fleetSizeDestroy value = 109 }
+	}
+	else_if = {
+		limit = { years_passed = 110 }
+		set_variable = { which = fleetSizeDestroy value = 110 }
+	}
+	else_if = {
+		limit = { years_passed = 111 }
+		set_variable = { which = fleetSizeDestroy value = 111 }
+	}
+	else_if = {
+		limit = { years_passed = 112 }
+		set_variable = { which = fleetSizeDestroy value = 112 }
+	}
+	else_if = {
+		limit = { years_passed = 113 }
+		set_variable = { which = fleetSizeDestroy value = 113 }
+	}
+	else_if = {
+		limit = { years_passed = 114 }
+		set_variable = { which = fleetSizeDestroy value = 114 }
+	}
+	else_if = {
+		limit = { years_passed = 115 }
+		set_variable = { which = fleetSizeDestroy value = 115 }
+	}
+	else_if = {
+		limit = { years_passed = 116 }
+		set_variable = { which = fleetSizeDestroy value = 116 }
+	}
+	else_if = {
+		limit = { years_passed = 117 }
+		set_variable = { which = fleetSizeDestroy value = 117 }
+	}
+	else_if = {
+		limit = { years_passed = 118 }
+		set_variable = { which = fleetSizeDestroy value = 118 }
+	}
+	else_if = {
+		limit = { years_passed = 119 }
+		set_variable = { which = fleetSizeDestroy value = 119 }
+	}
+	else_if = {
+		limit = { years_passed = 120 }
+		set_variable = { which = fleetSizeDestroy value = 120 }
+	}
+	else_if = {
+		limit = { years_passed = 121 }
+		set_variable = { which = fleetSizeDestroy value = 121 }
+	}
+	else_if = {
+		limit = { years_passed = 122 }
+		set_variable = { which = fleetSizeDestroy value = 122 }
+	}
+	else_if = {
+		limit = { years_passed = 123 }
+		set_variable = { which = fleetSizeDestroy value = 123 }
+	}
+	else_if = {
+		limit = { years_passed = 124 }
+		set_variable = { which = fleetSizeDestroy value = 124 }
+	}
+	else_if = {
+		limit = { years_passed = 125 }
+		set_variable = { which = fleetSizeDestroy value = 125 }
+	}
+	else_if = {
+		limit = { years_passed = 126 }
+		set_variable = { which = fleetSizeDestroy value = 126 }
+	}
+	else_if = {
+		limit = { years_passed = 127 }
+		set_variable = { which = fleetSizeDestroy value = 127 }
+	}
+	else_if = {
+		limit = { years_passed = 128 }
+		set_variable = { which = fleetSizeDestroy value = 128 }
+	}
+	else_if = {
+		limit = { years_passed = 129 }
+		set_variable = { which = fleetSizeDestroy value = 129 }
+	}
+	else_if = {
+		limit = { years_passed = 130 }
+		set_variable = { which = fleetSizeDestroy value = 130 }
+	}
+	else_if = {
+		limit = { years_passed = 131 }
+		set_variable = { which = fleetSizeDestroy value = 131 }
+	}
+	else_if = {
+		limit = { years_passed = 132 }
+		set_variable = { which = fleetSizeDestroy value = 132 }
+	}
+	else_if = {
+		limit = { years_passed = 133 }
+		set_variable = { which = fleetSizeDestroy value = 133 }
+	}
+	else_if = {
+		limit = { years_passed = 134 }
+		set_variable = { which = fleetSizeDestroy value = 134 }
+	}
+	else_if = {
+		limit = { years_passed = 135 }
+		set_variable = { which = fleetSizeDestroy value = 135 }
+	}
+	else_if = {
+		limit = { years_passed = 136 }
+		set_variable = { which = fleetSizeDestroy value = 136 }
+	}
+	else_if = {
+		limit = { years_passed = 137 }
+		set_variable = { which = fleetSizeDestroy value = 137 }
+	}
+	else_if = {
+		limit = { years_passed = 138 }
+		set_variable = { which = fleetSizeDestroy value = 138 }
+	}
+	else_if = {
+		limit = { years_passed = 139 }
+		set_variable = { which = fleetSizeDestroy value = 139 }
+	}
+	else_if = {
+		limit = { years_passed = 140 }
+		set_variable = { which = fleetSizeDestroy value = 140 }
+	}
+	else_if = {
+		limit = { years_passed = 141 }
+		set_variable = { which = fleetSizeDestroy value = 141 }
+	}
+	else_if = {
+		limit = { years_passed = 142 }
+		set_variable = { which = fleetSizeDestroy value = 142 }
+	}
+	else_if = {
+		limit = { years_passed = 143 }
+		set_variable = { which = fleetSizeDestroy value = 143 }
+	}
+	else_if = {
+		limit = { years_passed = 144 }
+		set_variable = { which = fleetSizeDestroy value = 144 }
+	}
+	else_if = {
+		limit = { years_passed = 145 }
+		set_variable = { which = fleetSizeDestroy value = 145 }
+	}
+	else_if = {
+		limit = { years_passed = 146 }
+		set_variable = { which = fleetSizeDestroy value = 146 }
+	}
+	else_if = {
+		limit = { years_passed = 147 }
+		set_variable = { which = fleetSizeDestroy value = 147 }
+	}
+	else_if = {
+		limit = { years_passed = 148 }
+		set_variable = { which = fleetSizeDestroy value = 148 }
+	}
+	else_if = {
+		limit = { years_passed = 149 }
+		set_variable = { which = fleetSizeDestroy value = 149 }
+	}
+	else_if = {
+		limit = { years_passed = 150 }
+		set_variable = { which = fleetSizeDestroy value = 150 }
+	}
+	else_if = {
+		limit = { years_passed = 151 }
+		set_variable = { which = fleetSizeDestroy value = 151 }
+	}
+	else_if = {
+		limit = { years_passed = 152 }
+		set_variable = { which = fleetSizeDestroy value = 152 }
+	}
+	else_if = {
+		limit = { years_passed = 153 }
+		set_variable = { which = fleetSizeDestroy value = 153 }
+	}
+	else_if = {
+		limit = { years_passed = 154 }
+		set_variable = { which = fleetSizeDestroy value = 154 }
+	}
+	else_if = {
+		limit = { years_passed = 155 }
+		set_variable = { which = fleetSizeDestroy value = 155 }
+	}
+	else_if = {
+		limit = { years_passed = 156 }
+		set_variable = { which = fleetSizeDestroy value = 156 }
+	}
+	else_if = {
+		limit = { years_passed = 157 }
+		set_variable = { which = fleetSizeDestroy value = 157 }
+	}
+	else_if = {
+		limit = { years_passed = 158 }
+		set_variable = { which = fleetSizeDestroy value = 158 }
+	}
+	else_if = {
+		limit = { years_passed = 159 }
+		set_variable = { which = fleetSizeDestroy value = 159 }
+	}
+	else_if = {
+		limit = { years_passed = 160 }
+		set_variable = { which = fleetSizeDestroy value = 160 }
+	}
+	else_if = {
+		limit = { years_passed = 161 }
+		set_variable = { which = fleetSizeDestroy value = 161 }
+	}
+	else_if = {
+		limit = { years_passed = 162 }
+		set_variable = { which = fleetSizeDestroy value = 162 }
+	}
+	else_if = {
+		limit = { years_passed = 163 }
+		set_variable = { which = fleetSizeDestroy value = 163 }
+	}
+	else_if = {
+		limit = { years_passed = 164 }
+		set_variable = { which = fleetSizeDestroy value = 164 }
+	}
+	else_if = {
+		limit = { years_passed = 165 }
+		set_variable = { which = fleetSizeDestroy value = 165 }
+	}
+	else_if = {
+		limit = { years_passed = 166 }
+		set_variable = { which = fleetSizeDestroy value = 166 }
+	}
+	else_if = {
+		limit = { years_passed = 167 }
+		set_variable = { which = fleetSizeDestroy value = 167 }
+	}
+	else_if = {
+		limit = { years_passed = 168 }
+		set_variable = { which = fleetSizeDestroy value = 168 }
+	}
+	else_if = {
+		limit = { years_passed = 169 }
+		set_variable = { which = fleetSizeDestroy value = 169 }
+	}
+	else_if = {
+		limit = { years_passed = 170 }
+		set_variable = { which = fleetSizeDestroy value = 170 }
+	}
+	else_if = {
+		limit = { years_passed = 171 }
+		set_variable = { which = fleetSizeDestroy value = 171 }
+	}
+	else_if = {
+		limit = { years_passed = 172 }
+		set_variable = { which = fleetSizeDestroy value = 172 }
+	}
+	else_if = {
+		limit = { years_passed = 173 }
+		set_variable = { which = fleetSizeDestroy value = 173 }
+	}
+	else_if = {
+		limit = { years_passed = 174 }
+		set_variable = { which = fleetSizeDestroy value = 174 }
+	}
+	else_if = {
+		limit = { years_passed = 175 }
+		set_variable = { which = fleetSizeDestroy value = 175 }
+	}
+	else_if = {
+		limit = { years_passed = 176 }
+		set_variable = { which = fleetSizeDestroy value = 176 }
+	}
+	else_if = {
+		limit = { years_passed = 177 }
+		set_variable = { which = fleetSizeDestroy value = 177 }
+	}
+	else_if = {
+		limit = { years_passed = 178 }
+		set_variable = { which = fleetSizeDestroy value = 178 }
+	}
+	else_if = {
+		limit = { years_passed = 179 }
+		set_variable = { which = fleetSizeDestroy value = 179 }
+	}
+	else_if = {
+		limit = { years_passed = 180 }
+		set_variable = { which = fleetSizeDestroy value = 180 }
+	}
+	else_if = {
+		limit = { years_passed = 181 }
+		set_variable = { which = fleetSizeDestroy value = 181 }
+	}
+	else_if = {
+		limit = { years_passed = 182 }
+		set_variable = { which = fleetSizeDestroy value = 182 }
+	}
+	else_if = {
+		limit = { years_passed = 183 }
+		set_variable = { which = fleetSizeDestroy value = 183 }
+	}
+	else_if = {
+		limit = { years_passed = 184 }
+		set_variable = { which = fleetSizeDestroy value = 184 }
+	}
+	else_if = {
+		limit = { years_passed = 185 }
+		set_variable = { which = fleetSizeDestroy value = 185 }
+	}
+	else_if = {
+		limit = { years_passed = 186 }
+		set_variable = { which = fleetSizeDestroy value = 186 }
+	}
+	else_if = {
+		limit = { years_passed = 187 }
+		set_variable = { which = fleetSizeDestroy value = 187 }
+	}
+	else_if = {
+		limit = { years_passed = 188 }
+		set_variable = { which = fleetSizeDestroy value = 188 }
+	}
+	else_if = {
+		limit = { years_passed = 189 }
+		set_variable = { which = fleetSizeDestroy value = 189 }
+	}
+	else_if = {
+		limit = { years_passed = 190 }
+		set_variable = { which = fleetSizeDestroy value = 190 }
+	}
+	else_if = {
+		limit = { years_passed = 191 }
+		set_variable = { which = fleetSizeDestroy value = 191 }
+	}
+	else_if = {
+		limit = { years_passed = 192 }
+		set_variable = { which = fleetSizeDestroy value = 192 }
+	}
+	else_if = {
+		limit = { years_passed = 193 }
+		set_variable = { which = fleetSizeDestroy value = 193 }
+	}
+	else_if = {
+		limit = { years_passed = 194 }
+		set_variable = { which = fleetSizeDestroy value = 194 }
+	}
+	else_if = {
+		limit = { years_passed = 195 }
+		set_variable = { which = fleetSizeDestroy value = 195 }
+	}
+	else_if = {
+		limit = { years_passed = 196 }
+		set_variable = { which = fleetSizeDestroy value = 196 }
+	}
+	else_if = {
+		limit = { years_passed = 197 }
+		set_variable = { which = fleetSizeDestroy value = 197 }
+	}
+	else_if = {
+		limit = { years_passed = 198 }
+		set_variable = { which = fleetSizeDestroy value = 198 }
+	}
+	else_if = {
+		limit = { years_passed = 199 }
+		set_variable = { which = fleetSizeDestroy value = 199 }
+	}
+	else_if = {
+		limit = { years_passed = 200 }
+		set_variable = { which = fleetSizeDestroy value = 200 }
+	}
+	else_if = {
+		limit = { years_passed = 201 }
+		set_variable = { which = fleetSizeDestroy value = 201 }
+	}
+	else_if = {
+		limit = { years_passed = 202 }
+		set_variable = { which = fleetSizeDestroy value = 202 }
+	}
+	else_if = {
+		limit = { years_passed = 203 }
+		set_variable = { which = fleetSizeDestroy value = 203 }
+	}
+	else_if = {
+		limit = { years_passed = 204 }
+		set_variable = { which = fleetSizeDestroy value = 204 }
+	}
+	else_if = {
+		limit = { years_passed = 205 }
+		set_variable = { which = fleetSizeDestroy value = 205 }
+	}
+	else_if = {
+		limit = { years_passed = 206 }
+		set_variable = { which = fleetSizeDestroy value = 206 }
+	}
+	else_if = {
+		limit = { years_passed = 207 }
+		set_variable = { which = fleetSizeDestroy value = 207 }
+	}
+	else_if = {
+		limit = { years_passed = 208 }
+		set_variable = { which = fleetSizeDestroy value = 208 }
+	}
+	else_if = {
+		limit = { years_passed = 209 }
+		set_variable = { which = fleetSizeDestroy value = 209 }
+	}
+	else_if = {
+		limit = { years_passed = 210 }
+		set_variable = { which = fleetSizeDestroy value = 210 }
+	}
+	else_if = {
+		limit = { years_passed = 211 }
+		set_variable = { which = fleetSizeDestroy value = 211 }
+	}
+	else_if = {
+		limit = { years_passed = 212 }
+		set_variable = { which = fleetSizeDestroy value = 212 }
+	}
+	else_if = {
+		limit = { years_passed = 213 }
+		set_variable = { which = fleetSizeDestroy value = 213 }
+	}
+	else_if = {
+		limit = { years_passed = 214 }
+		set_variable = { which = fleetSizeDestroy value = 214 }
+	}
+	else_if = {
+		limit = { years_passed = 215 }
+		set_variable = { which = fleetSizeDestroy value = 215 }
+	}
+	else_if = {
+		limit = { years_passed = 216 }
+		set_variable = { which = fleetSizeDestroy value = 216 }
+	}
+	else_if = {
+		limit = { years_passed = 217 }
+		set_variable = { which = fleetSizeDestroy value = 217 }
+	}
+	else_if = {
+		limit = { years_passed = 218 }
+		set_variable = { which = fleetSizeDestroy value = 218 }
+	}
+	else_if = {
+		limit = { years_passed = 219 }
+		set_variable = { which = fleetSizeDestroy value = 219 }
+	}
+	else_if = {
+		limit = { years_passed = 220 }
+		set_variable = { which = fleetSizeDestroy value = 220 }
+	}
+	else_if = {
+		limit = { years_passed = 221 }
+		set_variable = { which = fleetSizeDestroy value = 221 }
+	}
+	else_if = {
+		limit = { years_passed = 222 }
+		set_variable = { which = fleetSizeDestroy value = 222 }
+	}
+	else_if = {
+		limit = { years_passed = 223 }
+		set_variable = { which = fleetSizeDestroy value = 223 }
+	}
+	else_if = {
+		limit = { years_passed = 224 }
+		set_variable = { which = fleetSizeDestroy value = 224 }
+	}
+	else_if = {
+		limit = { years_passed = 225 }
+		set_variable = { which = fleetSizeDestroy value = 225 }
+	}
+	else_if = {
+		limit = { years_passed = 226 }
+		set_variable = { which = fleetSizeDestroy value = 226 }
+	}
+	else_if = {
+		limit = { years_passed = 227 }
+		set_variable = { which = fleetSizeDestroy value = 227 }
+	}
+	else_if = {
+		limit = { years_passed = 228 }
+		set_variable = { which = fleetSizeDestroy value = 228 }
+	}
+	else_if = {
+		limit = { years_passed = 229 }
+		set_variable = { which = fleetSizeDestroy value = 229 }
+	}
+	else_if = {
+		limit = { years_passed = 230 }
+		set_variable = { which = fleetSizeDestroy value = 230 }
+	}
+	else_if = {
+		limit = { years_passed = 231 }
+		set_variable = { which = fleetSizeDestroy value = 231 }
+	}
+	else_if = {
+		limit = { years_passed = 232 }
+		set_variable = { which = fleetSizeDestroy value = 232 }
+	}
+	else_if = {
+		limit = { years_passed = 233 }
+		set_variable = { which = fleetSizeDestroy value = 233 }
+	}
+	else_if = {
+		limit = { years_passed = 234 }
+		set_variable = { which = fleetSizeDestroy value = 234 }
+	}
+	else_if = {
+		limit = { years_passed = 235 }
+		set_variable = { which = fleetSizeDestroy value = 235 }
+	}
+	else_if = {
+		limit = { years_passed = 236 }
+		set_variable = { which = fleetSizeDestroy value = 236 }
+	}
+	else_if = {
+		limit = { years_passed = 237 }
+		set_variable = { which = fleetSizeDestroy value = 237 }
+	}
+	else_if = {
+		limit = { years_passed = 238 }
+		set_variable = { which = fleetSizeDestroy value = 238 }
+	}
+	else_if = {
+		limit = { years_passed = 239 }
+		set_variable = { which = fleetSizeDestroy value = 239 }
+	}
+	else_if = {
+		limit = { years_passed = 240 }
+		set_variable = { which = fleetSizeDestroy value = 240 }
+	}
+	else_if = {
+		limit = { years_passed = 241 }
+		set_variable = { which = fleetSizeDestroy value = 241 }
+	}
+	else_if = {
+		limit = { years_passed = 242 }
+		set_variable = { which = fleetSizeDestroy value = 242 }
+	}
+	else_if = {
+		limit = { years_passed = 243 }
+		set_variable = { which = fleetSizeDestroy value = 243 }
+	}
+	else_if = {
+		limit = { years_passed = 244 }
+		set_variable = { which = fleetSizeDestroy value = 244 }
+	}
+	else_if = {
+		limit = { years_passed = 245 }
+		set_variable = { which = fleetSizeDestroy value = 245 }
+	}
+	else_if = {
+		limit = { years_passed = 246 }
+		set_variable = { which = fleetSizeDestroy value = 246 }
+	}
+	else_if = {
+		limit = { years_passed = 247 }
+		set_variable = { which = fleetSizeDestroy value = 247 }
+	}
+	else_if = {
+		limit = { years_passed = 248 }
+		set_variable = { which = fleetSizeDestroy value = 248 }
+	}
+	else_if = {
+		limit = { years_passed = 249 }
+		set_variable = { which = fleetSizeDestroy value = 249 }
+	}
+	else_if = {
+		limit = { years_passed = 250 }
+		set_variable = { which = fleetSizeDestroy value = 250 }
+	}
+	else_if = {
+		limit = { years_passed = 251 }
+		set_variable = { which = fleetSizeDestroy value = 251 }
+	}
+	else_if = {
+		limit = { years_passed = 252 }
+		set_variable = { which = fleetSizeDestroy value = 252 }
+	}
+	else_if = {
+		limit = { years_passed = 253 }
+		set_variable = { which = fleetSizeDestroy value = 253 }
+	}
+	else_if = {
+		limit = { years_passed = 254 }
+		set_variable = { which = fleetSizeDestroy value = 254 }
+	}
+	else_if = {
+		limit = { years_passed = 255 }
+		set_variable = { which = fleetSizeDestroy value = 255 }
+	}
+	else_if = {
+		limit = { years_passed = 256 }
+		set_variable = { which = fleetSizeDestroy value = 256 }
+	}
+	else_if = {
+		limit = { years_passed = 257 }
+		set_variable = { which = fleetSizeDestroy value = 257 }
+	}
+	else_if = {
+		limit = { years_passed = 258 }
+		set_variable = { which = fleetSizeDestroy value = 258 }
+	}
+	else_if = {
+		limit = { years_passed = 259 }
+		set_variable = { which = fleetSizeDestroy value = 259 }
+	}
+	else_if = {
+		limit = { years_passed = 260 }
+		set_variable = { which = fleetSizeDestroy value = 260 }
+	}
+	else_if = {
+		limit = { years_passed = 261 }
+		set_variable = { which = fleetSizeDestroy value = 261 }
+	}
+	else_if = {
+		limit = { years_passed = 262 }
+		set_variable = { which = fleetSizeDestroy value = 262 }
+	}
+	else_if = {
+		limit = { years_passed = 263 }
+		set_variable = { which = fleetSizeDestroy value = 263 }
+	}
+	else_if = {
+		limit = { years_passed = 264 }
+		set_variable = { which = fleetSizeDestroy value = 264 }
+	}
+	else_if = {
+		limit = { years_passed = 265 }
+		set_variable = { which = fleetSizeDestroy value = 265 }
+	}
+	else_if = {
+		limit = { years_passed = 266 }
+		set_variable = { which = fleetSizeDestroy value = 266 }
+	}
+	else_if = {
+		limit = { years_passed = 267 }
+		set_variable = { which = fleetSizeDestroy value = 267 }
+	}
+	else_if = {
+		limit = { years_passed = 268 }
+		set_variable = { which = fleetSizeDestroy value = 268 }
+	}
+	else_if = {
+		limit = { years_passed = 269 }
+		set_variable = { which = fleetSizeDestroy value = 269 }
+	}
+	else_if = {
+		limit = { years_passed = 270 }
+		set_variable = { which = fleetSizeDestroy value = 270 }
+	}
+	else_if = {
+		limit = { years_passed = 271 }
+		set_variable = { which = fleetSizeDestroy value = 271 }
+	}
+	else_if = {
+		limit = { years_passed = 272 }
+		set_variable = { which = fleetSizeDestroy value = 272 }
+	}
+	else_if = {
+		limit = { years_passed = 273 }
+		set_variable = { which = fleetSizeDestroy value = 273 }
+	}
+	else_if = {
+		limit = { years_passed = 274 }
+		set_variable = { which = fleetSizeDestroy value = 274 }
+	}
+	else_if = {
+		limit = { years_passed = 275 }
+		set_variable = { which = fleetSizeDestroy value = 275 }
+	}
+	else_if = {
+		limit = { years_passed = 276 }
+		set_variable = { which = fleetSizeDestroy value = 276 }
+	}
+	else_if = {
+		limit = { years_passed = 277 }
+		set_variable = { which = fleetSizeDestroy value = 277 }
+	}
+	else_if = {
+		limit = { years_passed = 278 }
+		set_variable = { which = fleetSizeDestroy value = 278 }
+	}
+	else_if = {
+		limit = { years_passed = 279 }
+		set_variable = { which = fleetSizeDestroy value = 279 }
+	}
+	else_if = {
+		limit = { years_passed = 280 }
+		set_variable = { which = fleetSizeDestroy value = 280 }
+	}
+	else_if = {
+		limit = { years_passed = 281 }
+		set_variable = { which = fleetSizeDestroy value = 281 }
+	}
+	else_if = {
+		limit = { years_passed = 282 }
+		set_variable = { which = fleetSizeDestroy value = 282 }
+	}
+	else_if = {
+		limit = { years_passed = 283 }
+		set_variable = { which = fleetSizeDestroy value = 283 }
+	}
+	else_if = {
+		limit = { years_passed = 284 }
+		set_variable = { which = fleetSizeDestroy value = 284 }
+	}
+	else_if = {
+		limit = { years_passed = 285 }
+		set_variable = { which = fleetSizeDestroy value = 285 }
+	}
+	else_if = {
+		limit = { years_passed = 286 }
+		set_variable = { which = fleetSizeDestroy value = 286 }
+	}
+	else_if = {
+		limit = { years_passed = 287 }
+		set_variable = { which = fleetSizeDestroy value = 287 }
+	}
+	else_if = {
+		limit = { years_passed = 288 }
+		set_variable = { which = fleetSizeDestroy value = 288 }
+	}
+	else_if = {
+		limit = { years_passed = 289 }
+		set_variable = { which = fleetSizeDestroy value = 289 }
+	}
+	else_if = {
+		limit = { years_passed = 290 }
+		set_variable = { which = fleetSizeDestroy value = 290 }
+	}
+	else_if = {
+		limit = { years_passed = 291 }
+		set_variable = { which = fleetSizeDestroy value = 291 }
+	}
+	else_if = {
+		limit = { years_passed = 292 }
+		set_variable = { which = fleetSizeDestroy value = 292 }
+	}
+	else_if = {
+		limit = { years_passed = 293 }
+		set_variable = { which = fleetSizeDestroy value = 293 }
+	}
+	else_if = {
+		limit = { years_passed = 294 }
+		set_variable = { which = fleetSizeDestroy value = 294 }
+	}
+	else_if = {
+		limit = { years_passed = 295 }
+		set_variable = { which = fleetSizeDestroy value = 295 }
+	}
+	else_if = {
+		limit = { years_passed = 296 }
+		set_variable = { which = fleetSizeDestroy value = 296 }
+	}
+	else_if = {
+		limit = { years_passed = 297 }
+		set_variable = { which = fleetSizeDestroy value = 297 }
+	}
+	else_if = {
+		limit = { years_passed = 298 }
+		set_variable = { which = fleetSizeDestroy value = 298 }
+	}
+	else_if = {
+		limit = { years_passed = 299 }
+		set_variable = { which = fleetSizeDestroy value = 299 }
+	}
+	else_if = {
+		limit = { years_passed >= 300 }
+		set_variable = { which = fleetSizeDestroy value = 300 }
+	}
+	divide_variable = { which = fleetSizeDestroy value = 2 }
+	kiyo_spy_destroy_ships_looper = yes
+}
+
+kiyo_spy_destroy_ships_looper = {
+	if = {
+		limit = { has_country_flag = kiyo_spy_destroyed_1 }
+		subtract_variable = { which = fleetSizeDestroy value = 1 }
+		remove_country_flag = kiyo_spy_destroyed_1
+	}
+	if = {
+		limit = { has_country_flag = kiyo_spy_destroyed_2 }
+		subtract_variable = { which = fleetSizeDestroy value = 2 }
+		remove_country_flag = kiyo_spy_destroyed_2
+	}
+	if = {
+		limit = { has_country_flag = kiyo_spy_destroyed_4 }
+		subtract_variable = { which = fleetSizeDestroy value = 4 }
+		remove_country_flag = kiyo_spy_destroyed_4
+	}
+	if = {
+		limit = { has_country_flag = kiyo_spy_destroyed_8 }
+		subtract_variable = { which = fleetSizeDestroy value = 8 }
+		remove_country_flag = kiyo_spy_destroyed_8
+	}
+	if = {
+		limit = {
+			check_variable = { which = fleetSizeDestroy value > 0 }
+			any_owned_ship = {
+				OR = {
+					is_ship_size = corvette
+					is_ship_size = destroyer
+					is_ship_size = cruiser
+					is_ship_size = battleship
+				}
+			}
+		}
+		random_owned_ship = {
+			limit = {
+				OR = {
+					is_ship_size = corvette
+					is_ship_size = destroyer
+					is_ship_size = cruiser
+					is_ship_size = battleship
+				}
+			}
+			if = {
+				limit = { is_ship_size = corvette }
+				root = { set_country_flag = kiyo_spy_destroyed_1 }
+			}
+			else_if = {
+				limit = { is_ship_size = destroyer }
+				root = { set_country_flag = kiyo_spy_destroyed_2 }
+			}
+			else_if = {
+				limit = { is_ship_size = cruiser }
+				root = { set_country_flag = kiyo_spy_destroyed_4 }
+			}
+			else_if = {
+				limit = { is_ship_size = battleship }
+				root = { set_country_flag = kiyo_spy_destroyed_8 }
+			}
+			destroy_ship = this
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = fleetSizeDestroy value > 0 }
+			any_owned_ship = {
+				is_ship_class = shipclass_military
+				NOR = {
+					is_ship_size = corvette
+					is_ship_size = destroyer
+					is_ship_size = cruiser
+					is_ship_size = battleship
+				}
+			}
+		}
+		set_variable = { which = fleetSizeDestroy value = 0 }
+	}
+	if = {
+		limit = { check_variable = { which = fleetSizeDestroy value > 0 } }
+		kiyo_spy_destroy_ships_looper = yes
+	}
+}
+
+kiyo_spy_calculate_spy = {
+	set_variable = {
+		which = spy_total
+		value = 1
+	}
+	if = { limit = { has_country_flag = kiyo_spy_primitive } change_variable = { which = spy_total value = 1 } }
+	if = { limit = { capital_scope = { has_building = building_capital_2 } } change_variable = { which = spy_total value = 1 } }
+	if = { limit = { capital_scope = { has_building = building_capital_3 } } change_variable = { which = spy_total value = 2 } }
+	set_variable = {
+		which = spy_available
+		value = spy_total
+	}
+	if = { limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy1 } } } change_variable = { which = spy_available value = -1 } }
+	if = { limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy2 } } } change_variable = { which = spy_available value = -1 } }
+	if = { limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy3 } } } change_variable = { which = spy_available value = -1 } }
+	if = { limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy4 } } } change_variable = { which = spy_available value = -1 } }
+}
+
+kiyo_spy_remove_spy = {
+	every_country = {
+		limit = {
+			reverse_has_relation_flag = { who = root flag = kiyo_spy_nospy }
+			OR = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_spy1 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_spy2 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_spy3 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_spy4 }
+			}
+		}
+		root = {
+			if = {
+				limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy1 } } }
+				remove_relation_flag = { who = event_target:spyTarget flag = kiyo_spy_spy1 }
+			}
+			else_if = {
+				limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy2 } } }
+				remove_relation_flag = { who = event_target:spyTarget flag = kiyo_spy_spy2 }
+			}
+			else_if = {
+				limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy3 } } }
+				remove_relation_flag = { who = event_target:spyTarget flag = kiyo_spy_spy3 }
+			}
+			else_if = {
+				limit = { any_country = { reverse_has_relation_flag = { who = root flag = kiyo_spy_spy4 } } }
+				remove_relation_flag = { who = event_target:spyTarget flag = kiyo_spy_spy4 }
+			}
+		}
+	}
+	kiyo_spy_calculate_spy = yes
+}
+
+kiyo_spy_free_speech = {
+	if = {
+		limit = {
+			check_variable = { which = kiyo_spy_free_speech value > 0 }
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		random_owned_pop = {
+			limit = {
+				is_species = prev
+				NOR = {
+					pop_has_trait = trait_nerve_stapled
+					pop_has_trait = trait_presapient_docile_livestock
+				}
+				planet = { is_capital = no }
+				NOT = { has_modifier = kiyo_spy_free_speech }
+			}
+			add_modifier = {
+				modifier = kiyo_spy_free_speech
+				days = 1800
+			}
+		}
+		subtract_variable = { which = kiyo_spy_free_speech value = 1 }
+		kiyo_spy_free_speech = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = kiyo_spy_free_speech value > 0 }
+			has_ethic = ethic_gestalt_consciousness
+		}
+		random_owned_pop = {
+			limit = {
+				is_species = prev
+				planet = { is_capital = no }
+				NOT = { has_modifier = kiyo_spy_free_speech_gestalt }
+			}
+			add_modifier = {
+				modifier = kiyo_spy_free_speech_gestalt
+				days = 1800
+			}
+		}
+		subtract_variable = { which = kiyo_spy_free_speech value = 1 }
+		kiyo_spy_free_speech = yes
+	}
+}
+
+kiyo_spy_set_intrigue = {
+	if = {
+		limit = {
+			NOR = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue1 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue2 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue3 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue4 }
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue5 }
+			}
+		}
+		set_variable = { which = intrigue value = 0 }
+	}
+	else_if = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue1 } }
+		set_variable = { which = intrigue value = 1 }
+	}
+	else_if = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue2 } }
+		set_variable = { which = intrigue value = 2 }
+	}
+	else_if = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue3 } }
+		set_variable = { which = intrigue value = 3 }
+	}
+	else_if = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue4 } }
+		set_variable = { which = intrigue value = 4 }
+	}
+	else_if = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue5 } }
+		set_variable = { which = intrigue value = 5 }
+	}
+}
+
+kiyo_spy_increase_intrigue = {
+	every_country = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue_up } }
+		if = {
+			limit = {
+				NOR = {
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue1 }
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue2 }
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue3 }
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue4 }
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue5 }
+				}
+			}
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue1 } }
+		}
+		else_if = {
+			limit = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue1 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue1 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue2 } }
+		}
+		else_if = {
+			limit = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue2 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue2 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue3 } }
+		}
+		else_if = {
+			limit = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue3 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue3 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue4 } }
+		}
+		else_if = {
+			limit = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue4 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue4 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue5 } }
+		}
+		remove_relation_flag = { who = root flag = kiyo_spy_intrigue_up }
+	}
+}
+
+kiyo_spy_decrease_intrigue = {
+	every_country = {
+		limit = { reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue_down } }
+		if = {
+			limit = {
+				reverse_has_relation_flag = { who = root flag = kiyo_spy_intrigue1 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue1 } }
+		}
+		else_if = {
+			limit = {
+				has_relation_flag = { who = root flag = kiyo_spy_intrigue2 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue2 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue1 } }
+		}
+		else_if = {
+			limit = {
+				has_relation_flag = { who = root flag = kiyo_spy_intrigue3 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue3 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue2 } }
+		}
+		else_if = {
+			limit = {
+				has_relation_flag = { who = root flag = kiyo_spy_intrigue4 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue4 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue3 } }
+		}
+		else_if = {
+			limit = {
+				has_relation_flag = { who = root flag = kiyo_spy_intrigue5 }
+			}
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue5 } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue4 } }
+		}
+		remove_relation_flag = { who = root flag = kiyo_spy_intrigue_down }
+	}
+}

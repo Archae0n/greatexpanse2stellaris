@@ -1,0 +1,119 @@
+for_science = { #Test Subjects
+	all_technology_research_speed = 0.2
+}
+
+mos_militarist = { #March Of Science
+	starbase_shipyard_build_speed_mult = 0.15
+	starbase_shipyard_build_cost_mult = -0.15
+}
+
+mos_xenophobe = {
+	country_starbase_influence_cost_mult = -0.15
+	rivalry_influence_gain = 0.2
+}
+
+mos_egalitarian = {
+	pop_consumer_goods_mult = -0.10
+	planet_building_upkeep_mult = -0.10
+}
+
+mos_materialist = {
+	country_resource_physics_research_mult = 0.15
+	country_resource_society_research_mult = 0.15
+	country_resource_engineering_research_mult = 0.15
+}
+
+mos_pacifist = {
+	country_resource_unity_mult = 0.4
+}
+
+mos_xenophile = {
+	pop_citizen_happiness = 0.1
+	pop_other_species_happiness = 0.1
+}
+
+mos_authoritarian = {
+	#influence_gain_add = 1
+	pop_resource_output = 0.2
+}
+
+mos_spiritualist = {
+	pop_government_ethic_attraction = 0.4
+}
+
+roboticists_bonus = { #Roboticists
+	pop_robot_build_speed_mult = 0.15
+	pop_robot_build_cost_mult = -0.15
+}
+
+awoken_tech = { #Awakened Minds
+	all_technology_research_speed = 0.1
+}
+
+awoken_genes = {
+	modify_species_cost_mult = -0.25
+}
+
+awoken_machines = {
+	pop_robot_build_speed_mult = 0.15
+	pop_robot_build_cost_mult = -0.15
+}
+
+awoken_minds = {
+	pop_government_ethic_attraction = 0.15
+	pop_citizen_happiness = 0.05
+}
+
+aos_roboboost = { #Age Of Steel
+	pop_robot_build_speed_mult = 0.20
+	pop_robot_upkeep_mult = -0.20
+	pop_robot_build_cost_mult = -0.20
+}
+
+aos_roboboost_2 = { 
+	pop_robot_build_speed_mult = 0.40
+	pop_robot_upkeep_mult = -0.40
+	pop_robot_build_cost_mult = -0.40
+}
+
+focus_physics = {
+	country_physics_tech_research_speed = 0.25
+	country_society_tech_research_speed = -0.1
+	country_engineering_tech_research_speed = -0.1
+}
+
+focus_society = {
+	country_society_tech_research_speed = 0.25
+	country_physics_tech_research_speed = -0.1
+	country_engineering_tech_research_speed = -0.1
+}
+
+focus_engineering = {
+	country_engineering_tech_research_speed = 0.25
+	country_physics_tech_research_speed = -0.1
+	country_society_tech_research_speed = -0.1
+}
+
+uk_physics = {
+	country_physics_tech_research_speed = 0.1
+}
+
+uk_perma_physics = {
+	country_physics_tech_research_speed = 0.1
+}
+
+uk_society = {
+	country_society_tech_research_speed = 0.1
+}
+
+uk_perma_society = {
+	country_society_tech_research_speed = 0.1
+}
+
+uk_engineering = {
+	country_engineering_tech_research_speed = 0.1
+}
+
+uk_perma_engineering = {
+	country_engineering_tech_research_speed = 0.1
+}

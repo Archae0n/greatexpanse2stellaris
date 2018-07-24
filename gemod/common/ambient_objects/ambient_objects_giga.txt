@@ -1,0 +1,6 @@
+ambient_object = {
+	name = "blackhole_detonator_explosion_object"
+	entity = "blackhole_detonator_explosion_entity"
+	selectable = no
+	show_name = no
+}

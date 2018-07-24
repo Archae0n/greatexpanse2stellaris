@@ -1,0 +1,291 @@
+namespace = eac_aw_help
+
+# Menu
+country_event = {
+	id = eac_aw_help.1
+	title = eac_aw_help.1.name
+	desc = eac_aw_help.1.desc
+	picture = GFX_evt_eac_at_war
+	is_triggered_only = yes
+
+	trigger = { 		
+		is_ai = no
+		OR = {
+			is_multiplayer = no
+			AND = { 
+				is_multiplayer = yes				
+				has_country_flag = eac_at_war_game_host
+			}	
+		}				
+	}
+
+	# option = {
+	# 	name = eac_add_carrier_design
+	# 	custom_tooltip = eac_add_carrier_design.tooltip
+		
+	# 	trigger = { has_technology = eac_aw_tech_advanced_carrier }
+
+	# 	hidden_effect = {
+	# 		country_event = { id = eac_at_war.11 }
+	# 	}
+	# }
+	option = {
+		name = eac_aw_help.1.EnableAiShield
+		custom_tooltip = eac_aw_help.1.EnableAiShield.tooltip
+		
+		trigger = {
+			NOT = { has_global_flag = eac_at_war_allow_ai_planetary_shield_generator }
+		}
+		
+		hidden_effect = {
+			set_global_flag = eac_at_war_allow_ai_planetary_shield_generator
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.DisableAiShield
+		custom_tooltip = eac_aw_help.1.DisableAiShield.tooltip
+		
+		trigger = {
+			has_global_flag = eac_at_war_allow_ai_planetary_shield_generator
+		}
+
+		hidden_effect = {
+			remove_global_flag = eac_at_war_allow_ai_planetary_shield_generator
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+
+	option = {
+		name = eac_aw_help.1.VanillaCitadels
+		custom_tooltip = eac_aw_help.1.VanillaCitadels.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_use_vanilla_citadels }
+				NOT = { has_technology = tech_starbase_4 }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_use_vanilla_citadels
+			remove_global_flag = eac_at_war_use_large_gun_citadels
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.LargeGunCitadels
+		custom_tooltip = eac_aw_help.1.LargeGunCitadels.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_use_large_gun_citadels }
+				NOT = { has_technology = tech_starbase_4 }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_use_large_gun_citadels
+			remove_global_flag = eac_at_war_use_vanilla_citadels
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+
+	option = {
+		name = eac_aw_help.1.EnableAdvancedCarriers
+		custom_tooltip = eac_aw_help.1.EnableAdvancedCarriers.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_enable_advanced_carriers }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_enable_advanced_carriers
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.DisableAdvancedCarriers
+		custom_tooltip = eac_aw_help.1.DisableAdvancedCarriers.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				has_global_flag = eac_at_war_enable_advanced_carriers 
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = eac_at_war_enable_advanced_carriers
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	
+	option = {
+		name = eac_aw_help.1.EnableLightCarriers
+		custom_tooltip = eac_aw_help.1.EnableLightCarriers.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_enable_light_carriers }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_enable_light_carriers
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.DisableLightCarriers
+		custom_tooltip = eac_aw_help.1.DisableLightCarriers.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				has_global_flag = eac_at_war_enable_light_carriers 
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = eac_at_war_enable_light_carriers
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	
+	option = {
+		name = eac_aw_help.option_blank
+		trigger = { always = no }
+	}
+
+	option = {
+		name = eac_aw_help.1.EnableHeavyDefensePlatforms
+		custom_tooltip = eac_aw_help.1.EnableHeavyDefensePlatforms.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_enable_heavy_defense_platforms }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_enable_heavy_defense_platforms
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.DisableHeavyDefensePlatforms
+		custom_tooltip = eac_aw_help.1.DisableHeavyDefensePlatforms.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				has_global_flag = eac_at_war_enable_heavy_defense_platforms 
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = eac_at_war_enable_heavy_defense_platforms
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.EnableSpaceMarines
+		custom_tooltip = eac_aw_help.1.EnableSpaceMarines.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				NOT = { has_global_flag = eac_at_war_enable_space_marines }
+			}
+		}
+		hidden_effect = {
+			set_global_flag = eac_at_war_enable_space_marines
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+	option = {
+		name = eac_aw_help.1.DisableSpaceMarines
+		custom_tooltip = eac_aw_help.1.DisableSpaceMarines.tooltip
+		
+		trigger = { 
+			hidden_trigger = {
+				has_global_flag = eac_at_war_enable_space_marines 
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = eac_at_war_enable_space_marines
+			country_event = { id = eac_aw_help.1 }
+		}
+	}
+
+	option = {
+		name = eac_aw_help.1.HelpSystem
+		custom_tooltip = eac_aw_help.1.HelpSystem.tooltip
+
+		trigger = { always = no }
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_close_window
+	}
+}
+
+country_event = {
+	id = eac_aw_help.2
+	title = eac_aw_help.2.name
+	desc = eac_aw_help.2.desc
+	picture = GFX_evt_eac_at_war
+	is_triggered_only = yes
+
+	option = {
+		name = eac_aw_help.2.MissileCruisers
+
+		hidden_effect = {
+			country_event = { id = eac_aw_help.3 }
+		}
+	}
+	option = {
+		name = eac_aw_help.2.AdvancedCarriers
+
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_help.2.NaniteCloud
+
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_help.2.DefensePlatforms
+
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_help.2.PlanetaryCannons
+
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_close_window
+	}
+}
+
+# Missle Cruiser Designs
+country_event = {
+	id = eac_aw_help.3
+	title = eac_aw_help.3.name
+	desc = eac_aw_help.3.desc
+	picture = GFX_eac_help_missile_cruiser_sections
+	is_triggered_only = yes
+
+	option = {
+		name = eac_aw_help_main_menu
+		hidden_effect = {
+			country_event = { id = eac_aw_help.2 }
+		}
+	}
+	option = {
+		name = eac_aw_close_window
+	}
+}
+

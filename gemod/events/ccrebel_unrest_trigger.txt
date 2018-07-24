@@ -1,0 +1,593 @@
+namespace = unrest
+
+@unrestlevel1 = 10
+@unrestlevel2 = 50
+@unrestlevel3 = 80
+
+#My addition:
+@unrestlevel4 = 99
+
+#I figured I'd overwrite the original since I was overwriting 24 of 33 events
+
+
+
+#unrest first round gatekeeper (performance improvement)
+planet_event = {
+	id = unrest.9999
+	hide_window = yes
+	
+	trigger = {
+		has_owner = yes
+		exists = owner
+		unrest > @unrestlevel2
+		NOR = {
+			has_planet_flag = cc_revolt_imminent
+			has_planet_flag = recent_unrest_event
+		}
+		has_ground_combat = no
+		has_orbital_bombardment = no
+		exists = controller
+		controller = { is_same_value = root.owner }
+	}
+		
+		
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.8
+			unrest > @unrestlevel3
+		}
+		modifier = {
+			factor = 0.8
+			unrest > @unrestlevel4
+		}
+		modifier = {
+			factor = 0.8
+			has_planet_flag = cc_opposite_ethic_to_ruler
+		}
+	}
+
+	
+	immediate = {
+	
+		planet_event = { id = unrest.4199 days = 181 }
+		
+		if = {
+			limit = { owner = { has_ethic = ethic_gestalt_consciousness } }
+			if = {
+				limit = { owner = { has_authority = auth_hive_mind } }
+				planet_event = { id = ccrebel_hm.1 }
+			}
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				planet_event = { id = ccrebel_hm.2 }
+			}
+		}
+		else = {
+			random_list = {
+				100 = {
+					planet_event = { id = unrest.101 }
+					modifier = {
+						factor = 2
+						pop_percentage = {
+							limit = { NOT = { is_same_species = root.owner } }
+							percentage > 0.5
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.105 }
+					modifier = {
+						factor = 0
+						NOR = {
+							unrest > @unrestlevel3
+							pop_percentage = {
+								limit = { NOT = { is_same_species = root.owner } }
+								percentage > 0.5
+							}
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.110 }
+					modifier = {
+						factor = 0
+						unrest > @unrestlevel3
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.115 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_spiritualist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_spiritualist
+									has_ethic = ethic_fanatic_spiritualist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_materialist
+								has_ethic = ethic_fanatic_materialist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_spiritualists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_spiritualists_2
+							has_planet_flag = ccrebel_perf_spiritualists_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.120 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_authoritarian } }
+							owner = {
+								OR = {
+									has_ethic = ethic_authoritarian
+									has_ethic = ethic_fanatic_authoritarian
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_egalitarian
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_authoritarians_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_authoritarians_2
+							has_planet_flag = ccrebel_perf_authoritarians_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.125 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_xenophobe } }
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophobe
+									has_ethic = ethic_fanatic_xenophobe
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_xenophile
+								has_ethic = ethic_fanatic_xenophile
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_xenophobes_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_xenophobes_2
+							has_planet_flag = ccrebel_perf_xenophobes_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.130 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_materialist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_materialist
+									has_ethic = ethic_fanatic_materialist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_materialists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_materialists_2
+							has_planet_flag = ccrebel_perf_materialists_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.135 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_xenophile } }
+							owner = {
+								OR = {
+									has_ethic = ethic_xenophile
+									has_ethic = ethic_fanatic_xenophile
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_xenophobe
+								has_ethic = ethic_fanatic_xenophobe
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_xenophiles_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_xenophiles_2
+							has_planet_flag = ccrebel_perf_xenophiles_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.140 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_egalitarian } }
+							owner = {
+								OR = {
+									has_ethic = ethic_egalitarian
+									has_ethic = ethic_fanatic_egalitarian
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_authoritarian
+								has_ethic = ethic_fanatic_authoritarian
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_egalitarians_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_egalitarians_2
+							has_planet_flag = ccrebel_perf_egalitarians_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.145 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_pacifist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_pacifist
+									has_ethic = ethic_fanatic_pacifist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_pacifists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_pacifists_2
+							has_planet_flag = ccrebel_perf_pacifists_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = unrest.150 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_militarist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_pacifist
+								has_ethic = ethic_fanatic_pacifist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_militarists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_militarists_2
+							has_planet_flag = ccrebel_perf_militarists_3
+						}
+					}
+				}
+				
+				100 = {
+					planet_event = { id = ccrebel_petruxa.1 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_green } }
+							owner = {
+								OR = {
+									has_ethic = ethic_green
+									has_ethic = ethic_fanatic_green
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_industrial
+								has_ethic = ethic_fanatic_industrial
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_greens_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_greens_2
+							has_planet_flag = ccrebel_perf_greens_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = ccrebel_petruxa.2 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_industrial } }
+							owner = {
+								OR = {
+									has_ethic = ethic_industrial
+									has_ethic = ethic_fanatic_industrial
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_green
+								has_ethic = ethic_fanatic_green
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_industrials_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_industrials_2
+							has_planet_flag = ccrebel_perf_industrials_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = ccrebel_petruxa.3 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_elitist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_elitist
+									has_ethic = ethic_fanatic_elitist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_pluralist
+								has_ethic = ethic_fanatic_pluralist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_elitists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_elitists_2
+							has_planet_flag = ccrebel_perf_elitists_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = ccrebel_petruxa.4 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_pluralist } }
+							owner = {
+								OR = {
+									has_ethic = ethic_pluralist
+									has_ethic = ethic_fanatic_pluralist
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_elitist
+								has_ethic = ethic_fanatic_elitist
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_pluralists_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_pluralists_2
+							has_planet_flag = ccrebel_perf_pluralists_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = ccrebel_petruxa.5 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_capitalism } }
+							owner = {
+								OR = {
+									has_ethic = ethic_capitalism
+									has_ethic = ethic_fanatic_capitalism
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_socialism
+								has_ethic = ethic_fanatic_socialism
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_capitalisms_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_capitalisms_2
+							has_planet_flag = ccrebel_perf_capitalisms_3
+						}
+					}
+				}
+				100 = {
+					planet_event = { id = ccrebel_petruxa.4 }
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { any_owned_pop = { has_ethic = ethic_socialism } }
+							owner = {
+								OR = {
+									has_ethic = ethic_socialism
+									has_ethic = ethic_fanatic_socialism
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						owner = {
+							OR = {
+								has_ethic = ethic_capitalism
+								has_ethic = ethic_fanatic_capitalism
+							}
+						}
+					}
+					modifier = {
+						factor = 1.5
+						has_planet_flag = ccrebel_perf_socialisms_1
+					}
+					modifier = {
+						factor = 1.5
+						OR = {
+							has_planet_flag = ccrebel_perf_socialisms_2
+							has_planet_flag = ccrebel_perf_socialisms_3
+						}
+					}
+				}
+				1 = { } #just in case there's a cock-up
+			}
+		}
+	}
+}

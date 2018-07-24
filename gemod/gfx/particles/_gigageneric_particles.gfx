@@ -1,0 +1,16 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "blackhole_detonator_explosion_particle"
+		type = "blackhole_detonator_explosion_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "giga_large_station_core_particle"
+		type = "giga_large_station_core_effect"
+		
+		scale = 20
+	}
+}

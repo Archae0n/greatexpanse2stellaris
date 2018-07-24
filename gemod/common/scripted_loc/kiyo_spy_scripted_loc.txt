@@ -1,0 +1,199 @@
+defined_text = {
+	name = GetOverNavyCap
+	text = {
+		trigger = {
+			used_naval_capacity_percent > 1
+			check_variable = { which = intrigue value > 0 }
+		}
+		localization_key = kiyo_spy_overcap
+	}
+	text = {
+		trigger = {
+			used_naval_capacity_percent <= 1
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetStarving
+	text = {
+		trigger = {
+			AND = {
+				food = 0
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+			check_variable = { which = intrigue value > 0 }
+		}
+		localization_key = kiyo_spy_starving
+	}
+	text = {
+		trigger = {
+			NAND = {
+				food = 0
+				has_monthly_income = {
+					resource = food
+					value < 0
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetMineralDeficit
+	text = {
+		trigger = {
+			AND = {
+				minerals = 0
+				has_minerals_0 = yes
+			}
+			check_variable = { which = intrigue value > 2 }
+		}
+		localization_key = kiyo_spy_mineraldeficit
+	}
+	text = {
+		trigger = {
+			NAND = {
+				minerals = 0
+				has_minerals_0 = yes
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEnergyDeficit
+	text = {
+		trigger = {
+			AND = {
+				energy = 0
+				has_energy_0 = yes
+			}
+			check_variable = { which = intrigue value > 2 }
+		}
+		localization_key = kiyo_spy_energydeficit
+	}
+	text = {
+		trigger = {
+			NAND = {
+				energy = 0
+				has_energy_0 = yes
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetIntrigue0
+	text = {
+		trigger = { check_variable = { which = intrigue value = 0 } }
+		localization_key = kiyo_spy_zero
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = intrigue value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetSpy0
+	text = {
+		trigger = { check_variable = { which = spy_available value = 0 } }
+		localization_key = kiyo_spy_zero
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = spy_available value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetMinerals0
+	text = {
+		trigger = { check_variable = { which = mineralVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = mineralVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEnergy0
+	text = {
+		trigger = { check_variable = { which = energyVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = energyVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetPhysics0
+	text = {
+		trigger = { check_variable = { which = physicsVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = physicsVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetSociety0
+	text = {
+		trigger = { check_variable = { which = societyVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = societyVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEngineering0
+	text = {
+		trigger = { check_variable = { which = engineeringVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = engineeringVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetAscension0
+	text = {
+		trigger = { check_variable = { which = ascensionVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = ascensionVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetFleet0
+	text = {
+		trigger = { check_variable = { which = fleetVal value = 0 } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = fleetVal value = 0 } } }
+		localization_key = kiyo_spy_noinfo
+	}
+}

@@ -1,0 +1,290 @@
+wg_plunder = {
+	casus_belli = cb_despoliation
+	
+	hide_if_no_cb = no
+	total_war = no
+	set_defender_wargoal = wg_humiliation
+	surrender_acceptance = -25
+
+	potential = {
+		has_total_war_cb = no
+		from = { is_ai = yes }
+		has_valid_civic = civic_barbaric_despoilers
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_plunder_accept_them			
+		if = {
+			limit = { 
+				from = {
+					num_owned_planets < 5
+				}
+			}		
+			custom_tooltip = wg_plunder_accept_us_1
+			hidden_effect = { add_energy = 500 add_minerals = 500 } 
+		}
+		if = {
+			limit = {
+				from = { 
+					num_owned_planets > 4
+					num_owned_planets < 10
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_2
+			hidden_effect = { add_energy = 1000 add_minerals = 1000 } 
+		}
+		if = {
+			limit = {
+				from = { 
+					num_owned_planets > 9
+					num_owned_planets < 15
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_3
+			hidden_effect = { add_energy = 1500 add_minerals = 1500 } 
+		}	
+		if = {
+			limit = {
+				from = { 
+					num_owned_planets > 14
+					num_owned_planets < 20
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_4
+			hidden_effect = { add_energy = 2000 add_minerals = 2000 } 
+		}			
+		if = {
+			limit = {
+				from = { 
+					num_owned_planets > 19
+				}
+			}
+			custom_tooltip = wg_plunder_accept_us_5
+			hidden_effect = { add_energy = 2500 add_minerals = 2500 } 
+		}			
+		hidden_effect = { from = { add_modifier = { modifier = raided days = 3600 } } }
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+wg_subjugation = {
+	casus_belli = cb_subjugation
+	
+	hide_if_no_cb = no
+	set_defender_wargoal = wg_humiliation
+	surrender_acceptance = -100
+
+	potential = {
+		NOT = { has_valid_civic = civic_inwards_perfection }
+		from = { is_ai = yes }
+		has_total_war_cb = no
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}				
+			}	
+		}		
+		from = {
+			set_subject_of = {
+				who = root
+				subject_type = vassal
+			}		
+		}	
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = wants_tribute
+		}
+	}
+}
+
+wg_tribute = {
+	casus_belli = cb_subjugation
+	
+	hide_if_no_cb = no
+	set_defender_wargoal = wg_humiliation
+	surrender_acceptance = -75
+
+	potential = {
+		has_total_war_cb = no
+		from = { is_ai = yes }
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.25
+				}				
+			}	
+		}		
+		from = {
+			set_subject_of = {
+				who = root
+				subject_type = tributary
+			}		
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = wants_tribute }
+		}		
+	}
+}
+
+wg_force_ideology = {
+	casus_belli = cb_ideology
+	
+	hide_if_no_cb = no
+	set_defender_wargoal = wg_humiliation
+	surrender_acceptance = -100
+	
+	war_exhaustion = 0.75
+
+	potential = {
+		has_policy_flag = liberation_wars
+		from = { is_ai = yes }
+		has_total_war_cb = no
+		from = { is_country_type = default }
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_force_ideology_accept
+		hidden_effect = {		
+			from = { copy_ethos_and_authority = root }
+			add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+			from = { add_opinion_modifier = { modifier = opinion_liberated_us who = root } }
+			end_rivalry = from
+			from = { end_rivalry = root }
+			every_system_within_border = {
+				limit = {
+					from = { has_claim = prev }
+				}
+				remove_claims = { who = from }
+			}			
+			every_country = {
+				limit = { 	
+					OR = {
+						is_in_federation_with = root 
+						is_subject = yes
+						overlord = { is_same_value = root }
+					}
+				}
+				end_rivalry = from
+				from = { end_rivalry = prev }	
+				add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+				from = { add_opinion_modifier = { modifier = opinion_liberated_us who = prev } }
+				every_system_within_border = {
+					limit = {
+						from = { has_claim = prev }
+					}
+					remove_claims = { who = from }
+				}
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.25
+				}				
+			}
+			from = {
+				leave_alliance = { override_requirements = yes }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+wg_conquest = {
+	casus_belli = cb_claim
+	
+	hide_if_no_cb = no
+	set_defender_wargoal = wg_humiliation
+	threat_multiplier = 0.75
+	
+	potential = {
+		has_total_war_cb = no
+		from = { is_ai = yes }
+	}
+	possible = {
+		always = yes
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+wg_humiliation = {
+	casus_belli = cb_humiliation
+
+	hide_if_no_cb = no
+	defender_default = yes
+	set_defender_wargoal = wg_humiliation
+	surrender_acceptance = -25
+
+	potential = {
+		from = {
+			is_ai = yes
+		}
+		OR = {
+			has_total_war_cb = no
+			AND = {
+				is_ai = no
+				has_total_war_cb = yes
+				from = {
+					is_country_type = fallen_empire
+				}
+			}
+		}
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		if = {
+			limit = {
+				is_country_type = fallen_empire			
+			}
+			save_event_target_as = fallen_empire_humiliator
+			from = { fallen_empire_humiliate_effect = yes }			
+			else = {			
+				custom_tooltip = wg_humiliation_accept
+				hidden_effect = {	
+					add_influence = 100
+					from = { add_modifier = { modifier = humiliated days = 3600 } }
+				}			
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

@@ -1,0 +1,71 @@
+namespace = CrisisManagerControl
+
+####################################
+####################################
+#####                          #####
+#####    Post-Crisis Events    #####
+#####                          #####
+####################################
+####################################
+
+### Redirect only, Called by on_country_destroyed
+country_event = {
+	id = CrisisManagerControl.0030
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		event_target:CmtGlobalVar = { check_variable = { which = CmtVarMultiple value = 3 } }
+		CmtTriggerIsCrisisCountry = yes
+		NOT = { CmtTriggerInCrisisNow = yes }
+	}
+	
+	immediate = {
+		event_target:CmtGlobalVar = {
+			country_event = { id = CrisisManagerControl.0031 }
+			country_event = { id = CrisisManagerControl.0031 days = 3 }	## Backup
+		}
+	}
+}
+
+### Flag Control for Crisis Interval
+country_event = {
+	id = CrisisManagerControl.0031
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		event_target:CmtGlobalVar = { check_variable = { which = CmtVarMultiple value = 3 } }
+		NOT = { CmtTriggerInCrisisNow = yes }
+	}
+	
+	immediate = {
+		CmtEffectSetIntervalFlag = yes
+	}
+}
+
+### Dead End
+country_event = {
+	id = CrisisManagerControl.0036
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			any_country = {
+				OR = {
+					CmtTriggerIsEmpire = yes
+					CmtTriggerIsHorde = yes
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		CmtEffectHostileCrisis = yes
+	}
+}
+
+
+
+

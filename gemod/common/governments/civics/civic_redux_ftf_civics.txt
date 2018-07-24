@@ -1,0 +1,412 @@
+#CIVICS FOR FORGING THE FUTURE
+
+#MARCH OF SCIENCE - 10% Research Point Gains. UNIQUE EDICT: March of Science - Applies a bonus based on Fanatic Ethic | UNIQUE TECH: Progress Day Parades - Applies a permanent version of March Of Science's buff.
+#PROGRESS SHARED - 25% Subject Technology Sharing Bonus. Gain the Epigenetic Triggers tech if you start the game with this Civic.
+#FOCUS OF KNOWLEDGE - At the start of the Game, choose a Tech Category. You gain 25% Bonus Research Speed to all Techs in that category. Other Techs lose 10% Research Speed. 
+#DIGITAL LIFE - 10% Happiness, 10% Governing Ethics Attraction and 20% Bonus Unity. +10% Building Maintenance and -5% Energy Gain. 
+#TEST SUBJECTS - 5% Faster Research. Gain the 'For Science' Planet Edict - Removes a Xeno Pop, and applies a 20% Research Speed buff for 5 Years. Purged Pops provide Research Points. 
+#SELF-ENHANCING WAREHOUSES - Can build Self-Enhancing Warehouses, which provide Mineral/Energy Storage, and if a Robot is nearby, a bonus to all Mineral/Energy production on the Planet. 
+#AWAKENED MINDS (UTOPIA) - +1 Tech Alternative, and double the efficiency of the Technological Ascendancy Perk. Gain an additional bonus based on the first Ascension Path Perk you take. 
+#AGE OF STEEL (UTOPIA/SYNTHETIC DAWN) - -20% Robot Build/Maintenance Cost and Build Robots 20% Faster. This bonus increases as you go down the Synthetic Ascension Path. 
+#ROBOTICISTS - +1 Robot Trait Point and 15% Cheaper/Faster Robots. Robot Cost and Build Speed modifier is doubled if the Machinists Civic is enabled.
+
+#LIVING CORE (HIVE MIND/LEVIATHANS) - Can build Living Amplifiers on Planets to give 5% Army Health, Damage and Morale. The Hive's Consiousness manifests as a powerful Defense Army. If you lose control of your HomeWorld, kill all Pops in your empire. 
+#UNITED KNOWLEDGE (HIVE MIND) - At the start of the Game, or shortly after selecting it, choose a Tech Category. You gain 15% Research Speed to all Techs in that Area. After 15 Years, it falls into a persistent 5% Bonus and choose a new Tech Category. 
+
+#THE CORE (MACHINES) - Begin the game on a 25-Tile Machine World with enhanced resources
+
+civic_march_of_progress = {
+	modification = yes #Can you add it to/remove it from your empire after the game starts?
+    
+	playable = { #What do you need to make this Civic useable in the game? (Usually reserved for DLC - for example "Utopia" makes it exclusive to those with the Utopia DLC)
+    }
+    
+	potential = { #What do you need to see it? (Mainly used to seperate Hive Mind civics from non-HM)
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = { #What conditions do you need to use it on your empire?
+		ethics = {
+			OR = {
+				text = civic_tooltip_any_fanatic
+				value = ethic_fanatic_militarist
+				value = ethic_fanatic_xenophobe
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_materialist
+				value = ethic_fanatic_pacifist
+				value = ethic_fanatic_xenophile
+				value = ethic_fanatic_authoritarian
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	random_weight = { #What are the odds the AI will pick it?
+		base = 1
+	}
+
+	description = "civic_tooltip_march_of_science_effects" #Any custom effects?
+	modifier = { #What does this civic do?
+		country_resource_physics_research_mult = 0.1
+		country_resource_society_research_mult = 0.1
+		country_resource_engineering_research_mult = 0.1
+	}
+}
+
+civic_progress_shared = {
+	modification = yes
+	
+	playable = { 
+    }
+    
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_xenophile
+			}
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = "civic_tooltip_progress_shared_effects"
+	modifier = {
+		country_subject_technology_sharing_mult = 0.30
+	}
+}
+
+civic_focus_of_knowledge = {
+	modification = no
+	
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+		OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+		}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = "civic_tooltip_focus_of_knowledge_effects"
+	modifier = {
+		
+	}
+}
+
+civic_digital_life = {
+	modification = no
+	
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	#description = "civic_tooltip_digital_life_effects"
+	modifier = {
+		pop_citizen_happiness = 0.05
+		pop_government_ethic_attraction = 0.1
+		country_resource_unity_mult = 0.15
+		planet_building_upkeep_mult = 0.1
+		country_resource_energy_mult = -0.05
+	}
+}
+
+civic_test_subjects = {
+	modification = no
+	
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+			OR = {
+				text = civic_tooltip_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = "civic_tooltip_test_subjects_effects"
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+}
+
+civic_self_expanding_storage = {
+	modification = yes
+	
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	
+	possible = {
+		ethics = {
+			NOT = { value = ethic_fanatic_spiritualist }
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = "civic_tooltip_self_expanding_storage_effects"
+	modifier = {
+	}
+}
+
+civic_awakened_minds = {
+	modification = no
+	
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+	
+	potential = {
+		 ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+					text = civic_tooltip_materialist
+					value = ethic_materialist
+					value = ethic_fanatic_materialist
+			}	
+		}
+	}
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+	}
+	
+	description = "civic_tooltip_awakened_minds_effects"
+	modifier = {
+		#num_tech_alternatives_add = 1
+	}
+}
+
+civic_age_of_steel = {
+	modification = no
+	
+	playable = {
+		AND = {
+			host_has_dlc = "Utopia"
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+	}
+	
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOR = { 
+				host_has_dlc = "Utopia"
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+	}
+	
+	description = "civic_tooltip_age_of_steel_effects"
+	modifier = {
+		
+	}
+}
+
+civic_roboticists = {
+	modification = yes
+	
+	playable = {
+		#host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = "civic_tooltip_roboticists_effects"
+	modifier = {
+		#MACHINE_species_trait_points_add = 1
+		pop_robot_build_speed_mult = 0.15
+		pop_robot_build_cost_mult = -0.15
+	}
+}
+
+civic_living_core = {
+	modification = no
+	
+	playable = {
+		host_has_dlc = "Leviathans Story Pack"
+	}
+	
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_purifying_presense
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_living_core_effects
+}
+
+civic_united_knowledge = {
+	modification = yes
+	
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	
+	possible = {
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_united_knowledge_effects
+}
+
+civic_the_core = {
+	modification = no
+	
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_servitor
+				value = civic_machine_assimilator
+			}
+		}
+	}
+	
+	description = civic_tooltip_the_core_effects
+}

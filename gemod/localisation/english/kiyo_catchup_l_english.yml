@@ -1,0 +1,55 @@
+﻿l_english:
+
+ #Irrelevant Raiding#
+ kiyo_event_catchup.raid.title:0 "Raidings of a Struggling Empire: Results"
+ kiyo_event_catchup.raid.good.desc:0 "Our raiding on §Y[superiorVictim.GetName]§! has been successful! It seems that they were unprepared for our raid and our privateers were able to get a lot of resources."
+ kiyo_event_catchup.raid.bad.desc:0 "Our raiding on §Y[superiorVictim.GetName]§! has been unsuccessful. It seems that they might have expected our raid so our privateers could not get too many resources."
+ kiyo_event_catchup.raided.title:0 "Raidings from a Struggling Empire"
+ kiyo_event_catchup.raided.good.desc:0 "It seems that one of our neighboring irrelevant empires have tried to raid us. Fortunately, our personnel were prepared for them this time so they shouldn't get much from their petty raid. Regardless, their raid shouldn't be too much of a problem for our empire."
+ kiyo_event_catchup.raided.bad.desc:0 "It seems that one of our neighboring irrelevant empires have tried to raid us. Unfortunately, our personnel were unprepared for them this time so they shouldn't get much from their petty raid. Regardless, their raid shouldn't be too much of a problem for our empire."
+ 
+ #Irrelevant#
+ kiyo_event_catchup.1.title:0 "Our Galactic Standing is Irrelevant?!"
+ kiyo_event_catchup.1.desc:0 "Our empire seems to be irrelevant to some of our galactic neighbors. Some officials are fervently supporting our internal development to increase our galactic standing."
+ kiyo_event_catchup.2.title:0 "Our Galactic Standing is Irrelevant?!"
+ kiyo_event_catchup.2.desc:0 "Our empire seems to be irrelevant to some of our galactic neighbors. Some officials recommend improving our mineral output while others want to plan a mineral raid on §Y[superiorVictim.GetName]§!, one of our superior neighbors.\n\nWhat should we do?"
+ kiyo_event_catchup.3.title:0 "Our Strongest Fleets are Weak?!"
+ kiyo_event_catchup.3.desc:0 "Our navy seems to be weak compared to some of our galactic neighbors. Some officials recommend conserving minerals for ships while others want to plan periodic shipyard raids on §Y[superiorVictim.GetName]§!, one of our superior neighbors.\n\nWhat should we do?"
+ kiyo_event_catchup.4.title:0 "Our Military Capacity is Small?!"
+ kiyo_event_catchup.4.desc:0 "Our military capacity seems to be small compared to some of our galactic neighbors. Some officials recommend improving our ship maintenance while others want to plan an energy raid on §Y[superiorVictim.GetName]§!, one of our superior neighbors.\n\nWhat should we do?"
+ kiyo_event_catchup.5.title:0 "Our Technologies are Outdated?!"
+ kiyo_event_catchup.5.desc:0 "Our empire seems to be primitive compared to some of our galactic neighbors. Some officials recommend improving our science output while others want to plan a data raid on §Y[superiorVictim.GetName]§!, one of our superior neighbors.\n\nWhat should we do?"
+ 
+ #Choices#
+ kiyo_event_catchup.a:0 "We must improve ourselves!"
+ kiyo_event_catchup.a.irr:0 "Gain +10 and +15% £minerals  for 5 years"
+ kiyo_event_catchup.a.fleet:0 "Gain -18% shipyard build cost £navy_size  for 5 years"
+ kiyo_event_catchup.a.navy:0 "Gain +10 and +15% £energy  for 5 years"
+ kiyo_event_catchup.a.tech:0 "Gain +15% research speed and +4 to all research"
+ kiyo_event_catchup.b:0 "We should plan a raid!"
+ kiyo_event_catchup.b.irr:0 "§Y[superiorVictim.GetName]§! loses -10 and -10% £minerals  for 10 years.\n\nChance to get either:\n+10 and +6% £minerals  for 10 years\n+25 and +18% £minerals  for 10 years"
+ kiyo_event_catchup.b.fleet:0 "§Y[superiorVictim.GetName]§! gets +20% ship cost £navy_size  for 10 years.\n\nChance to get either:\n-6% ship cost £navy_size  for 10 years\n-18% ship cost £navy_size  for 10 years"
+ kiyo_event_catchup.b.navy:0 "§Y[superiorVictim.GetName]§! loses -10 and -10% £energy  for 10 years.\n\nChance to get either:\n+10 and +6% £energy  for 10 years\n+25 and +20% £energy  for 10 years"
+ kiyo_event_catchup.b.tech:0 "§Y[superiorVictim.GetName]§! loses -4 for all research and -10% research speed for 10 years.\n\nChance to get either:\n+4 to all research and +6% research speed for 10 years\n+4 to all research and +18% research speed for 10 years"
+ 
+ #Static Modifiers#
+ kiyo_catchup_irr_stolen:0 "Stolen Minerals from Raidings"
+ kiyo_catchup_irr_bad:0 "Mineral Raiding"
+ kiyo_catchup_irr_good:0 "Initiative for Empire Relevance"
+ kiyo_catchup_irr_great:0 "Mineral Raiding"
+ kiyo_catchup_fleet_stolen:0 "Raided Shipyards"
+ kiyo_catchup_fleet_bad:0 "Initiative for Fleet Relevance"
+ kiyo_catchup_fleet_good:0 "Initiative for Fleet Relevance"
+ kiyo_catchup_navy_stolen:0 "Stolen Energy from Raidings"
+ kiyo_catchup_navy_bad:0 "Energy Raiding"
+ kiyo_catchup_navy_good:0 "Initiative for Military Relevance"
+ kiyo_catchup_navy_great:0 "Energy Raiding"
+ kiyo_catchup_tech_stolen:0 "Stolen Data from Hackers"
+ kiyo_catchup_tech_bad:0 "Data Hacking"
+ kiyo_catchup_tech_good:0 "Initiative for Scientific Relevance"
+ kiyo_catchup_tech_great:0 "Data Hacking"
+ 
+ #Resource Modifiers#
+ country_resource_physics_research_add:0 "Monthly Physics Research"
+ country_resource_society_research_add:0 "Monthly Society Research"
+ country_resource_engineering_research_add:0 "Monthly Engineering Research"

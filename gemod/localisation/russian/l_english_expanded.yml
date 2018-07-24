@@ -1,0 +1,91 @@
+﻿l_english:
+
+ ##################
+ #Fighters:
+ ##################
+ 
+ #Scouts:
+ SCOUT_HANGAR_1:0 "Scout Wing"
+ SCOUT_HANGAR_1_DESC:1 "A flight of Scout craft provides basic strike craft capability, harrassing enemy bombers and strike craft in the vicinity of the mothership."
+ LARGE_SCOUT_HANGAR_1:0 "Scout Wing"
+ #Decoy Drones:
+ DECOY_DRONES_HANGAR_1:0 "Decoy Drones Wing"
+ DECOY_DRONES_HANGAR_1_DESC:1 "The purpose of Decoy Drones is to attract enemy fire, allowing other strike craft to advance."
+ DECOY_DRONES_SCOUT_HANGAR_1:0 "Decoy Drones Wing"
+ #Fighters:
+ FIGHTERS_HANGAR_1:0 "Basic Fighter Wing"
+ FIGHTERS_HANGAR_1_DESC:1 "Basic Fighter-class strike craft will deploy to engage hostiles when the mothership enters battle."
+ LARGE_FIGHTERS_HANGAR_1:0 "Basic Fighter Wing"
+ FIGHTERS_HANGAR_2:0 "Improved Fighter Wing"
+ FIGHTERS_HANGAR_2_DESC:1 "Improved Fighters target smaller enemy vessels as well as bombers and strike craft in coordinated maneuvers."
+ LARGE_FIGHTERS_HANGAR_2:0 "Improved Fighter Wing"
+ FIGHTERS_HANGAR_3:0 "Advanced Fighter Wing"
+ FIGHTERS_HANGAR_3_DESC:1 "An Advanced Fighter Wing is capable of doing significant damage to smaller enemy vessels, and hold its own against hostile strike craft."
+ LARGE_FIGHTERS_HANGAR_3:0 "Advanced Fighter Wing"
+ #Interceptors:
+ FIGHTERS2_HANGAR_1:0 "Basic Interceptor Wing"
+ FIGHTERS2_HANGAR_1_DESC:1 "Basic Interceptor-class strike craft will stay close to the mothership and engage nearby hostiles when needed."
+ LARGE_FIGHTERS2_HANGAR_1:0 "Basic Interceptor Wing"
+ FIGHTERS2_HANGAR_2:0 "Improved Interceptor Wing"
+ FIGHTERS2_HANGAR_2_DESC:1 "Improved Interceptors target smaller enemy vessels as well as bombers and strike craft in coordinated maneuvers in the mothership's proximity."
+ LARGE_FIGHTERS2_HANGAR_2:0 "Improved Interceptor Wing"
+ FIGHTERS2_HANGAR_3:0 "Advanced Interceptor Wing"
+ FIGHTERS2_HANGAR_3_DESC:1 "An Advanced Interceptor Wing is capable of doing significant damage to smaller enemy vessels, and hold its own against hostile strike craft when defending mothership."
+ LARGE_FIGHTERS2_HANGAR_3:0 "Advanced Interceptor Wing" 
+ #Gunships:
+ FIGHTERS3_HANGAR_1:0 "Basic Gunship Wing"
+ FIGHTERS3_HANGAR_1_DESC:1 "Gunship wing fire volleys of missiles in quick succession."
+ LARGE_FIGHTERS3_HANGAR_1:0 "Basic Gunship Wing"
+ FIGHTERS3_HANGAR_2:0 "Improved Gunship Wing"
+ FIGHTERS3_HANGAR_2_DESC:1 "By improving Gunship design, our engineers were able to increase their survivability as well as increase their combat capabilities."
+ LARGE_FIGHTERS3_HANGAR_2:0 "Improved Gunship Wing"
+ FIGHTERS3_HANGAR_3:0 "Advanced Gunship Wing"
+ FIGHTERS3_HANGAR_3_DESC:1 "Latest improvements in the strike craft technology allow us to deploy new generation of gunships, capable of dealing serious damage to enemy ships."
+ LARGE_FIGHTERS3_HANGAR_3:0 "Advanced Gunship Wing" 
+ #Heavy Fighters:
+ HEAVY_FIGHTERS_HANGAR_1:0 "Basic Heavy Fighter Wing"
+ HEAVY_FIGHTERS_HANGAR_1_DESC:1 "These heavily armored fighters are designed to engage faster enemy vessles and destroy them from up close."
+ LARGE_HEAVY_FIGHTERS_HANGAR_1:0 "Basic Heavy Fighter Wing"
+ HEAVY_FIGHTERS_HANGAR_2:0 "Improved Heavy Fighter Wing"
+ HEAVY_FIGHTERS_HANGAR_2_DESC:1 "Heavy fighters, with more advanced lasers, are perfect weapon against enemy corvettes and bomber wings."
+ LARGE_HEAVY_FIGHTERS_HANGAR_2:0 "Improved Heavy Fighter Wing"
+ HEAVY_FIGHTERS_HANGAR_3:0 "Advanced Heavy Fighter Wing"
+ HEAVY_FIGHTERS_HANGAR_3_DESC:1 "Advanced Heavy Fighters, equipped with superior weaponry, can destroy nearly everything."
+ LARGE_HEAVY_FIGHTERS_HANGAR_3:0 "Advanced Heavy Fighter Wing"
+ 
+ ##################
+ #Bombers:
+ ##################
+ 
+ #Torpedo Bombers:
+ BOMBERS_HANGAR_1:0 "Basic Torpedo Bomber Wing"
+ BOMBERS_HANGAR_1_DESC:1 "A Basic Bomber Wing is equipped with a comparatively minimal payload, deployed to assault larger enemy vessels from up close."
+ LARGE_BOMBERS_HANGAR_1:0 "Basic Torpedo Bomber Wing"
+ BOMBERS_HANGAR_2:0 "Improved Torpedo Bomber Wing"
+ BOMBERS_HANGAR_2_DESC:1 "Improved Bombers deal increased damage to enemy military ships."
+ LARGE_BOMBERS_HANGAR_2:0 "Improved Torpedo Bomber Wing"
+ BOMBERS_HANGAR_3:0 "Advanced Torpedo Bomber Wing"
+ BOMBERS_HANGAR_3_DESC:1 "Advanced Bombers deftly navigate stellar battlefields to approach enemy ships from unexpected angles, delivering thei explosive payload."
+ LARGE_BOMBERS_HANGAR_3:0 "Advanced Torpedo Bomber Wing"
+ #Plasma Bombers:
+ PLASMA_BOMBERS_HANGAR_1:0 "Basic Plasma Bomber Wing"
+ PLASMA_BOMBERS_HANGAR_1_DESC:1 "These Bombers are equipped with plasma bombs, designed to destroy armor of larger enemy vessels from up close."
+ LARGE_PLASMA_BOMBERS_HANGAR_1:0 "Basic Plasma Bomber Wing"
+ PLASMA_BOMBERS_HANGAR_2:0 "Improved Plasma Bomber Wing"
+ PLASMA_BOMBERS_HANGAR_2_DESC:1 "These Improved Plasma Bombers deal increased damage to armored enemy vessels."
+ LARGE_PLASMA_BOMBERS_HANGAR_2:0 "Improved Plasma Bomber Wing"
+ PLASMA_BOMBERS_HANGAR_3:0 "Advanced Plasma Bomber Wing"
+ PLASMA_BOMBERS_HANGAR_3_DESC:1 "Next generation of Plasma Bombers. They deftly navigate stellar battlefields to attack armored ships from unexpected angles, delivering their devastating payload."
+ LARGE_PLASMA_BOMBERS_HANGAR_3:0 "Advanced Plasma Bomber Wing"
+ 
+ ##################
+ #Technologies:
+ ##################
+ 
+ # Strike Craft
+ tech_sce_1:0 "Basic Carrier Operations"
+ tech_sce_1_desc:0 "These manned strike craft are launched from a mothership and rely on their speed and small size to survive long enough to punch through enemy defenses."
+ tech_sce_2:0 "Intermediate Carrier Operations"
+ tech_sce_2_desc:0 "The next generation of strike craft, featuring improved avionics, better handling characteristics and more powerful armaments."
+ tech_sce_3:0 "Advanced Carrier Operations"
+ tech_sce_3_desc:0 "A further refinement in strike craft design, these advanced strike craft are a pilot's dream. Their performance far exceeds that of previous models."

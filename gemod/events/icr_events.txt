@@ -1,0 +1,52 @@
+namespace = icr_events
+
+
+country_event = {
+	id = icr_events.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { 
+			limit = { 
+				NOT = { has_country_flag = samurai_war }
+				is_at_war = yes
+			}
+			remove_modifier = samurai_happiness_unrest_no_war
+			remove_country_flag = samurai_happiness_unrest_no_war
+			set_country_flag = samurai_war
+		}
+		if = { 
+			limit = { 
+				NOT = { has_country_flag = samurai_happiness_unrest_no_war }
+				is_at_war = no
+			}
+			add_modifier = { modifier = samurai_happiness_unrest_no_war }
+			remove_country_flag = samurai_war
+			set_country_flag = samurai_happiness_unrest_no_war
+		}
+	}
+}
+
+country_event = { #Photoelectrolysis start
+	id = icr_events.10
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_photoelectrolysis
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			every_tile = {
+				limit = {
+					has_building = building_hydroponics_farm_1
+				}
+				set_building = building_power_hydroponics_farm_1
+			}
+		}
+	}
+}

@@ -1,0 +1,206 @@
+
+####################
+###  Constances  ###
+####################
+
+
+@CmtConstEndOfCycleModifier_013d = 60.00		## 1400
+@CmtConstEndOfCycleModifier_088d = 60.00		##  200
+@CmtConstEndOfCycleModifier_666d = 60.00		##   27
+@CmtConstEndOfCycleModifier_04yr = 12.00
+@CmtConstEndOfCycleModifier_13yr =  3.75
+@CmtConstEndOfCycleModifier_17yr =  3.00
+@CmtConstEndOfCycleModifier_23yr =  2.00
+#CmtConstEndOfCycleModifier_50yr =  1.00
+
+###############################
+###  Covenant End of Cycle  ###
+###############################
+#	cf. Vanilla
+#	covenant_end_of_the_cycle = {
+#		country_resource_food_mult = 1
+#		country_resource_minerals_mult = 1
+#		country_resource_energy_mult = 1
+#		country_resource_unity_mult = 1
+#		country_resource_influence_mult = 1
+#		all_technology_research_speed = 1
+#		country_naval_cap_mult = 1
+#	}
+#
+
+CmtModifierCovenantFEoC_013d = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_013d
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_013d
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_013d
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_013d
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_013d
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_013d
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_013d
+}
+
+CmtModifierCovenantFEoC_088d = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_088d
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_088d
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_088d
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_088d
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_088d
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_088d
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_088d
+}
+
+CmtModifierCovenantFEoC_666d = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_666d
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_666d
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_666d
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_666d
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_666d
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_666d
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_666d
+}
+
+CmtModifierCovenantFEoC_04yr = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_04yr
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_04yr
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_04yr
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_04yr
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_04yr
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_04yr
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_04yr
+}
+
+CmtModifierCovenantFEoC_13yr = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_13yr
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_13yr
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_13yr
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_13yr
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_13yr
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_13yr
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_13yr
+}
+
+CmtModifierCovenantFEoC_17yr = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_17yr
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_17yr
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_17yr
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_17yr
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_17yr
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_17yr
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_17yr
+}
+
+CmtModifierCovenantFEoC_23yr = {
+	country_resource_food_mult = @CmtConstEndOfCycleModifier_23yr
+	country_resource_minerals_mult = @CmtConstEndOfCycleModifier_23yr
+	country_resource_energy_mult = @CmtConstEndOfCycleModifier_23yr
+	country_resource_unity_mult = @CmtConstEndOfCycleModifier_23yr
+	country_resource_influence_mult = @CmtConstEndOfCycleModifier_23yr
+	all_technology_research_speed = @CmtConstEndOfCycleModifier_23yr
+	country_naval_cap_mult = @CmtConstEndOfCycleModifier_23yr
+}
+
+
+
+
+##################
+###  Absorber  ###
+##################
+#	cf. Vanilla
+#
+#	absorbed_consciousness_1 = {
+#		ship_shield_add = 100000 
+#		ship_hull_add = 50000
+#		ship_shield_regen_add_static = 100
+#		ship_weapon_damage = 2
+#		ship_fire_rate_mult = 2
+#	}
+#
+#	absorbed_consciousness_2 = {
+#		ship_shield_add = 200000 
+#		ship_hull_add = 100000
+#		ship_shield_regen_add_static = 200
+#		ship_weapon_damage = 3
+#		ship_fire_rate_mult = 3
+#	}
+#
+#	absorbed_consciousness_3 = {
+#		ship_shield_add = 300000 
+#		ship_hull_add = 150000
+#		ship_shield_regen_add_static = 300
+#		ship_weapon_damage = 4
+#		ship_fire_rate_mult = 4
+#	}
+#
+#	absorbed_consciousness_4 = {
+#		ship_shield_add = 400000 
+#		ship_hull_add = 200000
+#		ship_shield_regen_add_static = 400
+#		ship_weapon_damage = 5
+#		ship_fire_rate_mult = 5
+#	}
+#
+#	absorbed_consciousness_5 = {
+#		ship_shield_add = 500000 
+#		ship_hull_add = 250000
+#		ship_shield_regen_add_static = 500
+#		ship_weapon_damage = 6
+#		ship_fire_rate_mult = 6
+#	}
+#
+
+
+CmtModifierAbsorvedConsciousness_6 = {
+	ship_shield_add = 600000 
+	ship_hull_add = 300000
+	ship_shield_regen_add_static = 600
+	ship_weapon_damage = 7
+	ship_fire_rate_mult = 7
+}
+
+CmtModifierAbsorvedConsciousness_7 = {
+	ship_shield_add = 700000 
+	ship_hull_add = 350000
+	ship_shield_regen_add_static = 700
+	ship_weapon_damage = 8
+	ship_fire_rate_mult = 8
+}
+
+CmtModifierAbsorvedConsciousness_8 = {
+	ship_shield_add = 800000 
+	ship_hull_add = 400000
+	ship_shield_regen_add_static = 800
+	ship_weapon_damage = 9
+	ship_fire_rate_mult = 9
+}
+
+CmtModifierAbsorvedConsciousness_9 = {
+	ship_shield_add = 900000 
+	ship_hull_add = 450000
+	ship_shield_regen_add_static = 900
+	ship_weapon_damage = 10
+	ship_fire_rate_mult = 10
+}
+
+CmtModifierAbsorvedConsciousness_A = {
+	ship_shield_add = 1000000 
+	ship_hull_add = 500000
+	ship_shield_regen_add_static = 1000
+	ship_weapon_damage = 11
+	ship_fire_rate_mult = 11
+}
+
+CmtModifierAbsorvedConsciousness_B = {
+	ship_shield_add = 1100000 
+	ship_hull_add = 550000
+	ship_shield_regen_add_static = 1100
+	ship_weapon_damage = 12
+	ship_fire_rate_mult = 12
+}
+
+CmtModifierAbsorvedConsciousness_C = {
+	ship_shield_add = 1200000 
+	ship_hull_add = 6000000
+	ship_shield_regen_add_static = 1200
+	ship_weapon_damage = 13
+	ship_fire_rate_mult = 13
+}
+

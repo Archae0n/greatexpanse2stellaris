@@ -1,0 +1,17 @@
+﻿l_spanish:
+#Samurai Spirit
+ civic_samurai_determined:0 "Samurai Spirit"
+ civic_samurai_determined_desc:0 "Even if they can't win, they will just continue fighting and embrace death like heroes."
+ civic_tooltip_samurai_determined_effects:0 "You no suffer from §YWar exhaustion§!.\nYou suffer from a §RMalus§!, If you are'nt at war."
+ samurai_happiness_unrest_no_war:0 "Samurai Spirit Modifier"
+ samurai_happiness_unrest_no_war_desc:0 "We are not at war!!!\nSeriously ?"
+ 
+  casus_belli_cb_demilitarize:0 "§YDemilitarize§!"
+ casus_belli_cb_neurotoxins:0 "§YNeurotoxins§!"
+ war_goal_wg_demilitarize:0 "§HDemilitarize§!"
+ war_goal_wg_demilitarize_desc:0 "The ennemy will be forced to demilitarize."
+ war_goal_wg_neurotoxins:0 "§HNeurotoxins§!"
+ war_goal_wg_neurotoxins_desc:0 "Release a deadly neurotoxin into the atmosphere of ennemies planets."
+ 
+  trader_cache_sr:0 "Trader's Cache Modfifier"
+ trader_cache_sr_desc:0 "You own every §Gstrategic ressources§!."

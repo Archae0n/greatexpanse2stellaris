@@ -1,0 +1,120 @@
+﻿#########################################
+#########################################
+######                              #####
+######    Backup of Legacy Event    #####
+######                              #####
+#########################################
+#########################################
+#
+#
+#
+#### Crises to Happen at Earliest (fine tuning)
+#country_event = {
+#	id = CrisisManagerMenu.0313
+#	title = CrisisManagerMenu.0313.name
+#	desc = CrisisManagerMenu.0313.desc
+#	picture = GFX_evt_CmtMenuA
+#	is_triggered_only = yes
+#	
+#	after = {
+#		if = {
+#			limit = { has_country_flag = CmtFlagGoBack }
+#			hidden_effect = {
+#				remove_country_flag = CmtFlagGoBack
+#				country_event = { id = CrisisManagerMenu.0312 }
+#			}
+#			break = yes
+#		}
+#		if = {
+#			limit = { has_country_flag = CmtFlagSpMenu }
+#			hidden_effect = {
+#				remove_country_flag = CmtFlagSpMenu
+#				country_event = { id = CrisisManagerMenu.0313 }
+#			}
+#			break = yes
+#		}
+#		if = {
+#			limit = { has_country_flag = CmtFlagIndividual }
+#			hidden_effect = { country_event = { id = CrisisManagerMenu.0101 } }
+#			break = yes
+#		}
+#		hidden_effect = { country_event = { id = CrisisManagerMenu.0321 } }
+#	}
+#	
+#	option = {
+#		name = CrisisManagerMenu.0313.50.name
+#		custom_tooltip = CrisisManagerMenu.0313+50.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = 50 }
+#				change_variable = { which = YearCrisisEariest4 value = 50 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313.25.name
+#		custom_tooltip = CrisisManagerMenu.0313.25.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = 25 }
+#				change_variable = { which = YearCrisisEariest4 value = 25 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313.05.name
+#		custom_tooltip = CrisisManagerMenu.0313.05.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = 5 }
+#				change_variable = { which = YearCrisisEariest4 value = 5 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313-05.name
+#		custom_tooltip = CrisisManagerMenu.0313-05.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = -5 }
+#				change_variable = { which = YearCrisisEariest4 value = -5 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313-25.name
+#		custom_tooltip = CrisisManagerMenu.0313-25.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = -25 }
+#				change_variable = { which = YearCrisisEariest4 value = -25 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313-50.name
+#		custom_tooltip = CrisisManagerMenu.0313-50.tooltip
+#		hidden_effect = {
+#			event_target:CmtGlobalVar = { 
+#				change_variable = { which = YearCrisisEariest value = -50 }
+#				change_variable = { which = YearCrisisEariest4 value = -50 }
+#			}
+#			set_country_flag = CmtFlagSpMenu
+#		}
+#	}
+#	option = {
+#		name = CrisisManagerMenu.0313-OK.name
+#		custom_tooltip = CrisisManagerMenu.0313-OK.tooltip
+#	}
+#	option = {
+#		name = CrisisManagerGoBack.name
+#		custom_tooltip = CrisisManagerGoBack.tooltip
+#		hidden_effect = { set_country_flag = CmtFlagGoBack }
+#	}
+#}
+#

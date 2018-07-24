@@ -1,0 +1,59 @@
+﻿l_polish:
+
+#################################
+# EAC At War Help System        #
+#################################
+
+# Main Screen
+ eac_aw_help.1.name:0 "£ship_stats_damage EAC: At War Menu"
+ eac_aw_help.1.desc:0 "Menu for EAC: At War features and help system"
+ eac_aw_help.1.EnableAiShield:0 "Allow AI to build Planetary Shield Generators"
+ eac_aw_help.1.EnableAiShield.tooltip:0 "§YCurrently not allowed.§!\n\nSets a flag that allows the AI to build Planetary Shield Generators if they have the tech. Vanilla does not allow this."
+ eac_aw_help.1.DisableAiShield:0 "Stop the AI from building Planetary Shield Generators"
+ eac_aw_help.1.DisableAiShield.tooltip:0 "§YCurrently allowed.§!\n\nClears the flag that allows the AI to build Planetary Shield Generators if they have the tech. Vanilla does not allow this."
+ eac_aw_help.option_blank:0 " "
+
+ eac_aw_help.1.VanillaCitadels:0 "Use Vanilla Citadel Core Section"
+ eac_aw_help.1.VanillaCitadels.tooltip:0 "§YLarge Weapon Citadel Core Section active.§!\n\nThe vanilla citadel core section has 1 torpedo and 12 medium weapon slots."
+ eac_aw_help.1.LargeGunCitadels:0 "Use the Large Weapon Citadel Core Section"
+ eac_aw_help.1.LargeGunCitadels.tooltip:0 "§YVanilla Citadel Core Section active.§!\n\nThis large weapon version of the citadel core section has 1 torpedo and 12 large weapon slots."
+
+ eac_aw_help.1.EnableAdvancedCarriers:0 "Enable the Advanced Carrier Technology"
+ eac_aw_help.1.EnableAdvancedCarriers.tooltip:0 "§YCurrently disabled.§!\n\nSets a flag allowing the Advanced Carrier technology to appear in the game."
+ eac_aw_help.1.DisableAdvancedCarriers:0 "Disable the Advanced Carrier Technology"
+ eac_aw_help.1.DisableAdvancedCarriers.tooltip:0 "§YCurrently enabled.§!\n\nClears the flag that allowed the Advanced Carrier technology to appear in the game."
+
+ eac_aw_help.1.EnableLightCarriers:0 "Enable the Light Carrier Technology"
+ eac_aw_help.1.EnableLightCarriers.tooltip:0 "§YCurrently disabled.§!\n\nSets a flag allowing the Light Carrier technology to appear in the game."
+ eac_aw_help.1.DisableLightCarriers:0 "Disable the Light Carrier Technology"
+ eac_aw_help.1.DisableLightCarriers.tooltip:0 "§YCurrently enabled.§!\n\nClears the flag that allowed the Light Carrier technology to appear in the game."
+
+ eac_aw_help.1.EnableHeavyDefensePlatforms:0 "Enable Heavy Defense Platforms"
+ eac_aw_help.1.EnableHeavyDefensePlatforms.tooltip:0 "§YCurrently disabled.§!\n\nSets a flag that allows the technology for Heavy Defense Platfroms to appear in the game."
+ eac_aw_help.1.DisableHeavyDefensePlatforms:0 "Disable Heavy Defense Platforms"
+ eac_aw_help.1.DisableHeavyDefensePlatforms.tooltip:0 "§YCurrently enabled.§!\n\nClears the flag that allowed the Heavy Defense Platforms technology to appear in the game."
+
+ eac_aw_help.1.EnableSpaceMarines:0 "Enable Space Marines"
+ eac_aw_help.1.EnableSpaceMarines.tooltip:0 "§YCurrently disabled.§!\n\nSets a flag that allows the technology for Space Marines to appear in the game."
+ eac_aw_help.1.DisableSpaceMarines:0 "Disable Space Marines"
+ eac_aw_help.1.DisableSpaceMarines.tooltip:0 "§YCurrently enabled.§!\n\nClears the flag that allowed the Space Marines technology to appear in the game."
+
+ eac_aw_help.1.HelpSystem:0 "Show the EAC: At War Help System"
+ eac_aw_help.1.HelpSystem.tooltip:0  "Opens up the help system for this mod."
+
+ eac_aw_help.2.name:0 "EAC: At War Help System"
+ eac_aw_help.2.desc:0 "Choose the topic below."
+ eac_aw_help.2.MissileCruisers:0 "Technology: $eac_aw_tech_missile_cruiser$"
+ eac_aw_help.2.AdvancedCarriers:0 "Technology: $eac_aw_tech_advanced_carrier$"
+ eac_aw_help.2.NaniteCloud:0 "Technology: $eac_aw_tech_nanite_clouds$"
+ eac_aw_help.2.DefensePlatforms:0 "Technology: $eac_aw_tech_repeatable_starbase_defense_platform_capacity_add$ (repeatable)"
+ eac_aw_help.2.PlanetaryCannons:0 "Buildings: Planetary Cannons"
+
+ eac_aw_help_main_menu:0 "Help Main Menu"
+
+ # Missle Cruisers
+ eac_aw_help.3.name:0 "$eac_aw_tech_missile_cruiser$"
+ eac_aw_help.3.desc:0 "\n£help_missile_cruisers \n\n\nThis technology adds a new bow, §H$EAC_CRUISER_BOW_G2$§!, and mid section, §H$EAC_CRUISER_MID_G3$§!, to cruisers giving 2 guided and 3 guided slots respectively."
+
+
+ 

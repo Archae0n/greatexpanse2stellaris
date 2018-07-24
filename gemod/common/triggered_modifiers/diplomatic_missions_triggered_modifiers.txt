@@ -1,0 +1,20 @@
+#########################################################################
+# Diplomatic Missions Static Modifiers
+# by Lucas Pinheiro Silva
+##########################################################################
+
+marchal_status = {
+  potential = {
+    always = yes
+  }
+
+  trigger = {
+    is_subject_type = "march"
+  }
+
+  navy_size_mult = 0.30
+  ship_upkeep_mult = -0.20
+  ship_reparation_speed_mult  = 0.20
+  ship_weapon_damage = 0.10
+  ship_interstellar_speed_mult = 0.10
+}

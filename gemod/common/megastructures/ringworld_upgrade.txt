@@ -1,0 +1,103 @@
+ringworld_upgrade_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	construction_blocks_others = no
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -5 y = -5 }
+	build_time = 1800
+	build_cost = {
+		minerals = 10000
+		influence = 75
+	}
+
+	maintenance = {
+		energy = 5
+	}
+
+	potential = {
+		AND = {
+			has_technology = tech_ringworld_mastery
+			has_ascension_perk = ap_galactic_wonders
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_ringworld_tech"
+				is_planet_class = pc_ringworld_tech
+			}
+			custom_tooltip = {
+				fail_text = "requires_built_ringworld"
+				solar_system = { has_star_flag = ring_world_built }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+	}
+}
+
+ringworld_upgrade_1 = {
+	entity = ""
+	construction_entity = "ringworld_habitable_entity_01_entity"
+	portrait = "GFX_megastructure_continental_planet"
+	construction_blocks_others = no
+	upgrade_from = {
+		ringworld_upgrade_0
+	}
+	build_time = 2700
+	build_cost = {
+		minerals = 12500
+	}
+	
+	potential = {
+		has_technology = tech_ringworld_mastery
+	}
+	
+	on_build_complete = {
+		fromfrom.planet = {
+			change_pc = pc_ringworld_habitable
+			set_planet_entity = {
+				entity = "ringworld_habitable_entity_01_entity"
+				graphical_culture = fromfrom
+			}
+			while = { 
+				limit = { 
+					planet_size < 25
+				} 
+				change_planet_size = +1			
+			}
+			set_name = "Habitable Section"
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+
+

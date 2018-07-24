@@ -1,0 +1,64 @@
+##########################################################################
+# Diplomatic Missions Opinion Modifiers
+# by Lucas Pinheiro Silva
+##########################################################################
+
+opinion_political_interference = {
+  opinion = {
+    base = -100
+  }
+
+  unique = yes
+
+  decay = {
+    base = 5
+    modifier = {
+      add = -1
+      is_subject_type = "tvassal"
+    }
+    modifier = {
+      add = -1
+      is_subject_type = "tprotectorate"
+    }
+    modifier = {
+      add = -1
+      has_ethic = "ethic_xenophobe"
+    }
+    modifier = {
+      add = -1
+      has_ethic = "ethic_fanatic_xenophobe"
+    }
+  }
+}
+
+opinion_friendly_diplomatic_visit = {
+  opinion = {
+    base = 15
+    modifier = {
+      add = 10
+      has_ethic = "ethic_xenophile"
+    }
+    modifier = {
+      add = 20
+      has_ethic = "ethic_fanatic_xenophile"
+    }
+    modifier = {
+      add = -5
+      has_ethic = "ethic_xenophobe"
+    }
+    modifier = {
+      add = -10
+      has_ethic = "ethic_fanatic_xenophobe"
+    }
+  }
+
+  unique = yes
+}
+
+opinion_march = {
+  opinion = {
+    base = 100
+  }
+
+  unique = yes
+}

@@ -1,0 +1,271 @@
+##########################################################################
+# Better Subjects Events
+# by Lucas Pinheiro Silva
+##########################################################################
+
+namespace = better_subjects
+
+### Taxation of Subjects
+
+# Turn Tributary Vassals into Vassals
+country_event = {
+  id = better_subjects.10
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "tvassal" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = vassal
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+# Turn Tributary Protectorates into Protectorates
+country_event = {
+  id = better_subjects.11
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "tprotectorate" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = protectorate
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+# Turn Vassals into Tributary Vassals
+country_event = {
+  id = better_subjects.12
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = {
+        is_subject_type = "vassal"
+        NOT = {
+          has_relation_flag = {
+            who = ROOT
+            flag = tax_exemption
+          }
+        }
+      }
+      set_subject_of = {
+        who = ROOT
+        subject_type = tvassal
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+#  Turn Protectorates into Tributary Protectorates
+country_event = {
+  id = better_subjects.13
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = {
+        is_subject_type = "protectorate"
+        NOT = {
+          has_relation_flag = {
+            who = ROOT
+            flag = tax_exemption
+          }
+        }
+      }
+      set_subject_of = {
+        who = ROOT
+        subject_type = tprotectorate
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+### Subsidization of Subjects
+
+# Remove subsidies and opinion modifiers from Vassals
+country_event = {
+  id = better_subjects.20
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+    limit = { is_subject_type = "vassal" }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+      remove_modifier = overlord_subsidies_vassal
+    }
+  }
+}
+
+# Remove subsidies and opinion modifiers from Protectotates
+country_event = {
+  id = better_subjects.21
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+      remove_modifier = overlord_subsidies_protectorate
+    }
+  }
+}
+
+# Give subsidies and opinion modifiers to Vassals
+country_event = {
+  id = better_subjects.22
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      add_modifier = {
+        modifier = overlord_subsidies_vassal
+        days = -1
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+  }
+}
+
+# Give subsidies and opinion modifiers to Protectorates
+country_event = {
+  id = better_subjects.23
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      add_modifier = {
+        modifier = overlord_subsidies_protectorate
+        days = -1
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+  }
+}
+
+# Malus from subsidizing Vassals
+country_event = {
+  id = better_subjects.24
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    if = {
+      limit = { vassals < 6 }
+      add_modifier = {
+        modifier = subsidizing_vassals_1
+        days = -1
+      }
+      remove_modifier = subsidizing_vassals_2
+      remove_modifier = subsidizing_vassals_3
+      else = {
+        if = {
+          limit = { vassals <  11 }
+          add_modifier = {
+            modifier = subsidizing_vassals_2
+            days = -1
+          }
+          remove_modifier = subsidizing_vassals_1
+          remove_modifier = subsidizing_vassals_3
+          else = {
+            add_modifier = {
+              modifier = subsidizing_vassals_3
+              days = -1
+            }
+            remove_modifier = subsidizing_vassals_1
+            remove_modifier = subsidizing_vassals_2
+          }
+        }
+      }
+    }
+  }
+}
+
+# Remove malus from subsidizing Vassals
+country_event = {
+  id = better_subjects.25
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    remove_modifier = subsidizing_vassals_1
+    remove_modifier = subsidizing_vassals_2
+    remove_modifier = subsidizing_vassals_3
+  }
+}
+
+# Bonus research from Protectorate subsidies
+country_event = {
+  id = better_subjects.26
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      add_physics_research = 10
+      add_society_research = 10
+      add_engineering_research = 10
+      ROOT = {
+        add_physics_research = 10
+        add_society_research = 10
+        add_engineering_research = 10
+      }
+    }
+  }
+}

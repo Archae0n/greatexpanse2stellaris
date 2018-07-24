@@ -1,0 +1,121 @@
+
+########################################
+########################################
+#####                              #####
+#####    Common Scripted Effect    #####
+#####                              #####
+########################################
+########################################
+
+
+################################
+###  Common Effect for Menu  ###
+################################
+
+### Hard Coated Option
+CmtEffectHardCoatedSettings = {
+	remove_global_flag = CmtFlagDebugMode
+	
+	#set_global_flag = CmtFlagDebugMode		## Hidden menu is shown and MTTH several event is short
+	#set_global_flag = CmtFlagNoSeparator
+}
+
+### Version check
+CmtEffectVersionUp = {
+	event_target:CmtGlobalVar = {
+		if = {
+			limit = { check_variable = { which = CmtVarVersion value < @CmtT000_ConstVersionInfo } }
+			if = {
+				limit = {
+					check_variable = { which = CmtVarVersion value < 1.01 }
+					check_variable = { which = CmtVarGuardianWornOut value = 0 }
+				}
+				set_variable = { which = CmtVarGuardianWornOut value = 1 }
+			}
+			if = {
+				limit = { check_variable = { which = CmtVarVersion value < 1.03 } }
+				if = {
+					limit = { check_variable = { which = CmtVarFasterCombatFleet_Common value = 0 } }
+					set_variable = { which = CmtVarFasterCombatFleet_Common value = 1 }
+				}
+				if = {
+					limit = { check_variable = { which = CmtVarFasterConstructor_Common value = 0 } }
+					set_variable = { which = CmtVarFasterConstructor_Common value = 1 }
+				}
+				if = {
+					limit = { check_variable = { which = CmtVarGhostStrength value = 0 } }
+					set_variable = { which = CmtVarGhostStrength value = 3 }
+				}
+			}
+			set_variable = { which = CmtVarVersion value = @CmtT000_ConstVersionInfo }
+		}
+	}
+}
+
+### Edition Check
+CmtEffectClearDetectedEdition = {
+	remove_global_flag = CmtFlagEndGameEdition
+	remove_global_flag = CmtFlagMidGameEdition
+	remove_global_flag = CmtFlagSleeperEdition
+}
+
+CmtEffectSetDetectedEdition = {
+	CmtEffectDetectEndGameEdition = yes
+	CmtEffectDetectMidGameEdition = yes
+	CmtEffectDetectSleeperEdition = yes
+}
+
+### Edition Check: Overwritten by Cmt*00
+CmtEffectDetectEndGameEdition = {}
+CmtEffectDetectMidGameEdition = {}
+CmtEffectDetectSleeperEdition = {}
+
+
+
+########################
+###  Common Actions  ###
+########################
+
+### scope: this = stellar_system
+CmtEffectDestroySystemStarbase = {
+	if = {
+		limit = { exists = starbase }
+		starbase = { fleet = { destroy_fleet = this } }
+	}
+}
+
+### scope: this = planet
+CmtEffectPurgeRandomPop = {
+	random_pop = { 
+		limit = {
+			is_growing = no
+			is_being_purged = no
+		}
+		purge = yes 
+	}
+}
+
+####################
+###  Debug tool  ###
+####################
+
+### Test of FIOS/LIOS
+CmtEffectFiosLiosTest = {
+	event_target:CmtGlobalVar = { change_variable = { which = CmtVarFiosLios value = 1 } }
+}
+
+
+### Legacy
+#
+#CmtEffectDestroySystemStarbase = {
+#	if = {
+#		limit = { any_ship_in_system = { is_ship_class = shipclass_starbase } }
+#		every_fleet_in_system = {
+#			limit = { any_owned_ship = { is_ship_class = shipclass_starbase } }
+#			destroy_fleet = this
+#		}
+#	}
+#}
+#
+
+

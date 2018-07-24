@@ -1,0 +1,279 @@
+# CoFH - Stellar Expansion - FTL Enhanced
+# Technologies
+# Author: King Lemming
+
+################################################################################
+# Tier Variables
+################################################################################
+
+@tier1cost1 = 500
+@tier1cost2 = 640
+@tier1cost3 = 780
+
+@tier2cost1 = 1000
+@tier2cost2 = 1500
+@tier2cost3 = 2000
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+
+@tier4cost1 = 6000
+@tier4cost2 = 8000
+@tier4cost3 = 10000
+
+@tier5cost1 = 14000
+@tier5cost2 = 17000
+@tier5cost3 = 20000
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+
+@tier2weight1 = 85
+@tier2weight2 = 75
+@tier2weight3 = 70
+
+@tier3weight1 = 65
+@tier3weight2 = 60
+@tier3weight3 = 50
+
+@tier4weight1 = 45
+@tier4weight2 = 40
+@tier4weight3 = 35
+
+@tier5weight1 = 30
+@tier5weight2 = 25
+@tier5weight3 = 20
+
+################################################################################
+# FTL Travel
+################################################################################
+
+# Hypernavigation Calibration
+tech_cofh_se_reduced_ftl_windup = {
+	area = physics
+	cost = @tier2cost3
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_hyper_drive_2" }
+	weight = @tier2weight3
+	is_rare = yes
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.50
+		ship_windup_mult = -0.10
+	}
+
+	weight_modifier = {
+		factor = 0.5
+
+		modifier = {
+			factor = 4
+			has_technology = tech_hyper_drive_3
+		}
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 4
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# Exigent Sensor Calibration
+tech_cofh_se_improved_disengage_chance = {
+	area = physics
+	cost = @tier3cost1
+	tier = 3
+	category = { computing }
+	prerequisites = { "tech_sensors_3" }
+	weight = @tier3weight1
+	is_rare = yes
+
+	modifier = {
+		ship_disengage_chance_mult = 0.20
+		ship_sensor_range_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+
+		modifier = {
+			factor = 5
+			has_technology = tech_cofh_se_reduced_emergency_ftl_damage
+		}
+	}
+
+	ai_weight = {
+		factor = 4
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+# Structural Integrity Fields
+tech_cofh_se_reduced_emergency_ftl_damage = {
+	area = physics
+	cost = @tier3cost1
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "tech_shields_3" }
+	weight = @tier3weight1
+	is_rare = yes
+
+	modifier = {
+		ship_hull_mult = 0.10
+		ship_emergency_ftl_mult = -0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+
+		modifier = {
+			factor = 5
+			has_technology = tech_cofh_se_improved_disengage_chance
+		}
+	}
+
+	ai_weight = {
+		factor = 4
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# Spacetime Resonance Damping
+tech_cofh_se_reduced_ftl_winddown = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	category = { particles }
+	weight = @tier3weight3
+	is_rare = yes
+
+	modifier = {
+		ship_winddown_mult = -0.25
+	}
+
+	weight_modifier = {
+		factor = 0.5
+
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_jump_drive_1"
+				has_technology = "tech_psi_jump_drive_1"
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 4
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# Spacetime Projection Optimization
+#tech_cofh_se_improved_jumpdrive_range = {
+#	area = physics
+#	cost = @tier4cost1
+#	tier = 4
+#	category = { particles }
+#	prerequisites = { "tech_cofh_se_reduced_ftl_winddown" }
+#	weight = @tier4weight1
+#	is_rare = yes
+#
+#	modifier = {
+#		ship_ftl_jumpdrive_range_mult = 0.50
+#	}
+#
+#	weight_modifier = {
+#		factor = 0.5
+#
+#		modifier = {
+#			factor = 0
+#			NOR = {
+#				has_technology = "tech_jump_drive_1"
+#				has_technology = "tech_psi_jump_drive_1"
+#			}
+#		}
+#
+#		modifier = {
+#			factor = 1.25
+#			research_leader = {
+#				area = physics
+#				has_trait = "leader_trait_expertise_particles"
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		factor = 4
+#
+#		modifier = {
+#			factor = 1.25
+#			research_leader = {
+#				area = physics
+#				has_trait = "leader_trait_expertise_particles"
+#			}
+#		}
+#	}
+#}

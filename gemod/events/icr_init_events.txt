@@ -1,0 +1,143 @@
+#country_event = { id = <event id> days = 30 random = 8 }
+namespace = icr_init_events
+
+event = {
+	id = icr_init_events.1 #monthly pulse
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	######################civic_divine_transcendence
+		every_country  = {
+			limit = {
+				has_valid_civic = civic_divine_transcendence
+			}
+			country_event = { id = credux_dt_level.1 days = 2 }
+			country_event = { id = credux_dt_level.2 days = 2 }
+			country_event = { id = credux_dt_level.3 days = 2 }
+			country_event = { id = credux_dt_level.4 days = 2 }
+			country_event = { id = credux_dt_level.5 days = 2 }
+			country_event = { id = credux_dt_level.6 days = 2 }
+			country_event = { id = credux_dt_level.7 days = 2 }
+			country_event = { id = credux_dt_level.8 days = 2 }
+		}
+	######################civic_dark_influence
+		every_country = {
+			limit = {
+				has_valid_civic = civic_dark_influence
+			}
+			every_owned_planet = {
+				planet_event = { id = credux_dark_ones.5 days = 2 }
+				planet_event = { id = credux_dark_ones.6 days = 2 }
+				planet_event = { id = credux_dark_ones.7 days = 2 }
+			}
+		}
+	######################civic_mandate_of_heaven
+		every_country = {
+			limit = {
+				has_valid_civic = civic_mandate_of_heaven
+			}
+			country_event = { id = credux_moh.1 days = 2 }
+			country_event = { id = credux_moh.2 days = 2 }
+		}
+	######################civic_age_of_steel
+		every_country = {
+			limit = {
+				has_valid_civic = civic_age_of_steel
+			}
+			country_event = { id = credux_ftf.91 days = 2 }
+			country_event = { id = credux_ftf.92 days = 2 }
+		}
+	######################civic_awakened_minds
+		every_country = {
+			limit = {
+				has_valid_civic = civic_awakened_minds
+			}
+			country_event = { id = credux_ftf.81 days = 2 }
+			country_event = { id = credux_ftf.82 days = 2 }
+		}
+	######################civic_roboticists
+		every_country = {
+			limit = {
+				has_valid_civic = civic_roboticists
+			}
+			country_event = { id = credux_ftf.71 days = 2 }
+			country_event = { id = credux_ftf.72 days = 2 }
+		}
+	######################civic_united_knowledge
+		every_country = {
+			limit = {
+				has_valid_civic = civic_united_knowledge
+			}
+			country_event = { id = credux_ftf.51 days = 2 }
+		}
+	######################civic_living_core
+		every_country = {
+			limit = {
+				has_valid_civic = civic_living_core
+			}
+			country_event = { id = credux_ftf.611 days = 2 }
+			country_event = { id = credux_ftf.612 days = 2 }
+			country_event = { id = credux_ftf.613 days = 2 }
+		}
+	######################civic_samurai_determined
+		every_country = {
+			limit = {
+				has_valid_civic = civic_samurai_determined
+			}
+			country_event = { id = icr_events.2 days = 2 }
+		}
+	######################civic_starborn_swarm
+		every_country = {
+			limit = {
+				has_valid_civic = civic_starborn_swarm
+			}
+			country_event = { id = credux_starborn.2 days = 2 }
+		}
+	######################civic_purifying_presense
+		every_country = {
+			limit = {
+				has_valid_civic = civic_purifying_presense
+			}
+			random_list = {
+				99 = { }
+				1 = { country_event = { id = credux_purify.9001 days = 2 } }
+			}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	} #end immediate
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

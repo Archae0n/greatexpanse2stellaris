@@ -1,0 +1,321 @@
+##########################################################################
+# Diplomatic Missions Events
+# by Lucas Pinheiro Silva
+##########################################################################
+
+namespace = diplomatic_missions
+
+# Begin diplomatic missions
+country_event = {
+	id = diplomatic_missions.1
+	title = "diplomatic_missions.1.name"
+	desc = "diplomatic_missions.1.desc"
+	picture = GFX_evt_galactic_senate
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { 
+					any_owned_ship = { 
+						is_ship_size = diplomatic_ship 
+					} 
+				} 
+			}
+			save_event_target_as = DiplomaticCountry
+			country_event = { 
+				id = diplomatic_missions.2 days = 7 
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Create Diplomatic Ship
+country_event = {
+	id = diplomatic_missions.2
+	title = "diplomatic_missions.2.name"
+	desc = "diplomatic_missions.2.desc"
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_administrative_work_02
+
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			create_fleet = { name = "Diplomatic Fleet" }
+			last_created_fleet = {
+				set_owner = event_target:DiplomaticCountry
+				create_ship_design = {
+					design = "Diplomat"
+				}
+				create_ship = {
+					name = "Eloquence"
+					design = last_created_design
+					graphical_culture = event_target:DiplomaticCountry
+				}
+				set_location = {
+					target = PREV
+					distance = 45
+					angle = random
+				}
+			}
+		}
+		set_country_flag = diplomatic_missions_ready
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Destroy Diplomatic Ship
+country_event = {
+	id = diplomatic_missions.3
+	title = "diplomatic_missions.3.name"
+	desc = "diplomatic_missions.3.desc"
+	picture = GFX_evt_space_debris
+	show_sound = event_radio_chatter_02
+
+	trigger = {
+		NOT = { has_country_edict = "diplomatic_missions" }
+		has_country_flag = diplomatic_missions_ready
+	}
+
+	immediate = {
+		random_owned_ship = {
+			limit = { is_ship_size = diplomatic_ship }
+			reduce_hp_percent = 100
+		}
+		remove_country_flag = diplomatic_missions_ready
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Diplomatic Missions helper event
+country_event = {
+  id = diplomatic_missions.10
+
+  hide_window = yes
+
+  mean_time_to_happen = { days = 7 }
+
+  trigger = {
+    has_country_edict = "diplomatic_missions"
+    has_country_flag = diplomatic_missions_ready
+    NOT = { has_country_flag = ongoing_diplomatic_mission }
+  }
+
+
+  immediate = {
+    random_owned_ship = {
+      limit = { is_ship_size = diplomatic_ship }
+      save_event_target_as = DiplomaticShip
+    }
+
+    # If Diplomatic Ship is in a valid capital, call Diplomatic Missions menu
+    if = {
+      limit = {
+        event_target:DiplomaticShip = {
+          exists = solar_system
+          solar_system = {
+            exists = space_owner
+            space_owner = {
+              NOT = {
+                has_relation_flag = {
+                  who = ROOT
+                  flag = recent_diplomatic_mission
+                }
+              }
+              exists = overlord
+              overlord = { is_country = ROOT }
+            }
+            any_planet = { is_capital = yes }
+          }
+        }
+      }
+
+      # Save country as DiplomaticTarget
+      event_target:DiplomaticShip = {
+        solar_system = {
+          space_owner = {
+            save_event_target_as = DiplomaticTarget
+          }
+        }
+      }
+      set_country_flag = ongoing_diplomatic_mission
+      country_event = { id = diplomatic_missions.11 }
+    }
+  }
+}
+
+# Diplomatic Missions menu
+country_event = {
+  id = diplomatic_missions.11
+  title = "diplomatic_missions.11.name"
+  desc = {
+    trigger = {
+      hidden:event_target:DiplomaticTarget = {
+        switch = {
+          trigger = is_subject_type
+          tvassal = { text = diplomatic_missions.11.desc.tsubject }
+          tprotectorate = { text = diplomatic_missions.11.desc.tsubject }
+          tributary = { text = diplomatic_missions.11.desc.tributary }
+          default = { text = diplomatic_missions.11.desc.default }
+        }
+      }
+    }
+  }
+  picture = GFX_evt_metropolis
+  show_sound = event_default
+
+  is_triggered_only = yes
+
+  immediate = {
+    set_variable = {
+      which = marches
+      value = 0
+    }
+    every_subject = {
+      limit = { is_subject_type = "march" }
+      change_variable = {
+        which = marches
+        value = 1
+      }
+    }
+  }
+
+  # Country Inspection
+  option = {
+    name = diplomatic_missions.11.a
+    trigger = {
+      has_policy_flag = slavery_not_allowed
+      has_policy_flag = purge_not_allowed
+      event_target:DiplomaticTarget = {
+        NOT = {
+          OR = {
+            is_subject_type = "tributary"
+            is_subject_type = "tvassal"
+            is_subject_type = "tprotectorate"
+          }
+        }
+      }
+    }
+    hidden_effect = {
+     country_event = { id = diplomatic_missions.100 }
+    }
+  }
+
+  # Turn into March
+  option = {
+    name = diplomatic_missions.11.b
+    trigger = {
+      OR = {
+        AND = {
+          has_ethic = "ethic_fanatic_pacifist"
+          check_variable = {
+            which = marches
+            value < 1
+          }
+        }
+        AND = {
+          has_ethic = "ethic_pacifist"
+          check_variable = {
+            which = marches
+            value < 2
+          }
+        }
+        AND = {
+          NOR = {
+            has_ethic = "ethic_fanatic_pacifist"
+            has_ethic = "ethic_pacifist"
+            has_ethic = "ethic_militarist"
+            has_ethic = "ethic_fanatic_militarist"
+          }
+          check_variable = {
+            which = marches
+            value < 3
+          }
+        }
+        AND = {
+          has_ethic = "ethic_militarist"
+          check_variable = {
+            which = marches
+            value < 4
+          }
+        }
+        AND = {
+          has_ethic = "ethic_fanatic_militarist"
+          check_variable = {
+            which = marches
+            value < 5
+          }
+        }
+      }
+      event_target:DiplomaticTarget = {
+        is_subject_type = "vassal"
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.200 }
+    }
+  }
+
+  # Revoke March Status
+  option = {
+    name = diplomatic_missions.11.c
+    trigger = {
+      event_target:DiplomaticTarget = {
+        is_subject_type = "march"
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.220 }
+    }
+  }
+
+  # Give Tax Exemption
+  option = {
+    name = diplomatic_missions.11.d
+    trigger = {
+      event_target:DiplomaticTarget = {
+        OR = {
+          is_subject_type = "tvassal"
+          is_subject_type = "tprotectorate"
+        }
+      }
+    }
+    hidden_effect = {
+      country_event = { id = diplomatic_missions.300 }
+    }
+  }
+
+  # Do nothing
+  option = {
+    name = diplomatic_missions.11.z
+    hidden_effect = {
+      event_target:DiplomaticTarget = {
+        set_timed_relation_flag = {
+          flag = recent_diplomatic_mission
+          who = ROOT
+          days = 360
+        }
+      }
+      remove_country_flag = ongoing_diplomatic_mission
+    }
+    event_target:DiplomaticTarget = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_friendly_diplomatic_visit
+      }
+    }
+  }
+}

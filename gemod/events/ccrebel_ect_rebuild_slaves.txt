@@ -1,0 +1,409 @@
+
+namespace = cc_slaves_rebel
+
+#Basically changed it so less likely to wipe out legimate govt changes, but can't be infallible with 5 ethics.
+
+#yearly
+event = {
+	id = cc_slaves_rebel.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_civic = civic_broken_shackles
+			has_civic = civic_free_republic
+			NOT = {
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_civic = civic_broken_shackles
+				has_civic = civic_free_republic
+				NOT = { has_country_flag = ccrebel_just_lost_war }
+				NOT = {
+					AND = {
+						OR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						}
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+			}
+			if = { #tell the player
+				limit = { is_ai = no }
+				country_event = { id = cc_slaves_rebel.21 }
+			}
+
+			else_if = {
+				limit = { has_country_flag = ccrebel_dont_change_ethic_60_years }
+
+				if = {
+					limit = {
+						NOR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+					shift_ethic = ethic_militarist
+				}
+				if = {
+					limit = { NOT = { has_ethic = "ethic_fanatic_egalitarian" } }
+					shift_ethic = ethic_fanatic_egalitarian
+				}
+				
+				#Backup, in case that doesn't work 100% as I want (theoretically possible that they simply do the same shift and cancel each other out)
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								OR = {
+									has_ethic = ethic_militarist
+									has_ethic = ethic_fanatic_militarist
+								}
+								has_ethic = ethic_fanatic_egalitarian
+							}
+						}
+					}
+					if = {
+						limit = { has_ethic = "ethic_socialism" }
+						country_remove_ethic = "ethic_socialism"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_socialism" }
+						country_remove_ethic = "ethic_fanatic_socialism"
+					}
+					if = {
+						limit = { has_ethic = "ethic_capitalism" }
+						country_remove_ethic = "ethic_capitalism"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_capitalism" }
+						country_remove_ethic = "ethic_fanatic_capitalism"
+					}
+					if = {
+						limit = { has_ethic = "ethic_green" }
+						country_remove_ethic = "ethic_green"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_green" }
+						country_remove_ethic = "ethic_fanatic_green"
+					}
+					if = {
+						limit = { has_ethic = "ethic_industrial" }
+						country_remove_ethic = "ethic_industrial"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_industrial" }
+						country_remove_ethic = "ethic_fanatic_industrial"
+					}
+					if = {
+						limit = { has_ethic = "ethic_elitist" }
+						country_remove_ethic = "ethic_elitist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_elitist" }
+						country_remove_ethic = "ethic_fanatic_elitist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_pluralist" }
+						country_remove_ethic = "ethic_pluralist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_pluralist" }
+						country_remove_ethic = "ethic_fanatic_pluralist"
+					}
+					
+					if = {
+						limit = { has_ethic = "ethic_fanatic_materialist" }
+						country_remove_ethic = "ethic_fanatic_materialist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_materialist" }
+						country_remove_ethic = "ethic_materialist"
+					}
+		#			if = {
+		#				limit = { has_ethic = "ethic_fanatic_egalitarian" }
+		#				country_remove_ethic = "ethic_fanatic_egalitarian"
+		#			}
+					if = {
+						limit = { has_ethic = "ethic_egalitarian" }
+						country_remove_ethic = "ethic_egalitarian"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_pacifist" }
+						country_remove_ethic = "ethic_fanatic_pacifist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_pacifist" }
+						country_remove_ethic = "ethic_pacifist"
+					}
+		#			if = {
+		#				limit = { has_ethic = "ethic_fanatic_militarist" }
+		#				country_remove_ethic = "ethic_fanatic_militarist"
+		#			}
+		#			if = {
+		#				limit = { has_ethic = "ethic_militarist" }
+		#				country_remove_ethic = "ethic_militarist"
+		#			}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_xenophile" }
+						country_remove_ethic = "ethic_fanatic_xenophile"
+					}
+					if = {
+						limit = { has_ethic = "ethic_xenophile" }
+						country_remove_ethic = "ethic_xenophile"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_xenophobe" }
+						country_remove_ethic = "ethic_fanatic_xenophobe"
+					}
+					if = {
+						limit = { has_ethic = "ethic_xenophobe" }
+						country_remove_ethic = "ethic_xenophobe"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_spiritualist" }
+						country_remove_ethic = "ethic_fanatic_spiritualist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_spiritualist" }
+						country_remove_ethic = "ethic_spiritualist"
+					}
+					if = {
+						limit = { has_ethic = "ethic_fanatic_authoritarian" }
+						country_remove_ethic = "ethic_fanatic_authoritarian"
+					}
+					if = {
+						limit = { has_ethic = "ethic_authoritarian" }
+						country_remove_ethic = "ethic_authoritarian"
+					}
+					
+					
+					if = {
+						limit = { NOR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						} }
+						country_add_ethic = ethic_militarist
+					}
+					if = {
+						limit = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
+						country_add_ethic = ethic_fanatic_egalitarian
+					}
+					set_name = random
+				}
+			}
+			else = {
+				change_government = {
+					civics = {
+						civic = civic_beacon_of_liberty
+						civic = civic_idealistic_foundation
+					}
+				}
+				set_name = random
+				change_country_flag = random
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cc_slaves_rebel.21
+	title = cc_slaves_rebel.21.name
+	desc = cc_slaves_rebel.21.desc
+	picture = GFX_evt_arguing_senate
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cc_slaves_rebel.21.option
+		custom_tooltip = cc_slaves_rebel.21.tooltip
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+				shift_ethic = ethic_militarist
+			}
+			if = {
+				limit = { NOT = { has_ethic = "ethic_fanatic_egalitarian" } }
+				shift_ethic = ethic_fanatic_egalitarian
+			}
+			
+			#Backup, in case that doesn't work 100% as I want (theoretically possible that they simply do the same shift and cancel each other out)
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							OR = {
+								has_ethic = ethic_militarist
+								has_ethic = ethic_fanatic_militarist
+							}
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+				}
+				if = {
+					limit = { has_ethic = "ethic_socialism" }
+					country_remove_ethic = "ethic_socialism"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_socialism" }
+					country_remove_ethic = "ethic_fanatic_socialism"
+				}
+				if = {
+					limit = { has_ethic = "ethic_capitalism" }
+					country_remove_ethic = "ethic_capitalism"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_capitalism" }
+					country_remove_ethic = "ethic_fanatic_capitalism"
+				}
+				if = {
+					limit = { has_ethic = "ethic_green" }
+					country_remove_ethic = "ethic_green"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_green" }
+					country_remove_ethic = "ethic_fanatic_green"
+				}
+				if = {
+					limit = { has_ethic = "ethic_industrial" }
+					country_remove_ethic = "ethic_industrial"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_industrial" }
+					country_remove_ethic = "ethic_fanatic_industrial"
+				}
+				if = {
+					limit = { has_ethic = "ethic_elitist" }
+					country_remove_ethic = "ethic_elitist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_elitist" }
+					country_remove_ethic = "ethic_fanatic_elitist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_pluralist" }
+					country_remove_ethic = "ethic_pluralist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_pluralist" }
+					country_remove_ethic = "ethic_fanatic_pluralist"
+				}
+				
+				if = {
+					limit = { has_ethic = "ethic_fanatic_materialist" }
+					country_remove_ethic = "ethic_fanatic_materialist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_materialist" }
+					country_remove_ethic = "ethic_materialist"
+				}
+	#			if = {
+	#				limit = { has_ethic = "ethic_fanatic_egalitarian" }
+	#				country_remove_ethic = "ethic_fanatic_egalitarian"
+	#			}
+				if = {
+					limit = { has_ethic = "ethic_egalitarian" }
+					country_remove_ethic = "ethic_egalitarian"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_pacifist" }
+					country_remove_ethic = "ethic_fanatic_pacifist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_pacifist" }
+					country_remove_ethic = "ethic_pacifist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_militarist" }
+					country_remove_ethic = "ethic_fanatic_militarist"
+				}
+	#			if = {
+	#				limit = { has_ethic = "ethic_militarist" }
+	#				country_remove_ethic = "ethic_militarist"
+	#			}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_xenophile" }
+					country_remove_ethic = "ethic_fanatic_xenophile"
+				}
+				if = {
+					limit = { has_ethic = "ethic_xenophile" }
+					country_remove_ethic = "ethic_xenophile"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_xenophobe" }
+					country_remove_ethic = "ethic_fanatic_xenophobe"
+				}
+				if = {
+					limit = { has_ethic = "ethic_xenophobe" }
+					country_remove_ethic = "ethic_xenophobe"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_spiritualist" }
+					country_remove_ethic = "ethic_fanatic_spiritualist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_spiritualist" }
+					country_remove_ethic = "ethic_spiritualist"
+				}
+				if = {
+					limit = { has_ethic = "ethic_fanatic_authoritarian" }
+					country_remove_ethic = "ethic_fanatic_authoritarian"
+				}
+				if = {
+					limit = { has_ethic = "ethic_authoritarian" }
+					country_remove_ethic = "ethic_authoritarian"
+				}
+				
+				
+				if = {
+					limit = { NOR = { has_ethic = ethic_militarist } }
+					country_add_ethic = ethic_militarist
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_fanatic_egalitarian } }
+					country_add_ethic = ethic_fanatic_egalitarian
+				}
+				set_name = random
+			}
+		}
+	}
+
+	option = {
+		name = cc_slaves_rebel.21.option.b
+		custom_tooltip = cc_slaves_rebel.21.option.b.tooltip
+		
+		hidden_effect = {
+			add_modifier = {
+				modifier = betrayed_the_revolution
+				days = 9000
+			}
+			change_government = {
+				civics = {
+					civic = civic_beacon_of_liberty
+					civic = civic_idealistic_foundation
+				}
+			}
+			set_name = random
+			change_country_flag = random
+		}
+	}
+}

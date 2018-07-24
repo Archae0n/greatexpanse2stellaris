@@ -1,0 +1,120 @@
+namespace = claims_decay
+
+@claims_decay_time_xenophile = 60
+@claims_decay_time_normal = 120
+@claims_decay_time_xenophobe = 240
+
+country_event = {
+	id = claims_decay.10
+	hide_window = yes
+	
+	trigger = {
+		is_ai = yes
+		OR = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = @claims_decay_time_xenophobe
+	}
+	
+	immediate = {
+		country_event = {
+			id = claims_decay.20
+		}
+	}
+}
+
+country_event = {
+	id = claims_decay.11
+	hide_window = yes
+	
+	trigger = {
+		is_ai = yes
+		NOT = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = @claims_decay_time_normal
+	}
+	
+	immediate = {
+		country_event = {
+			id = claims_decay.20
+		}
+	}
+}
+
+country_event = {
+	id = claims_decay.12
+	hide_window = yes
+	
+	trigger = {
+		is_ai = yes
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = @claims_decay_time_xenophile
+	}
+	
+	immediate = {
+		country_event = {
+			id = claims_decay.20
+		}
+	}
+}
+
+country_event = {
+	id = claims_decay.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = { 
+					is_rival = root
+					root = { is_rival = prev }
+				}
+				OR = {
+					is_loyal_to  = root
+					is_cordial_to = root
+					is_friendly_to = root
+					is_in_federation_with = root
+					has_association_status = root
+					has_defensive_pact = root
+					AND = {
+						root = { 
+							has_ascension_perk = ap_shared_destiny 
+							is_overlord_to = prev
+						}
+					}
+					root = { has_edict = diplomatic_grants }
+				}
+			}
+		
+			random_system_within_border = {
+				limit = {
+					root = {
+						has_claim = prev
+					}
+				}
+				remove_claims = { 
+					who = root 
+					num_of_claims = 5 
+				} 
+			}
+		}
+	}
+}

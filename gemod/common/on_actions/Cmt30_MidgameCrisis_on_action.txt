@@ -1,0 +1,7 @@
+
+on_yearly_pulse = {
+	events = {
+		CrisisManagerControl.6001		## Trigger Awaking of Khan
+	}
+}
+

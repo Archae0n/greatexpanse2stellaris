@@ -1,0 +1,408 @@
+# CoFH - Stellar Expansion - Terraforming
+# Terraforming Links
+# Author: King Lemming
+
+################################################################################
+# Toxic Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_continental"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmospheric_purification"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_toxic
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_toxic
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_toxic_kelp
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_ocean"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmospheric_purification"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_toxic
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_toxic
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_active_volcano
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_toxic_kelp
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_tropical"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmospheric_purification"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_toxic
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_toxic
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_dense_jungle
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_noxious_swamp
+				}
+			}
+		}
+	}
+}
+
+################################################################################
+# Barren Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_desert"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_quicksand_basin
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_arid"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_quicksand_basin
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_savannah"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_quicksand_basin
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+################################################################################
+# Cold Barren Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_arctic"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren_cold
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren_cold
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_tundra"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren_cold
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren_cold
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_alpine"
+
+	energy = 10000
+	duration = 7300
+
+	condition = {
+		has_technology = "tech_cofh_se_atmosphere_creation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+		cofh_se_not_terraforming_candidate = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_barren_cold
+				days = 3600
+			}
+			set_planet_flag = cofh_se_was_barren_cold
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}

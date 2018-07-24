@@ -1,0 +1,33 @@
+cb_humiliation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+		}
+	}
+	is_valid = {	
+		OR = {
+			AND = {
+				OR = {
+					NOT = { has_policy_flag = liberation_wars }
+					from = { has_ethic = ethic_gestalt_consciousness }
+				}
+				is_rival = FROM
+				has_total_war_cb = no
+				OR = {
+					is_subject = no
+					overlord = { NOT = { is_same_value = from } }
+				}
+			}
+			AND = {
+				is_ai = no
+				has_total_war_cb = yes
+				from = {
+					is_country_type = fallen_empire
+				}
+			}
+		}
+	}
+}

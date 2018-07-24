@@ -1,0 +1,2615 @@
+#These are country triggers
+
+has_minerals_0 = {
+	has_monthly_income = {
+		resource = minerals
+		value <= 0
+	}
+}
+
+has_minerals_5 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 0
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 5
+		}
+	}
+}
+
+has_minerals_10 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 5
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 10
+		}
+	}
+}
+
+has_minerals_15 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 10
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 15
+		}
+	}
+}
+
+has_minerals_20 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 15
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 20
+		}
+	}
+}
+
+has_minerals_25 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 20
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 25
+		}
+	}
+}
+
+has_minerals_30 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 25
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 30
+		}
+	}
+}
+
+has_minerals_35 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 30
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 35
+		}
+	}
+}
+
+has_minerals_40 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 35
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 40
+		}
+	}
+}
+
+has_minerals_45 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 40
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 45
+		}
+	}
+}
+
+has_minerals_50 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 45
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 50
+		}
+	}
+}
+
+has_minerals_55 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 50
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 55
+		}
+	}
+}
+
+has_minerals_60 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 55
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 60
+		}
+	}
+}
+
+has_minerals_65 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 60
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 65
+		}
+	}
+}
+
+has_minerals_70 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 65
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 70
+		}
+	}
+}
+
+has_minerals_75 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 70
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 75
+		}
+	}
+}
+
+has_minerals_80 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 75
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 80
+		}
+	}
+}
+
+has_minerals_85 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 80
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 85
+		}
+	}
+}
+
+has_minerals_90 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 85
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 90
+		}
+	}
+}
+
+has_minerals_95 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 90
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 95
+		}
+	}
+}
+
+has_minerals_100 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 95
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 100
+		}
+	}
+}
+
+has_minerals_105 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 100
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 105
+		}
+	}
+}
+
+has_minerals_110 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 115
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 110
+		}
+	}
+}
+
+has_minerals_115 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 110
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 115
+		}
+	}
+}
+
+has_minerals_120 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 115
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 120
+		}
+	}
+}
+
+has_minerals_125 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 120
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 125
+		}
+	}
+}
+
+has_minerals_130 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 125
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 130
+		}
+	}
+}
+
+has_minerals_135 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 130
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 135
+		}
+	}
+}
+
+has_minerals_140 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 135
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 140
+		}
+	}
+}
+
+has_minerals_145 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 140
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 145
+		}
+	}
+}
+
+has_minerals_150 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 145
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 150
+		}
+	}
+}
+
+has_minerals_155 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 150
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 155
+		}
+	}
+}
+
+has_minerals_160 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 155
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 160
+		}
+	}
+}
+
+has_minerals_165 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 160
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 165
+		}
+	}
+}
+
+has_minerals_170 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 165
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 170
+		}
+	}
+}
+
+has_minerals_175 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 170
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 175
+		}
+	}
+}
+
+has_minerals_180 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 175
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 180
+		}
+	}
+}
+
+has_minerals_185 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 180
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 185
+		}
+	}
+}
+
+has_minerals_190 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 185
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 190
+		}
+	}
+}
+
+has_minerals_195 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 190
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 195
+		}
+	}
+}
+
+has_minerals_200 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 195
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 200
+		}
+	}
+}
+
+has_minerals_205 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 200
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 205
+		}
+	}
+}
+
+has_minerals_210 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 205
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 210
+		}
+	}
+}
+
+has_minerals_215 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 210
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 215
+		}
+	}
+}
+
+has_minerals_220 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 215
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 220
+		}
+	}
+}
+
+has_minerals_225 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 220
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 225
+		}
+	}
+}
+
+has_minerals_230 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 225
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 230
+		}
+	}
+}
+
+has_minerals_235 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 230
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 235
+		}
+	}
+}
+
+has_minerals_240 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 235
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 240
+		}
+	}
+}
+
+has_minerals_245 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 240
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 245
+		}
+	}
+}
+
+has_minerals_250 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 245
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 250
+		}
+	}
+}
+
+has_minerals_255 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 250
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 255
+		}
+	}
+}
+
+has_minerals_260 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 255
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 260
+		}
+	}
+}
+
+has_minerals_265 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 260
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 265
+		}
+	}
+}
+
+has_minerals_270 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 265
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 270
+		}
+	}
+}
+
+has_minerals_275 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 270
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 275
+		}
+	}
+}
+
+has_minerals_280 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 275
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 280
+		}
+	}
+}
+
+has_minerals_285 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 280
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 285
+		}
+	}
+}
+
+has_minerals_290 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 285
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 290
+		}
+	}
+}
+
+has_minerals_295 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 290
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 295
+		}
+	}
+}
+
+has_minerals_300 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 295
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 300
+		}
+	}
+}
+
+has_minerals_305 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 300
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 305
+		}
+	}
+}
+
+has_minerals_310 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 305
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 310
+		}
+	}
+}
+
+has_minerals_315 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 310
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 315
+		}
+	}
+}
+
+has_minerals_320 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 315
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 320
+		}
+	}
+}
+
+has_minerals_325 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 320
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 325
+		}
+	}
+}
+
+has_minerals_330 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 325
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 330
+		}
+	}
+}
+
+has_minerals_335 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 330
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 335
+		}
+	}
+}
+
+has_minerals_340 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 335
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 340
+		}
+	}
+}
+
+has_minerals_345 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 340
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 345
+		}
+	}
+}
+
+has_minerals_350 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 345
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 350
+		}
+	}
+}
+
+has_minerals_355 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 350
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 355
+		}
+	}
+}
+
+has_minerals_360 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 355
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 360
+		}
+	}
+}
+
+has_minerals_365 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 360
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 365
+		}
+	}
+}
+
+has_minerals_370 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 365
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 370
+		}
+	}
+}
+
+has_minerals_375 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 370
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 375
+		}
+	}
+}
+
+has_minerals_380 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 375
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 380
+		}
+	}
+}
+
+has_minerals_385 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 380
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 385
+		}
+	}
+}
+
+has_minerals_390 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 385
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 390
+		}
+	}
+}
+
+has_minerals_395 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 390
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 395
+		}
+	}
+}
+
+has_minerals_400 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 395
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 400
+		}
+	}
+}
+
+has_minerals_405 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 400
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 405
+		}
+	}
+}
+
+has_minerals_410 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 405
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 410
+		}
+	}
+}
+
+has_minerals_415 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 410
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 415
+		}
+	}
+}
+
+has_minerals_420 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 415
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 420
+		}
+	}
+}
+
+has_minerals_425 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 420
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 425
+		}
+	}
+}
+
+has_minerals_430 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 425
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 430
+		}
+	}
+}
+
+has_minerals_435 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 430
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 435
+		}
+	}
+}
+
+has_minerals_440 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 435
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 440
+		}
+	}
+}
+
+has_minerals_445 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 440
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 445
+		}
+	}
+}
+
+has_minerals_450 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 445
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 450
+		}
+	}
+}
+
+has_minerals_455 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 450
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 455
+		}
+	}
+}
+
+has_minerals_460 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 455
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 460
+		}
+	}
+}
+
+has_minerals_465 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 460
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 465
+		}
+	}
+}
+
+has_minerals_470 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 465
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 470
+		}
+	}
+}
+
+has_minerals_475 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 470
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 475
+		}
+	}
+}
+
+has_minerals_480 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 475
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 480
+		}
+	}
+}
+
+has_minerals_485 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 480
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 485
+		}
+	}
+}
+
+has_minerals_490 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 485
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 490
+		}
+	}
+}
+
+has_minerals_495 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 490
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 495
+		}
+	}
+}
+
+has_minerals_500 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 495
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 500
+		}
+	}
+}
+
+has_minerals_505 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 500
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 505
+		}
+	}
+}
+
+has_minerals_510 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 505
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 510
+		}
+	}
+}
+
+has_minerals_515 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 510
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 515
+		}
+	}
+}
+
+has_minerals_520 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 515
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 520
+		}
+	}
+}
+
+has_minerals_525 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 520
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 525
+		}
+	}
+}
+
+has_minerals_530 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 525
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 530
+		}
+	}
+}
+
+has_minerals_535 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 530
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 535
+		}
+	}
+}
+
+has_minerals_540 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 535
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 540
+		}
+	}
+}
+
+has_minerals_545 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 540
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 545
+		}
+	}
+}
+
+has_minerals_550 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 545
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 550
+		}
+	}
+}
+
+has_minerals_555 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 550
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 555
+		}
+	}
+}
+
+has_minerals_560 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 555
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 560
+		}
+	}
+}
+
+has_minerals_565 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 560
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 565
+		}
+	}
+}
+
+has_minerals_570 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 565
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 570
+		}
+	}
+}
+
+has_minerals_575 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 570
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 575
+		}
+	}
+}
+
+has_minerals_580 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 575
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 580
+		}
+	}
+}
+
+has_minerals_585 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 580
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 585
+		}
+	}
+}
+
+has_minerals_590 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 585
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 590
+		}
+	}
+}
+
+has_minerals_595 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 590
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 595
+		}
+	}
+}
+
+has_minerals_600 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 595
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 600
+		}
+	}
+}
+
+has_minerals_605 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 600
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 605
+		}
+	}
+}
+
+has_minerals_610 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 605
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 610
+		}
+	}
+}
+
+has_minerals_615 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 610
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 615
+		}
+	}
+}
+
+has_minerals_620 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 615
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 620
+		}
+	}
+}
+
+has_minerals_625 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 620
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 625
+		}
+	}
+}
+
+has_minerals_630 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 625
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 630
+		}
+	}
+}
+
+has_minerals_635 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 630
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 635
+		}
+	}
+}
+
+has_minerals_640 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 635
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 640
+		}
+	}
+}
+
+has_minerals_645 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 640
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 645
+		}
+	}
+}
+
+has_minerals_650 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 645
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 650
+		}
+	}
+}
+
+has_minerals_655 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 650
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 655
+		}
+	}
+}
+
+has_minerals_660 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 655
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 660
+		}
+	}
+}
+
+has_minerals_665 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 660
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 665
+		}
+	}
+}
+
+has_minerals_670 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 665
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 670
+		}
+	}
+}
+
+has_minerals_675 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 670
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 675
+		}
+	}
+}
+
+has_minerals_680 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 675
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 680
+		}
+	}
+}
+
+has_minerals_685 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 680
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 685
+		}
+	}
+}
+
+has_minerals_690 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 685
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 690
+		}
+	}
+}
+
+has_minerals_695 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 690
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 695
+		}
+	}
+}
+
+has_minerals_700 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 695
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 700
+		}
+	}
+}
+
+has_minerals_705 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 700
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 705
+		}
+	}
+}
+
+has_minerals_710 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 705
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 710
+		}
+	}
+}
+
+has_minerals_715 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 710
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 715
+		}
+	}
+}
+
+has_minerals_720 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 715
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 720
+		}
+	}
+}
+
+has_minerals_725 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 720
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 725
+		}
+	}
+}
+
+has_minerals_730 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 725
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 730
+		}
+	}
+}
+
+has_minerals_735 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 730
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 735
+		}
+	}
+}
+
+has_minerals_740 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 735
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 740
+		}
+	}
+}
+
+has_minerals_745 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 740
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 745
+		}
+	}
+}
+
+has_minerals_750 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 745
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 750
+		}
+	}
+}
+
+has_minerals_755 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 750
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 755
+		}
+	}
+}
+
+has_minerals_760 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 755
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 760
+		}
+	}
+}
+
+has_minerals_765 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 760
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 765
+		}
+	}
+}
+
+has_minerals_770 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 765
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 770
+		}
+	}
+}
+
+has_minerals_775 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 770
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 775
+		}
+	}
+}
+
+has_minerals_780 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 775
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 780
+		}
+	}
+}
+
+has_minerals_785 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 780
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 785
+		}
+	}
+}
+
+has_minerals_790 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 785
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 790
+		}
+	}
+}
+
+has_minerals_795 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 790
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 795
+		}
+	}
+}
+
+has_minerals_800 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 795
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 800
+		}
+	}
+}
+
+has_minerals_805 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 800
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 805
+		}
+	}
+}
+
+has_minerals_810 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 805
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 810
+		}
+	}
+}
+
+has_minerals_815 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 810
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 815
+		}
+	}
+}
+
+has_minerals_820 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 815
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 820
+		}
+	}
+}
+
+has_minerals_825 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 820
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 825
+		}
+	}
+}
+
+has_minerals_830 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 825
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 830
+		}
+	}
+}
+
+has_minerals_835 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 830
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 835
+		}
+	}
+}
+
+has_minerals_840 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 835
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 840
+		}
+	}
+}
+
+has_minerals_845 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 840
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 845
+		}
+	}
+}
+
+has_minerals_850 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 845
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 850
+		}
+	}
+}
+
+has_minerals_855 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 850
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 855
+		}
+	}
+}
+
+has_minerals_860 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 855
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 860
+		}
+	}
+}
+
+has_minerals_865 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 860
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 865
+		}
+	}
+}
+
+has_minerals_870 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 865
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 870
+		}
+	}
+}
+
+has_minerals_875 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 870
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 875
+		}
+	}
+}
+
+has_minerals_880 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 875
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 880
+		}
+	}
+}
+
+has_minerals_885 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 880
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 885
+		}
+	}
+}
+
+has_minerals_890 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 885
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 890
+		}
+	}
+}
+
+has_minerals_895 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 890
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 895
+		}
+	}
+}
+
+has_minerals_900 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 895
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 900
+		}
+	}
+}
+
+has_minerals_905 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 900
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 905
+		}
+	}
+}
+
+has_minerals_910 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 905
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 910
+		}
+	}
+}
+
+has_minerals_915 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 910
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 915
+		}
+	}
+}
+
+has_minerals_920 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 915
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 920
+		}
+	}
+}
+
+has_minerals_925 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 920
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 925
+		}
+	}
+}
+
+has_minerals_930 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 925
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 930
+		}
+	}
+}
+
+has_minerals_935 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 930
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 935
+		}
+	}
+}
+
+has_minerals_940 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 935
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 940
+		}
+	}
+}
+
+has_minerals_945 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 940
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 945
+		}
+	}
+}
+
+has_minerals_950 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 945
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 950
+		}
+	}
+}
+
+has_minerals_955 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 950
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 955
+		}
+	}
+}
+
+has_minerals_960 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 955
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 960
+		}
+	}
+}
+
+has_minerals_965 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 960
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 965
+		}
+	}
+}
+
+has_minerals_970 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 965
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 970
+		}
+	}
+}
+
+has_minerals_975 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 970
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 975
+		}
+	}
+}
+
+has_minerals_980 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 975
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 980
+		}
+	}
+}
+
+has_minerals_985 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 980
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 985
+		}
+	}
+}
+
+has_minerals_990 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 985
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 990
+		}
+	}
+}
+
+has_minerals_995 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 990
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 995
+		}
+	}
+}
+
+has_minerals_1000 = {
+	AND = {
+		has_monthly_income = {
+			resource = minerals
+			value > 995
+		}
+		has_monthly_income = {
+			resource = minerals
+			value <= 1000
+		}
+	}
+}
+
+has_minerals_op = {
+	has_monthly_income = {
+		resource = minerals
+		value > 1000
+	}
+}

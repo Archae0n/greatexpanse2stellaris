@@ -1,0 +1,80 @@
+#Defensive armies can't transport of the planet
+#Garrison armies are created by pops
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+
+#Demonic Assault Armies
+demonic_assault_army = {
+	damage = 1.95
+	health = 1.55
+	morale = 0.85
+	morale_damage = 2.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	#assault = yes
+	time = 90
+	maintenance = 0.33
+	icon_frame = 2
+	
+	has_species = no
+	
+	cost = {
+		minerals = 60
+	}
+	prerequisites = { "tech_assault_armies" }
+	potential = {
+		planet = {
+			has_planet_flag = dark_ones_pleased 
+		}
+	}
+}
+
+#Imp Horde
+demonic_horde_army = {
+	damage = 1.00
+	health = 0.75
+	morale = 1.00
+	morale_damage = 2.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	#assault = yes
+	time = 15
+	maintenance = 0.05
+	icon_frame = 2
+	
+	has_species = no
+	
+	cost = {
+		minerals = 5
+	}
+	prerequisites = { "tech_assault_armies" }
+	potential = {
+		planet = {
+			has_planet_flag = dark_ones_pleased 
+		}
+	}
+}
+
+living_core = {
+	defensive = yes
+	damage = 2.0
+	health = 6.0
+	has_morale = no
+	
+	time = 3600
+	
+	maintenance = 0
+	icon_frame = 8
+	cost = {
+		food = 200
+		energy = 500
+		influence = 100
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+	}
+}

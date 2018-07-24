@@ -1,0 +1,269 @@
+# CoFH - Stellar Expansion - Terraforming (Extreme)
+# Terraforming Links
+# Author: King Lemming
+
+################################################################################
+# Molten Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_desert"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_tectonic_restriction"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_molten
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_molten
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_active_volcano
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_arid"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_tectonic_restriction"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_molten
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_molten
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_active_volcano
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_savannah"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_tectonic_restriction"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_molten
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_molten
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_active_volcano
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_deep_sinkhole
+				}
+			}
+		}
+	}
+}
+
+################################################################################
+# Frozen Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_arctic"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_dynamo_manipulation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_frozen
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_frozen
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_tundra"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_dynamo_manipulation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_frozen
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_frozen
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_alpine"
+
+	energy = 20000
+	duration = 14600
+
+	condition = {
+		has_technology = "tech_cofh_se_dynamo_manipulation"
+
+		cofh_se_normal_planet = yes
+		cofh_se_normal_star = yes
+		cofh_se_no_dyson_sphere = yes
+		cofh_se_no_habitat = yes
+	}
+
+	effect = {
+		from = {
+			add_modifier = {
+				modifier = cofh_se_pm_frozen
+				days = 7200
+			}
+			set_planet_flag = cofh_se_was_frozen
+
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_mountain_range
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+					}
+					set_blocker = tb_massive_glacier
+				}
+			}
+		}
+	}
+}

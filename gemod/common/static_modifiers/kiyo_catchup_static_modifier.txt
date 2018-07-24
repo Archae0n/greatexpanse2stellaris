@@ -1,0 +1,65 @@
+kiyo_catchup_irr_stolen = {
+	country_resource_minerals_add = -10
+	country_resource_minerals_mult = -0.10
+}
+kiyo_catchup_irr_bad = {
+	country_resource_minerals_add = 10
+	country_resource_minerals_mult = 0.06
+}
+kiyo_catchup_irr_good = {
+	country_resource_minerals_add = 10
+	country_resource_minerals_mult = 0.15
+}
+kiyo_catchup_irr_great = {
+	country_resource_minerals_add = 25
+	country_resource_minerals_mult = 0.18
+}
+kiyo_catchup_fleet_stolen = {
+	starbase_shipyard_build_cost_mult = 0.20
+}
+kiyo_catchup_fleet_bad = {
+	starbase_shipyard_build_cost_mult = -0.06
+}
+kiyo_catchup_fleet_good = {
+	starbase_shipyard_build_cost_mult = -0.18
+}
+kiyo_catchup_navy_stolen = {
+	country_resource_energy_add = -10
+	country_resource_energy_mult = -0.10
+}
+kiyo_catchup_navy_bad = {
+	country_resource_energy_add = 10
+	country_resource_energy_mult = 0.06
+}
+kiyo_catchup_navy_good = {
+	country_resource_energy_add = 10
+	country_resource_energy_mult = 0.15
+}
+kiyo_catchup_navy_great = {
+	country_resource_energy_add = 25
+	country_resource_energy_mult = 0.20
+}
+kiyo_catchup_tech_stolen = {
+	country_resource_physics_research_add = -4
+	country_resource_society_research_add = -4
+	country_resource_engineering_research_add = -4
+	all_technology_research_speed = -0.10
+}
+kiyo_catchup_tech_bad = {
+	country_resource_physics_research_add = 4
+	country_resource_society_research_add = 4
+	country_resource_engineering_research_add = 4
+	all_technology_research_speed = 0.06
+}
+kiyo_catchup_tech_good = {
+	country_resource_physics_research_add = 4
+	country_resource_society_research_add = 4
+	country_resource_engineering_research_add = 4
+	all_technology_research_speed = 0.15
+}
+kiyo_catchup_tech_great = {
+	country_resource_physics_research_add = 4
+	country_resource_society_research_add = 4
+	country_resource_engineering_research_add = 4
+	all_technology_research_speed = 0.18
+}

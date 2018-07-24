@@ -1,0 +1,137 @@
+entity = {
+	name = "machine_planet_01_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_A_diffuse.dds"
+		texture_normal = "ai_04_A_normal.dds"
+		texture_specular = "ai_04_A_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "machine_planet_02_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_B_diffuse.dds"
+		texture_normal = "ai_04_B_normal.dds"
+		texture_specular = "ai_04_B_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "machine_planet_03_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_C_diffuse.dds"
+		texture_normal = "ai_04_C_normal.dds"
+		texture_specular = "ai_04_C_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "machine_planet_04_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_D_diffuse.dds"
+		texture_normal = "ai_04_D_normal.dds"
+		texture_specular = "ai_04_D_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "machine_planet_05_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_E_diffuse.dds"
+		texture_normal = "ai_04_E_normal.dds"
+		texture_specular = "ai_04_E_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "machine_planet_06_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "ai_04_F_diffuse.dds"
+		texture_normal = "ai_04_F_normal.dds"
+		texture_specular = "ai_04_F_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_machine_planet_class_02" } }
+	}
+	
+	scale = 1.0
+}
