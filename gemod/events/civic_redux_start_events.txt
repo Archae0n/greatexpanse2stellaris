@@ -159,6 +159,11 @@ country_event = {
 	}
 	
 	immediate = {
+			#get sync evo pop
+			random_owned_pop = {
+			limit = { NOT = { is_exact_same_species = owner_species } }
+			save_event_target_as = oss_secondary_species
+		}
 		random_planet_within_border = { #First find a suitable world within your borders (We don't want gas giants or asteroids. Everything else is fair game.)
 			limit = {
 				OR = {
@@ -302,8 +307,8 @@ country_event = {
 						}
 						change_pc = pc_glacial
 					}
-					if = { Frozen_Desert
-						limit = {
+					if = { #Frozen_Desert
+					limit = {
 							ROOT = {
 								has_trait = trait_pc_frozen_desert_preference
 							}
@@ -504,6 +509,7 @@ country_event = {
 									has_trait = trait_pc_arid_preference
 									has_trait = trait_pc_glacial_preference
 									has_trait = trait_pc_frozen_desert_preference
+									has_trait = trait_pc_oasis_preference
 									has_trait = trait_pc_steppe_preference
 									has_trait = trait_pc_hadesert_preference
 									has_trait = trait_pc_antarctic_preference
@@ -532,25 +538,25 @@ country_event = {
 				remove_blocker = yes
 			}
 			
-			if = { #We want at least 18 tiles on our planet
+			if = { #We want at least 16 tiles on our planet
 				limit = {
-					planet_size < 18
+					planet_size < 16
 				}
 				while = {
 					limit = {
-						planet_size < 18
+						planet_size < 16
 					}
 					change_planet_size = 1
 				}
 			}
 				
-			if = { #We want 18 tiles on the planet, for balance
+			if = { #We want 21 tiles on the planet max, for balance
 				limit = {
-					planet_size > 18
+					planet_size > 21
 				}
 				while = {
 					limit = {
-						planet_size > 18
+						planet_size > 21
 					}
 					change_planet_size = -1
 				}
@@ -767,18 +773,48 @@ country_event = {
 				owner = root
 				species = owner_main_species
 				ethos = owner
-			}
-			reset_start_buildings_and_blockers_life_seeded = yes			
-			
+			}		
+			reset_start_buildings_and_blockers_life_seeded = yes
 			while = {
 				limit = {
-					num_pops < 4
+					num_pops < 3
 				}
 				create_pop = {
 					species = owner
 					ethos = owner
 				}
 			}
+			if = { 
+				limit = { ROOT = { is_cbshing_country_has_any_secondary_species = yes } }
+				every_tile = {
+					limit = { 
+						has_building = yes
+						has_pop = no 
+						has_blocker = no
+					}
+					create_pop = { 
+						species = event_target:oss_secondary_species
+						ethos = random
+					}
+				}
+				break = yes
+			}
+			while = {
+				limit = {
+					num_pops < 5
+				}
+				every_tile = {
+					limit = { 
+						has_building = yes
+						has_pop = no 
+						has_blocker = no
+					}
+					create_pop = { 
+						species = owner
+						ethos = owner
+					}
+				}
+			}			
 		}
 	}
 }
