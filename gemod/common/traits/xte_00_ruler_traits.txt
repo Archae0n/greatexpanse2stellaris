@@ -2,7 +2,7 @@
 # Xenology Ruler Traits #
 #########################
 
- trait_ruler_stigmergy = {
+trait_ruler_stigmergy = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_stigmergy.dds"
@@ -20,7 +20,7 @@
 	ai_weight = { weight = 200 }
 }
 
- trait_ruler_stigmergy2 = {
+trait_ruler_stigmergy2 = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_stigmergy.dds"
