@@ -1,0 +1,1222 @@
+kiyo_catchup_compare_minerals = {
+	OR = {
+		AND = {
+			has_minerals_0 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 0
+				}
+			}
+		}
+		AND = {
+			has_minerals_5 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 7.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_10 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 15.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_15 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 22.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_20 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 30.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_25 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 37.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_30 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 45.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_35 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 52.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_40 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 60.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_45 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 67.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_50 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 75.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_55 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 82.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_60 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 90.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_65 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 97.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_70 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 105.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_75 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 112.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_80 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 120.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_85 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 127.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_90 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 135.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_95 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 142.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_100 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 150.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_105 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 157.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_110 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 165.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_115 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 172.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_120 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 180.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_125 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 187.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_130 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 195.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_135 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 202.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_140 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 210.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_145 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 217.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_150 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 225.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_155 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 232.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_160 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 240.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_165 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 247.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_170 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 255.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_175 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 262.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_180 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 270.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_185 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 277.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_190 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 285.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_195 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 292.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_200 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 300.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_205 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 307.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_210 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 315.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_215 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 322.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_220 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 330.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_225 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 337.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_230 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 345.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_235 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 352.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_240 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 360.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_245 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 367.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_250 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 375.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_255 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 382.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_260 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 390.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_265 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 397.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_270 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 405.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_275 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 412.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_280 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 420.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_285 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 427.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_290 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 435.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_295 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 442.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_300 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 450.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_305 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 457.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_310 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 465.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_315 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 472.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_320 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 480.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_325 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 487.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_330 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 495.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_335 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 502.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_340 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 510.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_345 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 517.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_350 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 525.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_355 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 532.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_360 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 540.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_365 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 547.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_370 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 555.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_375 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 562.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_380 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 570.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_385 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 577.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_390 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 585.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_395 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 592.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_400 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 600.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_405 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 607.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_410 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 615.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_415 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 622.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_420 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 630.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_425 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 637.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_430 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 645.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_435 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 652.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_440 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 660.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_445 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 667.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_450 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 675.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_455 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 682.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_460 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 690.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_465 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 697.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_470 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 705.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_475 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 712.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_480 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 720.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_485 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 727.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_490 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 735.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_495 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 742.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_500 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 750.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_505 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 757.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_510 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 765.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_515 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 772.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_520 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 780.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_525 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 787.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_530 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 795.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_535 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 802.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_540 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 810.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_545 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 817.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_550 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 825.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_555 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 832.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_560 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 840.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_565 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 847.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_570 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 855.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_575 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 862.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_580 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 870.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_585 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 877.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_590 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 885.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_595 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 892.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_600 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 900.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_605 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 907.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_610 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 915.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_615 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 922.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_620 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 930.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_625 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 937.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_630 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 945.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_635 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 952.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_640 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 960.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_645 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 967.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_650 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 975.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_655 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 982.5
+				}
+			}
+		}
+		AND = {
+			has_minerals_660 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 990.0
+				}
+			}
+		}
+		AND = {
+			has_minerals_665 = yes
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 997.5
+				}
+			}
+		}
+		AND = {
+			check_variable = {
+				which = mineralVal
+				value > 665
+			}
+			event_target:superiorVictim = {
+				check_variable = {
+					which = mineralVal
+					value > 1000.0
+				}
+			}
+}
+	}
+}

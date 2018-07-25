@@ -1,0 +1,175 @@
+namespace = gai_ai_colonize
+
+event = {
+	id = gai_ai_colonize.1
+	hide_window = yes
+	is_triggered_only = yes
+		
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = { has_global_flag = disable_gai_ai_colonize }
+				is_ai = yes
+				#is_at_war = no
+				OR = {
+					is_country_type = "default"
+					is_country_type = awakened_fallen_empire
+					
+				}
+				minerals > 300
+				OR = {
+					energy > 1000
+					AND = {
+						energy > 100
+						has_monthly_income = {
+							resource = energy
+							value > 10
+						}
+					}
+					AND = {
+						energy > 200
+						has_monthly_income = {
+							resource = energy
+							value > 8
+						}
+					}
+					AND = {
+						energy > 300
+						has_monthly_income = {
+							resource = energy
+							value > 6
+						}
+					}
+					AND = {
+						energy > 400
+						has_monthly_income = {
+							resource = energy
+							value > 3
+						}
+					}
+					AND = {
+						energy > 500
+						has_monthly_income = {
+							resource = energy
+							value > 1
+						}
+					}
+				}
+				any_planet_within_border = {    
+					can_colonize = { who = prev status = yes }    
+				}
+			}
+			country_event = { id = gai_ai_colonize.2 }
+		}
+	}
+}
+
+country_event = {
+	id = gai_ai_colonize.2	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_pop = {
+            limit = {
+                NOR = {
+                    has_citizenship_type = {
+                        type = citizenship_assimilation
+                        country = root
+                    }
+                    has_citizenship_type = {
+                        type = citizenship_purge
+                        country = root
+                    }
+                    has_citizenship_type = {
+                        type = citizenship_purge_machine
+                        country = root
+                    }
+                }
+            }
+            if = { 
+                limit = { 
+                    prev = {
+                        any_planet_within_border = {    
+                            can_colonize = { who = prev status = yes }    
+                            is_colony = no
+                            NAND = {
+                                has_modifier = holy_planet 
+                                any_country = {
+                                    has_ai_personality_behaviour = holy_planets
+                                }
+                            }
+                            habitability = { who = prevprev value > 0.39 }
+                        }
+                    }
+                }    
+            }
+            save_event_target_as = habitability_spec
+        }
+		random_planet = {	
+			limit = {
+				NOT = { is_colony = yes }
+				can_colonize = { who = root status = yes }				
+				solar_system = {
+					is_within_borders_of = root
+				}
+				NAND = {
+					has_modifier = holy_planet 
+					any_country = {
+						has_ai_personality_behaviour = holy_planets
+					}
+				}
+				habitability = { who = event_target:habitability_spec value > 0.39 }
+			}
+			IF = {
+				limit = {
+					NOT = { is_colony = yes }
+					can_colonize = { who = root status = yes }				
+					solar_system = {
+						is_within_borders_of = root
+					}
+					habitability = { who = root.species value > 0.39 }
+					NAND = {
+						has_modifier = holy_planet 
+						any_country = {
+							has_ai_personality_behaviour = holy_planets
+						}
+					}
+				}
+				start_colony = {
+					owner = root
+					species = event_target:habitability_spec
+				}
+				OWNER = {
+					add_minerals = -300
+					add_energy = -100
+				}
+			}
+			IF = {
+				limit = {
+					NOT = { is_colony = yes }
+					can_colonize = { who = root status = yes }				
+					solar_system = { is_within_borders_of = root	}
+					habitability = { who = root.species value < 0.40 }
+					NAND = {
+						has_modifier = holy_planet 
+						any_country = {
+							has_ai_personality_behaviour = holy_planets
+						}
+					}
+				}
+				start_colony = {
+					owner = root
+					species = event_target:habitability_spec
+				}
+				create_pop = {
+					species = event_target:habitability_spec
+				}
+				OWNER = {
+					add_minerals = -300
+					add_energy = -100
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+samurai_happiness_unrest_no_war = {
+	pop_happiness = -0.25
+	planet_unrest_add = 20
+}
+trader_cache_sr = {
+	icon = "gfx/interface/icons/modifiers/mod_country_previous_deals.dds"
+	icon_frame = 1
+	country_resource_sr_riggan_add = 1
+	country_resource_sr_xuran_add = 1
+	country_resource_sr_muutagan_add = 1
+	country_resource_sr_satramene_add = 1
+	country_resource_sr_terraform_gases_add = 1
+	country_resource_sr_terraform_liquids_add = 1
+	country_resource_sr_garanthium_add = 1
+	country_resource_sr_lythuric_add = 1
+	country_resource_sr_teldar_add = 1
+	country_resource_sr_yurantic_add = 1
+	country_resource_sr_aldar_add = 1
+	country_resource_sr_orillium_add = 1
+	country_resource_sr_pitharan_add = 1
+	country_resource_sr_engos_add = 1
+	country_resource_sr_neutronium_add = 1
+	country_resource_sr_living_metal_add = 1
+	country_resource_sr_zro_add = 1
+	country_resource_sr_dark_matter_add = 1
+}

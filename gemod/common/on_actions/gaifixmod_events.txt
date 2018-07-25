@@ -1,0 +1,30 @@
+on_yearly_pulse = {
+	events = {
+		gai_edict.1	
+		no_starbase_defense.1
+		gai_bio_trophy.1
+		gai_ai_colonize.1
+		gai_ai_starbase.1
+		#gai_nsc_compat_warning.1
+		gai_ai_armies.1
+	}
+}
+
+on_entering_war = {
+	events = {
+		gai_clear.1
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		gai_build.1
+		ai_fixmod_flag.1
+	}
+}
+
+on_bi_yearly_pulse = {
+	events = {
+		gai_clear.4
+	}
+}

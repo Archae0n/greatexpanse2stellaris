@@ -1,0 +1,52 @@
+﻿l_french:
+ ####################################
+ # Alpha Naming Convention - WILL LIKELY BE CHANGED IF SECTIONS ARE REDESIGNED
+ #
+ # Mid sections have a flavor-name fitting to number of weapon/utility slots followed by the key-word "Core"
+ # Front sections have a flavor-name followed by the key-word "Breaker"
+ # Rear sections have a flavor-name followed by the key-word "Bulwark"
+ #
+ ####################################
+ 
+ EAC_TITAN_BOW:0 "Titan Carrier Bow"
+ EAC_TITAN_MID:0 "Titan Carrier Core"
+ EAC_TITAN_STERN:0 "Titan Carrier Stern"
+ 
+ ####################################
+ # Battleship
+ ####################################
+ EAC_BATTLESHIP_BOW_AC:1 "Advanced Carrier Bow"
+ EAC_BATTLESHIP_MID_AC:1 "Advanced Carrier Core"
+ EAC_BATTLESHIP_STERN_AC:1 "Advanced Carrier Stern"
+
+ ####################################
+ # Cruiser
+ ####################################
+ EAC_CRUISER_BOW_G2:1 "Missile Cruiser Bow"
+ EAC_CRUISER_MID_G3:1 "Missile Cruiser Core"
+
+ EAC_CRUISER_BOW_S1:0 "Light Carrier Bow"
+ EAC_CRUISER_MID_S2:0 "Light Carrier Core"
+ EAC_CRUISER_STERN_P2:0 "Light Carrier Stern"
+
+ ####################################
+ # Station Defense
+ ####################################
+ EAC_LIGHT_MILITARY_STATION_SECTION:0 "$LIGHT_MILITARY_STATION_SECTION$"
+ EAC_PD_MILITARY_STATION_SECTION:0 "$PD_MILITARY_STATION_SECTION$"
+ EAC_MEDIUM_MILITARY_STATION_SECTION:0 "$MEDIUM_MILITARY_STATION_SECTION$"
+ EAC_MISSILE_MILITARY_STATION_SECTION:0 "$MISSILE_MILITARY_STATION_SECTION$"
+ EAC_HEAVY_MILITARY_STATION_SECTION:0 "$HEAVY_MILITARY_STATION_SECTION$"
+ EAC_HANGAR_MILITARY_STATION_SECTION:0 "$HANGAR_MILITARY_STATION_SECTION$"
+
+ ####################################
+ # Starbases
+ ####################################
+#  EAC_STARPORT_STARBASE_SECTION:0 "Heavy $STARPORT_STARBASE_SECTION$"
+#  EAC_STARHOLD_STARBASE_SECTION:0 "Heavy $STARHOLD_STARBASE_SECTION$"
+#  EAC_STARFORTRESS_STARBASE_SECTION:0 "Heavy $STARFORTRESS_STARBASE_SECTION$"
+#  EAC_CITADEL_STARBASE_SECTION:0 "Heavy $CITADEL_STARBASE_SECTION$"
+ EAC_BATTERY_STARBASE_SECTION:0 "Heavy $BATTERY_STARBASE_SECTION$"
+ EAC_MISSILE_STARBASE_SECTION:0 "Heavy $MISSILE_STARBASE_SECTION$"
+ EAC_HANGAR_STARBASE_SECTION:0 "Heavy $HANGAR_STARBASE_SECTION$"
+EAC_CITADEL_STARBASE_SECTION:0 "Large Gun Citadel Core"

@@ -1,0 +1,40 @@
+
+##########################################################
+##########################################################
+#####                                                #####
+#####    Scripted Effect Creating Auxiliary Fleet    #####
+#####    Army, Constructor, Colonizer                #####
+#####                                                #####
+##########################################################
+##########################################################
+#
+# Information
+#	All script in this file require following scopes
+#	this: Owner country
+#	prev: Location for creating fleets (e.g. planet)
+#
+
+
+
+####################
+###  Constances  ###
+####################
+
+
+##############
+###  Khan  ###
+##############
+
+
+CmtEffectCreateFleet_KhanConstructor = {
+	create_fleet = {
+		effect = {
+			set_owner = prev
+			create_ship = {
+				name = random
+				design = "NAME_Clan_Builder"
+			}
+			CmtFleetSetAuxParam_KhanAuxiliary = yes
+		}
+	}
+}

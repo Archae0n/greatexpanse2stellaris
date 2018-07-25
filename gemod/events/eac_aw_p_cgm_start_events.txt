@@ -1,0 +1,19 @@
+namespace = eac_aw_p_cgm_start
+
+event = {
+	id = eac_aw_p_cgm_start.1
+	hide_window = yes
+	fire_only_once = yes
+	
+	trigger = { NOT = { has_global_flag = eac_at_war_patch_cgm_installed } }
+	
+	immediate = { set_global_flag = eac_at_war_patch_cgm_installed }
+}
+
+country_event = {
+	id = eac_aw_p_cgm_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { set_country_flag = display_low_tier_flag}
+}

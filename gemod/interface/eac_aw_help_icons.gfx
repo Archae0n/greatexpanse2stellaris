@@ -1,0 +1,13 @@
+
+	spriteTypes = {
+		spriteType = {
+			name = "GFX_eac_help_missile_cruiser_sections"
+			texturefile = "gfx/event_pictures/help/eac_help_missile_cruiser_sections.dds"
+			masking_texture = "gfx/interface/situation_log/event_mask.dds"
+			alwaystransparent = yes		
+		}
+		spriteType = {
+			name = "GFX_text_help_missile_cruisers"
+			texturefile = "gfx/interface/icons/technologies/eac_aw_tech_missile_cruiser.dds"
+		}	
+	}

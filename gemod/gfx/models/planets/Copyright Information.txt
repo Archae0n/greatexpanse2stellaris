@@ -1,0 +1,73 @@
+The following image files associated with this work are copyrighted and permission to use, copy, or otherwise distrubute is specifically prohibited!
+
+File:
+ai_04_A_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_A_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_A_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_B_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_B_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_B_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_C_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_C_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_C_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_D_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_D_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_D_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_E_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_E_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_E_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_F_diffuse.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_F_normal.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED
+
+File:
+ai_04_F_specular.dds
+© 2017 LOGICSEQUENCE ALL RIGHTS RESERVED

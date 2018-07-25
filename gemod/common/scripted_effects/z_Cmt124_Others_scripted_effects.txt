@@ -1,0 +1,201 @@
+
+########################################
+########################################
+#####                              #####
+#####    Other Scripted Effects    #####
+#####                              #####
+########################################
+########################################
+
+################
+###  Common  ###
+################
+
+CmtEffectSetIntervalFlag = {
+	event_target:CmtGlobalVar = {
+		remove_global_flag = CmtFlagNowInInterval
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T0 } }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T1 } }
+			set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstCrisisInterval_D1 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T2 } }
+			set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstCrisisInterval_D2 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T3 } }
+			set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstCrisisInterval_D3 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T4 } }
+			set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstCrisisInterval_D4 }
+			break = yes
+		}
+		if = {
+			limit = { check_variable = { which = CmtVarTriggerInterval value < @CmtConstCrisisInterval_T5 } }
+			set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstCrisisInterval_D5 }
+			break = yes
+		}
+		set_timed_global_flag = { flag = CmtFlagNowInInterval days = @CmtConstTUnq_ConstCrisisInterval }
+	}
+}
+
+
+CmtEffectFriendlyCrisis = {
+	event_target:CmtGlobalVar = {
+		if = {
+			limit = { check_variable = { which = CmtVarFriendlyCrisis value = 2 } }
+			every_country = {
+				limit = { CmtTriggerIsExpExds = yes }
+				every_country = {
+					limit = {
+						CmtTriggerIsExpExds = yes
+						NOT = { is_same_value = prev }
+					}
+					set_faction_hostility = {
+						target = prev
+						set_hostile = no
+						set_neutral = no
+						set_friendly = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					check_variable = { which = CmtVarFriendlyCrisis value = 3 }
+					check_variable = { which = CmtVarFriendlyCrisis value = 4 }
+				}
+			}
+			every_country = {
+				limit = { CmtTriggerIsExpCrisisCountry = yes }
+				every_country = {
+					limit = {
+						CmtTriggerIsExpCrisisCountry = yes
+						NOT = { is_same_value = prev }
+					}
+					set_faction_hostility = {
+						target = prev
+						set_hostile = no
+						set_neutral = no
+						set_friendly = yes
+					}
+				}
+			}
+			if = {
+				limit = { check_variable = { which = CmtVarFriendlyCrisis value = 3 } }
+				every_country = {
+					limit = { CmtTriggerIsExpExds = yes }
+					every_country = {
+						limit = {
+							CmtTriggerIsExpExds = yes
+							NOT = { is_same_value = prev }
+						}
+						set_faction_hostility = {
+							target = prev
+							set_hostile = yes
+							set_neutral = no
+							set_friendly = no
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+CmtEffectHostileCrisis = {
+	every_country = {
+		limit = { CmtTriggerIsExpCrisisCountry = yes }
+		every_country = {
+			limit = {
+				CmtTriggerIsExpCrisisCountry = yes
+				NOT = { is_same_value = prev }
+			}
+			set_faction_hostility = {
+				target = prev
+				set_hostile = yes
+				set_neutral = no
+				set_friendly = no
+			}
+		}
+	}
+	every_country = {
+		limit = { is_country_type = portal_holder }
+		every_country = {
+			limit = {
+				CmtTriggerIsExds = yes
+				NOT = { is_same_value = prev }
+			}
+			set_faction_hostility = {
+				target = prev
+				set_hostile = no
+				set_neutral = no
+				set_friendly = yes
+			}
+		}
+	}
+	every_country = {
+		limit = { CmtTriggerIsExds = yes }
+		every_country = {
+			limit = {
+				is_country_type = portal_holder
+				NOT = { is_same_value = prev }
+			}
+			set_faction_hostility = {
+				target = prev
+				set_hostile = no
+				set_neutral = no
+				set_friendly = yes
+			}
+		}
+	}
+}
+
+
+
+###########################
+###  Extradimensionals  ###
+###########################
+
+CmtEffectRainforcementExdCombat = {
+	random_country = {
+		limit = { is_country_type = portal_holder }
+		random_owned_ship = {
+			limit = { is_ship_size = dimensional_portal_ed }
+			save_event_target_as = dimensional_portal
+		}
+	}
+	random_owned_ship = {
+		limit = { is_ship_size = dimensional_portal_ed }
+		save_event_target_as = dimensional_portal
+	}
+	
+	if = {
+		limit = { is_country_type = extradimensional }
+		event_target:dimensional_portal = { CmtEffectCreateAdmiralty_UnbiddenRainforcement = yes }
+		break = yes
+	}
+	if = {
+		limit = { is_country_type = extradimensional_2 }
+		event_target:dimensional_portal = { CmtEffectCreateAdmiralty_AberrantRainforcement = yes }
+		break = yes
+	}
+	if = {
+		limit = { is_country_type = extradimensional_3 }
+		event_target:dimensional_portal = { CmtEffectCreateAdmiralty_VehementRainforcement = yes }
+		break = yes
+	}
+}
+
+
+
+

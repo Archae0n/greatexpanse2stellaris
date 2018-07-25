@@ -1,0 +1,231 @@
+#Special Terraforming Tech for Planet Forgers
+
+#Atmospheric Creation - For Barren World Terraforming
+tech_atmospheric_creation = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	is_rare = yes
+	
+	category = { 
+		new_worlds
+	}
+	
+	prerequisites = {
+		"tech_climate_restoration"
+	}
+	
+	weight = @tier2weight3
+	potential = {
+		OR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+		}
+	}
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_BARREN_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_BARREN_DESC"
+		}
+	}
+	weight_modifier = {
+		factor = 0.3
+		modifier = {
+			factor = 0.5
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+#Planetary Denitrification - For Toxic World Terraforming
+tech_planetary_denitrification = {
+	cost = @tier3cost2
+	area = society
+	tier = 2
+	is_rare = yes
+	
+	category = { 
+		new_worlds
+	}
+	potential = {
+		OR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+		}
+	}
+	prerequisites = {
+		"tech_atmospheric_creation"
+	
+	}
+	weight = @tier3weight3
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_TOXIC_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_TOXIC_DESC"
+		}
+	}
+	weight_modifier = {
+		factor = 0.15
+		modifier = {
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.001
+			NOR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+#Macro-Cryogenics - For Molten World Terraforming
+tech_macro_cryogenics = {
+	cost = @tier3cost2
+	area = society
+	tier = 2
+	is_rare = yes
+	
+	category = { 
+		new_worlds
+	}
+	
+	prerequisites = {
+		"tech_atmospheric_creation"
+	
+	}
+	potential = {
+		OR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+		}
+	}
+	weight = @tier3weight3
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_MOLTEN_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_MOLTEN_DESC"
+		}
+	}
+	weight_modifier = {
+		factor = 0.15
+		modifier = {
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.001
+			NOR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+#Global Heat Induction - For Frozen World Terraforming
+tech_global_heat_induction = {
+	cost = @tier3cost2
+	area = society
+	tier = 2
+	is_rare = yes
+	
+	category = { 
+		new_worlds
+	}
+	potential = {
+		OR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+		}
+	}
+	prerequisites = {
+		"tech_atmospheric_creation"
+	
+	}
+	weight = @tier3weight3
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_FROZEN_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_FROZEN_DESC"
+		}
+	}
+	weight_modifier = {
+		factor = 0.15
+		modifier = {
+			factor = 0.33
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.001
+			NOR = {
+				has_valid_civic = civic_planet_forgers
+				has_valid_civic = civic_purifying_presense
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}

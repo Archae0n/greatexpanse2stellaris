@@ -1,0 +1,6 @@
+	NShip = {	
+		SHIP_EXP_GAIN_COMBAT			= 10.0				# Gained each day ship is in combat
+		SHIP_EXP_EXPERIENCED			= 200				# Amount of exp to reach experienced rank
+		SHIP_EXP_VETERAN				= 1000				# Amount of exp to reach veteran rank
+		SHIP_EXP_ELITE					= 3600				# Amount of exp to reach elite rank
+	}

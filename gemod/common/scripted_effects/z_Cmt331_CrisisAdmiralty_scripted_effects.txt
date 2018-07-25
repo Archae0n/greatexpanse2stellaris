@@ -1,0 +1,396 @@
+
+########################################################
+########################################################
+#####                                              #####
+#####    Scripted Effect Creating Plural Fleets    #####
+#####                                              #####
+########################################################
+########################################################
+#
+# Information
+#	All script in this file require following scopes
+#	this: Location for creating fleets (e.g. planet)
+#
+
+
+####################
+###  Constances  ###
+####################
+@CmtConstKhanConstructorUpperLimit = 5		## -1
+@CmtConstKhanArmyUpperLimit = 40		## -1
+@CmtConstKhanFleetPowerUpperLimit_Base = 100000		## 100 k
+
+@CmtConstKhanFleetPowerUpperLimit_V1 =   25000		##   25 k
+@CmtConstKhanFleetPowerUpperLimit_V2 =   50000		##   50 k
+@CmtConstKhanFleetPowerUpperLimit_V3 =   75000		##   75 k
+@CmtConstKhanFleetPowerUpperLimit_V4 =  100000		##  100 k
+@CmtConstKhanFleetPowerUpperLimit_V5 =  150000		##  150 k
+@CmtConstKhanFleetPowerUpperLimit_V6 =  250000		##  250 k
+@CmtConstKhanFleetPowerUpperLimit_V7 =  500000		##  500 k
+@CmtConstKhanFleetPowerUpperLimit_V8 = 1000000		## 1000 k
+
+@CmtConstKhanFleetPowerUpperLimit_T1 =   37500		##   37.5 k
+@CmtConstKhanFleetPowerUpperLimit_T2 =   62500		##   62.5 k
+@CmtConstKhanFleetPowerUpperLimit_T3 =   87500		##   87.5 k
+@CmtConstKhanFleetPowerUpperLimit_T4 =  125000		##  125 k
+@CmtConstKhanFleetPowerUpperLimit_T5 =  200000		##  200 k
+@CmtConstKhanFleetPowerUpperLimit_T6 =  375000		##  375 k
+@CmtConstKhanFleetPowerUpperLimit_T7 =  750000		##  750 k
+
+
+
+##############
+###  Khan  ###
+##############
+
+### The Fleet for Khan Own
+CmtEffectCreateAdmiralty_Khan1stFleet = {		### Exception: Leader = event_target:great_khan
+	event_target:raider_khanate = {
+		CmtEffectCreateFleet_Khan1stFleet = yes
+	}
+}
+
+CmtEffectCreateAdmiralty_Khan2ndFleetSet = {		### Exception: Leader = exiled_khan
+	event_target:raider_khanate = {
+		CmtEffectCreateFleet_Khan2ndFleet = yes
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			CmtEffectCreateFleet_KhanStandard = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+		}
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			random_list = {
+				125 = {
+					event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = 0 } }
+					CmtEffectCreateFleet_KhanStandard = yes
+					CmtEffectCreateFleet_KhanArmy = yes
+				}
+				75 = {
+					event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+					CmtEffectCreateFleet_KhanArmy = yes
+				}
+				200 = { }
+			}
+		}
+	}
+}
+
+### Consorts of Khan
+CmtEffectCreateAdmiralty_KhanStarterPack = {
+	event_target:raider_khanate = {
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			CmtEffectCreateFleet_KhanStandard = yes
+			CmtEffectCreateFleet_KhanStandard = yes
+			CmtEffectCreateFleet_KhanStandard = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+			CmtEffectCreateFleet_KhanArmy = yes
+			CmtEffectCreateFleet_KhanConstructor = yes
+			CmtEffectCreateFleet_KhanConstructor = yes
+			CmtEffectCreateFleet_KhanConstructor = yes
+		}
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			CmtEffectCreateFleet_KhanArmy = yes
+			random_list = { 300 = { CmtEffectCreateFleet_KhanStandard = yes } 100 = { } }
+			random_list = { 300 = { CmtEffectCreateFleet_KhanConstructor = yes } 100 = { } }
+		}
+	}
+}
+
+
+### Mercenaries
+CmtEffectCreateAdmiralty_KhanMercenaries1 = {
+	event_target:raider_khanate = {
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			CmtEffectCreateFleet_KhanArmadaVoidborn = yes
+			CmtEffectCreateFleet_KhanStarRiderFlotilla = yes
+			CmtEffectCreateFleet_KhanFirstStormWing = yes
+		}
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.625 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.75 } }
+			CmtEffectCreateFleet_KhanArmadaVoidborn = yes
+			CmtEffectCreateFleet_KhanStarRiderFlotilla = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.375 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			CmtEffectCreateFleet_KhanStarRiderFlotilla = yes
+			CmtEffectCreateFleet_KhanFirstStormWing = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.175 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.50 } }
+			CmtEffectCreateFleet_KhanFirstStormWing = yes
+		}
+	}
+}
+
+
+CmtEffectCreateAdmiralty_KhanMercenaries2 = {
+	event_target:raider_khanate = {
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			CmtEffectCreateFleet_KhanDwamakBashers = yes
+			CmtEffectCreateFleet_KhanUnhingedScreamerFlotilla = yes
+			CmtEffectCreateFleet_KhanFrenziedVolunteerSquadron = yes
+		}
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.625 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.75 } }
+			CmtEffectCreateFleet_KhanDwamakBashers = yes
+			CmtEffectCreateFleet_KhanUnhingedScreamerFlotilla = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.375 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			CmtEffectCreateFleet_KhanUnhingedScreamerFlotilla = yes
+			CmtEffectCreateFleet_KhanFrenziedVolunteerSquadron = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.175 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.50 } }
+			CmtEffectCreateFleet_KhanFrenziedVolunteerSquadron = yes
+		}
+	}
+}
+
+CmtEffectCreateAdmiralty_KhanMercenaries3 = {
+	event_target:raider_khanate = {
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			CmtEffectCreateFleet_KhanHerChosenChampions = yes
+			CmtEffectCreateFleet_KhanOrderEternalNight = yes
+			CmtEffectCreateFleet_KhanTwilightCongregation = yes
+		}
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.625 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.75 } }
+			CmtEffectCreateFleet_KhanHerChosenChampions = yes
+			CmtEffectCreateFleet_KhanOrderEternalNight = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.375 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			CmtEffectCreateFleet_KhanOrderEternalNight = yes
+			CmtEffectCreateFleet_KhanTwilightCongregation = yes
+		} else_if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.175 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.50 } }
+			CmtEffectCreateFleet_KhanTwilightCongregation = yes
+		}
+	}
+}
+
+
+### Rainforcement (Capital/Sub-Capital)
+CmtEffectCreateAdmiralty_KhanReinforcement = {
+	event_target:raider_khanate = {
+		### Constructor
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarKhanMultiple value = 5 } } }
+			event_target:CmtGlobalVar = { set_variable = { which = CmtVarTemp value = 0 } }
+			every_system_within_border = {
+				limit = { CmtTriggerMarauderCapitalSystem = yes }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarTemp value = @CmtConstKhanConstructorUpperLimit } }
+			}
+		} else = { event_target:CmtGlobalVar = { set_variable = { which = CmtVarTemp value = @CmtConstKhanConstructorUpperLimit } } }
+		event_target:CmtGlobalVar = { multiply_variable = { which = CmtVarTemp value = CmtVarConstructorNumber_Khan } }
+		every_owned_ship = {
+			limit = { is_ship_size = constructor }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarTemp value = -1 } }
+		}
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > 0 } } }
+			event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarConstructorNumber_Khan } }
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+				CmtEffectCreateFleet_KhanConstructor = yes
+			}
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+				random_list = {
+					100 = {
+						event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = 0 } }
+						CmtEffectCreateFleet_KhanConstructor = yes
+					}
+					300 = { }
+				}
+			}
+		}
+		
+		### Army
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarKhanMultiple value = 5 } } }
+			event_target:CmtGlobalVar = { set_variable = { which = CmtVarTemp value = 0 } }
+			every_system_within_border = {
+				limit = { CmtTriggerMarauderCapitalSystem = yes }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarTemp value = @CmtConstKhanArmyUpperLimit } }
+			}
+		} else = { event_target:CmtGlobalVar = { set_variable = { which = CmtVarTemp value = @CmtConstKhanArmyUpperLimit } } }
+		event_target:CmtGlobalVar = {
+			multiply_variable = { which = CmtVarTemp value = CmtVarArmyPower_Khan }
+			multiply_variable = { which = CmtVarTemp value = CmtVarArmyNumber_Khan }
+		}
+		every_owned_army = { event_target:CmtGlobalVar = { change_variable = { which = CmtVarTemp value = -1 } } }
+		if = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > 0 } } }
+			event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarArmyNumber_Khan } }
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+				CmtEffectCreateFleet_KhanArmy = yes
+			}
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+				random_list = {
+					100 = {
+						event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = 0 } }
+						CmtEffectCreateFleet_KhanArmy = yes
+					}
+					300 = { }
+				}
+			}
+		}
+		
+		### Navy Fleet
+		event_target:CmtGlobalVar = {
+			if = {
+				limit = { check_variable = { which = CmtVarKhanMultiple value = 5 } }
+				set_variable = { which = CmtVarTemp value = 0 }
+				prev = {
+					every_planet_within_border = {
+						limit = { has_planet_flag = CmtFlagMarauderExpRallyPoint }
+						change_variable = { which = CmtVarTemp value = @CmtConstKhanFleetPowerUpperLimit_Base }
+					}
+				}
+			} else = { set_variable = { which = CmtVarTemp value = @CmtConstKhanFleetPowerUpperLimit_Base } }
+			multiply_variable = { which = CmtVarTemp value = CmtVarFleetPower_Khan }
+			multiply_variable = { which = CmtVarTemp value = CmtVarCombatFleetNumber_Khan }
+		}
+		if = {
+			limit = {
+				OR = {
+					fleet_power < @CmtConstKhanFleetPowerUpperLimit_V1
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T1 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V2
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T2 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V3
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T3 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V4
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T4 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V5
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T5 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V6
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T6 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V7
+					}
+					AND = {
+						event_target:CmtGlobalVar = { check_variable = { which = CmtVarTemp value > @CmtConstKhanFleetPowerUpperLimit_T7 } }
+						fleet_power < @CmtConstKhanFleetPowerUpperLimit_V8
+					}
+				}
+			}
+			event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+				CmtEffectCreateFleet_KhanStandard = yes
+			}
+			while = {
+				limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+				event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+				random_list = {
+					100 = {
+						event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = 0 } }
+						CmtEffectCreateFleet_KhanStandard = yes
+					}
+					300 = { }
+				}
+			}
+		}
+	}
+}
+
+
+### Garrison (Satrap)
+CmtEffectCreateAdmiralty_KhanEncourager = {
+	event_target:raider_khanate = {
+		CmtEffectCreateFleet_KhanEncourager = yes
+	}
+}
+
+### Rainforcement (Satrap)
+CmtEffectCreateAdmiralty_KhanSubRainforcement = {
+	event_target:raider_khanate = {
+		event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = CmtVarCombatFleetNumber_Khan } }
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.875 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -1 } }
+			if = {
+				limit = { event_target:satrapy_empire = { max_naval_capacity < 100 } }
+				CmtEffectCreateFleet_KhanSubRainforcement1 = yes
+			} else_if = {
+				limit = { event_target:satrapy_empire = { max_naval_capacity < 200 } }
+				CmtEffectCreateFleet_KhanSubRainforcement2 = yes
+			} else_if = {
+				limit = { event_target:satrapy_empire = { max_naval_capacity < 300 } }
+				CmtEffectCreateFleet_KhanSubRainforcement3 = yes
+			} else_if = {
+				limit = { event_target:satrapy_empire = { max_naval_capacity < 500 } }
+				CmtEffectCreateFleet_KhanSubRainforcement4 = yes
+			} else = { CmtEffectCreateFleet_KhanSubRainforcement5 = yes }
+		}
+		while = {
+			limit = { event_target:CmtGlobalVar = { check_variable = { which = CmtVarWhileControlFleet value > 0.125 } } }
+			event_target:CmtGlobalVar = { change_variable = { which = CmtVarWhileControlFleet value = -0.25 } }
+			random_list = {
+				100 = {
+					event_target:CmtGlobalVar = { set_variable = { which = CmtVarWhileControlFleet value = 0 } }
+					if = {
+						limit = { event_target:satrapy_empire = { max_naval_capacity < 100 } }
+						CmtEffectCreateFleet_KhanSubRainforcement1 = yes
+					} else_if = {
+						limit = { event_target:satrapy_empire = { max_naval_capacity < 200 } }
+						CmtEffectCreateFleet_KhanSubRainforcement2 = yes
+					} else_if = {
+						limit = { event_target:satrapy_empire = { max_naval_capacity < 300 } }
+						CmtEffectCreateFleet_KhanSubRainforcement3 = yes
+					} else_if = {
+						limit = { event_target:satrapy_empire = { max_naval_capacity < 500 } }
+						CmtEffectCreateFleet_KhanSubRainforcement4 = yes
+					} else = { CmtEffectCreateFleet_KhanSubRainforcement5 = yes }
+				}
+				300 = { }
+			}
+		}
+	}
+}
+

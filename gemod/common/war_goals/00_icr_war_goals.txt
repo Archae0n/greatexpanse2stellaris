@@ -1,0 +1,51 @@
+wg_demilitarize = { #PEACEKEEPING
+	casus_belli = cb_demilitarize
+
+	hide_if_no_cb = yes
+	total_war = no
+	surrender_acceptance = 0
+	cede_claims = no
+	war_exhaustion = 1.0
+	threat_multiplier = 1.0
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_demilitarize_effect
+		hidden_effect = { FROM = { add_modifier = { modifier = demilitarized days = 3600 }}}
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+wg_neurotoxins = { #NEUROTOXINS
+	casus_belli = cb_neurotoxins
+
+	hide_if_no_cb = yes
+	total_war = yes
+	surrender_acceptance = -50
+	cede_claims = no
+	war_exhaustion = 1.0
+	threat_multiplier = 1.2
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		always = yes
+	}
+	on_accept = {
+		custom_tooltip = wg_neurotoxins_effect
+		hidden_effect = { FROM = { every_owned_planet = { add_modifier = { modifier = neurotoxins_released days = 7200 }}}}
+	}
+	
+	ai_weight = {
+		weight = 20
+	}
+}
+

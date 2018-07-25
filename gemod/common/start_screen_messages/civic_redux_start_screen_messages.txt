@@ -1,0 +1,25 @@
+#Dark Influence
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_DARK_INFLUENCE"
+	
+	trigger = {
+		OR = {
+			has_valid_civic = civic_dark_influence
+		}
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+#Constitutional Monarchy
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_CONSTITUTIONAL_MONARCHY"
+	
+	trigger = {
+		OR = {
+			has_valid_civic = civic_constitutional_monarchy
+		}
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}

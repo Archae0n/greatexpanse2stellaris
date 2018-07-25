@@ -1,0 +1,24 @@
+
+on_yearly_pulse = {
+	events = {
+		crisis.206		## Rainforcement of Prethoryn
+	}
+}
+
+# This = owner of destroyed ship, From = owner of combatant ship, FromFrom = destroyed ship, FromFromFrom = combatant ship
+on_ship_destroyed_victim = {
+	events = {
+		CrisisManagerControl.4111		## Defeat of FEoC
+	}
+}
+
+#This = destroyed country, From = destroying country
+on_country_destroyed = {
+	events = {
+		CrisisManagerControl.0030		## Post-Crisis Process
+		CrisisManagerControl.0036		## DEAD END (All empires are destroyed)
+	}
+}
+
+
+	

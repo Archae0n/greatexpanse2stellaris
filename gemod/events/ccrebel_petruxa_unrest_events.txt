@@ -1,0 +1,226 @@
+
+namespace = ccrebel_petruxa
+
+
+# Unrest: Greens
+planet_event = {
+	id = ccrebel_petruxa.1
+	title = ccrebel_petruxa.1.name
+	desc = ccrebel_petruxa.1.desc
+	picture = GFX_evt_alien_nature
+	show_sound = event_celebration
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = {
+			modifier = green_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = green_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}
+
+
+# Unrest: industrials
+planet_event = {
+	id = ccrebel_petruxa.2
+	title = ccrebel_petruxa.2.name
+	desc = ccrebel_petruxa.2.desc
+	picture = GFX_evt_drilling_for_gas
+	show_sound = event_cityscape
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = industrial_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = industrial_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}
+
+# Unrest: elitists
+planet_event = {
+	id = ccrebel_petruxa.3
+	title = ccrebel_petruxa.3.name
+	desc = ccrebel_petruxa.3.desc
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_celebration
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = elitist_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = elitist_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}
+
+# Unrest: pluralists
+planet_event = {
+	id = ccrebel_petruxa.4
+	title = ccrebel_petruxa.4.name
+	desc = ccrebel_petruxa.4.desc
+	picture = GFX_evt_colony_settlement
+	show_sound = event_celebration
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = {
+			modifier = pluralist_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = pluralist_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}
+
+# Unrest: capitalisms
+planet_event = {
+	id = ccrebel_petruxa.5
+	title = ccrebel_petruxa.5.name
+	desc = ccrebel_petruxa.5.desc
+	picture = GFX_evt_arguing_senate
+	show_sound = event_public_unrest
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = {
+			modifier = capitalism_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = capitalism_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}
+
+# Unrest: socialisms
+planet_event = {
+	id = ccrebel_petruxa.6
+	title = ccrebel_petruxa.6.name
+	desc = ccrebel_petruxa.6.desc
+	picture = GFX_evt_colony_settlement
+	show_sound = event_celebration
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = {
+			modifier = socialism_unrest
+			days = 7200 # 20 years
+		}
+		set_timed_planet_flag = {
+			flag = cc_revolt_imminent
+			days = 7200
+		}
+		set_timed_planet_flag = {
+			flag = recent_unrest_event
+			days = 180
+		}
+	}
+
+	option = {
+		name = OK
+		tooltip = {
+			add_modifier = {
+				modifier = socialism_unrest
+				days = 7200 # 20 years
+			}
+		}
+	}
+}

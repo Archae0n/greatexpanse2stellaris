@@ -1,0 +1,114 @@
+#event from dpe_diplo_events
+namespace = gai_replicators
+
+#Replicators dont get built ever in 2.0.2 for the AI this fixes that
+planet_event = {
+	id = gai_replicators.1
+	hide_window = yes
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	trigger = {
+		has_owner = yes
+		NOT = { has_global_flag = disable_gai_replicators }
+		not = { owner = { has_country_flag = new_replicator } }
+		planet = {
+			OR = {
+				has_building = building_machine_capital_2
+				has_building = building_capital_2
+				has_building = building_machine_capital_3
+				has_building = building_capital_3
+				has_building = "building_hab_capital"
+			}
+		}
+		owner = { has_technology = tech_matter_generator }
+		exists = owner
+		free_pop_tiles = 0
+		owner = {
+			and = {
+				is_ai = yes
+				is_country_type = default
+				OR = {
+					has_monthly_income = {
+						resource = energy
+						value > 120
+					}
+					has_monthly_income = {
+						resource = energy
+						value < -25
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_tile = {
+			limit = {
+				gai_food_okay_to_replace = yes
+				OR = {
+					gai_is_blank = yes 
+					gai_build_on_food_okay = yes
+				}
+				OR = {
+					owner = {
+						has_monthly_income = {
+							resource = energy
+							value > 120
+						}
+					}
+					AND = {
+						has_building = building_replicator
+						owner ={
+							has_monthly_income = {
+								resource = energy
+								value < -25
+							}
+						}
+					}
+				}
+				NOT = { gai_near_capital = yes }
+			}
+			IF = {
+				limit = {
+					owner = {
+						has_monthly_income = {
+							resource = energy
+							value > 120
+						}
+					}
+				}
+				planet = {
+					owner = {
+						set_timed_country_flag = {
+							flag = new_replicator
+							days = 120
+						}
+					}
+				}
+				add_building_construction = building_replicator
+			}
+			IF = {
+				limit = {
+					owner = {
+						has_monthly_income = {
+							resource = energy
+							value < -25
+						}
+					}
+				}
+				planet = {
+					owner = {
+						set_timed_country_flag = {
+							flag = new_replicator
+							days = 120
+						}
+					}
+				}
+				add_building_construction = building_power_plant_1
+			}
+		}
+	}
+}
+

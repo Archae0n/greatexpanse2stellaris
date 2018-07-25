@@ -1,0 +1,691 @@
+namespace = eac_at_war
+
+event = {
+	id = eac_at_war.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = { 
+		# Set Default Option Flags
+		set_global_flag = eac_at_war_allow_ai_planetary_shield_generator
+		set_global_flag = eac_at_war_use_large_gun_citadels
+		set_global_flag = eac_at_war_enable_advanced_carriers
+		set_global_flag = eac_at_war_enable_light_carriers
+		set_global_flag = eac_at_war_enable_heavy_defense_platforms
+		set_global_flag = eac_at_war_enable_space_marines
+		set_global_flag = eac_default_options_setup
+	}
+}
+
+country_event = {
+	id = eac_at_war.1
+	hide_window = yes
+	fire_only_once = yes
+	
+	trigger = { 
+		NOT = { has_global_flag = eac_at_war_installed }
+		is_ai = no
+	}
+	
+	immediate = { 
+		set_global_flag = eac_at_war_installed
+		set_country_flag = eac_at_war_game_host	
+
+		if = { 
+			limit = { NOT = { has_global_flag = eac_default_options_setup} }
+			# Set Default Option Flags
+			set_global_flag = eac_at_war_allow_ai_planetary_shield_generator
+			set_global_flag = eac_at_war_use_large_gun_citadels
+			set_global_flag = eac_at_war_enable_advanced_carriers
+			set_global_flag = eac_at_war_enable_light_carriers
+			set_global_flag = eac_at_war_enable_heavy_defense_platforms
+			set_global_flag = eac_at_war_enable_space_marines
+		}
+	}
+}
+
+country_event = {
+	id = eac_at_war.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_starbase_4
+		has_global_flag = eac_at_war_use_large_gun_citadels 
+	}
+
+	immediate = {
+		give_technology = { tech = eac_tech_large_gun_citadel message = no }
+	}
+}
+
+country_event = {
+	id = eac_at_war.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = eac_aw_tech_advanced_carrier
+		is_ai = yes
+	}
+
+	immediate = {
+		# give_technology = { tech = eac_aw_tech_carrier_ai_radar message = no }
+		switch = {
+			trigger = has_technology
+			tech_pd_tracking_3 = {
+				create_ship_design = { design = "NAME_EAC_Advanced_Carrier_PD3" }
+				add_ship_design = last_created_design
+				break = yes
+			}
+			tech_pd_tracking_2 = {
+				create_ship_design = { design = "NAME_EAC_Advanced_Carrier_PD2" }
+				add_ship_design = last_created_design
+				break = yes
+			}
+			tech_pd_tracking_1 = {
+				create_ship_design = { design = "NAME_EAC_Advanced_Carrier_PD1" }
+				add_ship_design = last_created_design
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eac_at_war.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_ship_design = { design = "NAME_planetary_fighter" }
+		add_ship_design = last_created_design
+		capital_scope = {
+			planet = { save_event_target_as = eac_test }
+			solar_system = {
+				create_fleet = {
+					name = "Planetary Defense"
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random  design = NAME_planetary_fighter 
+						}
+					}
+				}
+				last_created_fleet = {
+					set_location = { target = event_target:eac_test distance = 20 }
+					# add_modifier = { modifier = eac_aw_stop_ship_movement days = -1 }
+				}
+
+			}
+		}
+		
+	}
+}
+
+#From = Planet scope
+#This = Fleet scope
+fleet_event = {
+	id = eac_at_war.80
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			OR = {
+				has_fleet_flag = eac_message_planet_cannon_damage
+				has_fleet_flag = eac_message_planet_cannon_kill
+			}
+		}
+	}
+
+	immediate = {
+		this = {
+			if = {
+				limit = { has_fleet_flag = eac_message_planet_cannon_damage }
+				remove_fleet_flag = eac_message_planet_cannon_damage
+			}
+			if = { 
+				limit = { has_fleet_flag = eac_message_planet_cannon_kill }
+				remove_fleet_flag = eac_message_planet_cannon_kill
+			}
+		}
+	}
+}
+
+#From = Planet scope
+#This = Fleet scope
+fleet_event = {
+	id = eac_at_war.90
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			is_ship_class = shipclass_transport
+		}
+		# from = {
+		# # 	# if = { limit = { exists = owner }
+		# # 	# 	owner = { is_at_war_with = root.owner }
+		# # 	# }
+		# 	has_orbital_bombardment = no
+		# 	# OR = {
+		# 	# 	has_building = eac_building_planetary_proton_cannon
+		# 	# 	has_building = eac_building_planetary_neutron_cannon
+		# 	# 	has_building = eac_building_planetary_tachyon_cannon	
+		# 	# 	has_building = eac_building_planetary_coil_scattergun					
+		# 	# 	has_building = eac_building_planetary_rail_scattergun					
+		# 	# }
+		# }
+	}
+
+	immediate = {
+		this = {
+			owner = { save_event_target_as = eac_transport_fleet_owner }
+		}
+		from = {
+			owner = {
+				if = {
+					limit = { is_at_war_with = eac_transport_fleet_owner }
+				}
+				# log = "At War transport in orbit. [From.GetName] [Root.GetName]"
+				
+			}
+		}
+		# log = "Transport in orbit. [From.GetName] [Root.GetName]"
+	}
+}
+
+
+
+event = {
+	id = eac_at_war.99
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = { is_at_war = yes }
+			save_event_target_as = eac_country_at_war
+			log = "country at war: [This.GetName]"
+			every_owned_fleet = {
+				limit = {
+					is_ship_class = shipclass_military_special #colossus
+				}
+				log = "   colossis found: [This.GetName]"
+				if = {
+					limit = {
+						exists = orbit
+						orbit = { 
+							owner = { is_at_war_with = event_target:eac_country_at_war } 
+						}
+					}
+					orbit = { log = "      planet: [This.GetName]" }
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = eac_at_war.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			random_list = {
+				33 = { 	country_event = { id = eac_at_war.101 days = 1 } }
+				33 = { 	country_event = { id = eac_at_war.101 days = 2 } }
+				33 = { 	country_event = { id = eac_at_war.101 days = 3 } }
+			}
+			# country_event = { id = eac_at_war.101 }
+		}
+	}
+}
+
+country_event = {
+	id = eac_at_war.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				OR = {
+					has_building = eac_building_planetary_proton_cannon
+					has_building = eac_building_planetary_neutron_cannon
+					has_building = eac_building_planetary_tachyon_cannon	
+					has_building = eac_building_planetary_coil_scattergun					
+					has_building = eac_building_planetary_rail_scattergun					
+				}
+			}
+			planet_event = { id = eac_at_war.110 }
+		}	
+	}
+}
+
+# If enemy in orbit, fire!
+planet_event = {
+	id = eac_at_war.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_orbital_bombardment = yes 
+			has_enemy_transport_in_orbit = yes
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_building
+			eac_building_planetary_proton_cannon = {
+				planet_event = { id = eac_at_war.111 }
+				planet_event = { id = eac_at_war.111 days = 7 }
+				planet_event = { id = eac_at_war.111 days = 13 }
+				planet_event = { id = eac_at_war.111 days = 19 }
+				planet_event = { id = eac_at_war.111 days = 26 }
+			
+			}
+			eac_building_planetary_neutron_cannon = {
+				planet_event = { id = eac_at_war.112 }
+				planet_event = { id = eac_at_war.112 days = 8 }
+				planet_event = { id = eac_at_war.112 days = 16 }
+				planet_event = { id = eac_at_war.112 days = 24 }
+			}
+			eac_building_planetary_tachyon_cannon = {
+				planet_event = { id = eac_at_war.113 }
+				planet_event = { id = eac_at_war.113 days = 11 }
+				planet_event = { id = eac_at_war.113 days = 21 }
+			}
+			eac_building_planetary_coil_scattergun = {
+				planet_event = { id = eac_at_war.114 }
+				planet_event = { id = eac_at_war.114 days = 4 }
+				planet_event = { id = eac_at_war.114 days = 8 }
+				planet_event = { id = eac_at_war.114 days = 12 }
+				planet_event = { id = eac_at_war.114 days = 16 }
+				planet_event = { id = eac_at_war.114 days = 20 }
+				planet_event = { id = eac_at_war.114 days = 24 }
+			}
+			eac_building_planetary_rail_scattergun = {
+				planet_event = { id = eac_at_war.115 }
+				planet_event = { id = eac_at_war.115 days = 5 }
+				planet_event = { id = eac_at_war.115 days = 10 }
+				planet_event = { id = eac_at_war.115 days = 15 }
+				planet_event = { id = eac_at_war.115 days = 20 }
+				planet_event = { id = eac_at_war.115 days = 25 }
+			}
+		}
+	}
+}
+
+# Proton Cannon
+planet_event = {
+	id = eac_at_war.111
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+		if = {
+			limit = {
+				this = { 
+					OR = {
+						has_orbital_bombardment = yes 
+						has_enemy_transport_in_orbit = yes
+					}
+					has_building = eac_building_planetary_proton_cannon
+				}
+			}
+			eac_fire_proton_cannon = yes
+		}
+	}
+}
+
+# Neutron Cannon
+planet_event = {
+	id = eac_at_war.112
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				this = { 
+					OR = {
+						has_orbital_bombardment = yes 
+						has_enemy_transport_in_orbit = yes
+					}
+					has_building = eac_building_planetary_neutron_cannon
+				}
+			}
+			eac_fire_neutron_cannon = yes
+		}
+	}
+}
+
+# Tachyon Cannon
+planet_event = {
+	id = eac_at_war.113
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				this = { 
+					OR = {
+						has_orbital_bombardment = yes 
+						has_enemy_transport_in_orbit = yes
+					}
+					has_building = eac_building_planetary_tachyon_cannon
+				}
+			}
+			eac_fire_tachyon_cannon = yes
+		}
+	}
+}
+
+# Coil Scattergun
+planet_event = {
+	id = eac_at_war.114
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+		if = {
+			limit = {
+				this = { 
+					OR = {
+						has_orbital_bombardment = yes 
+						has_enemy_transport_in_orbit = yes
+					}
+					has_building = eac_building_planetary_coil_scattergun
+				}
+			}
+
+			eac_fire_coil_scattergun = yes
+		}
+	}
+}
+
+# Rail Scattergun
+planet_event = {
+	id = eac_at_war.115
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+		if = {
+			limit = {
+				this = { 
+					OR = {
+						has_orbital_bombardment = yes 
+						has_enemy_transport_in_orbit = yes
+					}
+					has_building = eac_building_planetary_rail_scattergun
+				}
+			}
+			eac_fire_rail_scattergun = yes
+		}
+	}
+}
+
+event = {
+	id = eac_at_war.150
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			country_event = { id = eac_at_war.151 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = eac_at_war.151
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_orbital_bombardment = yes
+			}
+			save_event_target_as = eac_bombarded_planet
+			
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_ship_class = shipclass_military
+						exists = orbit
+						orbit = { is_planet = event_target:eac_bombarded_planet }
+					}
+					random_owned_ship = {
+						limit = {
+							exists = leader
+							leader = { has_trait = eac_aw_leader_trait_ground_pounder }
+						}
+						event_target:eac_bombarded_planet = { 
+							add_modifier = { modifier = eac_aw_admiral_ground_pounder days = 30 } 
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+
+# A tile building has been ruined
+# This = Planet
+# From = Tile
+planet_event = {
+	id = eac_at_war.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				owner = { has_technology = eac_aw_tech_nanite_clouds }
+				this = { 
+					has_orbital_bombardment = yes 
+					num_pops > 0 
+				}
+				from = { 
+					AND = {
+						OR = {
+							has_building = eac_building_planetary_proton_cannon 
+							has_building = eac_building_planetary_neutron_cannon 
+							has_building = eac_building_planetary_tachyon_cannon 
+							has_building = eac_building_planetary_coil_scattergun					
+							has_building = eac_building_planetary_rail_scattergun					
+						}
+					}
+				} 
+			}
+			from = {
+				switch = {
+					trigger = has_building
+					eac_building_planetary_proton_cannon = { planet = { set_planet_flag = eac_proton_cannon_flag }}
+					eac_building_planetary_neutron_cannon = { planet = { set_planet_flag = eac_neutron_cannon_flag }}
+					eac_building_planetary_tachyon_cannon = { planet = { set_planet_flag = eac_tachyon_cannon_flag }}
+					eac_building_planetary_coil_scattergun = { planet = { set_planet_flag = eac_coil_scattergun_flag }}
+					eac_building_planetary_rail_scattergun = { planet = { set_planet_flag = eac_rail_scattergun_flag }}
+				}
+				set_building = eac_building_nanites
+			}
+			planet_event = { id = eac_at_war.201 days = 150 random = 30 }
+		}
+	}
+}
+
+# Cannon Rebuilt During Orbital Bombardment
+planet_event = {
+	id = eac_at_war.201
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				from = { 
+					num_pops > 0
+					is_occupied_flag = no 
+				} 
+				fromfrom = { has_building = eac_building_nanites }
+			}
+			from = { 
+				switch = {
+					trigger = has_planet_flag
+					eac_proton_cannon_flag = { 
+						fromfrom = { set_building = eac_building_planetary_proton_cannon } 
+						remove_planet_flag = eac_proton_cannon_flag
+					}
+					eac_neutron_cannon_flag = { 
+						fromfrom = { set_building = eac_building_planetary_neutron_cannon } 
+						remove_planet_flag = eac_neutron_cannon_flag
+					}
+					eac_tachyon_cannon_flag = { 
+						fromfrom = { set_building = eac_building_planetary_tachyon_cannon } 
+						remove_planet_flag = eac_tachyon_cannon_flag
+					}
+					eac_coil_scattergun_flag = { 
+						fromfrom = { set_building = eac_building_planetary_coil_scattergun } 
+						remove_planet_flag = eac_coil_scattergun_flag
+					}
+					eac_rail_scattergun_flag = { 
+						fromfrom = { set_building = eac_building_planetary_rail_scattergun } 
+						remove_planet_flag = eac_rail_scattergun_flag
+					}
+				}
+				fromfrom = { set_ruined = no }
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						OR = {
+							is_ship_class = shipclass_military
+							is_ship_class = shipclass_transport
+						}
+						exists = orbit
+						orbit = { 
+							is_planet = root 
+							has_orbital_bombardment = yes
+						}
+					}
+					owner = {
+						create_message = {
+							type = EAC_PLANETARY_CANNON_OPERATIONAL
+							localization = EAC_MESSAGE_PLANETARY_CANNON_OPERATIONAL_DESC
+							days = 30 
+							target = root
+							
+							variable = { type = name localization = FLEET scope = prev } 
+							variable = { type = name localization = PLANET scope = root } 
+						}						
+					}
+				}
+			}
+		}
+		else_if = { 
+			limit = { is_occupied_flag = yes } 
+			fromfrom = { set_blocker = tb_bomb_crater }
+		}
+	}
+}
+
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+planet_event = {
+	id = eac_at_war.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				ROOT = { has_building = eac_building_nanites }
+			}
+			ROOT = {
+				every_tile = {
+					limit = { has_building = eac_building_nanites }
+					set_blocker = tb_bomb_crater 
+				}
+			}
+		}
+	}
+}
+
+#From = Planet scope
+#This = Fleet scope
+fleet_event = {
+	id = eac_at_war.300
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		this = {
+			owner = { save_event_target_as = eac_fleet_country}
+		}
+		if = {
+			limit = {
+				this = { 
+					is_ship_class = shipclass_military_special 
+				}
+				from = { 
+					owner = { is_at_war_with = event_target:eac_fleet_country }
+					OR = {
+						has_building = eac_building_planetary_proton_cannon
+						has_building = eac_building_planetary_neutron_cannon
+						has_building = eac_building_planetary_tachyon_cannon						
+					}
+				}
+			}
+			from = { set_planet_flag = eac_colossus_orbitting }
+			set_fleet_flag = eac_orbiting_planet
+			log = "set orbitting planet flags"
+		}
+	}
+}
+
+country_event = {
+	id = eac_at_war.900
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_ambient_object = {
+				type = eac_neutron_cannon_projectile_hit
+				location = this
+				duration = 3
+				use_3d_location = yes
+				entity_offset = { min = 0 max = 0 }
+				entity_offset_angle = { min = 0 max = 0 }
+				entity_offset_height = { min = 0 max = 0 }
+				entity_scale_to_size = no
+				scale = 1
+			}  
+			
+			create_ambient_object = {
+				type = eac_ship_explosion
+				location = this
+				duration = 3
+				use_3d_location = yes
+				entity_offset = { min = 0 max = 1 }
+				entity_offset_angle = { min = 0 max = 180 }
+				entity_offset_height = { min = -1 max = 1 }
+				entity_scale_to_size = yes
+				scale = 2
+			}
+
+		}
+	}
+}

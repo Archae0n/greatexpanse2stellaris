@@ -1,0 +1,132 @@
+#Passive#
+kiyo_spy_scandal_trial_good = {
+	pop_happiness = 0.05
+}
+kiyo_spy_scandal_bad = {
+	country_resource_influence_add = -1
+}
+kiyo_spy_drone_building_good = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_building_cost_mult.dds"
+	planet_building_upkeep_mult = -0.05
+}
+kiyo_spy_drone_vital_good = {
+	pop_resource_output = 0.05
+}
+kiyo_spy_drone_bad = {
+	country_resource_influence_add = -1
+}
+kiyo_spy_conserve_minerals_good = {
+	tile_resource_minerals_mult = 0.10
+}
+kiyo_spy_conserve_energy_good = {
+	tile_resource_energy_mult = 0.10
+}
+kiyo_spy_assassin_guard = {
+	army_damage_mult = 0.10
+}
+kiyo_spy_assassin_warrant = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_building_cost_mult.dds"
+	planet_building_upkeep_mult = -0.05
+}
+kiyo_spy_assassin_bad = {
+	pop_happiness = -0.10
+}
+kiyo_spy_assassin_bad_gestalt = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_growth_speed.dds"
+	pop_growth_speed = -0.35
+	pop_robot_build_speed_mult = -0.35
+}
+kiyo_spy_hijack_ai_good = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_combat_speed_mult.dds"
+	ship_experience_gain_mult = 0.50
+}
+kiyo_spy_hijack_ai_bad = {
+	starbase_shipyard_build_cost_mult = 0.15
+}
+kiyo_spy_hijack_inventory_good = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_orbit_upkeep_mult.dds"
+	ship_orbit_upkeep_mult = -0.10
+}
+kiyo_spy_check_unity = {
+	country_resource_unity_mult = 0.05
+}
+kiyo_spy_check_security = {
+	ship_upkeep_mult = -0.05
+}
+kiyo_spy_free_speech = {
+	pop_government_ethic_attraction = -0.20
+	pop_ethics_shift_speed_mult = 0.25
+}
+kiyo_spy_free_speech_gestalt = {
+	pop_resource_output = -0.15
+}
+kiyo_spy_speech_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 3
+	planet_unrest_mult = 0.50
+}
+kiyo_spy_speech_unrest_gestalt = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
+	icon_frame = 3
+	pop_resource_output = -0.15
+}
+
+#Active#
+kiyo_spy_active_bomb = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_building_cost_mult.dds"
+	planet_building_upkeep_mult = 0.15
+	planet_colony_development_speed_mult = -0.5
+}
+kiyo_spy_active_bomb_orbital = {
+	ship_upkeep_mult = 0.15
+}
+kiyo_spy_active_toxic = {
+	icon = "gfx/interface/icons/modifiers/tile_resource_food_add.dds"
+	tile_building_resource_food_add = -1
+}
+kiyo_spy_active_toxic_machine = {
+	icon = "gfx/interface/icons/modifiers/static_resource_energy_add.dds"
+	tile_building_resource_energy_add = -1
+}
+kiyo_spy_active_toxic_equipment = {
+	pop_resource_output = -0.05
+}
+kiyo_spy_active_toxic_sustenance = {
+	tile_resource_food_mult = -0.20
+}
+kiyo_spy_active_toxic_sustenance_machine = {
+	tile_resource_energy_mult = -0.15
+}
+kiyo_spy_active_leak = {
+	all_technology_research_speed = -0.10
+}
+kiyo_spy_active_leak_hack = {
+	country_resource_unity_mult = -0.15
+}
+kiyo_spy_active_leak_physical = {
+	icon = "gfx/interface/icons/modifiers/mod_country_all_tech_research_speed.dds"
+	country_resource_physics_research_mult = -0.5
+	country_resource_society_research_mult = -0.5
+	country_resource_engineering_research_mult = -0.5
+	country_resource_physics_research_add = -3
+	country_resource_society_research_add = -3
+	country_resource_engineering_research_add = -3
+}
+kiyo_spy_active_miner = {
+	icon = "gfx/interface/icons/modifiers/shipclass_military_station_build_cost_mult.dds"
+	shipsize_mining_station_build_cost_mult = 0.20
+	shipsize_research_station_build_cost_mult = 0.20
+	shipsize_observation_station_build_cost_mult = 0.20
+	shipclass_military_station_build_cost_mult = 0.20
+	country_starbase_upkeep_mult = 0.25
+}
+kiyo_spy_active_miner_minerals = {
+	country_resource_minerals_mult = -0.25
+	tile_resource_minerals_mult = 0.25
+	country_resource_minerals_add = 2.5
+}
+kiyo_spy_active_miner_energy = {
+	country_resource_energy_mult = -0.30
+	tile_resource_energy_mult = 0.30
+	country_resource_energy_add = 1.5
+}

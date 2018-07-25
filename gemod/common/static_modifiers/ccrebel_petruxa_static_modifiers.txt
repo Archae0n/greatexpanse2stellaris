@@ -1,0 +1,147 @@
+
+ccrebel_planet_being_stirred_up_socialism = {
+	
+	pop_ethic_socialism_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_capitalism = {
+	
+	pop_ethic_capitalism_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_green = {
+	
+	pop_ethic_green_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_industrial = {
+	
+	pop_ethic_industrial_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_elitist = {
+	
+	pop_ethic_elitist_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_pluralist = {
+	
+	pop_ethic_pluralist_attraction_mult = 0.75
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_socialism_2 = {
+	
+	pop_ethic_socialism_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_capitalism_2 = {
+	
+	pop_ethic_capitalism_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_green_2 = {
+	
+	pop_ethic_green_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_industrial_2 = {
+	
+	pop_ethic_industrial_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_elitist_2 = {
+	
+	pop_ethic_elitist_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_pluralist_2 = {
+	
+	pop_ethic_pluralist_attraction_mult = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_socialism_3 = {
+	
+	pop_ethic_socialism_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_capitalism_3 = {
+	
+	pop_ethic_capitalism_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_green_3 = {
+	
+	pop_ethic_green_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_industrial_3 = {
+	
+	pop_ethic_industrial_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_elitist_3 = {
+	
+	pop_ethic_elitist_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_pluralist_3 = {
+	
+	pop_ethic_pluralist_attraction_mult = 1.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_socialism_4 = {
+	
+	pop_ethic_socialism_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_capitalism_4 = {
+	
+	pop_ethic_capitalism_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_green_4 = {
+	
+	pop_ethic_green_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_industrial_4 = {
+	
+	pop_ethic_industrial_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_elitist_4 = {
+	
+	pop_ethic_elitist_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+ccrebel_planet_being_stirred_up_pluralist_4 = {
+	
+	pop_ethic_pluralist_attraction_mult = 1.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_sedition.dds"
+	icon_frame = 3
+}
+
+

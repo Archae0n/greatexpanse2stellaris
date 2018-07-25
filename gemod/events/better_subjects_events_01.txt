@@ -1,0 +1,112 @@
+##########################################################################
+# Better Subjects Events
+# by Lucas Pinheiro Silva
+##########################################################################
+
+namespace = better_subjects
+
+### Taxation of Subjects
+
+# Monthly pulse
+country_event = {
+	id = better_subjects.1000
+
+	hide_window = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	trigger = {
+		OR = {
+			has_policy_flag = dont_tax_subjects
+			has_policy_flag = tax_vassals
+			has_policy_flag = tax_protectorates
+			has_policy_flag = tax_all_subjects
+		}
+	}
+
+	immediate = {
+		every_subject = {
+			limit = {
+				has_relation_flag = {
+					who = ROOT
+					flag = tax_exemption
+				}
+			}
+			remove_opinion_modifier = {
+				who = ROOT
+				modifier = opinion_subjects_taxes
+			}
+		}
+		if = {
+			limit = { has_policy_flag = dont_tax_subjects }
+			country_event = { id = better_subjects.10 }
+			country_event = { id = better_subjects.11 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_vassals }
+			country_event = { id = better_subjects.12 }
+			country_event = { id = better_subjects.11 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_protectorates	}
+			country_event = { id = better_subjects.13 }
+			country_event = { id = better_subjects.10 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_all_subjects }
+			country_event = { id = better_subjects.12 }
+			country_event = { id = better_subjects.13 }
+		}
+	}
+}
+
+
+### Subsidization of Subjects
+
+# Monthly pulse
+country_event = {
+	id = better_subjects.2000
+
+	hide_window = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	trigger = {
+		OR = {
+			has_policy_flag = no_subsidies
+			has_policy_flag = subsidize_vassals
+			has_policy_flag = subsidize_protectorates
+			has_policy_flag = subsidize_all_subjects
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_policy_flag = no_subsidies }
+			country_event = { id = better_subjects.20 }
+			country_event = { id = better_subjects.21 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_vassals }
+			country_event = { id = better_subjects.22 }
+			country_event = { id = better_subjects.21 }
+			country_event = { id = better_subjects.24 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_protectorates }
+			country_event = { id = better_subjects.23 }
+			country_event = { id = better_subjects.20 }
+			country_event = { id = better_subjects.26 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_all_subjects }
+			country_event = { id = better_subjects.22 }
+			country_event = { id = better_subjects.23 }
+			country_event = { id = better_subjects.24 }
+			country_event = { id = better_subjects.26 }
+		}
+	}
+}

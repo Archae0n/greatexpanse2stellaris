@@ -1,0 +1,244 @@
+#civic_cultural_cohesion = { #Cultural Cohesion - Unity and Reduced Subject Integration Cost. Cannot Declare War. Replace Supremacy with Cohesion.
+#	modification = no
+#	
+#	playable = {
+#	
+#	}
+#	
+#	potential = {
+#		ethics = {
+#		NOT = {
+#				value = ethic_gestalt_consciousness 
+#			} 
+#		}
+#	}
+#	
+#	possible = {
+#		ethics = {
+#			OR = {
+#				text = civic_tooltip_pacifist
+#				value = ethic_fanatic_pacifist
+#				value = ethic_pacifist
+#			}
+#			OR = {
+#				text = civic_tooltip_xenophile
+#				value = ethic_fanatic_xenophile
+#				value = ethic_xenophile
+#			}
+#		}
+#	}
+#	
+#	random_weight = {
+#		base = 1
+#	}
+#	
+#	modifier = {
+#		country_resource_unity_mult = 0.15
+#		subject_integration_influence_cost_mult = -0.25
+#	}
+#}
+
+civic_strategic_studies = { #5% Faster Research Speed. +5% Research Points per Strategic Resource (Capped at +30%)
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness 
+			} 
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_strategic_studies_effect
+	modifier = {
+		all_technology_research_speed = 0.05
+		country_strategic_resources_resource_physics_research_mult = 0.05
+		country_strategic_resources_resource_physics_research_max_mult = 0.3
+		country_strategic_resources_resource_society_research_mult = 0.05
+		country_strategic_resources_resource_society_research_max_mult = 0.3
+		country_strategic_resources_resource_engineering_research_mult = 0.05
+		country_strategic_resources_resource_engineering_research_max_mult = 0.3
+	}
+}
+
+civic_hydroponic_adaptation = { #+5% Food per Planet Class occupied (capped at +30%)
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+			} 
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist_hive
+				value = ethic_fanatic_pacifist
+				value = ethic_pacifist
+				value = ethic_gestalt_consciousness
+			}
+		}
+		civics = {
+			OR = {
+				value = civic_environmentalist
+				value = civic_hive_ascetic
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_hydroponic_adaptation_effect
+	modifier = {
+		country_planet_classes_resource_food_mult = 0.05
+		country_planet_classes_resource_food_max_mult = 0.4
+	}
+}
+
+civic_imperial_overlord = { #+10% Influence per Subject (capped at 60%)
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			} 
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+			}
+		}
+		civics = {
+			value = civic_feudal_realm
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_imperial_overlord_effects
+	modifier = {
+		country_subjects_resource_influence_mult = 0.1
+		country_subjects_resource_influence_max_mult = 0.5
+	}
+}
+
+civic_flexible_blueprints = { #Robots are cheaper. Faster Robomodding.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	
+	possible = {
+	
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	modifier = {
+		pop_robot_build_cost_mult = -0.2
+		modify_species_cost_mult = -0.33
+	}
+}
+
+civic_advanced_networking = { #Reduced Colony Influence Cost + a bonus if a Special Robot civic is taken or not
+	modification = no
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	
+	possible = {
+	
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	description = civic_tooltip_advanced_networking_effects
+	modifier = {
+		tradition_cost_num_colonies_mult = -0.15
+	}
+}
+
+civic_neurotoxins = { #Unique War Demand - Release Neurotoxins (Planet) - 80% = Kills 1/2 Pops and reduce Habitability and Growth Speed by 20% | 15% = Previous Effect + Kills an additional Pop and change the planet to a Tomb World | 5% = change the planet to a Toxic World, destroying the colony in the process. Gain 100 Influence.
+	modification = yes
+	
+	playable = {
+	
+	}
+	
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	
+	possible = {
+		civics = {
+			value = civic_machine_terminator
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_neurotoxins_effect
+	modifier = {
+		army_damage_mult = 0.15
+	}
+}

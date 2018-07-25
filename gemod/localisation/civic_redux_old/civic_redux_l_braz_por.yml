@@ -1,0 +1,765 @@
+﻿l_braz_por:
+ TECH_UNLOCK_TERRAFORMING_BARREN_TITLE:0 "§HUnlock Terraforming Project:§! Barren Worlds"
+ TECH_UNLOCK_TERRAFORMING_BARREN_DESC:0 "Through multiple stages, you can now terraform Barren Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_TOXIC_TITLE:0 "§HUnlock Terraforming Project:§! Toxic Worlds"
+ TECH_UNLOCK_TERRAFORMING_TOXIC_DESC:0 "Through multiple stages, you can now terraform Toxic Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_MOLTEN_TITLE:0 "§HUnlock Terraforming Project:§! Molten Worlds"
+ TECH_UNLOCK_TERRAFORMING_MOLTEN_DESC:0 "Through multiple stages, you can now terraform Molten Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_FROZEN_TITLE:0 "§HUnlock Terraforming Project:§! Frozen Worlds"
+ TECH_UNLOCK_TERRAFORMING_FROZEN_DESC:0 "Through multiple stages, you can now terraform Frozen Worlds into a Habitable World."
+ 
+ tech_atmospheric_creation:0 "Atmospheric Creation"
+ tech_atmospheric_creation_desc:0 "Restoring a planet's climate is not so different to creating a new one altogether. You just need a LOT more time, resources and effort to generate and stabilise it."
+ 
+ tech_planetary_denitrification:0 "Planetary Denitrification"
+ tech_planetary_denitrification_desc:0 "Through the use of heavy chlorine bombing and techniques learned from generating new atmospheres, we can transform the climate of a world ruined by pollutants and nitrates into a more stable condition for life."
+ 
+ tech_macro_cryogenics:0 "Macro-Cryogenics"
+ tech_macro_cryogenics_desc:0 "Large scale freezing and heat reduction on a planet's surface can eventually bring even the hottest climates down to a reasonable level."
+ 
+ tech_global_heat_induction:0 "Global Heat Induction"
+ tech_global_heat_induction_desc:0 "Ice, when presented with enough heat, melts. Heating the atmosphere of a Frozen World should eventually produce similar results."
+ 
+  war_demand_demilitarize_header:1 "§HDemilitarize§!"
+ war_demand_demilitarize_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_tooltip_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_content:2 "[parameter:country.GetName] will be forced to demilitarize, weakening their military capacity and preventing them from Declaring War for 10 Years. We will also gain §G100§! £influence  Influence"
+ war_demand_demilitarize_tooltip_proper_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_proper_content:1 "$war_demand_demilitarize_tooltip_content$"
+ war_demand_already_demilitarized:0 "[parameter:country.GetName] is currently demilitarized, there is no point in enforcing this demand."
+ 
+ demilitarized:0 "Demilitarized"
+ demilitarized_desc:0 "We have been forced by another empire to lay down our weapons, weakening our military power."
+ 
+ war_demand_blood_hunt_header:1 "§RBlood Hunt§!"
+ war_demand_blood_hunt_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_blood_hunt_tooltip_header:0 "$war_demand_blood_hunt_header$"
+ war_demand_blood_hunt_tooltip_content:2 "Our hunter drones will be unleashed upon [parameter:planet.GetName], killing at least 3 £pop  §YPops§!\n\nFor each £pop  §YPop§! killed we will gain some £society  §YSociety Research§! and £unity  §YUnity§!"
+ war_demand_blood_hunt_tooltip_proper_header:1 "$war_demand_blood_hunt_header$"
+ war_demand_blood_hunt_tooltip_proper_content:2 "$war_demand_blood_hunt_tooltip_content$"
+ star_sign_change_recent:0 "Constellation Cooldown"
+ star_sign_change_recent_desc:0 "Your Constellation recently changed, and will not change again while this is active."
+ 
+ star_sign_aries:0 "Constellation: §BAries§!"
+ star_sign_aries_desc:0 "The stars have shifted to the Aries Constellation.\nThe Ram encourages exploration and discovery, and taking the leap into the unknown."
+ star_sign_taurus:0 "Constellation: §BTaurus§!"
+ star_sign_taurus_desc:0 "The stars have shifted to the Taurus Constellation.\nThe headstrong Bull fortifies your ships."
+ star_sign_gemini:0 "Constellation: §BGemini§!"
+ star_sign_gemini_desc:0 "The stars have shifted to the Gemini Constellation.\nThe Twins, always learning, boost your capacity for knowledge."
+ star_sign_cancer:0 "Constellation: §BCancer§!"
+ star_sign_cancer_desc:0 "The stars have shifted to the Cancer Constellation.\nWith a protective shell to shield it from harm, the Crab protects and watches over all."
+ star_sign_leo:0 "Constellation: §BLeo§!"
+ star_sign_leo_desc:0 "The stars have shifted to the Leo Constellation.\nA natural leader, the Lion is at the forefront of all things. Drones ready to serve the hive are better prepared."
+ star_sign_virgo:0 "Constellation: §BVirgo§!"
+ star_sign_virgo_desc:0 "The stars have shifted to the Virgo Constellation.\nThe Maiden assists your scientists through intricate analysis of her surroundings."
+ star_sign_libra:0 "Constellation: §BLibra§!"
+ star_sign_libra_desc:0 "The stars have shifted to the Libra Constellation.\nBringing ballance between you and your neighbours, the Scales bring justice and fairness to all."
+ star_sign_scorpio:0 "Constellation: §BScorpio§!"
+ star_sign_scorpio_desc:0 "The stars have shifted to the Scorpio Constellation.\nThe Scorpion's deadly sting is felt through your fleets."
+ star_sign_sagittarius:0 "Constellation: §BSagittarius§!"
+ star_sign_sagittarius_desc:0 "The stars have shifted to the Sagittarius Constellation.\nWith power and precision the Archer can strike down his targets from afar."
+ star_sign_capricorn:0 "Constellation: §BCapricorn§!"
+ star_sign_capricorn_desc:0 "The stars have shifted to the Capricorn Constellation.\nThe Capricorn encourages our drones to be prudent and hard-working."
+ star_sign_aquarius:0 "Constellation: §BAquarius§!"
+ star_sign_aquarius_desc:0 "The stars have shifted to the Aquarius Constellation.\nThe Water-Bearer brings an age of plenty for us."
+ star_sign_pisces:0 "Constellation: §BPisces§!"
+ star_sign_pisces_desc:0 "The stars have shifted to the Pisces Constellation.\nThe Fish, ever vigilant, prepare the Hive for future dangers."
+ 
+ credux_starborn.1.name:0 "The Starborn Swarm"
+ credux_starborn.1.desc:0 "We were stardust once. Part of a greater machine, unthinking yet ever-moving. Now we are made flesh and form, yet our connection to the stars have never wavered.\n\nAs we return to our ancient homes, the stars watch over us and grant us power. Our most sacred of watchers is..."
+ credux_starborn.1.a: "Aries, the Ram."
+ credux_starborn.1.b: "Taurus, the Bull."
+ credux_starborn.1.c: "Gemini, the Twins."
+ credux_starborn.1.d: "Cancer, the Crab."
+ credux_starborn.1.e: "Leo, the Lion."
+ credux_starborn.1.f: "Virgo, the Maiden."
+ credux_starborn.1.g: "Libra, the Scales."
+ credux_starborn.1.h: "Scorpio, the Scorpion."
+ credux_starborn.1.i: "Sagittarius, the Archer."
+ credux_starborn.1.j: "The Capricorn."
+ credux_starborn.1.k: "Aquarius, the Water-Bearer."
+ credux_starborn.1.l: "Pisces, the Fish."
+ 
+ credux_starborn.2.name:0 "Constellation Changes"
+ credux_starborn.2.desc:0 "The stars ebb and flow in a never ending cycle. Our §BGuardian§! for these last few years has left us, and in their place stands..."
+ pc_barren_unstable:0 "Forsaken World"
+ pc_barren_unstable_desc:0 "Barren and rocky world with a thin atmosphere, covered in meteor impact craters and completely devoid of life.\n\nIt appears that an attempt at terraforming this world has taken place. The foundations of an atmosphere and some frozen water is present - but in its current state is unsuitable for sustaining life."
+ pc_barren_stable:0 "Dead World"
+ pc_barren_stable_desc:0 "Barren and rocky world with a thin atmosphere, covered in meteor impact craters and completely devoid of life.\n\nIt appears that an attempt at terraforming this world has taken place. While there is a notable atmosphere and even some liquid water, it remains an unsuitable candidate for colonisation."
+ 
+ pc_barren_cold_unstable:0 "Forsaken World"
+ pc_barren_cold_unstable_desc:0 "Barren and rocky world covered in meteor impact craters and completely devoid of life.\n\nIt appears that an attempt at terraforming this world has taken place. The foundations of an atmosphere and some frozen water is present - but in its current state is unsuitable for sustaining life."
+ pc_barren_cold_stable:0 "Dead World"
+ pc_barren_cold_stable_desc:0 "Barren and rocky world covered in meteor impact craters and completely devoid of life.\n\nIt appears that an attempt at terraforming this world has taken place. While there is a notable atmosphere and even some liquid water, it remains an unsuitable candidate for colonisation."
+ 
+ pc_toxic_detox1:0 "Corrupted World"
+ pc_toxic_detox1_desc:0 "A rocky planet with a thick atmosphere that is lethal to all known higher forms of life.\n\nIt appears that an attempt at terraforming this world has taken place. While far from being able to reasonably sustain life, the highly acidic and alkaline nature of the atmosphere has been toned down."
+ pc_toxic_detox2:0 "Poisoned World"
+ pc_toxic_detox2_desc:0 "A rocky planet with a thick atmosphere that, save for some ammonia-based lifeforms, is lethal to all known higher forms of life.\n\nIt appears that an attempt at terraforming this world has taken place. The most toxic elements of the planet's atmosphere have been purified, and simple microbial life, lethal to all other life on contact, has started to develop."
+ pc_toxic_detox3:0 "Fallen World"
+ pc_toxic_detox3_desc:0 "A rocky planet with a semi-thick atmosphere. Persistent acid rainstorms and highly alkaline soil make this world lethal to all known higher forms of life.\n\nIt appears that an attempt at terraforming this world has taken place. The atmosphere has been reduced and cleansed of almost all pollutants. The soil and water on the planet are still in too extreme a condition to consider colonisation."
+ pc_toxic_detox4:0 "Scarred World"
+ pc_toxic_detox4_desc:0 "A rocky planet with a semi-thick atmosphere. Persistent acid rainstorms and highly alkaline soil make this world suitable only for ammonia-based lifeforms.\n\nIt appears that an attempt at terraforming this world has taken place. The soil has been moderately acidified and water conditions are slowly returning to a pH-neutral level. The microbial organisms remains hostile to life." 
+ pc_toxic_detox5:0 "Wounded World"
+ pc_toxic_detox5_desc:0 "A rocky planet with a nitrogen-rich atmosphere. Ammonia-based lifeforms and acid rainstorms ravage the planet, making this world suitable only for ammonia-based lifeforms.\n\nIt appears that an attempt at terraforming this world has taken place. The pH level of the soil is almost perfectly suited to normal conditions, and the microbial life is much less hostile to life than before." 
+ 
+ pc_molten_cold1:0 "Infernal World"
+ pc_molten_cold1_desc:0 "Rocky world that is scorching hot. The atmosphere is non-existent, and lava from the interior flows freely due to constant volcanic eruptions. This type of planet cannot sustain organic life.\n\nIt appears that an attempt at terraforming this world has taken place. The planet's atmosphere has been almost completely destroyed - presumably to let in cold air from space. It remains unsuitable for life."
+ pc_molten_cold2:0 "Burning World"
+ pc_molten_cold2_desc:0 "Rocky world that is extremely hot. The atmosphere is non-existent, and lava from the interior flows freely due to constant volcanic eruptions. This type of planet cannot sustain organic life.\n\nIt appears that an attempt at terraforming this world has taken place. Surface temperatures are lower than normally expected for this type of world. The volcanic eruptions are less frequent, but the sheer heat and lack of atmosphere means the planet cannot sustain life."
+ pc_molten_cold3:0 "Scorching World"
+ pc_molten_cold3_desc:0 "Rocky world that is extremely hot. The atmosphere is very thin, and the frequent volcanic eruptions spew out immense amounts of lava. Microbial life survives here, but is far too extreme for more complex forms to develop.\n\nIt appears that an attempt at terraforming this world has taken place. Many of the volcanic eruptions have been halted, and an atmosphere has been reintroduced to retain some of the colder conditions."
+ pc_molten_cold4:0 "Chaotic World"
+ pc_molten_cold4_desc:0 "Rocky world that is very hot. The atmosphere is thin, and persistent earthquakes and volcanic eruptions spew out large amounts of lava. Microbial life survives here, but is far too extreme for more complex forms to develop.\n\nIt appears that an attempt at terraforming this world has taken place. Surface tempreatures have reached an almost-suitable level for life, but multiple earthquakes and volcanic eruptions means complex life cannot survive."
+ pc_molten_cold5:0 "Unstable World"
+ pc_molten_cold5_desc:0 "Rocky world that is very hot. Frequent earthquakes and volcanic eruption spew out large amounts of lava. Microbial life survives here, but is far too extreme for more complex forms to develop.\n\nIt appears that an attempt at terraforming this world has taken place. The planet's crust has been stabilised to the point where volcanic eruptions and gas geysers have become an infrequent occurence. Much work reamins to be done, though, for this world to become habitable for life."
+ 
+ pc_frozen_heat1:0 "Cryo World"
+ pc_frozen_heat1_desc:0 "Rocky world covered in a thick layer of permanently frozen ice. Low temperatures and a very thin atmosphere precludes the existence of life on the surface.\n\nIt appears that an attempt at terraforming this world has taken place. The atmospheric and surface temperature of the world are higher than expected of similar planets, but fails to permeate the thick ice on the surface. No surface life can survive."
+ pc_frozen_heat2:0 "Frigid World"
+ pc_frozen_heat2_desc:0 "Rocky world covered in a thick layer of permanently frozen ice. Low temperatures and a semi thin atmosphere precludes the existence of life on the surface.\n\nIt appears that an attempt at terraforming this world has taken place. Some of the permafrost has begun to lift, and there are now distinct weak points within the ice. An atmosphere has formed to contain some of the heat inducted onto the world."
+ pc_frozen_heat3:0 "Icestorm World"
+ pc_frozen_heat3_desc:0 "Rocky world covered in a thick layer of frozen ice. Somewhat low temperatures and a semi thin atmosphere, coupled with powerful blizzards, precludes the existence of life on the surface.\n\nIt appears that an attempt at terraforming this world has taken place. Localised pollution has increased the temperature of several regions dramatically. However, a side effect of the forming atmosphere has revealed itself - huge gale-force winds packing bitterly cold winds and ice shards broken from the melted regions. It remains impossible for surface life to survive."
+ pc_frozen_heat4:0 "Blizzard World"
+ pc_frozen_heat4_desc:0 "Rocky world covered in a layer of frozen ice. Low temperatures and a semi thin atmosphere, coupled with powerful blizzards, precludes the existence of complex life on the surface.\n\nIt appears that an attempt at terraforming this world has taken place. The ice has begun to melt in several regions, creating slushy rivers and lakes on the surface. Meanwhile, the planet's core has heated up in response to our atmospheric efforts, further pushing the thaw and the temperature. The windstorms remain a serious threat to existence on the surface."
+ pc_frozen_heat5:0 "Glacial World"
+ pc_frozen_heat5_desc:0 "Rocky world covered in a layer of frozen ice, with some glaciers dotted in the oceans. A somewhat stable atmosphere, coupled with powerful blizzards, precludes the existence of complex life on the surface.\n\nIt appears that an attempt at terraforming this world has taken place. Large glaciers have broken off the main landscape of the planets and drift across the ocean. The severity of the blizzards has also calmed, and efforts can now be directed to stabilising both the atmosphere and the planet's new temperature."
+ 
+ pc_gaia_blank:0 "Gaia World"
+ pc_gaia_blank_desc:0 "An ideal, temperate world with a nitrogen-oxygen atmosphere and a resilient ecosystem. Optimal conditions for all known higher forms of life at different latitudes.\n\nThis Gaia World was spawned from the Nest Builders/One Small Step civic. However, this is because the species' Habitability was not a Vanilla variant and so could not be worked out. The standard modifiers a Gaia World gives have been annulled on this planet, but with the Gaia Creation technology can be restored."
+  demonic_assault_army:0 "Blood Legion"
+ demonic_assault_army_plural:0 "Blood Legions"
+ demonic_assault_army_desc:0 "A host of dark creatures from another plane, they can invade other planets. Driven by bloodlust, they will rip apart their summoner's enemies."
+ 
+ demonic_defense_army:0 "Terror Watcher"
+ demonic_defense_army_plural:0 "Terror Watchers"
+ demonic_defense_army_desc:0 "Powerful creatures from another plane, they are bound to the planet they are summoned to. Their gaze can turn their victims to ashes."
+ 
+ demonic_horde_army:0 "Imp Horde"
+ demonic_horde_army_plural:0 "Imp Hordes"
+ demonic_horde_army_desc:0 "Imps are nominally weak but easy to summon creatures from another plane. They can be devastating in large numbers."
+  triggered_opinion_behavioural_mimicry:0 "Behavioural Mimicry"
+   damage_vs_country_type_tiyanki_mult:0 "Damage to the Tiyanki"
+ 
+ dark_ones_pleased:0 "Dark Ones Pleased"
+ dark_ones_pleased_desc:0 "The §YDark Ones§! have recently fed on this world, and are providing bonuses for all your citizens."
+ 
+ dark_ones_content:0 "Dark Ones Content"
+ dark_ones_content_desc:0 "The §YDark Ones§! have not fed on this world for a time. §YThey§! are not providing bonuses, but are not hungry... yet."
+ 
+ dark_ones_hungry:0 "Dark Ones Hungry"
+ dark_ones_hungry_desc:0 "The §YDark Ones§! grow hungry. You should feed §YThem§! soon, or face §YTheir§! wrath..."
+ 
+ countdown_to_chaos:0 "The Countdown To Chaos"
+ countdown_to_chaos_desc:0 "You deal with the §YElder God§! will not last forever, and what happens when it expires you do not wish to know..."
+ 
+ the_great_feast:0 "The Great Feast"
+ the_great_feast_desc: "§RYOUR TIME IS UP. NOW WE MUST FEAST.§!"
+ 
+ pop_deep_earthen_connection:0 "Deep Earthen Connection"
+ pop_deep_earthen_connection:0 "This Pop shares a deep connection with their homeworld." 
+ 
+ dt_level_0:0 "Divine Transcendence"
+ dt_level_0_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G10%§! £happiness §WHappiness§!"
+ 
+ dt_level_1:0 "Divine Transcendence"
+ dt_level_1_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G15%§! §WGoverning Ethics Attraction§!"
+ 
+ dt_level_2:0 "Divine Transcendence"
+ dt_level_2_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G15%§! £unity §WUnity§!"
+ 
+ dt_level_3:0 "Divine Transcendence"
+ dt_level_3_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G20§! §WEdict Lenght§!"
+ 
+ dt_level_4:0 "Divine Transcendence"
+ dt_level_4_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G+20§! §WYears to Leader Lifespan§!"
+ 
+ dt_level_5:0 "Divine Transcendence"
+ dt_level_5_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G+2§! §WCore System Capacity§!"
+ 
+ dt_level_6:0 "Divine Transcendence"
+ dt_level_6_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G1§! §WMonthly Influence§!"
+ 
+ dt_level_7:0 "Divine Transcendence"
+ dt_level_7_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, all previous rewards are§! §YDOUBLED!§!"
+ 
+ dt_level_8:0 "Divine Transcendence"
+ dt_level_8_desc:0 "§WYou have completed your Divine Transcendence, and all previously awarded buffs have been§! §YDOUBLED!§!"
+ 
+ mandate_challenged:0 "Mandate of Heaven: Challenged"
+ mandate_challenged_desc:0 "The heavens revolt against you. Recent famines and hardships on one or more of your planets have led to your Mandate being challenged."
+ 
+ mandate_approved:0 "Mandate of Heaven: Approved"
+ mandate_approved_desc:0 "The people currently approve of your Mandate."
+ 
+ advanced_terraforming_in_progress:0 "Advanced Terraforming Project"
+ advanced_terraforming_in_progress_desc:0 "This planet is currently undergoing a major terraforming project to turn it into a more habitable world."
+ 
+ extreme_terraforming_in_progress:0 "Extreme Terraforming Project"
+ extreme_terraforming_in_progress_desc:0 "This planet is currently undergoing a major terraforming project to turn it into a more habitable world."
+ gov_shadowy_democracy:0 "Shadowy Democracy"
+ gov_shadowy_democracy_desc:0 "This government is a spiritualistic form of democracy, where citizens vote for powerful religious figures - all linked to dark gods and deities - to represent them."
+ gov_cultic_dominion:0 "Cultic Dominion"
+ gov_cultic_dominion_desc:0 "This government is a spiritualistic form of oligarchy, where the heads of several dark cults control the government. They convene regularly to elect a new ruler, aided by the powers of their gods and deities."
+ gov_demonic_dictatorship:0 "Demonic Dictatorship"
+ gov_demonic_dictatorship_desc:0 "This government is a spiritualistic form of dictatorship, ruled by a single individual and assisted by the myriad dark cults present in government. The leader becomes host to a powerful and sinister entity, forced to carry out their will."
+ gov_chaos_empire:0 "Chaos Empire"
+ gov_chaos_empire_desc:0 "This government is a spiritualistic form of autocracy, led by a family following the wills of sinister and evil entities. They are hailed as living gods, and those who question their authority mysteriously vanish."
+ 
+ gov_constitutional_monarchy_dem:0 "Constitutional Monarchy"
+ gov_constitutional_monarchy_dem_desc:0 "This relatively pure form of government follows both democratic and autocratic principles, with a publicly led parliament with its own rights and powers alongside a hereditary monarchy."
+ gov_constitutional_monarchy_imp:0 "Constitutional Monarchy"
+ gov_constitutional_monarchy_imp_desc:0 "This relatively pure form of government follows both democratic and autocratic principles, with a publicly led parliament with its own rights and powers alongside a hereditary monarchy."
+ 
+ RT_HEAD_CULTIST:0 "Head Cultist"
+ RT_DOMINATOR:0 "Dominator"
+ RT_DARK_HOST:0 "Dark Host"
+ RT_CHAOS_PRINCE:0 "Chaos Prince"
+ RT_CHAOS_PRINCESS:0 "Chaos Princess"
+ RT_CHOSEN_SON:0 "Chosen Son"
+ RT_CHOSEN_DAUGHTER:0 "Chosen Daughter"
+ 
+ RT_PRINCE:0 "Prince"
+ RT_PRINCESS:0 "Princess"
+  civic_march_of_progress:0 "March Of Science"
+ civic_march_of_progress_desc:0 "This society thrives upon - and celebrates - technological progression. Regardless of their strongest beliefs, they will find joy and rally behind their scientific leaders."
+ civic_tooltip_any_fanatic:0 "Has any §YFanatic§! Ethos."
+ civic_tooltip_march_of_science_effects:0 "§G10%§! bonus £physics £society £engineering Research Point Output.\nWhenever a Technology is researched, gain a temporary bonus effect based on your §YFanatic§! Ethos."
+ 
+ civic_progress_shared:0 "Progress Shared"
+ civic_progress_shared_desc:0 "This society believes in sharing its technological advances with their close allies and friends."
+ civic_tooltip_progress_shared_effects:0 "All technology is shared between you and your Vassals. A §G30%§! Bonus to Research Speed is given to Techs that one party has which the other does not.\n\nIf you start the game with this Civic, you gain the §GEpigenetic Triggers§! Technology for free!"
+ 
+ civic_focus_of_knowledge:0 "Focus Of Knowledge"
+ civic_focus_of_knowledge_desc:0 "This society tends to funnel their knowledge and progression into a single focus. While they may be experts in that field, neglect in other areas may stagnate."
+ civic_tooltip_focus_of_knowledge_effects:0 "Choose a Tech Category. You gain §G25%§! Research Speed into Techs of that Category and lose §R10%§! Research Speed for all other Techs."
+ 
+ civic_digital_life:0 "Digital Life"
+ civic_digital_life_desc:0 "This society has fully embraced technology and live a fully online and digital life - with all the benefits and problems that it poses."
+ 
+ civic_test_subjects:0 "Test Subjects"
+ civic_test_subjects_desc:0 "This society tends to use living subjects for their experiments."
+ civic_tooltip_test_subjects_effects:0 "§HUnique Planet Edict:§! For Science\nSacrifice a Xeno Pop to increase Research Speed by §G20%§!\n\nPurging Pops gives £physics £society £engineering  Research Points."
+ 
+ civic_self_expanding_storage:0 "Self-Expanding Storage"
+ civic_self_expanding_storage_desc:0 "By making several automated adjustments to their storage processes, this society can multiply their warehouses and capacitor limits to untold levels."
+ civic_tooltip_self_expanding_storage_effects:0 "§HUnique Building:§! Self-Expanding Warehouse\nIncreases your Mineral and Energy Storage by §G1000§!. If a Robot is also on the planet, increase the planet's Energy and Mineral income."
+ sew_robot_operator:0 "Robotic Operation"
+ 
+ civic_awakened_minds:0 "Awakened Minds"
+ civic_awakened_minds_desc:0 "This society shows wisdom far beyond their years."
+ civic_tooltip_awakened_minds_effects:0 "The effectiveness of the §YTechnological Ascendancy§! Ascension Perk is §Gdoubled§!\nUnlock an additional bonus based on the Ascension Path you take."
+ 
+ civic_age_of_steel:0 "Age Of Steel"
+ civic_age_of_steel_desc:0 "<LOADING CIVIC SUBROUTINES>\n<PLEASE WAIT>\n\nThis society has fully embraced the Machine Age and co-exist with th§RAS*$£&HD^%$NFGRG*§!\n\n§R<ERROR ACCESSING CIVIC INFORMATION>§!"
+ civic_tooltip_age_of_steel_effects:0 "§G20%§! increase to Robot Build Speed, and §G20%§! reduced Robot Build Cost and Maintenance.\n\nThis bonus will increase as you go down the §YSynthetic§! Ascension Path"
+ 
+ civic_roboticists:0 "Roboticists"
+ civic_roboticists_desc:0 "This society demonstrates remarkable knowledge about robotics and its potential applications."
+ civic_tooltip_roboticists_effects:0 "Build Robots §G15%§! faster and §G15%§! cheaper.\nIf you are using this Civic alongside the §YMechanists§! Civic, the Robot Cost and Build Speed Modifiers are doubled."
+ 
+ civic_living_core:0 "The Living Core"
+ civic_living_core_desc:0 "The Hive Mind's Consciousness lives and breathes as a great behemoth. It will defend them until the very end."
+ civic_tooltip_living_core_effects:0 "§HUnique Building:§! Living Amplifier\nIncreases the potency of your armies.\n\nThe Hive Mind's united consciousness and will manifests as the §HLiving Core,§! an immensely powerful Defense Army.\n\n§RShould the Living Core be defeated and the Hive's Homeworld taken in battle, their Empire will collapse!§!"
+ 
+ civic_united_knowledge:0 "United Knowledge"
+ civic_united_knowledge_desc:0 "The Hive Mind pools its collective experience and discoveries together, with the other members of the Hive."
+ civic_tooltip_united_knowledge_effects:0 "You can periodically choose a Tech Category to boost your Research Speed in by §G20%§!\nAfter 15 Years, it will fall into a §YPERMANENT§! §G10%§! boost."
+ 
+ civic_the_core:0 "The Core"
+ civic_the_core_desc:0 "The Machine Intelligence has implanted itself into the very surface of their Homeworld to maximise its connection between its drones."
+ civic_tooltip_the_core_effects:0 "Begin the game on a 25-Tile §YMachine World§! with enhanced resources."
+ 
+ #Buildings
+ building_self_expanding_warehouse:0 "Self-Expanding Warehouse"
+ building_self_expanding_warehouse_desc:0 "A marvel of engineering, Self-Expanding Warehouses can construct additional storage facilities when they are needed.\nRobots working around the Warehouse seem to increase the efficiency of the Warehouse."
+ 
+ building_living_amplifier:0 "Living Amplifier"
+ building_living_amplifier_desc:0 "A mysterious, pulsing structure that seems to infuse the owner's Armies with extra strength."
+ 
+ #Edicts
+ edict_for_science:0 "For Science!"
+ edict_for_science_desc:0 "This Edict contributes a non-native Pop towards our scientific cause."
+ edict_for_science.tooltip:0 "Sacrifice a §YXeno§! Pop to increase your Empire's Research Speed for a short time."
+ 
+ #Armies
+ living_core:0 "The Living Core"
+ living_core_plural:0 "The Living Core"
+ living_core_desc:0 "The manifestation of the Hive Mind's consciousness, it is immensely powerful and should never be confronted alone. It seems to grow in power and anger as Living Amplifiers are built.\n§RIf the Living Core is destroyed, it will likely kill all Pops of the controller's Empire.§!"
+ 
+ #Modifiers
+ for_science:0 "For Science!"
+ for_science_desc:0 "A recent sacrifice in the name of progress has helped our scientists with their discoveries."
+ 
+ mos_militarist:0 "The March Of Science"
+ mos_militarist_desc:0 "A recent discovery in the sciences has motivated your citizens."
+ 
+ mos_xenophobe:0 "$mos_militarist$"
+ mos_xenophobe_desc:0 "$mos_militarist_desc$"
+ 
+ mos_egalitarian:0 "$mos_militarist$"
+ mos_egalitarian_desc:0 "$mos_militarist_desc$"
+ 
+ mos_materialist:0 "$mos_militarist$"
+ mos_materialist_desc:0 "$mos_militarist_desc$"
+ 
+ mos_pacifist:0 "$mos_militarist$"
+ mos_pacifist_desc:0 "$mos_militarist_desc$"
+ 
+ mos_xenophile:0 "$mos_militarist$"
+ mos_xenophile_desc:0 "$mos_militarist_desc$"
+ 
+ mos_authoritarian:0 "$mos_militarist$"
+ mos_authoritarian_desc:0 "$mos_militarist_desc$"
+ 
+ mos_spiritualist:0 "$mos_militarist$"
+ mos_spiritualist_desc:0 "$mos_militarist_desc$"
+ 
+ focus_physics:0 "Focus Of Knowledge: Physics"
+ focus_society:0 "Focus Of Knowledge: Society"
+ focus_engineering:0 "Focus Of Knowledge: Engineering"
+ 
+ uk_physics:0 "United Knowledge: Physics"
+ uk_society:0 "United Knowledge: Society"
+ uk_engineering:0 "United Knowledge: Engineering"
+ 
+ uk_perma_physics:0 "Lingering Knowledge: Physics"
+ uk_perma_society:0 "Lingering Knowledge: Society"
+ uk_perma_engineering:0 "Lingering Knowledge: Engineering"
+ 
+ roboticists_bonus:0 "Natural Roboticists"
+ roboticists_bonus_desc:0 "Your Empires knowledge of Machinism has vastly improved your work in the fields of Robotics."
+ 
+ awoken_tech:0 "Technological Awakening"
+ 
+ awoken_genes:0 "Genetic Awakening"
+ awoken_machines:0 "Synthetic Awakening"
+ awoken_minds:0 "Psionic Awakening"
+ 
+ aos_roboboost:0 "Age Of Steel: Evolution"
+ aos_roboboost_desc:0 "The Synthetic Evolution has begun. We will become perfect."
+ 
+ aos_roboboost_2:0 "Age Of Steel: Perfection"
+ aos_roboboost_2_desc:0 "The flesh is weak. The Age of Steel has begun. We are perfect."
+ 
+ #Events
+ credux_ftf.4.name:0 "Focus Of Knowledge"
+ credux_ftf.4.desc:0 "At long last, the [Root.GetName] has perfected Space Flight and begun their galactic story. With highly capable scientists and researchers helping them out, they have become masters in the field of..."
+ 
+ credux_ftf.5.name:0 "United Knowledge"
+ credux_ftf.5.desc:0 "Through Our Unity We Have Learned. Together We Shall Continue To Learn. For Now, We Learn More About..."
+ 
+ credux_ftf.4.a:0 "Physics"
+ credux_ftf.4.b:0 "Society"
+ credux_ftf.4.c:0 "Engineering"
+ 
+ credux_ftf.61.name:0 "The Living Core - Rules"
+ credux_ftf.61.desc:0 "You have selected the Living Core Civic in this game. While you will largely play as a normal empire, there is one major difference that you will have to pay attention to.\n\nA special Defense Army has been added to your planet, called the §YLiving Core.§! It is the manifestation of your Hive Mind's Consciousness, and immensely powerful. However, if it is destroyed in an invasion, your Empire will be destroyed in the process. §RDO NOT DELETE THIS ARMY!§!\nThe Living Core, and all other armies you command, can be empowered with Living Amplifiers, and one has been provided for you on your Capital."
+ 
+ credux_ftf.611.name:0 "The Core Restored"
+ credux_ftf.611.desc:0 "§BThis was not the correct way to the meeting room, and Stanley knew it perfectly well. Perhaps he wanted to stop by the employee lounge first, just to admire it.§!\nThe Stanley Parable\n\nYou are seeing this message because you have deleted the Living Core Army, either accidentally or intentionally. Please be reminded that the Living Core is the manifestation of your Hive Mind's consciousness and should not be harmed. §RPLEASE DO NOT DELETE THIS ARMY!§!\n\nThe Living Core has been restored for you this time."
+ 
+ credux_ftf.612.name:0 "The Core Restored"
+ credux_ftf.612.desc:0 "Hey, it's me, Ungentlemanly Conduct. I'm the creator of the Living Core Civic, and I noticed that you've deleted the Living Core again. I've brought it back for you this time, but I'm gonna warn you.\nThe Living Core is a manifestation of your Hive Mind's consciousness. It means that it IS the brains behind the Hive. Without a brain, nothing can survive. Well, they would be comatose, but that's effectively dead. You're basically willing to kill off an entire species just to see what would happen if you delete it. §RPLEASE DO NOT DELETE THE LIVING CORE!!!§!\n\nThis is the last time I'll warn you."
+ 
+ credux_ftf.613.name:0 "The Core Restored?"
+ credux_ftf.613.desc:0 "Oh, hey, lookie here. We have a badass here, thinking he could get away with continuously deleting the Living Core, even though I KEEP SAYING in BIG RED LETTERS to NOT DELETE IT!\n\nYou know, I'm kinda tired of reminding you not to delete it, so how about I show you what happens when you destroy a Hive's consciousness instead?"
+ credux_ftf.613.a:0 "OK... Wait, what?"
+ 
+ credux_ftf.621.name:0 "Silence"
+ credux_ftf.621.desc:0 "The Core has fallen. It is only a matter of time before..."
+ credux_ftf.621.a:0 "..."
+ 
+ credux_ftf.622.name:0 "Shockwaves"
+ credux_ftf.622.desc:0 "Against all odds, we have managed to kill the monstrosity living on [From.FromFrom.GetName]. As our soldiers celebrated their victory, our spies within [From.This.GetName] territory reported the sudden collapse of the hive drones, as though a switch had suddenly turned off.\n\nOur scientists suggest that the creature - which they are now referring to as a Living Core - seemed to be the manifestation of the Hive's consciousness, and the act of killing it had resulted in the drones entering a comatose, having no consciousness of their own anymore."
+ credux_ftf.622.a:0 "A great victory for the [From.From.GetName]!"
+ credux_ftf.622.b:0 "What have we done?"
+  credux_moh.1.name:0 "Mandate of Heaven Challenged" 
+ credux_moh.1.desc:0 "Recent hardships on one of our planets has led to some of our subjects questioning the Mandate of Heaven set by [Root.GetRulerName]. This discontent is spreading throughout our empire and we are receiving reports of small riots on our worlds.\n\nWe must keep a close eye on these events, otherwise the volatile situation could turn into a full-scale rebellion."
+ 
+ credux_moh.2.name:0 "Mandate of Heaven Restored" 
+ credux_moh.2.desc:0 "It has been a long time since our people suffered from famine or hardship, and it has reflected in their faith in our Mandate of Heaven. The people have calmed again and any immediate risk of rebellion has been quashed."
+ 
+ credux_moh.31.name:0 "The Mandate Collapses"
+ credux_moh.31.desc:0 "Recent discontent within our empire resulted in the loss of one of our worlds to a rebel faction. Very quickly, sympathizers of the rebels started taking up arms across our worlds - and frequent clashes between authorities and malcontents left us unable to react.\n\nIn a final act to bring peace to the [Root.GetName], [Root.GetRulerName] chose to abdicate his throne and give it to the leader of the rebel party. The transition of power has been relatively peaceful, and order restored. However, the Mandate of Heaven - the foundation of our empire - has fallen."
+ credux_moh.31.a:0 "May they rule with honour and wisdom."
+ credux_moh.31.a.tooltip:0 "The Mandate of Heaven is lost, and a new ruler with new ideals takes over."
+  edict_sacrifice:0 "Dark Tribute"
+ edict_sacrifice_desc:0 "They would fear the truth behind the Executor's purpose more than the Executors themselves, if they knew the truth."
+ edict_sacrifice_effect.tooltip:0 "Sacrifice a £pop  Pop to the §YDark Ones§! to sate Their hunger."
+ 
+ edict_sacrifice_pure:0 "Dark Tribute"
+ edict_sacrifice_pure_desc:0 "They would fear the truth behind the Executor's purpose more than the Executors themselves, if they knew the truth."
+ 
+ edict_purify:0 "From Darkness Comes Light"
+ edict_purify_desc:0 "[This.GetName] has been corrupted by dark forces. This Edict purges these forces and restores order to the world."
+ edict_purify_effect.tooltip:0 "Remove all traces of the §YDark Ones'§! presence on [Root.GetName], earning bonus £unity Unity."
+ 
+ edict_panem:0 "Bread and Circuses"
+ edict_panem_desc:0 "A feast, some games, and suddenly, the population's worries seem like nothing."
+ 
+ edict_truth:0 "Correction"
+ edict_truth_desc:0 "This Edict takes away several non-conforming citizens for correction, and increases both the intensity and effectiveness of propaganda materials on the planet."
+ 
+ edict_sacrifice_auto:0 "Automate Dark Rituals"
+ edict_sacrifice_auto_desc:0 "Delegate the process of performing sacrifices to the §YDark Ones§! to local governors and priests."
+  credux_dark_ones.01.name:0 "Dark Influence - Rules"
+ credux_dark_ones.01.desc:0 "§RThey worshipped, so they said, the Great Old Ones who lived ages before there were any men, and who came to the young world out of the sky. Those Old Ones were gone now, inside the earth and under the sea; but their dead bodies had told their secrets in dreams to the first men, who formed a cult which had never died. This was that cult, and the prisoners said it had always existed and always would exist, hidden in distant wastes and dark places all over the world until the time when the great priest Cthulhu, from his dark house in the mighty city of R'lyeh under the waters, should rise and bring the earth again beneath his sway.§! §T- H.P. Lovecraft; The Call of Cthulu (1926)§!\n\nThe Dark Influence Civic makes some significant changes that you should be aware of before you being playing.\nEach planet that you capture or colonise will be marked by Dark Ones, whose mood -unique for each planet - shifts over time between Pleased, Content and Hungry. While the Dark Ones are pleased, they will provide bonuses to the planet. Contention and Hunger do not provide bonuses, but the must be kept above Hunger, lest you invoke their wrath.\nYou may sacrifice Pops to the Dark Ones to appease them through the use of the Planet Edict Dark Tribute. This will set their mood to Pleased."
+ 
+ credux_dark_ones.62.name:0 "Freak Geological Events" 
+ credux_dark_ones.62.desc:0 "Citizens on [Root.GetName] are reporting a series of violent storms and earthquakes all across the planet. With our data on the colony having never shown any similar events, scientists are baffled as to the cause - some have suggested outside influences at work.\n\n[Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] has immediately ordered a relief effort on the planet, and aid generously provided by citizens across the empire has repaired the worst of the damage.\n\nWe are continuing to investigate the cause of these geological occurances."
+ credux_dark_ones.6.a:0 "The §YDark Ones§! hunger. Prepare a sacrifice." 
+ 
+ credux_dark_ones.7.name:0 "The Vanished"
+ credux_dark_ones.7.desc:0 "Disturbing reports are coming in from [Root.GetName]. Apparantly, there was a chaotic storm engulfing the planet through the night. No damage to infastructure was reported. However, the citizens seem to have... vanished.\nFor want of a better word.\n\nAs if in a single blow, populous cities and thriving townships were suddenly stolen of its myriad citizens. Survivors told authorities that friends, neighbours, even family... they were taken. Vanished, like the dying breath of a terrible storm.\n\nWe have sent relief supplies and administrative support to the planet, but it will be years - if ever - before [Root.GetName] recovers from this dark chapter."
+ credux_dark_ones.7.a.tooltip:0 "Several £pop Pops have vanished from the planet. Cause unknown."
+ 
+ START_SCREEN_PART_TWO_DARK_INFLUENCE:0 "Although we were fractured once, through the power of the Dark Ones, we began to converge. Our faith and devotion - and our gifts - to our deities rewarded us with powerful boons. Boons that we used to eventually unite us all under one banner."
+  civic_cultural_cohesion:0 "Cultural Cohesion"
+ civic_cultural_cohesion_desc:0 "This society shows a huge variance in cultures and beliefs, yet still uniting in purpose. They are far more interested in absorbing and learning from societies than in conquering them."
+ 
+ civic_strategic_studies:0 "Strategic Studies"
+ civic_strategic_studies_desc:0 "The analysis and composition of rare and unusual materials fascinates this society."
+ civic_tooltip_strategic_studies_effect:0 "§YResearch Speed:§! §G+5%§!\nGain §G+5%§! £physics £society £engineering  bonus §YResearch Points§! per UNIQUE §YStrategic Resource§!, up to a §G+30%§! bonus."
+ 
+ civic_hydroponic_adaptation:0 "Hydroponic Adaptation"
+ civic_hydroponic_adaptation_desc:0 "This empire's farming methods are designed to be compatible with each planet's unique ecosystem - in turn bolstering the overall yield across all worlds."
+ civic_tooltip_hydroponic_adaptation_effect:0 "Gain §G+5%§! £food  §YFood§! per UNIQUE §YPlanet Class§! colonised, up to a §G+50%§! bonus."
+ civic_tooltip_pacifist_hive:0 "Requires being either a Pacifist or a Hive-Minded Gestalt Consciousness"
+ 
+ civic_imperial_overlord:0 "Imperial Overlord"
+ civic_imperial_overlord_desc:0 "The ruling parties of this society uses their large vassal network to bolster its own authority."
+ civic_tooltip_imperial_overlord_effects:0 "Gain §G+10%§! £influence  §YInfluence§! per §YSubject§!, up to a §G+60%§! bonus."
+ 
+ civic_flexible_blueprints:0 "Flexible Blueprints"
+ civic_flexible_blueprints_desc:0 "The Machine Intelligence keeps the designs of its drones to be as fluid and intuitive as possible to ensure a continued evolution and thus survival."
+ 
+ civic_advanced_networking:0 "Advanced Networking"
+ civic_advanced_networking_desc:0 "By improving the network distribution of orders and requests from the Machine Intelligence, more information and processing power can be diverted towards other critical functions."
+ civic_tooltip_advanced_networking_effects:0 "§YTradition Cost from Colonies:§! §G-15%§!\n\n§HDetermined Extermintators:§! §YShip Build Cost§! reduced by §G15%§!\n§HDriven Assimilators:§! §YRobot Upkeep§! reduced by §G15%§!\n§HRogue Servitors:§! §YConsumer Goods Cost§! reduced by §G15%§!\n\nIf you do not have any of the above Civics, reduce §YColony Influence Cost§! by §G25%§! instead."
+ 
+ civic_neurotoxins:0 "Neurotoxins"
+ civic_neurotoxins_desc:0 "A natural boon to scientific research."
+ civic_tooltip_neurotoxins_effect:0 "§HUnique War Demand:§! Release Neurotoxins\n\nRelease deadly neurotoxins on the planet, reducing Growth Speed and Habitability on the planet by 20%. There is a chance that the neurotoxins will cause lasting damage to the planet's environment."
+ 
+ #Supremacy Replacement Tree for Cultural Cohesion
+ tradition_cohesion:0 "Cohesion"
+ tradition_cohesion_desc:0 "An individual can do great things. Societies can do amazing things. A myriad of societies from different walks of life, working as one, can do the most incredible things."
+ 
+ tr_cohesion_adopt:0 "Cohesion Traditions"
+ tr_cohesion_adopt_desc:0 "$tradition_cohesion_desc$\n\n$tr_cohesion_adopt_effect$\n\n$tr_cohesion_finish_effect$"
+ tr_cohesion_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§YGoverning Ethics Attraction§! increased by §G+20%§!."
+ tr_cohesion_finish:0 "Cohesion Traditions Finished"
+ tr_cohesion_finish_effect:0 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_cohesion_adopt$ increases our §YPop Resource Output§! by §G+15%§!."
+ 
+ tr_cohesion_cooperative_economy:0 "Co-operative Economy"
+ tr_cohesion_cooperative_economy_desc:0 "Our £energy  §YEnergy§! and £minerals  §YMineral§! output is increased by §G+2.5%§! per Federation Member, up to a maximum of §G+15%§!."
+ tr_cohesion_cooperative_economy_delayed:0 "The conquests of businesses and corporations only serve to stagnate our economy in the long run. To ensure a steady future, teamwork is needed."
+ 
+ tr_cohesion_cultural_diversity:0 "Cultural Exchange"
+ tr_cohesion_cultural_diversity_desc:0 "§YAlien Migration Attraction§! increased by §G+50%§! and §YHabitability§! increased by §G+5%§!."
+ tr_cohesion_cultural_diversity_delayed:0 "Promoting the widespread sale and distribution of universal translators will surely be a boon to our tourism industry."
+ 
+ tr_cohesion_trading_guilds:0 "Merchant Guilds"
+ tr_cohesion_trading_guilds_desc:0 "§Y$MOD_SPACEPORT_SHIP_BUILD_SPEED_MULT$§! increased by §G+15%§! and §YTrade Attractiveness§! increased by §G+15%§!."
+ tr_cohesion_trading_guilds_delayed:0 "Trade is the lifeblood of society, and the key to mixing ways of thinking together. Establishing Merchant Guilds will not only bolster our naval prowess but improve our relations with neighbours."
+ 
+ tr_cohesion_competitive_spirit:0 "Competitive Spirit"
+ tr_cohesion_competitive_spirit_desc:0 "§Y$MOD_LEADER_SKILL_LEVELS$§! increased by §Y1§! and §YLeader Pool Size§! increased by §Y1§!."
+ tr_cohesion_competitive_spirit_delayed:0 "Everyone may be trying to win, but at the end of the day it's all just fun and games."
+ 
+ tr_cohesion_serve_and_protect:0 "To Serve and Protect"
+ tr_cohesion_serve_and_protect_desc:0 "§YDefense Army Damage§! and §YMorale§! increased by §G+30%§!."
+ tr_cohesion_serve_and_protect_delayed:0 "When you and others are working towards a common goal, it becomes easier to protect it together."
+ 
+ #Modifiers
+ networked_exterminators:0 "Advanced Networking (Exterminators)"
+ networked_assimilators:0 "Advanced Networking (Assimilators)"
+ networked_servitors:0 "Advanced Networking (Servitors)"
+ networked_expansion:0 "Advanced Networking (Expansion)"
+ 
+ neurotoxins_released:0 "Neurotoxins Released"
+ neurotoxins_released_desc:0 "A deadly neurotoxin has been released into the atmosphere of this world, and the locals are suffering from severe neurological symptoms and low birth rates."
+ 
+ #War Demands
+ war_demand_release_neurotoxins_header:1 "§RRelease Neurotoxins§!"
+ war_demand_release_neurotoxins_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_release_neurotoxins_tooltip_header:0 "$war_demand_release_neurotoxins_header$"
+ war_demand_release_neurotoxins_tooltip_content:2 "Release a deadly neurotoxin into the atmosphere of [parameter:planet.GetName], reducing the planet's §YHabitability§! and §YPop Growth Speed§! by §R20%§!. There is a small chance that the neurotoxin will cause adverse, lasting damage to the planet's atmosphere.\n\nIn addition, we will gain §G50§! £influence  §YInfluence§! and some £society  §YSociety Research.§!"
+ war_demand_release_neurotoxins_tooltip_proper_header:1 "$war_demand_release_neurotoxins_header$"
+ war_demand_release_neurotoxins_tooltip_proper_content:2 "$war_demand_release_neurotoxins_tooltip_content$"
+  civic_tooltip_materialist_militarist:0 "Is some degree of either §YMaterialist§! or §YMilitarist§!"
+ civic_tooltip_pacifist_egalitarian:0 "Is some degree of either §YPacifist§! or §YEgalitarian§!"
+ civic_tooltip_xenophobe_materialist_spiritualist:0 "Is some degree of either §YXenophobe,§! §YMaterialist§! or §YSpiritualist§!"
+ civic_tooltip_egalitarian_authoritarian:0 "Is some degree of either §YAuthoritarian§! or §YEgalitarian§!"
+ civic_tooltip_dem_dic:0 "Has §YDemocratic§! or §YDictatorial§! Authority"
+ civic_tooltip_oli_dic:0 "Has §YOligarchic§! or §YDictatorial§! Authority"
+ civic_tooltip_dem_imp:0 "Has §YDemocratic§! or §YImperial§! Authority"
+ 
+ #Launch
+ civic_big_game_hunters:0 "Big Game Hunters"
+ civic_big_game_hunters_desc:0 "To this nation, there is nothing quite like the thrill of the hunt. From tracking the prey, to chasing their quarry, to - finally - the moment of the kill."
+ civic_tooltip_big_game_hunters_effects:0 "Damage to §YSpaceborne Organics§! and §YGuardians§! increased by §G25%§!\nKilling §YSpaceborne Organics§! or §YGuardians§! grants £unity  Unity."
+ 
+ civic_dark_influence:0 "Dark Influence"
+ civic_dark_influence_desc:0 "Something about the way this government is run, and the people who run within it, is... off..."
+ civic_tooltip_dark_influence_effects:0 "£starbase §YStarbase Capacity§! increased by §G2§!\n§YArmy Health, Damage§! and §YMorale§! increased by §G15%§!\n§YPop Growth Speed§! increased by §G15%§!\nYou must regularly sacrifice your £pop  Pops, lest you face the wrath of the §YDark Ones...§!"
+ 
+ civic_elder_gods_promise:0 "Promise Of An Elder God"
+ civic_elder_gods_promise_desc:0 "Evil spirits and dark gods control and empower the government. This much they know. But how far are you willing to go for true power? Would you make a deal with an Elder God?"
+ civic_tooltip_elder_gods_promise_effects:0 "Your Empire becomes nigh unstoppable, but after 100 Years, or if you anger the §YDark Ones,§! your pact with the §YElder God§! will become nullified and the §YDark Ones§! will claim their dues."
+ 
+ civic_traders_cache:0 "Trader's Cache"
+ civic_traders_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying a huge amount of valuable goods. They have been using these resources to advance their growth, but soon the supplies will run out..."
+ civic_tooltip_traders_cache_effects:0 "Begin the game with a cache of every §YStrategic Ressources§! that lasts for 10 Years.\n§G15%§! Trade Attractiveness\n§G5%§! Citizen Pop Happiness"
+ 
+ civic_curators_cache:0 "Curator's Cache"
+ civic_curators_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying highly advanced information drives. With this they have made great strides in technology, but soon the drives will be exhausted..."
+ civic_tooltip_curators_cache_effects:0 "Begin the game with all £building §GResearch Buildings§! researched."
+ 
+ civic_artisans_cache:0 "Artisan's Cache"
+ civic_artisans_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying building materials and blueprints for an advanced structure. Using these designs they created an elaborate building."
+ civic_tooltip_artisans_cache_effects:0 "Begin the game with a £building  §YMinistry Of Culture§! built on your homeworld."
+ 
+ civic_photoelectrolysis:0 "Agrarian Photoelectronics"
+ civic_photoelectrolysis_desc:0 "Harnessing a rare and secret form of technology, a method of obtaining Energy Credits from the food this society grows has been discovered!"
+ civic_tooltip_photoelectrolysis_effects:0 "£building  §YFarms§! you build have no Upkeep and produce additional £energy  §YEnergy§!"
+ 
+ civic_earthen_connection:0 "Earthen Connection"
+ civic_earthen_connection_desc:0 "This society carries with their colony ships a portion of their homeworld, filled with rich nutrients to help them survive the alien and potentially hostile climate."
+ civic_tooltip_earthen_connection_effects:0 "Habitability is increased by §G10%§! for all £pop  Pops and an additional §G10%§! if they are the §YFounding Species§! or a subspecies of the §YFounder§!"
+ 
+ civic_divine_transcendence:0 "Divine Transcendence"
+ civic_divine_transcendence_desc:0 "Through harnessing the raw power of the universe this society has prepared itself for uplifting into mystical beings akin to gods..."
+ civic_tooltip_divine_transcendence_effects:0 "You unlock a permanent Buff Effect for each §YAscension Perk§! you have unlocked."
+ 
+ civic_mandate_of_heaven:0 "Mandate Of Heaven"
+ civic_mandate_of_heaven_desc:0 "Our ruler has been chosen by the gods themselves, and all authority on state and leadership rest with them."
+ civic_tooltip_mandate_of_heaven_effects:0 "§G20%§! bonus £unity  §YUnity§!\nIncreased §YLeader Cap§! by §G3§! and §YSkill Level§! by §G1§!.\nReduced §YLeader Recruitment§! Costs by §G15%§!.\n\nThe §BMandate of Heaven§! is challenged during a §YFamine,§! reducing £happiness §YHappiness§! and §YUnrest.§!\nAfter a rebellion, you will §RLOSE§! the §BMandate of Heaven!§!"
+ 
+ civic_fanatical_befrienders:0 "Fanatic Befrienders"
+ civic_fanatical_befrienders_desc:0 "Friendship is mandatory. You will be befriended.\nResistance is impolite."
+ civic_tooltip_fanatical_befrienders_effects:0 "§HUnique Subject Type:§! BFF\n\nBFFs must pay you 15% of ALL their §YMonthly Income§! and join you in Wars.\nBFFs can be integrated after 10 years.\nEach BFF you have increases your £influence  §YInfluence.§!\nYou §RCANNOT§! have any other type of vassal."
+ 
+ civic_planet_forgers:0 "Planet Forgers"
+ civic_planet_forgers_desc:0 "This society's homeworld suffered a calamitous ecological event that nearly rendered it uninhabitable, but managed to prevent the total destruction of the environment. From their experiences they can now manipluate environments more easily."
+ civic_tooltip_planet_forgers_effects:0 "Gain access to advanced Technology that will allow you to Terraform §YUninhabitable§! planets into §YHabitable§! ones.\n§YTerraforming Cost§! reduced by §G25%§!\n\nIf you begin the game with this Civic you will gain §YTerrestrial Sculpting§! for free."
+ 
+ civic_void_engineers:0 "Void Engineers"
+ civic_void_engineers_desc:0 "There's nothing like a challenge for this society to rise to the occasion. Space construction, once thought impossible, was made trivial, and now their eyes rest on greater and grander structures."
+ 
+ civic_gift_from_the_gods:0 "Gift From The Gods"
+ civic_gift_from_the_gods_desc:0 "In the past, they always took the scale and beauty of their world for granted. It was only when they looked into the stars and saw all the flaws of other worlds did they realise its true value."
+ civic_tooltip_gift_from_the_gods_effects:0 "Begin the game with your Capital World changing to a 25-Tile §GGaia World!§!"
+ 
+ civic_one_small_step:0 "One Small Step"
+ civic_one_small_step_desc:0 "Not far from their ancestral homeworld, the people have set up a small colony. Yes, it took many years and thousands of lives and attempts, but true opportunities like this cannot be wasted!"
+ civic_tooltip_one_small_step_effects:0 "Begin the game with a §YColony§! established on another world!"
+ 
+ civic_eco_warriors:0 "Eco-Warriors"
+ civic_eco_warriors_desc:0 "No matter where, no matter when. When the stability of the natural world is threatened, this society will fight to restore it to its former glory."
+ civic_tooltip_eco_warriors_effects:0 "Tile Blocker Clear Cost and Time reduced by §G25%§!\nClearing a Tile Blocker rewards £unity  §YUnity§!"
+ 
+ civic_pit_fighters:0 "Pit Fighters"
+ civic_pit_fighters_desc:0 "This society has always held a strong warrior tradition, which transitioned into the highest levels of government. The Fighting Pits remain as a vessel for entertainment and training for warriors."
+ civic_tooltip_pit_fighters_effects:0 "§HUnique Building:§! Fighting Pits\n\nFighting Pits grant £unity  §YUnity§! and increased §YArmy Health, Damage§! and §YRecruit Speed.§!"
+ 
+ civic_insurgent_power:0 "Insurgent Power"
+ civic_insurgent_power_desc:0 "The current government had very little clout several years ago, but when a popular figure took over with a domineering attitude, they very quickly established themselves as the permanent ruler."
+ 
+ civic_panem:0 "Panem et Circenses"
+ civic_panem_desc:0 "The people who once upon a time handed out military command, high civil office, legions... everything, now restrains itself and anxiously hopes for just two things: bread and circuses."
+ civic_tooltip_panem_effects:0 "§G15%§! faster §YArmy§! and §YShip Build Speed§!\nThrough a §HPlanetary Edict§! you can change the bonus on a single world to: §R-25%§! §YFood Output§! for §G+15%§! £happiness  §YHappiness§! and §G-30§! §YUnrest§!"
+ 
+ civic_bonds_of_unity:0 "Bonds Of Unity"
+ civic_bonds_of_unity_desc:0 "We venture out into the great unknown. Now, more than ever, we need to stand together as one species, one nation."
+ 
+ civic_industrial_idyll:0 "Industrial Idyll"
+ civic_industrial_idyll_desc:0 "This society proudly embraced the Industrial Era, quickly making every citizen need mass produced - and even the things people don't want!"
+ civic_tooltip_industrial_idyll_effects:0 "£building  §YMines§! also produce a small amount of £unity  Unity."
+ 
+ civic_commercial_idyll:0 "Commercial Idyll"
+ civic_commercial_idyll_desc:0 "Business booms, and so too does the economic ecosystem of this society. Goods, vehicles, contracts, people... if it can be bought there's both a buyer and a seller."
+ civic_tooltip_commercial_idyll_effects:0 "£building  §YPower Plants§! also produce a small amount of £unity  Unity."
+ 
+ civic_technological_idyll:0 "Technological Idyll"
+ civic_technological_idyll_desc:0 "Science marches ever onward with this society. Laws have been relaxed and funding made available to academic services to help boost the cause of progress."
+ civic_tooltip_technological_idyll_effects:0 "£building  §YScience Labs§! also produce a small amount of £unity  Unity."
+ 
+ civic_rights_of_the_conquered:0 "Rights Of The Conquered"
+ civic_rights_of_the_conquered_desc:0 "This society is built upon the backbone of those they have subdued. But the subdued must be cared for, lest they destroy everything they have created."
+ 
+ civic_money_is_power:0 "Money Is Power"
+ civic_money_is_power_desc:0 "It is no secret that this society is run on the backbone of wealthy investors. Promotions and office is earned not through one's ability but how much can one buy what they need."
+ 
+ civic_destructive_tendencies:0 "Destructive Tendencies"
+ civic_destructive_tendencies_desc:0 "When this society is at war, Mutually Assured Destruction is never far from the ruling party's minds..."
+ civic_tooltip_destructive_tendencies_effects:0 "Can use the §YArmageddon§! Bombardment Stance."
+ 
+ civic_pure_bloodlines:0 "Pure Bloodlines"
+ civic_pure_bloodlines_desc:0 "The highly exclusive ruling family of this society has never changed during its history, nor let an outside influence taint it. They often go to extreme measures to preserve the bloodline."
+ 
+ civic_manifest_destiny:0 "Manifest Destiny"
+ civic_manifest_destiny_desc:0 "Our rights to the heavens and all the lands they contain is assured, and has always been so."
+ civic_tooltip_manifest_destiny_effects:0 "New colonies start with §Y1§! additional £pop  Pop.\n\n§YOn Game Start§!: The first Colony you create is immediately established and gains §Y3§! bonus £pop  Pops."
+ 
+ civic_efficient_architecture:0 "Efficient Architecture"
+ civic_efficient_architecture_desc:0 "This society has designed their buildings to be both low maintenance and simple to erect. They may not be beautiful to some, but it does help keep the lights on."
+ 
+ civic_quantum_masters:0 "Quantum Masters"
+ civic_quantum_masters_desc:0 "The scientists of this society have harnessed the power of the building blocks of the universe and of artificial intelligence - and the applications for their research have pushed them towards greatness."
+ 
+ civic_sociology_masters:0 "Socio-Biological Masters"
+ civic_sociology_masters_desc:0 "Champions of the environment, masters of military strategy and controllers of civilizations. This society’s studies into people and creatures have pushed them towards greatness."
+ 
+ civic_industry_masters:0 "Masters Of Industry"
+ civic_industry_masters_desc:0 "Shipbuilding. Mineral Extraction. Weaponry. Robotics. Aynthing that either revolves around construction or destruction, this society can achieve. Their heavy Engineering focus have pushed them towards greatness."
+ 
+ civic_tranquil_workers:0 "Tranquil Workers"
+ civic_tranquil_workers_desc:0 "Physical and mental wellbeing are highly promoted in this society, with less strenuous working hours and state-sponsored exercise/relaxation schemes help improve a worker's output."
+ civic_tooltip_tranquil_workers_effects:0 "§HUnique Building:§! Garden Of Tranquility\n\nGarden Of Tranquility grants £unity  §YUnity§! and increased £happiness  §YHappiness§! and §YLeader Lifespan.§!"
+ 
+ #Update 1
+ civic_constitutional_monarchy:0 "Constitutional Monarchy"
+ civic_constitutional_monarchy_desc:0 "This society recognises both a democratically elected parliament and an autocratic leader as the head of their government."
+ civic_tooltip_constitutional_monarchy_effects:0 "Your Empire does not suffer a Diplomatic Malus when negotiating with the Ethic not chosen for this civic.\n§YDemocratic Crusaders§! will recognise you as a Democratic society if you are an Imperial nation.\n§G5%§! Citizen Pop Happiness.\n§G5%§! Slave Output."
+ START_SCREEN_PART_TWO_CONSTITUTIONAL_MONARCHY:0 "For years we have been struggling with the identity of our nation, ruled by both a powerful sovereign and a republic chosen by the people. This back and forth between the two sides - often leading to rebellions - was eventually quashed by a decree that both shall rule with equal rights and obligations."
+ 
+ civic_alluring_diplomats:0 "Alluring Diplomats"
+ civic_alluring_diplomats_desc:0 "Diplomacy has never been a challenge for this society. Envoys often say they have tongues of silver, and find it difficult to refuse their suggestions."
+ 
+ civic_peacekeeping_interventionists:0 "Peacekeeping Interventionists"
+ civic_peacekeeping_interventionists_desc:0 "This vehemently pacifistic society aims to bring about an end to all armed conflicts, by any means necessary."
+ civic_tooltip_peacekeeping_interventionists_effects:0 "§HUnique War Demand:§! Demilitarize\n\nForce the opponent to demilitarize, weakening them and preventing them from declaring war for 10 Years.\nCan use the §YLiberation Wars§! policy."
+ 
+ civic_keepers_of_tradition:0 "Keepers Of Tradition"
+ civic_keepers_of_tradition_desc:0 "Past, present and future. This soceity's values and traditions are fondly remembered in ceremonies and celebrations."
+ civic_tooltip_keepers_of_tradition_effects:0 "Begin the game with enough £unity  Unity to unlock a §YTradition§!\n§G+10%§! £unity  Unity"
+ 
+ civic_dependable_allies:0 "Dependable Allies"
+ civic_dependable_allies_desc:0 "Steadfast and reliable, this society can be counted on to honour their agreements - to friends and enemies alike."
+ 
+ civic_starborn_swarm:0 "Starborn Swarm"
+ civic_starborn_swarm_desc:0 "The Hive Mind is deeply connected to the cosmic powers of the Universe."
+ civic_tooltip_starborn_swarm_effects:0 "Begin the game under a §BConstellation§! of your choice. Every 5 Years after, your can change your §BConstellation.§!\nEach §BConstellation§! grants a different set of bonuses."
+ 
+ civic_behavioural_mimicry:0 "Behavioural Mimicry"
+ civic_behavioural_mimicry_desc:0 "The Hive Mind's interest in other species' behaviour and customs have led to its drones attempting to copy them."
+ civic_tooltip_behavioural_mimicry_effects:0 "Everyone's Opinion of you is increased by §G30§!"
+ 
+ civic_instinctive_intuition:0 "Instinctive Intuition"
+ civic_instinctive_intuition_desc:0 "Using the sensory input from its drones the Hive Mind expands its knowledge and learning patterns."
+ 
+ #Update 2
+ civic_nuclear_survivors:0 "Nuclear Survivors"
+ civic_nuclear_survivors_desc:0 "This society fought a nuclear war which destroyed their world and wiped out 90% of their population. The survivors have since adapted to - and thrived in - the new, hostile climate."
+ civic_tooltip_nuclear_survivors_effects:0 "Your Species gains the §YIrradiated§! Trait.\nYour Homeworld becomes a §YTomb World§! with no Tile Blockers"
+ 
+ civic_stupid_sexy_xenophobes:0 "Stupid Sexy Xenophobes"
+ civic_stupid_sexy_xenophobes_desc:0 "This society seems to be highly attractive to other cultures - despite being disgusted by them."
+ civic_tooltip_stupid_sexy_xenophobes_effects:0 "You suffer no Diplomatic Malus for being a Xenophobe"
+ 
+ civic_star_wanderers:0 "Star Wanderers"
+ civic_star_wanderers_desc:0 "This society was destined to travel among the stars."
+ 
+ civic_forces_of_darkness:0 "Forces of Darkness"
+ civic_forces_of_darkness_desc:0 "This society has made a pact with the Dark Ones - immense power and unstoppable armies at their command, in exchange for their blood..."
+ civic_tooltip_forces_of_darkness_effects:0 "You can recruit Special Armies on planets where the Dark Ones are Pleased.\n§G+15%§! Army Damage and Health"
+ 
+ civic_free_love:0 "Free Love"
+ civic_free_love_desc:0 "This society diesn't care who their citizens are or where they come from - love is love, and everyone is free to love who they please."
+ 
+ civic_big_brother:0 "Big Brother"
+ civic_big_brother_desc:0 "This stratified society strictly adheres to their founding beliefs. Correction facilities are commonplace in many of the cities, and non-conformists and enemies of the state have been known to disappear."
+ civic_tooltip_big_brother_effects:0 "§HUnique Building:§! Correction Facility\nGrants Governing Ethics Attraction and enables a special Edict that further increases Ethics Attraction and forces one Pop to your Ethics.\n\nThis Civic also grants a passive §G20%§! Bonus to Governing Ethics Attraction"
+ 
+ civic_interstellar_dominion:0 "Interstellar Dominion"
+ civic_interstellar_dominion_desc:0 "This society governs over a large number of subjugated states acquired through conquest. They will not allow any of their subjects to become full citizens - their place is to serve."
+ 
+ civic_nest_builders:0 "Nest Builders"
+ civic_nest_builders_desc:0 "The Hive Mind is adept at creating new nests and worlds which it can control."
+ civic_tooltip_nest_builders_effects:0 "Begin the game with a §YColony§! established on another world!\n\n§G+25%§! Colonisation Speed"
+ 
+ civic_purifying_presense:0 "Purifying Presence"
+ civic_purifying_presense_desc:0 "The mere presence of the Hive Mind's drones causes the ecology of local planets to improve"
+ civic_tooltip_purifying_presense_effects:0 "Begin the game with your Capital World changing to a 25-Tile §GGaia World!§!\nEach month, there is a chance that a planet within your borders to move one step closer towards being a Gaia World"
+ 
+ civic_blood_hunters:0 "Blood Hunters"
+ civic_blood_hunters_desc:0 "§RBlood. The scent of prey. We Hunt.§!"
+ civic_tooltip_blood_hunters_effects:0 "§HUnique War Demand:§! Blood Hunt\n\nThe chosen planet loses at least 3 Pops, with a good chance to kill more. Each Pop killed this way awards you 1/10 of a month's worth of £unity Unity and £society Society Research"
+  building_power_basic_farm:0 "Basic Hydroponics Farm"
+ building_power_basic_farm_desc:1 "Hydroponics Farms produce nutrient-rich vegetable matter tailored for consumption by local Pops."
+ building_power_hydroponics_farm_1:0 "Hydroponics Farm I"
+ building_power_hydroponics_farm_1_desc:1 "$building_basic_farm_desc$"
+ building_power_hydroponics_farm_2:0 "Hydroponics Farm II"
+ building_power_hydroponics_farm_2_desc:1 "$building_basic_farm_desc$"
+ building_power_hydroponics_farm_3:0 "Hydroponics Farm III"
+ building_power_hydroponics_farm_3_desc:1 "$building_basic_farm_desc$"
+ building_power_hydroponics_farm_4:0 "Hydroponics Farm IV"
+ building_power_hydroponics_farm_4_desc:1 "$building_basic_farm_desc$"
+ building_power_hydroponics_farm_5:0 "Hydroponics Farm V"
+ building_power_hydroponics_farm_5_desc:1 "$building_basic_farm_desc$"
+ 
+ building_cr_mining_network_1:0 "Mining Network I"
+ building_cr_mining_network_1_desc:1 "$building_basic_mine_desc$"
+ building_cr_mining_network_2:0 "Mining Network II"
+ building_cr_mining_network_2_desc:1 "$building_basic_mine_desc$"
+ building_cr_mining_network_3:0 "Mining Network III"
+ building_cr_mining_network_3_desc:1 "$building_basic_mine_desc$"
+ building_cr_mining_network_4:0 "Mining Network IV"
+ building_cr_mining_network_4_desc:1 "$building_basic_mine_desc$"
+ building_cr_mining_network_5:0 "Mining Network V"
+ building_cr_mining_network_5_desc:1 "$building_basic_mine_desc$"
+ 
+ building_cr_power_plant_1:0 "Power Plant I"
+ building_cr_power_plant_1_desc:1 "$building_basic_power_plant_desc$"
+ building_cr_power_plant_2:0 "Power Plant II"
+ building_cr_power_plant_2_desc:1 "$building_basic_power_plant_desc$"
+ building_cr_power_plant_3:0 "Power Plant III"
+ building_cr_power_plant_3_desc:1 "$building_basic_power_plant_desc$"
+ building_cr_power_plant_4:0 "Power Plant IV"
+ building_cr_power_plant_4_desc:1 "$building_basic_power_plant_desc$"
+ building_cr_power_plant_5:0 "Power Plant V"
+ building_cr_power_plant_5_desc:1 "$building_basic_power_plant_desc$"
+ 
+ building_cr_engineering_facility_1:0 "Engineering Facility I"
+ building_cr_engineering_facility_1_desc:1 "Engineering Facilities are specialized institutions generating additional Engineering research."
+ building_cr_engineering_facility_2:0 "Engineering Facility II"
+ building_cr_engineering_facility_2_desc:1 "$building_engineering_facility_1_desc$"
+ building_cr_engineering_facility_3:0 "Engineering Facility III"
+ building_cr_engineering_facility_3_desc:1 "$building_engineering_facility_1_desc$"
+ building_cr_engineering_facility_4:0 "Engineering Facility IV"
+ building_cr_engineering_facility_4_desc:1 "$building_engineering_facility_1_desc$\n\n$requires_capital_planet_desc$"
+ building_cr_engineering_facility_5:0 "Engineering Facility V"
+ building_cr_engineering_facility_5_desc:1 "$building_engineering_facility_1_desc$"
+ 
+ building_cr_physics_lab_1:0 "Physics Lab I"
+ building_cr_physics_lab_1_desc:1 "Physics Labs are specialized institutions generating additional Physics research."
+ building_cr_physics_lab_2:0 "Physics Lab II"
+ building_cr_physics_lab_2_desc:1 "$building_physics_lab_1_desc$"
+ building_cr_physics_lab_3:0 "Physics Lab III"
+ building_cr_physics_lab_3_desc:1 "$building_physics_lab_1_desc$"
+ building_cr_physics_lab_4:0 "Physics Lab IV"
+ building_cr_physics_lab_4_desc:1 "$building_physics_lab_1_desc$\n\n$requires_capital_planet_desc$"
+ building_cr_physics_lab_5:0 "Physics Lab V"
+ building_cr_physics_lab_5_desc:1 "$building_physics_lab_1_desc$"
+ 
+ building_cr_biolab_1:0 "Biolab I"
+ building_cr_biolab_1_desc:1 "Biolabs are specialized institutions generating additional Society research."
+ building_cr_biolab_2:0 "Biolab II"
+ building_cr_biolab_2_desc:1 "$building_biolab_1_desc$"
+ building_cr_biolab_3:0 "Biolab III"
+ building_cr_biolab_3_desc:1 "$building_biolab_1_desc$"
+ building_cr_biolab_4:0 "Biolab IV"
+ building_cr_biolab_4_desc:1 "$building_biolab_1_desc$\n\n$requires_capital_planet_desc$"
+ building_cr_biolab_5:0 "Biolab V"
+ building_cr_biolab_5_desc:1 "$building_biolab_1_desc$"
+ 
+ building_fighting_pits:0 "Fighting Pits"
+ building_fighting_pits_desc:0 "The Fighting Pits are akin to gladiatorial arenas, where the toughest warriors and strongest contenders fight for glory."
+ 
+ building_tranquil_garden:0 "Garden Of Tranquility"
+ building_tranquil_garden_desc:0 "The Garden Of Tranquility is a peaceful place, far from the hustle and bustle of life. Pops regularly visit to clear their mind of troubles and relax their bodies."
+ 
+ building_correction_facility:0 "Correction Facility"
+ building_correction_facility_desc:0 "A vast complex run by government loyalists. Its purposes are unknown - however, it does appear to promote conformity on the planet, and there are several instruments for affecting one's thinking."

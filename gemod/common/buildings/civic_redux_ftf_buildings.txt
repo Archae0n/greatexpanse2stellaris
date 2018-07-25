@@ -1,0 +1,146 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+@natural_equilibrium_happiness = 0.02
+#FORGING THE FUTURE - BUILDINGS
+
+building_self_expanding_warehouse = {
+	base_buildtime = 360
+	planet_unique = yes
+
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+
+	potential = {
+		owner = {
+			has_valid_civic = civic_self_expanding_storage
+		}
+	}
+
+	required_resources = {
+	}
+
+	produced_resources = {
+		engineering_research = 2
+		unity = 2
+	}
+
+	country_modifier = {
+		max_energy = 1000
+		max_minerals = 1000
+	}
+
+	triggered_planet_modifier = {
+		key = "sew_robot_operator"
+		potential = {
+			planet = {
+				AND = {
+					any_tile = {
+						has_building = building_self_expanding_warehouse
+					}
+					any_pop = {
+						is_robot_pop = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			tile_resource_energy_mult = 0.1
+			tile_resource_minerals_mult = 0.1
+		}
+	}
+
+	allow = {
+	
+	}
+
+	prerequisites = {
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_living_amplifier = {
+	base_buildtime = 1800
+	planet_unique = yes
+
+	cost = {
+		food = 100
+		energy = 75
+		minerals = 250
+	}
+
+	potential = {
+		planet = {
+			NOT = { is_planet_class = pc_habitat }
+		}
+		owner = {
+			has_valid_civic = civic_living_core
+		}
+	}
+
+	required_resources = {
+		food = 1
+	}
+
+	produced_resources = {
+		society_research = 3
+		unity = 2
+	}
+
+	country_modifier = {
+		army_health = 0.15
+	}
+	
+	planet_modifier  = {
+		pop_environment_tolerance = 0.1
+		pop_growth_speed = 0.2
+	}
+
+	allow = {
+	}
+
+	prerequisites = {
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

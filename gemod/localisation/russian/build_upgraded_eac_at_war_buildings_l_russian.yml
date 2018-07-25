@@ -1,0 +1,10 @@
+﻿l_russian:
+#This file was created by script!
+#Instead of editing it, you should change the origin files or the script and rerun the script!
+#Python files that can be directly used for a rerun (storing all parameters from the last run) should be in the main directory
+ eac_building_planetary_neutron_cannon_direct_build:0 "$eac_building_planetary_neutron_cannon$"
+ eac_building_planetary_neutron_cannon_direct_build_desc:0 "$eac_building_planetary_neutron_cannon_desc$"
+ eac_building_planetary_tachyon_cannon_direct_build:0 "$eac_building_planetary_tachyon_cannon$"
+ eac_building_planetary_tachyon_cannon_direct_build_desc:0 "$eac_building_planetary_tachyon_cannon_desc$"
+ eac_building_planetary_proton_cannon_hidden_tree_root:0 "$eac_building_planetary_proton_cannon$"
+ eac_building_planetary_proton_cannon_hidden_tree_root_desc:0 "$eac_building_planetary_proton_cannon_desc$"

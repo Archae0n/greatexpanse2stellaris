@@ -1,0 +1,1198 @@
+namespace = credux_start
+
+#Add a Modifier that increases Habitability for your PRIMARY species. (Earthen Connection)
+country_event = {
+	id = credux_start.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_earthen_connection
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			every_owned_pop = {
+				limit = {
+					is_same_species = owner
+				}
+				add_modifier = {
+					modifier = pop_deep_earthen_connection
+				}
+			}
+		}
+	}
+}
+
+#Caches - Provide your free bonuses!
+country_event = {
+	id = credux_start.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { #Traders
+			limit = {
+				has_valid_civic = civic_traders_cache
+			}
+			add_modifier = {
+				modifier = trader_cache_sr
+				days = 3600
+		}
+		
+		if = { #Artisans
+			limit = {
+				has_valid_civic = civic_artisans_cache
+			}
+			set_country_flag = artist_building_patron
+			every_owned_planet = {
+				limit = {
+					is_capital = yes
+				}
+				random_tile = {
+					limit = {
+						has_blocker = yes
+					}
+					remove_blocker = yes
+					set_building = "building_artist_patron"
+				}
+			}
+		}
+		
+		if = { #Curators
+			limit = {
+				has_valid_civic = civic_curators_cache
+			}
+			give_technology = {
+				message = no
+				tech = tech_engineering_lab_1
+			}
+			give_technology = {
+				message = no
+				tech = tech_engineering_lab_2
+			}
+			give_technology = {
+				message = no
+				tech = tech_engineering_lab_3
+			}
+			give_technology = {
+				message = no
+				tech = tech_physics_lab_1
+			}
+			give_technology = {
+				message = no
+				tech = tech_physics_lab_2
+			}
+			give_technology = {
+				message = no
+				tech = tech_physics_lab_3
+			}
+			give_technology = {
+				message = no
+				tech = tech_biolab_1
+			}
+			give_technology = {
+				message = no
+				tech = tech_biolab_2
+			}
+			give_technology = {
+				message = no
+				tech = tech_biolab_3
+			}
+		}
+	}
+}
+}
+
+#Divine Transcendence
+country_event = {
+	id = credux_start.4
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_0
+		}
+		set_country_flag = dt_level_0
+	}
+}
+
+#Mandate Of Heaven - Flag to check if you still have it.
+country_event = {
+	id = credux_start.5
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_mandate_of_heaven
+	}
+	
+	immediate = {
+		set_country_flag = mandate_of_heaven
+		add_modifier = {
+			modifier = mandate_approved
+		}
+	}
+}
+
+#One Small Step - Make a colony!
+country_event = {
+	id = credux_start.7
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_valid_civic = civic_nest_builders
+			has_valid_civic = civic_one_small_step
+		}
+	}
+	
+	immediate = {
+		random_planet_within_border = { #First find a suitable world within your borders (We don't want gas giants or asteroids. Everything else is fair game.)
+			limit = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_nuked
+					
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
+					is_planet_class = pc_savannah
+					
+					is_planet_class = pc_continental
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+				}
+				is_capital = no #We don't want to overwrite our own capital by accident!
+			}
+			if = { #Gaia Planets are fine! Carry on with the event.
+				limit = {
+					is_planet_class = pc_gaia
+				}
+				else = { #If it isn't a Gaia Planet we need to make it ideal for the founding species
+					if = { #ARID
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_arid_preference
+							}
+							NOT = { #Just in case the planet class isn't already Arid
+								is_planet_class = pc_arid
+							}
+						}
+						change_pc = pc_arid
+					}
+					
+					
+					if = { #DESERT
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_desert_preference
+							}
+							NOT = { #Just in case the planet class isn't already Desert
+								is_planet_class = pc_desert
+							}
+						}
+						change_pc = pc_desert
+					}
+					if = { #SAVANNAH
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_savannah_preference
+							}
+							NOT = { #Just in case the planet class isn't already Savannah
+								is_planet_class = pc_savannah
+							}
+						}
+						change_pc = pc_savannah
+					}
+					if = { #CONTINENTAL
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_continental_preference
+							}
+							NOT = { #Just in case the planet class isn't already Continental
+								is_planet_class = pc_continental
+							}
+						}
+						change_pc = pc_continental
+					}
+					if = { #OCEAN
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_ocean_preference
+							}
+							NOT = { #Just in case the planet class isn't already Ocean
+								is_planet_class = pc_ocean
+							}
+						}
+						change_pc = pc_ocean
+					}
+					if = { #TROPICAL
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_tropical_preference
+							}
+							NOT = { #Just in case the planet class isn't already Tropical
+								is_planet_class = pc_tropical
+							}
+						}
+						change_pc = pc_tropical
+					}
+					if = { #TUNDRA
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_tundra_preference
+							}
+							NOT = { #Just in case the planet class isn't already Tundra
+								is_planet_class = pc_tundra
+							}
+						}
+						change_pc = pc_tundra
+					}
+					if = { #ARCTIC
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_arctic_preference
+							}
+							NOT = { #Just in case the planet class isn't already Arctic
+								is_planet_class = pc_arctic
+							}
+						}
+						change_pc = pc_arctic
+					}
+					if = { #ALPINE
+						limit = {
+							ROOT = {
+							has_trait = trait_pc_alpine_preference
+							}
+							NOT = { #Just in case the planet class isn't already Alpine
+								is_planet_class = pc_alpine
+							}
+						}
+						change_pc = pc_alpine
+					}
+					if = { #Glacial
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_glacial_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_glacial
+							}
+						}
+						change_pc = pc_glacial
+					}
+					if = { Frozen_Desert
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_frozen_desert_preference
+							}
+							NOT = { #Just in case the planet class isn't already Frozen Desert
+								is_planet_class = pc_frozen_desert
+							}
+						}
+						change_pc = pc_frozen_desert
+					}
+					if = { #Steppe
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_steppe_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_steppe
+							}
+						}
+						change_pc = pc_steppe
+					}
+					if = { #Hadesert
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_hadesert_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_hadesert
+							}
+						}
+						change_pc = pc_hadesert
+					}
+					if = { #Antarctic
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_antarctic_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_antarctic
+							}
+						}
+						change_pc = pc_antarctic
+					}
+					if = { #sandsea
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_sandsea_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_sandsea
+							}
+						}
+						change_pc = pc_sandsea
+					}
+					if = { #subarctic
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_subarctic_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_subarctic
+							}
+						}
+						change_pc = pc_subarctic
+					}
+					if = { #Geothermal
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_geothermal_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_geothermal
+							}
+						}
+						change_pc = pc_geothermal
+					}
+					if = { #Cascadian
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_cascadian_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_cascadian
+							}
+						}
+						change_pc = pc_cascadian
+					}
+					if = { #Swamp
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_swamp_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_swamp
+							}
+						}
+						change_pc = pc_swamp
+					}
+					if = { #Mangrove
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_mangrove_preference
+							}
+							NOT = { 
+								is_planet_class = pc_mangrove
+							}
+						}
+						change_pc = pc_mangrove
+					}
+					if = { #DesertIslands
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_desertislands_preference
+							}
+							NOT = { 
+								is_planet_class = pc_desertislands
+							}
+						}
+						change_pc = pc_desertislands
+					}
+					if = { #Mesa is best Waifuframe
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_mesa_preference
+							}
+							NOT = { 
+								is_planet_class = pc_mesa
+							}
+						}
+						change_pc = pc_mesa
+					}
+					if = { #Oasis
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_oasis_preference
+							}
+							NOT = { 
+								is_planet_class = pc_oasis
+							}
+						}
+						change_pc = pc_oasis
+					}
+					if = { #HaJungle
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_hajungle_preference
+							}
+							NOT = { 
+								is_planet_class = pc_hajungle
+							}
+						}
+						change_pc = pc_hajungle
+					}
+					if = { #Methane
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_methane_preference
+							}
+							NOT = { 
+								is_planet_class = pc_methane
+							}
+						}
+						change_pc = pc_methane
+					}
+					if = { #Ammonia
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_ammonia_preference
+							}
+							NOT = { 
+								is_planet_class = pc_ammonia
+							}
+						}
+						change_pc = pc_ammonia
+					}
+					if = { #Voidborne, For Habitat Civs
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_habitat_preference
+							}
+							NOT = { 
+								is_planet_class = pc_habitat
+							}
+						}
+						change_pc = pc_habitat
+					}
+					if = { #??? - We can't work out the habitability, so make it a Gaia World.
+						limit = {
+							ROOT = {
+								NOR = {
+									has_trait = trait_pc_alpine_preference
+									has_trait = trait_pc_arctic_preference
+									has_trait = trait_pc_tundra_preference
+									has_trait = trait_pc_ocean_preference
+									has_trait = trait_pc_tropical_preference
+									has_trait = trait_pc_continental_preference
+									has_trait = trait_pc_savannah_preference
+									has_trait = trait_pc_desert_preference
+									has_trait = trait_pc_arid_preference
+									has_trait = trait_pc_glacial_preference
+									has_trait = trait_pc_frozen_desert_preference
+									has_trait = trait_pc_steppe_preference
+									has_trait = trait_pc_hadesert_preference
+									has_trait = trait_pc_antarctic_preference
+									has_trait = trait_pc_subarctic_preference
+									has_trait = trait_pc_sandsea_preference
+									has_trait = trait_pc_geothermal_preference
+									has_trait = trait_pc_cascadian_preference
+									has_trait = trait_pc_swamp_preference
+									has_trait = trait_pc_mangrove_preference
+									has_trait = trait_pc_mesa_preference
+									has_trait = trait_pc_desertislands_preference
+									has_trait = trait_pc_hajungle_preference
+									has_trait = trait_pc_methane_preference
+									has_trait = trait_pc_ammonia_preference
+									has_trait = trait_pc_habitat_preference
+								}
+							}
+						}
+						change_pc = pc_gaia
+					}
+				}
+			}
+			
+			every_tile = { #Clear out the planet's resources and tile blockers. We'll re-add resources later, when the planet size is right.
+				clear_deposits = yes
+				remove_blocker = yes
+			}
+			
+			if = { #We want at least 18 tiles on our planet
+				limit = {
+					planet_size < 18
+				}
+				while = {
+					limit = {
+						planet_size < 18
+					}
+					change_planet_size = 1
+				}
+			}
+				
+			if = { #We want 18 tiles on the planet, for balance
+				limit = {
+					planet_size > 18
+				}
+				while = {
+					limit = {
+						planet_size > 18
+					}
+					change_planet_size = -1
+				}
+			}
+			
+			every_tile = { #Add more resources to the planet!
+				if = { #Food
+					limit = {
+						has_resource = food
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_farmland_deposit
+						}
+						1 = {
+							set_deposit = d_vast_farmland_deposit
+						}
+						1 = {
+							set_deposit = d_rich_food_mineral_deposit
+						}
+					}
+				}
+				if = { #Energy
+					limit = {
+						has_resource = energy
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_energy_deposit
+						}
+						1 = {
+							set_deposit = d_vast_energy_deposit
+						}
+						1 = {
+							set_deposit = d_rich_mineral_energy_deposit
+						}
+					}
+				}
+				if = { #Minerals
+					limit = {
+						has_resource = minerals
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_mineral_deposit
+						}
+						1 = {
+							set_deposit = d_vast_mineral_deposit
+						}
+						1 = {
+							set_deposit = d_rich_mineral_energy_deposit
+						}
+						
+						1 = {
+							set_deposit = d_rich_food_mineral_deposit
+						}
+					}
+				}
+				if = { #Physics
+					limit = {
+						has_resource = physics_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_physics_deposit
+						}
+						1 = {
+							set_deposit = d_vast_physics_deposit
+						}
+					}
+				}
+				if = { #Society
+					limit = {
+						has_resource = society_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_society_deposit
+						}
+						1 = {
+							set_deposit = d_vast_society_deposit
+						}
+					}
+				}
+				if = { #Engineering
+					limit = {
+						has_resource = engineering_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_engineering_deposit
+						}
+						1 = {
+							set_deposit = d_vast_engineering_deposit
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_resource = food
+							has_resource = energy
+							has_resource = minerals
+							has_resource = physics_research
+							has_resource = society_research
+							has_resource = engineering_research
+						}
+					}
+					random_list = { #Add 1-3 of a resource, or none at all.
+						1 = { #Food
+							random_list = {
+								1 = {
+									set_deposit = d_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_rich_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_vast_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_food_deposit
+								}
+								1 = {
+									set_deposit = d_rich_food_mineral_deposit
+								}
+							}
+						}
+						1 = { #Energy
+							random_list = {
+								1 = {
+									set_deposit = d_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_energy_deposit
+								}
+								1 = {
+									set_deposit = d_vast_energy_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+							}
+						}
+						1 = { #Minerals
+							random_list = {
+								1 = {
+									set_deposit = d_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_vast_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+							}
+						} 
+						1 = { #Physics Research
+							random_list = {
+								1 = {
+									set_deposit = d_physics_deposit
+								}
+								1 = {
+									set_deposit = d_rich_physics_deposit
+								}
+								1 = {
+									set_deposit = d_vast_physics_deposit
+								}
+							}
+						}
+						1 = { #Society Research
+							random_list = {
+								1 = {
+									set_deposit = d_society_deposit
+								}
+								1 = {
+									set_deposit = d_rich_society_deposit
+								}
+								1 = {
+									set_deposit = d_vast_society_deposit
+								}
+							}
+						}
+						1 = { #Engineering Research
+							random_list = {
+								1 = {
+									set_deposit = d_engineering_deposit
+								}
+								1 = {
+									set_deposit = d_rich_engineering_deposit
+									}
+								1 = {
+									set_deposit = d_vast_engineering_deposit
+								}
+							}
+						}
+						2 = { #Do nothing
+					
+						}
+					}
+				}
+			}
+
+			create_colony = { #The planet is ready - make a colony!
+				owner = root
+				species = owner_main_species
+				ethos = owner
+			}
+			reset_start_buildings_and_blockers_life_seeded = yes			
+			
+			while = {
+				limit = {
+					num_pops < 4
+				}
+				create_pop = {
+					species = owner
+					ethos = owner
+				}
+			}
+		}
+	}
+}
+
+#Planet Forgers - Grant some basic technology.
+country_event = {
+	id = credux_start.8
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_planet_forgers
+	}
+	
+	immediate = {
+		give_technology = {
+			message = no
+			tech = tech_terrestrial_sculpting  
+		}
+	}
+}
+
+#Manifest Destiny
+country_event = {
+	id = credux_start.9
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_manifest_destiny
+	}
+	
+	immediate = {
+		set_country_flag = manifest_destiny_bonus_colony
+	}
+}
+
+#Eco-Warriors
+country_event = {
+	id = credux_start.10
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_eco_warriors
+	}
+	
+	immediate = {
+		give_technology = {
+			message = no
+			tech = tech_tb_mountain_range
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_volcano
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_dangerous_wildlife
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_dense_jungle
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_quicksand_basin
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_noxious_swamp
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_massive_glacier
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_toxic_kelp
+		}
+		give_technology = {
+			message = no
+			tech = tech_tb_deep_sinkhole
+		}
+	}
+}
+
+#Keepers Of Tradition - Free Unity for a Tradition!
+#country_event = {
+#	id = credux_start.11
+#	
+#	hide_window = yes
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		has_valid_civic = civic_keepers_of_tradition
+#	}
+#	
+#	immediate = {
+#		add_monthly_resource_mult = {
+#			resource = unity
+#			value = 1
+#			min = 100
+#			max = 100
+#		}
+#	}
+#}
+
+#Advanced Networking - Apply Relevant Bonus
+country_event = {
+	id = credux_start.12
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_advanced_networking
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_valid_civic = civic_machine_terminator
+			}
+			add_modifier = {
+				modifier = networked_exterminators
+			}
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_machine_assimilator
+			}
+			add_modifier = {
+				modifier = networked_assimilators
+			}
+		}
+		if = {
+			limit = {
+				has_valid_civic = civic_machine_servitor
+			}
+			add_modifier = {
+				modifier = networked_servitors
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_valid_civic = civic_machine_servitor
+					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+			add_modifier = {
+				modifier = networked_expansion
+			}
+		}
+	}
+}
+
+country_event = {
+	id = credux_start.6
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+			has_valid_civic = civic_purifying_presense
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			
+			change_pc = pc_gaia
+						
+			while = {
+				limit = {
+					planet_size < 25
+				}
+				change_planet_size = 1
+			}
+			
+			every_tile = { #Add more resources to the planet!
+				if = { #Food
+					limit = {
+						has_resource = food
+						NOT = {
+							has_resource = minerals
+						}
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_farmland_deposit
+						}
+						1 = {
+							set_deposit = d_vast_farmland_deposit
+						}
+					}
+				}
+				if = { #Energy
+					limit = {
+						has_resource = energy
+						NOT = {
+							has_resource = minerals
+						}
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_energy_deposit
+						}
+						1 = {
+							set_deposit = d_vast_energy_deposit
+						}
+					}
+				}
+				if = { #Minerals
+					limit = {
+						has_resource = minerals
+						NOR = {
+							has_resource = energy
+							has_resource = food
+						}
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_mineral_deposit
+						}
+						1 = {
+							set_deposit = d_vast_mineral_deposit
+						}
+					}
+				}
+				if = { #Energy + Minerals
+					limit = {
+						AND = {
+							has_resource = minerals
+							has_resource = energy
+						}
+					}
+					set_deposit = d_rich_mineral_energy_deposit
+				}
+				if = { #Food + Minerals
+					limit = {
+						AND = {
+							has_resource = minerals
+							has_resource = food
+						}
+					}
+					set_deposit = d_rich_food_mineral_deposit
+				}
+				if = { #Physics
+					limit = {
+						has_resource = physics_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_physics_deposit
+						}
+						1 = {
+							set_deposit = d_vast_physics_deposit
+						}
+					}
+				}
+				if = { #Society
+					limit = {
+						has_resource = society_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_society_deposit
+						}
+						1 = {
+							set_deposit = d_vast_society_deposit
+						}
+					}
+				}
+				if = { #Engineering
+					limit = {
+						has_resource = engineering_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_engineering_deposit
+						}
+						1 = {
+							set_deposit = d_vast_engineering_deposit
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_resource = food
+							has_resource = energy
+							has_resource = minerals
+							has_resource = physics_research
+							has_resource = society_research
+							has_resource = engineering_research
+						}
+					}
+					random_list = { #Add 1-3 of a resource, or none at all.
+						1 = { #Food
+							random_list = {
+								1 = {
+									set_deposit = d_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_rich_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_vast_farmland_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_food_deposit
+								}
+								1 = {
+									set_deposit = d_rich_food_mineral_deposit
+								}
+							}
+						}
+						1 = { #Energy
+							random_list = {
+								1 = {
+									set_deposit = d_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_energy_deposit
+								}
+								1 = {
+									set_deposit = d_vast_energy_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+							}
+						}
+						1 = { #Minerals
+							random_list = {
+								1 = {
+									set_deposit = d_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_vast_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_food_deposit
+								}
+								1 = {
+									set_deposit = d_rich_food_mineral_deposit
+								}
+							}
+						} 
+						1 = { #Physics Research
+							random_list = {
+								1 = {
+									set_deposit = d_physics_deposit
+								}
+								1 = {
+									set_deposit = d_rich_physics_deposit
+								}
+								1 = {
+									set_deposit = d_vast_physics_deposit
+								}
+							}
+						}
+						1 = { #Society Research
+							random_list = {
+								1 = {
+									set_deposit = d_society_deposit
+								}
+								1 = {
+									set_deposit = d_rich_society_deposit
+								}
+								1 = {
+									set_deposit = d_vast_society_deposit
+								}
+							}
+						}
+						1 = { #Engineering Research
+							random_list = {
+								1 = {
+									set_deposit = d_engineering_deposit
+								}
+								1 = {
+									set_deposit = d_rich_engineering_deposit
+									}
+								1 = {
+									set_deposit = d_vast_engineering_deposit
+								}
+							}
+						}
+						2 = { #Do nothing
+					
+						}
+					}
+				}
+			}
+		}
+	}
+}

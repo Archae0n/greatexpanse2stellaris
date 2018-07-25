@@ -1,0 +1,531 @@
+namespace = gai_critical_buildings
+
+#Build monuments/temples because the AI wont build them in sectors
+planet_event = {
+	id = gai_critical_buildings.1
+	hide_window = yes
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		has_owner = yes
+		is_under_colonization = no
+		years_passed > 10
+		exists = owner
+		owner = { 
+			#is_at_war = no
+			OR = {	
+				and = {
+					minerals > 1000 
+					NOT = { has_country_flag = gai_player_disable_critical_buildings }
+				}
+				AND = {
+					is_ai = yes	
+				}
+			}
+		}
+		NOT = { has_planet_flag = gai_player_disable_critical_buildings }
+		gai_is_ai = yes
+		NOT = { has_global_flag = disable_gai_critical_buildings }
+		NAND = {
+			gai_has_unity_building = yes
+			gai_has_growth_building = yes
+			gai_has_dome = yes
+			gai_has_p_hub = yes
+			gai_has_pur = yes
+			gai_has_slave_p = yes
+			gai_has_min_pro = yes
+			planet = { has_building = building_hive_synapse }
+			planet = { has_building = building_control_center }
+		}
+		owner = {
+			is_country_type = default
+		}
+	}
+
+	immediate = {
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				gai_is_ai = yes
+				NOT = { gai_important_building = yes }
+					owner = {
+						NOR = {
+							has_ethic = ethic_spiritualist		
+							has_ethic = ethic_fanatic_spiritualist
+							has_authority = auth_machine_intelligence
+						}
+						OR = {	minerals > 1000 is_ai = yes	}
+					}
+					planet = {
+						NOT = { is_planet_class = pc_habitat }
+						NOR = {
+							has_building = building_temple
+							has_building = building_holotemple				
+							has_building = building_citadel_of_faith
+							has_building = building_sacred_nexus
+						}
+					}
+					has_blocker = no
+					NOT = { gai_has_unity_building = yes }
+					NOT = { gai_has_sr = yes }
+						OR = {
+							gai_is_blank = yes
+							AND = {
+								gai_has_food = yes
+								gai_build_on_food_okay = yes
+							}
+						}
+						gai_replaceable_buildings = yes
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+					NOT = { planet = { has_building = building_autochthon_monument }}
+					has_blocker = no
+				}
+				add_building_construction = building_autochthon_monument
+				
+			}
+		}
+		random_tile = {
+			limit = {
+				gai_is_ai = yes
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				NOT = { gai_important_building = yes }
+					owner = {
+						OR = {	minerals > 1000 is_ai = yes	}
+						OR = {
+							has_ethic = ethic_spiritualist		
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					}
+					planet = {
+						NOT = { is_planet_class = pc_habitat }
+						NOR = {
+							has_building = building_autochthon_monument
+							has_building = building_heritage_site
+							has_building = building_hypercomms_forum
+							has_building = building_autocurating_vault
+						}
+					}
+					NOT = { gai_has_sr = yes }
+					has_blocker = no
+					NOT = { gai_has_unity_building = yes }
+						OR = {
+							gai_is_blank = yes
+							AND = {
+								gai_has_food = yes
+								gai_build_on_food_okay = yes
+							}
+						}
+						gai_replaceable_buildings = yes
+					NOT = { gai_near_capital = yes }
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+					NOT = { planet = { has_building = building_temple }}
+					has_blocker = no
+				}
+				add_building_construction = building_temple
+				
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				NOT = { gai_important_building = yes }
+				gai_is_ai = yes
+					owner = {
+						has_authority = auth_machine_intelligence 
+						OR = {	minerals > 1000 is_ai = yes	}
+					}
+					NOT = { gai_has_sr = yes }
+					has_blocker = no
+					NOT = { gai_has_unity_building = yes }
+						OR = {
+							gai_is_blank = yes
+							AND = {
+								gai_has_food = yes
+								gai_build_on_food_okay = yes
+							}
+						}
+						gai_replaceable_buildings = yes
+					NOT = { gai_near_capital = yes }
+			}
+			add_building_construction = building_uplink_node
+			
+		}
+		random_tile = {
+			limit = {
+				NOT = { gai_important_building = yes }
+				gai_is_ai = yes
+					owner = {
+						has_authority = auth_machine_intelligence
+						OR = {	minerals > 1000 is_ai = yes	}						
+					}
+					NOT = { gai_has_sr = yes }
+					has_blocker = no
+					NOT = { gai_has_growth_building = yes }
+					NOT = { planet = {is_planet_class = pc_habitat} }
+					OR = {
+						AND = {
+							AND = {
+								OR = {
+									gai_is_blank = yes
+									AND = {
+										gai_has_food = yes
+										gai_build_on_food_okay = yes
+									}
+								}
+								gai_replaceable_buildings = yes
+							}
+							NOT = { gai_near_capital = yes }
+							NOT = {
+								planet = {
+									any_tile = {
+										gai_has_society = yes
+									}
+								}
+							}
+						}
+						gai_has_society = yes
+					}
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+				}
+				add_building_construction = building_spare_parts_depot
+				
+			}
+		}
+		random_tile = {
+			limit = {
+				planet = {
+					gai_upgraded_capital = no
+					gai_shelter_capital = no
+				}
+				has_blocker = no
+				gai_energy_okay = yes
+			}
+			IF = {
+				limit = {
+					NOT = { owner = {has_authority = auth_machine_intelligence} }
+				}
+				add_building_construction = building_colony_shelter
+			}
+			IF = {
+				limit = {
+					owner = {has_authority = auth_machine_intelligence}
+				}
+				add_building_construction = building_deployment_post
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_upgraded_capital = yes
+				}
+				NOT = { gai_important_building = yes }
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+					NOT = { owner = { has_authority = auth_machine_intelligence } }
+					NOT = { gai_has_sr = yes }
+					NOT = { planet = {is_planet_class = pc_habitat} }
+					has_blocker = no
+					NOT = { gai_has_growth_building = yes }
+					OR = {
+						AND = {
+							AND = {
+								OR = {
+									gai_is_blank = yes
+									AND = {
+										gai_has_food = yes
+										gai_build_on_food_okay = yes
+									}
+								}
+								gai_replaceable_buildings = yes
+							}
+							NOT = { gai_near_capital = yes }
+							NOT = {
+								planet = {
+									any_tile = {
+										gai_has_society = yes
+									}
+								}
+							}
+						}
+						gai_has_society = yes
+					}
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+					NOT = { planet = { has_building = building_clinic }}
+					planet = { free_pop_tiles > 0 }
+					has_blocker = no
+				}
+				add_building_construction = building_clinic
+				
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				NOT = { gai_important_building = yes }
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+				gai_has_energy = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				NOT = { gai_has_p_hub = yes }
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+					NOT = { 
+						planet = { 
+							OR = {
+								has_building = building_power_hub_1 
+								has_building = building_power_hub_2
+							}
+						}
+					}
+					has_blocker = no
+				}
+				add_building_construction = building_power_hub_1
+				
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_upgraded_capital = yes
+				}
+				gai_replaceable_buildings = yes
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+				gai_has_energy = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				owner = {
+					has_swapped_tradition = tr_synchronicity_machine_center
+				}
+				NOT = { 
+					planet = { 
+						has_building = building_control_center 
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+				}
+				add_building_construction = building_control_center
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_upgraded_capital = yes
+				}
+				gai_replaceable_buildings = yes
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+				gai_has_energy = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				owner = {
+					has_swapped_tradition = tr_synchronicity_hive_mind_synapse
+				}
+				NOT = { 
+					planet = { 
+						has_building = building_hive_synapse 
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { OR = {	minerals > 1000 is_ai = yes	} }
+				}
+				add_building_construction = building_hive_synapse
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				NOT = { gai_important_building = yes }
+				gai_is_ai = yes
+				gai_has_minerals = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				NOT = { gai_has_min_pro = yes }
+			}
+			IF = {
+				limit = {
+					NOT = { 
+						planet = { 
+							OR = {
+								has_building = building_mineral_processing_plant_1
+								has_building = building_mineral_processing_plant_2
+							}
+						}
+					}
+					has_blocker = no
+				}
+				add_building_construction = building_mineral_processing_plant_1
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+				gai_has_food = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				NOT = { gai_has_dome = yes }
+			}
+			IF = {
+				limit = {
+					has_blocker = no
+				}
+				add_building_construction = building_paradise_dome
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				NOT = { gai_important_building = yes }
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				gai_is_ai = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				NOT = { gai_near_capital = yes }
+				has_blocker = no
+				OR = {
+					gai_is_blank = yes
+					AND = {
+						gai_has_food = yes
+						gai_build_on_food_okay = yes
+					}
+				}
+				gai_replaceable_buildings = yes
+				NOT = { gai_has_pur = yes }
+			}
+			IF = {
+				limit = {
+					has_blocker = no
+				}
+				add_building_construction = building_symbol_purity
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				NOT = { gai_important_building = yes }
+				gai_food_okay_to_replace = yes
+				gai_is_ai = yes
+				gai_has_food = yes
+				gai_has_minerals = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				NOT = { gai_has_slave_p = yes }
+			}
+			IF = {
+				limit = {
+					has_blocker = no
+				}
+				add_building_construction = building_slave_processing
+			}
+		}
+		random_tile = {
+			limit = {
+				NOR = {
+					gai_shelter_capital = yes
+					gai_near_capital = yes
+					gai_upgraded_capital = yes
+				}
+				owner = {
+					OR = {	minerals > 1000 is_ai = yes	}
+				}
+				NOT = { gai_important_building = yes }
+				gai_is_ai = yes
+				gai_has_food = yes
+				gai_food_okay_to_replace = yes
+				NOT = { gai_has_sr = yes }
+				NOT = { planet = {is_planet_class = pc_habitat} }
+				has_blocker = no
+				NOT = { gai_has_slave_p = yes }
+			}
+			IF = {
+				limit = {
+					has_blocker = no
+				}
+				add_building_construction = building_slave_processing
+			}
+		}
+	}
+}

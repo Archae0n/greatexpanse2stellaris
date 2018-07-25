@@ -1,0 +1,96 @@
+namespace = eac_at_war_armies
+
+country_event = {
+    id = eac_at_war_armies.0
+    hide_window = yes
+	fire_only_once = yes
+	
+	trigger = { 
+		last_increased_tech = eac_aw_tech_space_marines
+	}
+
+    immediate = {
+        set_variable = { which = space_marine_build_count value = 0 }
+    }
+}
+
+#An army construction has been completed.
+# This = Planet
+# From = Army
+planet_event = {
+    id = eac_at_war_armies.1
+    hide_window = yes
+	is_triggered_only = yes
+
+    trigger = { owner = { has_technology = eac_aw_tech_space_marines } }
+
+    immediate = {
+        from = {
+            if = { 
+                limit = { army_type = eac_space_marines_army } 
+                owner = {
+                    change_variable = {
+                        which = "space_marine_build_count" 
+                        value = -1
+                    }
+                    count_space_marines = yes
+                }
+            }
+        }
+    }
+}
+
+# Monthly Pulse
+# No scope
+event = {
+    id = eac_at_war_armies.2
+    hide_window = yes
+	is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            limit = { has_technology = eac_aw_tech_space_marines }
+            country_event = { id = eac_at_war_armies.3 days = 3}
+            country_event = { id = eac_at_war_armies.3 days = 10}
+            country_event = { id = eac_at_war_armies.3 days = 17}
+            country_event = { id = eac_at_war_armies.3 days = 24}
+        }
+    }
+}
+
+country_event = {
+    id = eac_at_war_armies.3
+    hide_window = yes
+	is_triggered_only = yes
+
+    immediate = {
+        count_space_marines = yes
+    }
+}
+
+
+country_event = {
+    id = eac_at_war_armies.11
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = { 
+        is_ai = yes 
+        has_technology = eac_aw_tech_space_marines
+    }
+
+    immediate = {
+        random_owned_planet = {
+            limit = { has_building = building_military_academy }
+            while = {
+                count = 15
+                create_army = {
+                    name = random
+                    owner = ROOT
+                    species = ROOT
+                    type = "eac_space_marines_army"
+                }
+            }
+        }
+    }
+}

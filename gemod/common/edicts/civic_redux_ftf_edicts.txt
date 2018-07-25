@@ -1,0 +1,36 @@
+planet_edict = {
+	name = "for_science"
+	cost = { influence = 100 }
+	length = 0
+	
+	effect = {
+		custom_tooltip = edict_for_science.tooltip #Sacrifice a Xeno Pop to apply an Empire-wide Research Bonus
+		planet_event = {
+			id = credux_ftf.1
+		}
+	}
+	
+	potential = {
+		num_pops > 1
+		any_pop = {
+			NOT = {
+				is_same_species = owner
+			}
+		}
+		owner = {
+			has_valid_civic = civic_test_subjects
+		}
+	}
+	
+	allow = {
+		owner = {
+			NOT = {
+				has_modifier = for_science
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

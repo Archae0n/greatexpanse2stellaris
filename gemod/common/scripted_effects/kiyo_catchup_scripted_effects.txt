@@ -1,0 +1,1416 @@
+kiyo_catchup_calculate_minerals = {
+	if = {
+		limit = { has_minerals_0 = yes }
+		set_variable = {
+			which = mineralVal
+			value = -1
+		}
+	}
+	if = {
+		limit = { has_minerals_5 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 3
+		}
+	}
+	if = {
+		limit = { has_minerals_10 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 8
+		}
+	}
+	if = {
+		limit = { has_minerals_15 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 13
+		}
+	}
+	if = {
+		limit = { has_minerals_20 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 18
+		}
+	}
+	if = {
+		limit = { has_minerals_25 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 23
+		}
+	}
+	if = {
+		limit = { has_minerals_30 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 28
+		}
+	}
+	if = {
+		limit = { has_minerals_35 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 33
+		}
+	}
+	if = {
+		limit = { has_minerals_40 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 38
+		}
+	}
+	if = {
+		limit = { has_minerals_45 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 43
+		}
+	}
+	if = {
+		limit = { has_minerals_50 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 48
+		}
+	}
+	if = {
+		limit = { has_minerals_55 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 53
+		}
+	}
+	if = {
+		limit = { has_minerals_60 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 58
+		}
+	}
+	if = {
+		limit = { has_minerals_65 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 63
+		}
+	}
+	if = {
+		limit = { has_minerals_70 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 68
+		}
+	}
+	if = {
+		limit = { has_minerals_75 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 73
+		}
+	}
+	if = {
+		limit = { has_minerals_80 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 78
+		}
+	}
+	if = {
+		limit = { has_minerals_85 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 83
+		}
+	}
+	if = {
+		limit = { has_minerals_90 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 88
+		}
+	}
+	if = {
+		limit = { has_minerals_95 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 93
+		}
+	}
+	if = {
+		limit = { has_minerals_100 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 98
+		}
+	}
+	if = {
+		limit = { has_minerals_105 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 103
+		}
+	}
+	if = {
+		limit = { has_minerals_110 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 108
+		}
+	}
+	if = {
+		limit = { has_minerals_115 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 113
+		}
+	}
+	if = {
+		limit = { has_minerals_120 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 118
+		}
+	}
+	if = {
+		limit = { has_minerals_125 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 123
+		}
+	}
+	if = {
+		limit = { has_minerals_130 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 128
+		}
+	}
+	if = {
+		limit = { has_minerals_135 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 133
+		}
+	}
+	if = {
+		limit = { has_minerals_140 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 138
+		}
+	}
+	if = {
+		limit = { has_minerals_145 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 143
+		}
+	}
+	if = {
+		limit = { has_minerals_150 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 148
+		}
+	}
+	if = {
+		limit = { has_minerals_155 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 153
+		}
+	}
+	if = {
+		limit = { has_minerals_160 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 158
+		}
+	}
+	if = {
+		limit = { has_minerals_165 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 163
+		}
+	}
+	if = {
+		limit = { has_minerals_170 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 168
+		}
+	}
+	if = {
+		limit = { has_minerals_175 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 173
+		}
+	}
+	if = {
+		limit = { has_minerals_180 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 178
+		}
+	}
+	if = {
+		limit = { has_minerals_185 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 183
+		}
+	}
+	if = {
+		limit = { has_minerals_190 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 188
+		}
+	}
+	if = {
+		limit = { has_minerals_195 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 193
+		}
+	}
+	if = {
+		limit = { has_minerals_200 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 198
+		}
+	}
+	if = {
+		limit = { has_minerals_205 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 203
+		}
+	}
+	if = {
+		limit = { has_minerals_210 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 208
+		}
+	}
+	if = {
+		limit = { has_minerals_215 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 213
+		}
+	}
+	if = {
+		limit = { has_minerals_220 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 218
+		}
+	}
+	if = {
+		limit = { has_minerals_225 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 223
+		}
+	}
+	if = {
+		limit = { has_minerals_230 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 228
+		}
+	}
+	if = {
+		limit = { has_minerals_235 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 233
+		}
+	}
+	if = {
+		limit = { has_minerals_240 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 238
+		}
+	}
+	if = {
+		limit = { has_minerals_245 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 243
+		}
+	}
+	if = {
+		limit = { has_minerals_250 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 248
+		}
+	}
+	if = {
+		limit = { has_minerals_255 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 253
+		}
+	}
+	if = {
+		limit = { has_minerals_260 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 258
+		}
+	}
+	if = {
+		limit = { has_minerals_265 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 263
+		}
+	}
+	if = {
+		limit = { has_minerals_270 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 268
+		}
+	}
+	if = {
+		limit = { has_minerals_275 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 273
+		}
+	}
+	if = {
+		limit = { has_minerals_280 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 278
+		}
+	}
+	if = {
+		limit = { has_minerals_285 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 283
+		}
+	}
+	if = {
+		limit = { has_minerals_290 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 288
+		}
+	}
+	if = {
+		limit = { has_minerals_295 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 293
+		}
+	}
+	if = {
+		limit = { has_minerals_300 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 298
+		}
+	}
+	if = {
+		limit = { has_minerals_305 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 303
+		}
+	}
+	if = {
+		limit = { has_minerals_310 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 308
+		}
+	}
+	if = {
+		limit = { has_minerals_315 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 313
+		}
+	}
+	if = {
+		limit = { has_minerals_320 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 318
+		}
+	}
+	if = {
+		limit = { has_minerals_325 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 323
+		}
+	}
+	if = {
+		limit = { has_minerals_330 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 328
+		}
+	}
+	if = {
+		limit = { has_minerals_335 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 333
+		}
+	}
+	if = {
+		limit = { has_minerals_340 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 338
+		}
+	}
+	if = {
+		limit = { has_minerals_345 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 343
+		}
+	}
+	if = {
+		limit = { has_minerals_350 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 348
+		}
+	}
+	if = {
+		limit = { has_minerals_355 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 353
+		}
+	}
+	if = {
+		limit = { has_minerals_360 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 358
+		}
+	}
+	if = {
+		limit = { has_minerals_365 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 363
+		}
+	}
+	if = {
+		limit = { has_minerals_370 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 368
+		}
+	}
+	if = {
+		limit = { has_minerals_375 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 373
+		}
+	}
+	if = {
+		limit = { has_minerals_380 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 378
+		}
+	}
+	if = {
+		limit = { has_minerals_385 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 383
+		}
+	}
+	if = {
+		limit = { has_minerals_390 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 388
+		}
+	}
+	if = {
+		limit = { has_minerals_395 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 393
+		}
+	}
+	if = {
+		limit = { has_minerals_400 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 398
+		}
+	}
+	if = {
+		limit = { has_minerals_405 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 403
+		}
+	}
+	if = {
+		limit = { has_minerals_410 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 408
+		}
+	}
+	if = {
+		limit = { has_minerals_415 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 413
+		}
+	}
+	if = {
+		limit = { has_minerals_420 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 418
+		}
+	}
+	if = {
+		limit = { has_minerals_425 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 423
+		}
+	}
+	if = {
+		limit = { has_minerals_430 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 428
+		}
+	}
+	if = {
+		limit = { has_minerals_435 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 433
+		}
+	}
+	if = {
+		limit = { has_minerals_440 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 438
+		}
+	}
+	if = {
+		limit = { has_minerals_445 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 443
+		}
+	}
+	if = {
+		limit = { has_minerals_450 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 448
+		}
+	}
+	if = {
+		limit = { has_minerals_455 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 453
+		}
+	}
+	if = {
+		limit = { has_minerals_460 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 458
+		}
+	}
+	if = {
+		limit = { has_minerals_465 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 463
+		}
+	}
+	if = {
+		limit = { has_minerals_470 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 468
+		}
+	}
+	if = {
+		limit = { has_minerals_475 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 473
+		}
+	}
+	if = {
+		limit = { has_minerals_480 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 478
+		}
+	}
+	if = {
+		limit = { has_minerals_485 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 483
+		}
+	}
+	if = {
+		limit = { has_minerals_490 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 488
+		}
+	}
+	if = {
+		limit = { has_minerals_495 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 493
+		}
+	}
+	if = {
+		limit = { has_minerals_500 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 498
+		}
+	}
+	if = {
+		limit = { has_minerals_505 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 503
+		}
+	}
+	if = {
+		limit = { has_minerals_510 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 508
+		}
+	}
+	if = {
+		limit = { has_minerals_515 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 513
+		}
+	}
+	if = {
+		limit = { has_minerals_520 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 518
+		}
+	}
+	if = {
+		limit = { has_minerals_525 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 523
+		}
+	}
+	if = {
+		limit = { has_minerals_530 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 528
+		}
+	}
+	if = {
+		limit = { has_minerals_535 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 533
+		}
+	}
+	if = {
+		limit = { has_minerals_540 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 538
+		}
+	}
+	if = {
+		limit = { has_minerals_545 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 543
+		}
+	}
+	if = {
+		limit = { has_minerals_550 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 548
+		}
+	}
+	if = {
+		limit = { has_minerals_555 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 553
+		}
+	}
+	if = {
+		limit = { has_minerals_560 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 558
+		}
+	}
+	if = {
+		limit = { has_minerals_565 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 563
+		}
+	}
+	if = {
+		limit = { has_minerals_570 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 568
+		}
+	}
+	if = {
+		limit = { has_minerals_575 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 573
+		}
+	}
+	if = {
+		limit = { has_minerals_580 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 578
+		}
+	}
+	if = {
+		limit = { has_minerals_585 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 583
+		}
+	}
+	if = {
+		limit = { has_minerals_590 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 588
+		}
+	}
+	if = {
+		limit = { has_minerals_595 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 593
+		}
+	}
+	if = {
+		limit = { has_minerals_600 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 598
+		}
+	}
+	if = {
+		limit = { has_minerals_605 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 603
+		}
+	}
+	if = {
+		limit = { has_minerals_610 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 608
+		}
+	}
+	if = {
+		limit = { has_minerals_615 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 613
+		}
+	}
+	if = {
+		limit = { has_minerals_620 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 618
+		}
+	}
+	if = {
+		limit = { has_minerals_625 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 623
+		}
+	}
+	if = {
+		limit = { has_minerals_630 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 628
+		}
+	}
+	if = {
+		limit = { has_minerals_635 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 633
+		}
+	}
+	if = {
+		limit = { has_minerals_640 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 638
+		}
+	}
+	if = {
+		limit = { has_minerals_645 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 643
+		}
+	}
+	if = {
+		limit = { has_minerals_650 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 648
+		}
+	}
+	if = {
+		limit = { has_minerals_655 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 653
+		}
+	}
+	if = {
+		limit = { has_minerals_660 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 658
+		}
+	}
+	if = {
+		limit = { has_minerals_665 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 663
+		}
+	}
+	if = {
+		limit = { has_minerals_670 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 668
+		}
+	}
+	if = {
+		limit = { has_minerals_675 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 673
+		}
+	}
+	if = {
+		limit = { has_minerals_680 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 678
+		}
+	}
+	if = {
+		limit = { has_minerals_685 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 683
+		}
+	}
+	if = {
+		limit = { has_minerals_690 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 688
+		}
+	}
+	if = {
+		limit = { has_minerals_695 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 693
+		}
+	}
+	if = {
+		limit = { has_minerals_700 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 698
+		}
+	}
+	if = {
+		limit = { has_minerals_705 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 703
+		}
+	}
+	if = {
+		limit = { has_minerals_710 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 708
+		}
+	}
+	if = {
+		limit = { has_minerals_715 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 713
+		}
+	}
+	if = {
+		limit = { has_minerals_720 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 718
+		}
+	}
+	if = {
+		limit = { has_minerals_725 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 723
+		}
+	}
+	if = {
+		limit = { has_minerals_730 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 728
+		}
+	}
+	if = {
+		limit = { has_minerals_735 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 733
+		}
+	}
+	if = {
+		limit = { has_minerals_740 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 738
+		}
+	}
+	if = {
+		limit = { has_minerals_745 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 743
+		}
+	}
+	if = {
+		limit = { has_minerals_750 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 748
+		}
+	}
+	if = {
+		limit = { has_minerals_755 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 753
+		}
+	}
+	if = {
+		limit = { has_minerals_760 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 758
+		}
+	}
+	if = {
+		limit = { has_minerals_765 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 763
+		}
+	}
+	if = {
+		limit = { has_minerals_770 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 768
+		}
+	}
+	if = {
+		limit = { has_minerals_775 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 773
+		}
+	}
+	if = {
+		limit = { has_minerals_780 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 778
+		}
+	}
+	if = {
+		limit = { has_minerals_785 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 783
+		}
+	}
+	if = {
+		limit = { has_minerals_790 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 788
+		}
+	}
+	if = {
+		limit = { has_minerals_795 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 793
+		}
+	}
+	if = {
+		limit = { has_minerals_800 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 798
+		}
+	}
+	if = {
+		limit = { has_minerals_805 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 803
+		}
+	}
+	if = {
+		limit = { has_minerals_810 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 808
+		}
+	}
+	if = {
+		limit = { has_minerals_815 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 813
+		}
+	}
+	if = {
+		limit = { has_minerals_820 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 818
+		}
+	}
+	if = {
+		limit = { has_minerals_825 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 823
+		}
+	}
+	if = {
+		limit = { has_minerals_830 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 828
+		}
+	}
+	if = {
+		limit = { has_minerals_835 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 833
+		}
+	}
+	if = {
+		limit = { has_minerals_840 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 838
+		}
+	}
+	if = {
+		limit = { has_minerals_845 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 843
+		}
+	}
+	if = {
+		limit = { has_minerals_850 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 848
+		}
+	}
+	if = {
+		limit = { has_minerals_855 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 853
+		}
+	}
+	if = {
+		limit = { has_minerals_860 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 858
+		}
+	}
+	if = {
+		limit = { has_minerals_865 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 863
+		}
+	}
+	if = {
+		limit = { has_minerals_870 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 868
+		}
+	}
+	if = {
+		limit = { has_minerals_875 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 873
+		}
+	}
+	if = {
+		limit = { has_minerals_880 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 878
+		}
+	}
+	if = {
+		limit = { has_minerals_885 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 883
+		}
+	}
+	if = {
+		limit = { has_minerals_890 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 888
+		}
+	}
+	if = {
+		limit = { has_minerals_895 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 893
+		}
+	}
+	if = {
+		limit = { has_minerals_900 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 898
+		}
+	}
+	if = {
+		limit = { has_minerals_905 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 903
+		}
+	}
+	if = {
+		limit = { has_minerals_910 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 908
+		}
+	}
+	if = {
+		limit = { has_minerals_915 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 913
+		}
+	}
+	if = {
+		limit = { has_minerals_920 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 918
+		}
+	}
+	if = {
+		limit = { has_minerals_925 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 923
+		}
+	}
+	if = {
+		limit = { has_minerals_930 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 928
+		}
+	}
+	if = {
+		limit = { has_minerals_935 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 933
+		}
+	}
+	if = {
+		limit = { has_minerals_940 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 938
+		}
+	}
+	if = {
+		limit = { has_minerals_945 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 943
+		}
+	}
+	if = {
+		limit = { has_minerals_950 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 948
+		}
+	}
+	if = {
+		limit = { has_minerals_955 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 953
+		}
+	}
+	if = {
+		limit = { has_minerals_960 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 958
+		}
+	}
+	if = {
+		limit = { has_minerals_965 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 963
+		}
+	}
+	if = {
+		limit = { has_minerals_970 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 968
+		}
+	}
+	if = {
+		limit = { has_minerals_975 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 973
+		}
+	}
+	if = {
+		limit = { has_minerals_980 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 978
+		}
+	}
+	if = {
+		limit = { has_minerals_985 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 983
+		}
+	}
+	if = {
+		limit = { has_minerals_990 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 988
+		}
+	}
+	if = {
+		limit = { has_minerals_995 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 993
+		}
+	}
+	if = {
+		limit = { has_minerals_1000 = yes }
+		set_variable = {
+			which = mineralVal
+			value = 998
+		}
+	}
+	if = {
+		limit = { has_minerals_op = yes }
+		set_variable = {
+			which = mineralVal
+			value = 1001
+		}
+	}
+}

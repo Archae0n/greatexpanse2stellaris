@@ -1,0 +1,56 @@
+
+##############################################
+##############################################
+#####                                    #####
+#####    Scripted Effect for             #####
+#####    Setting Auxiliary Parameters    #####
+#####                                    #####
+##############################################
+##############################################
+#
+# Information
+#	All script in this file require following scopes
+#	this = fleet
+#	prev = owner country
+#	prevprev = location for spawning fleet
+#	
+#
+
+####################
+###  Constances  ###
+####################
+
+
+
+##############
+###  Khan  ###
+##############
+
+CmtFleetSetAuxParam_KhanCombat = {
+	set_location = {
+		target = prevprev
+		distance = 45
+		angle = random
+	}
+}
+
+CmtFleetSetAuxParam_KhanEncourager = {
+	set_formation_scale = 2
+	set_fleet_stance = aggressive
+	set_aggro_range_measure_from = self
+	set_aggro_range = 250
+	set_location = {
+		target = prevprev
+		distance = 20
+		angle = random
+	}
+}
+
+CmtFleetSetAuxParam_KhanAuxiliary = {
+	set_location = {
+		target = prevprev
+		distance = 20
+		angle = random
+	}
+}
+

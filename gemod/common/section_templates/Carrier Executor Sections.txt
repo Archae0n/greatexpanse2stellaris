@@ -1,0 +1,83 @@
+#Mid1
+ship_section_template = {
+	key = "CARRIER_EXECUTOR_MID1"
+	ship_size = executor
+	fits_on_slot = mid1
+	entity = "executor_mid1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_carrier_executor }
+		
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = strike_craft
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		slot_size = large
+		slot_type = strike_craft
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_04"
+	}
+	
+	large_utility_slots = 6
+
+	cost = 0
+}
+	
+#Mid3
+ship_section_template = {
+	key = "CARRIER_EXECUTOR_MID3"
+	ship_size = executor
+	fits_on_slot = mid3
+	entity = "executor_mid3_entity"
+	icon = "GFX_ship_part_core_mid"	
+	
+	prerequisites = { tech_carrier_executor }
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		slot_size = large
+		slot_type = strike_craft
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "large_gun_06"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		slot_size = large
+		slot_type = strike_craft
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_07"
+	}
+	
+	large_utility_slots = 1
+	aux_utility_slots = 5
+}

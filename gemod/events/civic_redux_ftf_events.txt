@@ -1,0 +1,965 @@
+namespace = credux_ftf
+
+planet_event = { #Test Subjects - Applies For Science effects.
+	id = credux_ftf.1 
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				is_robot_pop = no
+				NOT = {
+					is_same_species = owner
+				}
+			}
+			kill_pop = yes
+		}
+		owner = {
+			add_modifier = {
+				modifier = for_science
+				days = 1799
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 0.3
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 0.3
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 0.3
+			}
+		}
+	}
+}
+
+planet_event = { #Test Subjects - Give Science on Purge
+	id = credux_ftf.11 
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			has_valid_civic = civic_test_subjects
+		}
+		FROMFROM = {
+			is_robot_pop = no
+			NOT = {
+				is_same_species = owner_species
+			}
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		FROM = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 0.3
+				min = 1
+				max = 30
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 0.3
+				min = 1
+				max = 30
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 0.3
+				min = 1
+				max = 30
+			}
+		}
+	}
+}
+
+country_event = { #March Of Science - Apply a buff when you research tech.
+	id = credux_ftf.2 
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_civic = civic_march_of_progress
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_militarist
+			}
+			add_modifier = {
+				modifier = mos_militarist
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			add_modifier = {
+				modifier = mos_xenophobe
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			add_modifier = {
+				modifier = mos_egalitarian
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_materialist
+			}
+			add_modifier = {
+				modifier = mos_materialist
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_pacifist
+			}
+			add_modifier = {
+				modifier = mos_pacifist
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+			add_modifier = {
+				modifier = mos_xenophile
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			add_modifier = {
+				modifier = mos_authoritarian
+				days = 360
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_modifier = {
+				modifier = mos_spiritualist
+				days = 360
+			}
+		}
+	}
+}
+
+country_event = { #Progress Shared - Auto-unlock Epigenetic Triggers
+	id = credux_ftf.3 
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_progress_shared
+	}
+	
+	immediate = {
+		give_technology = {
+			message = no
+			tech = tech_epigenetic_triggers
+		}
+	}
+}
+
+country_event = { #Focus Of Knowledge - Select Tech Category to Boost
+	id = credux_ftf.4 
+	title = credux_ftf.4.name
+	desc = credux_ftf.4.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_physics_research
+	
+	trigger = {
+		has_valid_civic = civic_focus_of_knowledge
+	}
+	
+	option = {
+		name = credux_ftf.4.a
+		add_modifier = {
+			modifier = focus_physics
+		}
+	}
+	option = {
+		name = credux_ftf.4.b
+		add_modifier = {
+			modifier = focus_society
+		}
+	}
+	option = {
+		name = credux_ftf.4.c
+		add_modifier = {
+			modifier = focus_engineering
+		}
+	}
+}
+
+country_event = { #United Knowledge - Select Tech Category to Boost (Game Start Variant)
+	id = credux_ftf.5 
+	title = credux_ftf.5.name
+	desc = credux_ftf.5.desc
+	
+	picture = GFX_evt_society_research
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_united_knowledge
+	}
+	
+	option = {
+		name = credux_ftf.4.a
+		add_modifier = {
+			modifier = uk_physics
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_physics
+		}
+	}
+	option = {
+		name = credux_ftf.4.b
+		add_modifier = {
+			modifier = uk_society
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_society
+		}
+	}
+	option = {
+		name = credux_ftf.4.c
+		add_modifier = {
+			modifier = uk_engineering
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_engineering
+		}
+	}
+}
+
+country_event = { #United Knowledge - Select Tech Category to Boost (Monthly Pulse Variant)
+	id = credux_ftf.51 
+	title = credux_ftf.5.name
+	desc = credux_ftf.5.desc
+	
+	picture = GFX_evt_society_research
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_modifier = uk_physics
+			has_modifier = uk_society
+			has_modifier = uk_engineering
+		}
+	}
+	
+	option = {
+		name = credux_ftf.4.a
+		add_modifier = {
+			modifier = uk_physics
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_physics
+		}
+	}
+	option = {
+		name = credux_ftf.4.b
+		add_modifier = {
+			modifier = uk_society
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_society
+		}
+	}
+	option = {
+		name = credux_ftf.4.c
+		add_modifier = {
+			modifier = uk_engineering
+			days = 5399
+		}
+		add_modifier = {
+			modifier = uk_perma_engineering
+		}
+	}
+}
+
+country_event = { #Living Core - Initialisation
+	id = credux_ftf.6
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_living_core
+	}
+	
+	immediate = {
+		capital_scope = {
+			set_planet_flag = living_core_homeworld
+			create_army = {
+				name = "The Living Core"
+				owner = root
+				species = root
+				type = "living_core"
+			}
+			if = {
+				limit = {
+					any_tile = {
+						has_blocker = no
+						has_resource = society_research
+					}
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_blocker = no
+					}
+					set_building = "building_living_amplifier"
+				}
+				else = {
+					random_tile = {
+						limit = {
+							has_building = no
+							has_blocker = no
+						}
+						set_building = "building_living_amplifier"
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = { #Living Core - Rules
+	id = credux_ftf.61 
+	title = credux_ftf.61.name
+	desc = credux_ftf.61.desc
+	
+	picture = GFX_evt_unity_symbol
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_living_core
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+country_event = { #Living Core - Respawn Living Core If Manually Deleted - First Time
+	id = credux_ftf.611 
+	title = credux_ftf.611.name
+	desc = credux_ftf.611.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_unity_symbol
+	
+	trigger = {
+		NOT = {
+			has_country_flag = deleted_lcore_1
+			any_owned_army = {
+				army_type = living_core
+			}
+		}
+	}
+	
+	immediate = {
+		random_planet = {
+			limit = {
+				has_planet_flag = living_core_homeworld
+			}
+			create_army = {
+				name = "The Living Core"
+				owner = root
+				species = root
+				type = "living_core"
+			}
+		}
+		set_country_flag = deleted_lcore_1
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+country_event = { #Living Core - Respawn Living Core If Manually Deleted - Second Time
+	id = credux_ftf.612 
+	title = credux_ftf.612.name
+	desc = credux_ftf.612.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_unity_symbol
+	
+	trigger = {
+		NOT = {
+			has_country_flag = deleted_lcore_2
+			any_owned_army = {
+				army_type = living_core
+			}
+		}
+		has_country_flag = deleted_lcore_1
+	}
+	
+	immediate = {
+		random_planet = {
+			limit = {
+				has_planet_flag = living_core_homeworld
+			}
+			create_army = {
+				name = "The Living Core"
+				owner = root
+				species = root
+				type = "living_core"
+			}
+		}
+		set_country_flag = deleted_lcore_2
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+country_event = { #Living Core - Initialisation
+	id = credux_ftf.613
+	title = credux_ftf.613.name
+	desc = credux_ftf.613.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_burning_settlement
+	
+	trigger = {
+		NOT = {
+			any_owned_army = {
+				army_type = living_core
+			}
+		}
+		has_country_flag = deleted_lcore_2
+	}
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = credux_ftf.613.a
+		every_owned_planet = {
+			every_owned_pop = {
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+country_event = { #Living Core - Ancestral World is taken by force (Gatekeeper)
+	id = credux_ftf.620 
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		this = {
+			has_valid_civic = civic_living_core
+			fromfrom = {
+				has_planet_flag = living_core_homeworld
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			country_event = {
+				id = credux_ftf.622
+			}
+		}
+		this = {
+			country_event = {
+				id = credux_ftf.621
+			}
+			
+		}
+	}
+}
+
+country_event = { #Living Core - Ancestral World is taken by force (Root)
+	id = credux_ftf.621 
+	title = credux_ftf.621.name
+	desc = credux_ftf.621.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_burning_settlement
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = credux_ftf.621.a
+		every_owned_planet = {
+			every_owned_pop = {
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+country_event = { #Living Core - Ancestral World is taken by force (Attackers)
+	id = credux_ftf.622 
+	title = credux_ftf.622.name
+	desc = credux_ftf.622.desc
+	
+	is_triggered_only = yes
+	
+	picture = GFX_evt_burning_settlement
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = credux_ftf.622.a
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+	
+	option = {
+		name = credux_ftf.622.b
+		trigger = {
+			NOR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+}
+
+country_event = { #Roboticists - Add Bonus Effect If Valid (Game Start)
+	id = credux_ftf.7 
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		AND = {
+			has_valid_civic = civic_mechanists
+			has_valid_civic = civic_roboticists
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = roboticists_bonus
+		}
+	}
+}
+
+country_event = { #Roboticists - Add Bonus Effect If Valid (Monthly Pulse)
+	id = credux_ftf.71 
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_valid_civic = civic_mechanists
+		NOT = {
+			has_modifier = roboticists_bonus
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = roboticists_bonus
+		}
+	}
+}
+
+country_event = { #Roboticists - Remove Bonus Effect If Invalid (Monthly Pulse)
+	id = credux_ftf.72 
+	
+	is_triggered_only = no
+	
+	hide_window = yes
+	
+	trigger = {
+		has_modifier = roboticists_bonus
+		NOT = {
+			has_valid_civic = civic_mechanists
+		}
+	}
+	
+	immediate = {
+		remove_modifier = roboticists_bonus
+	}
+}
+
+country_event = { #Awakened Minds - Bonus Power for Technological Ascendancy
+	id = credux_ftf.81
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_technological_ascendancy
+		NOT = {
+			has_modifier = awoken_tech
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = awoken_tech
+		}
+	}
+}
+
+country_event = { #Awakened Minds - Grant a bonus based on the first Ascension Path Perk
+	id = credux_ftf.82
+	
+	hide_window = yes
+	is_triggered_only = yes 
+	
+	trigger = {
+		OR = {
+			has_ascension_perk = ap_engineered_evolution
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_mind_over_matter
+		}
+		NOT = {
+			has_country_flag = ascension_begun_awakened_minds
+		}
+	}
+	
+	immediate = {
+		set_country_flag = ascension_begun_awakened_minds
+		if = {
+			limit = {
+				has_ascension_perk = ap_engineered_evolution
+			}
+			add_modifier = {
+				modifier = awoken_genes
+			}
+		}
+		if = {
+			limit = {
+				has_ascension_perk = ap_the_flesh_is_weak
+			}
+			add_modifier = {
+				modifier = awoken_machines
+			}
+		}
+		if = {
+			limit = {
+				has_ascension_perk = ap_mind_over_matter
+			}
+			add_modifier = {
+				modifier = awoken_minds
+			}
+		}
+	}
+}
+
+country_event = { #Age Of Steel - Bonus for unlocking The Flesh Is Weak
+	id = credux_ftf.91
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_the_flesh_is_weak
+		NOT = {
+			has_country_flag = aos_weak_flesh
+		}
+	}
+	
+	immediate = {
+		set_country_flag = aos_weak_flesh
+		add_modifier = {
+			modifier = aos_roboboost
+		}
+	}
+}
+
+country_event = { #Age Of Steel - Bonus for unlocking Synthetic Evolution
+	id = credux_ftf.92
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_synthetic_evolution
+		NOT = {
+			has_country_flag = aos_synths
+		}
+	}
+	
+	immediate = {
+		set_country_flag = aos_synths
+		add_modifier = {
+			modifier = aos_roboboost_2
+		}
+		remove_modifier = aos_roboboost
+	}
+}
+
+country_event = { #The Core - Create a Machine World
+	id = credux_ftf.100
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_the_core
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			
+			change_pc = pc_machine
+						
+			while = {
+				limit = {
+					planet_size < 25
+				}
+				change_planet_size = 1
+			}
+			
+			every_tile = { #Add more resources to the planet!
+				if = { #Energy
+					limit = {
+						has_resource = energy
+						NOT = {
+							has_resource = minerals
+						}
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_energy_deposit
+						}
+						1 = {
+							set_deposit = d_vast_energy_deposit
+						}
+					}
+				}
+				if = { #Minerals
+					limit = {
+						has_resource = minerals
+						NOT = {
+							has_resource = energy
+						}
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_mineral_deposit
+						}
+						1 = {
+							set_deposit = d_vast_mineral_deposit
+						}
+					}
+				}
+				if = { #Energy + Minerals
+					limit = {
+						AND = {
+							has_resource = minerals
+							has_resource = energy
+						}
+					}
+					set_deposit = d_rich_mineral_energy_deposit
+				}
+				if = { #Food
+					limit = {
+						has_resource = food
+					}
+					clear_deposits = yes
+				}
+				if = { #Physics
+					limit = {
+						has_resource = physics_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_physics_deposit
+						}
+						1 = {
+							set_deposit = d_vast_physics_deposit
+						}
+					}
+				}
+				if = { #Society
+					limit = {
+						has_resource = society_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_society_deposit
+						}
+						1 = {
+							set_deposit = d_vast_society_deposit
+						}
+					}
+				}
+				if = { #Engineering
+					limit = {
+						has_resource = engineering_research
+					}
+					random_list = {
+						1 = {
+							set_deposit = d_rich_engineering_deposit
+						}
+						1 = {
+							set_deposit = d_vast_engineering_deposit
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_resource = food
+							has_resource = energy
+							has_resource = minerals
+							has_resource = physics_research
+							has_resource = society_research
+							has_resource = engineering_research
+						}
+					}
+					random_list = { #Add 1-3 of a resource, or none at all.
+						1 = { #Energy
+							random_list = {
+								1 = {
+									set_deposit = d_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_energy_deposit
+								}
+								1 = {
+									set_deposit = d_vast_energy_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+							}
+						}
+						1 = { #Minerals
+							random_list = {
+								1 = {
+									set_deposit = d_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_vast_mineral_deposit
+								}
+								1 = {
+									set_deposit = d_mineral_energy_deposit
+								}
+								1 = {
+									set_deposit = d_rich_mineral_energy_deposit
+								}
+							}
+						} 
+						1 = { #Physics Research
+							random_list = {
+								1 = {
+									set_deposit = d_physics_deposit
+								}
+								1 = {
+									set_deposit = d_rich_physics_deposit
+								}
+								1 = {
+									set_deposit = d_vast_physics_deposit
+								}
+							}
+						}
+						1 = { #Society Research
+							random_list = {
+								1 = {
+									set_deposit = d_society_deposit
+								}
+								1 = {
+									set_deposit = d_rich_society_deposit
+								}
+								1 = {
+									set_deposit = d_vast_society_deposit
+								}
+							}
+						}
+						1 = { #Engineering Research
+							random_list = {
+								1 = {
+									set_deposit = d_engineering_deposit
+								}
+								1 = {
+									set_deposit = d_rich_engineering_deposit
+									}
+								1 = {
+									set_deposit = d_vast_engineering_deposit
+								}
+							}
+						}
+						1 = { #Do nothing
+					
+						}
+					}
+				}
+			}
+		}
+	}
+}

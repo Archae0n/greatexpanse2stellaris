@@ -1,0 +1,511 @@
+##########################################################################
+# Better Subjects Policies
+# by Lucas Pinheiro Silva
+##########################################################################
+
+### Taxation of Subjects
+
+subjects_taxation = {
+	potential = {
+		is_overlord = yes
+	}
+	
+
+	option = {
+		name = "dont_tax_subjects"
+		policy_flags = {
+			dont_tax_subjects
+		}
+		
+		
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = { is_subject_type = "tvassal" }
+					set_subject_of = {
+						who = ROOT
+						subject_type = vassal
+					}
+					remove_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+				every_subject = {
+					limit = { is_subject_type = "tprotectorate" }
+					set_subject_of = {
+						who = ROOT
+						subject_type = protectorate
+					}
+					remove_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 3
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			modifier = {
+				factor = 2
+				has_ethic = "ethic_xenophile"
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = liberator
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tax_vassals"
+		policy_flags = {
+			tax_vassals
+		}
+		valid = {
+			NOR = {
+				has_policy_flag = subsidize_vassals
+				has_policy_flag = subsidize_all_subjects
+			}
+			any_subject = {
+				OR = {
+					is_subject_type = "vassal"
+					is_subject_type = "tvassal"
+				}
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = {
+						is_subject_type = "vassal"
+						NOT = {
+							has_relation_flag = {
+								who = ROOT
+								flag = tax_exemption
+							}
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						subject_type = tvassal
+					}
+					add_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 3
+				has_ethic = "ethic_authoritarian"
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = uplifter
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+
+	option = {
+		name = "tax_protectorates"
+		policy_flags = {
+			tax_protectorates
+		}
+		valid = {
+			NOR = {
+				has_policy_flag = subsidize_protectorates
+				has_policy_flag = subsidize_all_subjects
+			}
+			any_subject = {
+				OR = {
+					is_subject_type = "protectorate"
+					is_subject_type = "tprotectorate"
+				}
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = {
+						is_subject_type = "protectorate"
+						NOT = {
+							has_relation_flag = {
+								who = ROOT
+								flag = tax_exemption
+							}
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						subject_type = tprotectorate
+					}
+					add_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 3
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = opportunist
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tax_all_subjects"
+		policy_flags = {
+			tax_all_subjects
+		}
+		valid = {
+			has_policy_flag = no_subsidies
+			any_subject = {
+				OR = {
+					is_subject_type = "vassal"
+					is_subject_type = "tvassal"
+					is_subject_type = "protectorate"
+					is_subject_type = "tprotectorate"
+				}
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = {
+						is_subject_type = "vassal"
+						NOT = {
+							has_relation_flag = {
+								who = ROOT
+								flag = tax_exemption
+							}
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						subject_type = tvassal
+					}
+					add_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+				every_subject = {
+					limit = {
+						is_subject_type = "protectorate"
+						NOT = {
+							has_relation_flag = {
+								who = ROOT
+								flag = tax_exemption
+							}
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						subject_type = tprotectorate
+					}
+					add_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_taxes
+					}
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+			 factor = 3
+			 OR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_authoritarian"
+			 }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_authoritarian"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = slaver
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = liberator
+			}
+		}
+	}
+}
+
+### Subsidization of Subjects
+
+subjects_support = {
+	potential = {
+		is_overlord = yes
+	}
+
+	option = {
+		name = "no_subsidies"
+		policy_flags = {
+			no_subsidies
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					remove_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_subsidies
+					}
+					remove_modifier = overlord_subsidies_vassal
+				}
+				country_event = { id = better_subjects.25 }
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_militarist"
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_ethic = "ethic_fanatic_militarist"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 3
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "subsidize_vassals"
+		policy_flags = {
+			subsidize_vassals
+		}
+		valid = {
+			NOR = {
+				has_policy_flag = tax_vassals
+				has_policy_flag = tax_all_subjects
+			}
+			any_subject = {
+				is_subject_type = "vassal"
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = { is_subject_type = "protectorate" }
+					remove_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_subsidies
+					}
+					remove_modifier = overlord_subsidies_vassal
+				}
+				every_subject = {
+					limit = { is_subject_type = "vassal" }
+					add_modifier = {
+		        modifier = overlord_subsidies_vassal
+		        days = -1
+		      }
+					add_opinion_modifier = {
+		        who = ROOT
+		        modifier = opinion_subjects_subsidies
+		      }
+				}
+				country_event = { id = better_subjects.24 }
+			}
+		}
+		modifier = {
+			influence_gain_add = 3
+		}
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+
+	option = {
+		name = "subsidize_protectorates"
+		policy_flags = {
+			subsidize_protectorates
+		}
+		valid = {
+			NOR = {
+				has_policy_flag = tax_protectorates
+				has_policy_flag = tax_all_subjects
+			}
+			any_subject = {
+				is_subject_type = "protectorate"
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+				limit = { is_subject_type = "vassal" }
+					remove_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_subsidies
+					}
+					remove_modifier = overlord_subsidies_vassal
+				}
+				every_subject = {
+		      limit = { is_subject_type = "protectorate" }
+		      add_modifier = {
+		        modifier = overlord_subsidies_protectorate
+		        days = -1
+		      }
+		      add_opinion_modifier = {
+		        who = ROOT
+		        modifier = opinion_subjects_subsidies
+		      }
+		    }
+				country_event = { id = better_subjects.25 }
+			}
+		}
+		modifier = {
+			tile_resource_physics_research_mult = -0.10
+			tile_resource_society_research_mult = -0.10
+			tile_resource_engineering_research_mult = -0.10
+			influence_gain_add = 3
+		}
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = uplifter
+			}
+		}
+	}
+
+	option = {
+		name = "subsidize_all_subjects"
+		policy_flags = {
+			subsidize_all_subjects
+		}
+		valid = {
+			has_policy_flag = dont_tax_subjects
+			any_subject = {
+				is_subject_type = "vassal"
+			}
+			any_subject = {
+				is_subject_type = "protectorate"
+			}
+		}
+		on_enabled = {
+			hidden_effect = {
+				every_subject = {
+					limit = { is_subject_type = "vassal" }
+					add_modifier = {
+						modifier = overlord_subsidies_vassal
+						days = -1
+					}
+					add_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_subjects_subsidies
+					}
+				}
+				every_subject = {
+		      limit = { is_subject_type = "protectorate" }
+		      add_modifier = {
+		        modifier = overlord_subsidies_protectorate
+		        days = -1
+		      }
+		      add_opinion_modifier = {
+		        who = ROOT
+		        modifier = opinion_subjects_subsidies
+		      }
+		    }
+				country_event = { id = better_subjects.24 }
+			}
+		}
+		modifier = {
+			influence_gain_add = 6
+			tile_resource_physics_research_mult = -0.10
+			tile_resource_society_research_mult = -0.10
+			tile_resource_engineering_research_mult = -0.10
+		}
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+}

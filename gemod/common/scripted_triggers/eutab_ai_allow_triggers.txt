@@ -1,0 +1,64 @@
+eu_allowon_food = {
+	NOR = {	
+		has_resource = { type = sr_alien_pets amount > 0 }
+		has_resource = { type = minerals amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = physics_research amount > 0 }
+		has_resource = { type = society_research amount > 0 }
+		has_resource = { type = engineering_research amount > 0 }
+	}
+}
+
+eu_allowon_research = {
+	OR = {	
+		has_resource = { type = physics_research amount > 0 }
+		has_resource = { type = society_research amount > 0 }
+		has_resource = { type = engineering_research amount > 0 }
+	}
+}
+
+eu_allowon_society = {
+	NOR = {
+		has_resource = { type = sr_alien_pets amount > 0 }
+		has_resource = { type = minerals amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = physics_research amount > 0 }
+		has_resource = { type = engineering_research amount > 0 }
+	}
+}
+
+eu_allowon_phy = {
+	NOR = {
+		has_resource = { type = minerals amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = physics_research amount > 0 }
+		has_resource = { type = society_research amount > 0 }
+		has_resource = { type = engineering_research amount > 0 }
+	}
+}
+
+eu_allowon_eng = {
+	NOR = {
+		has_resource = { type = minerals amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = society_research amount > 0 }
+		has_resource = { type = physics_research amount > 0 }
+	}
+}
+
+eu_allowon_phyeng = {
+	NOR = {
+		has_resource = { type = minerals amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = society_research amount > 0 }
+	}
+}
+
+eu_allowon_socmin = {
+	NOR = {
+		has_resource = { type = sr_alien_pets amount > 0 }
+		has_resource = { type = energy amount > 0 }
+		has_resource = { type = physics_research amount > 0 }
+		has_resource = { type = engineering_research amount > 0 }
+	}
+}
