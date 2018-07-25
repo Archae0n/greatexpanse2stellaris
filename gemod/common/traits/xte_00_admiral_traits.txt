@@ -136,6 +136,9 @@ trait_robot_admiral_prudent = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_admiral_prudent.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		ship_disengage_chance_mult = 0.40
