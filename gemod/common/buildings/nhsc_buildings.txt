@@ -1,7 +1,3 @@
-############################################################
-###                Zero Point Power Plant                ###
-############################################################
-
 nhsc_building_zeropointpowerplant_1 = {
 	base_buildtime = 360
 	planet_unique = yes
@@ -36,15 +32,7 @@ nhsc_building_zeropointpowerplant_1 = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###           Improved Zero Point Power Plant            ###
-############################################################
 
 nhsc_building_zeropointpowerplant_2 = {
 	base_buildtime = 270
@@ -78,15 +66,7 @@ nhsc_building_zeropointpowerplant_2 = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###                Central Research Bureau               ###
-############################################################
 
 nhsc_building_centralresearchbureau = {
 	base_buildtime = 360
@@ -137,15 +117,7 @@ nhsc_building_centralresearchbureau = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###                Magma Mining Facility                 ###
-############################################################
 
 nhsc_building_magmaminer_1 = {
 	base_buildtime = 360
@@ -183,15 +155,7 @@ nhsc_building_magmaminer_1 = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###            Improved Magma Mining Facility            ###
-############################################################
 
 nhsc_building_magmaminer_2 = {
 	base_buildtime = 270
@@ -227,15 +191,7 @@ nhsc_building_magmaminer_2 = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###               Culture Nexus (regular)                ###
-############################################################
 
 nhsc_building_culture_nexus = {
 	base_buildtime = 360
@@ -316,15 +272,7 @@ nhsc_building_culture_nexus = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###          Culture Nexus (biological hivemind)         ###
-############################################################
 
 nhsc_building_cerebral_node = {
 	base_buildtime = 360
@@ -399,15 +347,7 @@ nhsc_building_cerebral_node = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###           Culture Nexus (machine hivemind)           ###
-############################################################
 
 nhsc_building_network_regulator = {
 	base_buildtime = 360
@@ -482,15 +422,7 @@ nhsc_building_network_regulator = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###            Advanced Materials Laboratory             ###
-############################################################
 
 nhsc_building_materials_laboratory = {
 	base_buildtime = 360
@@ -553,15 +485,7 @@ nhsc_building_materials_laboratory = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###                 Technology Institute                 ###
-############################################################
 
 nhsc_building_technology_institute = {
 	base_buildtime = 360
@@ -624,15 +548,7 @@ nhsc_building_technology_institute = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###                  Neutronium Foundry                  ###
-############################################################
 
 nhsc_building_neutronium_foundry = {
 	base_buildtime = 360
@@ -677,15 +593,7 @@ nhsc_building_neutronium_foundry = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###             Dark Matter Drawing Facility             ###
-############################################################
 
 nhsc_building_dark_matter_drawer = {
 	base_buildtime = 360
@@ -727,15 +635,7 @@ nhsc_building_dark_matter_drawer = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###                 Stellar Energy Tower                 ###
-############################################################
 
 nhsc_building_stellar_energy_tower = {
 	base_buildtime = 360
@@ -783,15 +683,7 @@ nhsc_building_stellar_energy_tower = {
 			}
 		}
 	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
-
-############################################################
-###               Quantum Computation Node               ###
-############################################################
 
 nhsc_building_quantum_node = {
 	base_buildtime = 240
@@ -830,30 +722,8 @@ nhsc_building_quantum_node = {
 
 	prerequisites = { "nhsc_tech_quantum_node" }
 
-	allow = {
-		custom_tooltip = {
-			text = "requires_building_capital_2"
-			planet = {
-				OR = {
-					### vanilla capitals
-					has_building = "building_capital_2"
-					has_building = "building_capital_3"
-					has_building = "building_machine_capital_2"
-					has_building = "building_machine_capital_3"
-					has_building = "building_hab_capital"
-				}
-			}
-		}
-	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
+	allow = { always = yes }
 }
-
-############################################################
-###                 Watcher of Eternity                  ###
-############################################################
 
 nhsc_building_watcher = {
 	base_buildtime = 540
@@ -908,52 +778,5 @@ nhsc_building_watcher = {
 				}
 			}
 		}
-	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
-}
-
-############################################################
-###                 Reprocessing Plant                   ###
-############################################################
-
-nhsc_building_reprocessing_plant = {
-	base_buildtime = 360
-	planet_unique = yes
-	icon = "nhsc_building_reprocessor"
-
-	cost = { minerals = 400 }
-
-	produced_resources = { minerals = 5 }
-
-	required_resources = { energy = 2 }
-
-	planet_modifier = { pop_consumer_goods_mult = -0.33 }
-
-	prerequisites = { "nhsc_tech_reprocessing_plant" }
-
-	potential = {
-		NOT = { has_global_flag = ESC_buildings_forbidden }
-	}
-
-	allow = {
-		custom_tooltip = {
-			text = "requires_building_capital_2"
-			planet = {
-				OR = {
-					### vanilla capitals
-					has_building = "building_capital_2"
-					has_building = "building_capital_3"
-					has_building = "building_machine_capital_2"
-					has_building = "building_machine_capital_3"
-				}
-			}
-		}
-	}
-
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
 	}
 }

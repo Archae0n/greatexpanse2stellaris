@@ -425,16 +425,13 @@ building_control_center = {
 	
 	potential = {
 		owner = {
-			OR = {
-				has_swapped_tradition = tr_synchronicity_machine_center
-				has_technology = tech_eutab_m_control_center
-			}
+			has_swapped_tradition = tr_synchronicity_machine_center
 		}
 	}
 	
 	destroy_if = {
 		exists = owner
-		owner = { NOT = { has_authority = auth_machine_intelligence } }
+		owner = { NOT = { has_swapped_tradition = tr_synchronicity_machine_center } }
 	}
 	
 	produced_resources = {
@@ -464,6 +461,6 @@ building_control_center = {
 	}
 
 	ai_weight = {
-		factor = 1000
+		factor = 10
 	}
 }

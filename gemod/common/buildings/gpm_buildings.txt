@@ -103,6 +103,10 @@ gpm_building_stronghold = {
 		weight = 1000
 		modifier = {
 			factor = 0
+			years_passed < 25
+		}
+		modifier = {
+			factor = 0
 			planet = {
 				NOR = {
 					unrest > 50
@@ -179,15 +183,12 @@ gpm_building_stronghold = {
 		}
 	}
 	ai_replace = no
-	ai_allow = {
-		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
-	}
 }
 
 # Event Buildings Fallen Empire
 
 @feupkeep = 2
-@feproduction = 5
+@feproduction = 7
 @fecost = 500
 @fetime = 730
 
@@ -278,7 +279,7 @@ gpm_building_agri_processing_complex = {
 	}
 	
 	produced_resources = {
-		food = @feproduction
+		food = 10
 	}
 	
 	required_resources = {
@@ -303,7 +304,7 @@ gpm_building_precursor_factory = {
 	}
 	
 	produced_resources = {
-		minerals = @feproduction
+		minerals = 7
 	}
 	
 	prerequisites = {
@@ -326,7 +327,7 @@ gpm_building_precursor_power_plant = {
 	}
 	
 	produced_resources = {
-		energy = @feproduction
+		energy = 6
 	}
 	
 	prerequisites = {
@@ -345,11 +346,11 @@ gpm_building_precursor_processing_complex = {
 	}
 	
 	produced_resources = {
-		food = @feproduction
+		food = 10
 	}
 	
 	required_resources = {
-		minerals = 2
+		minerals = 3
 	}
 	
 	ai_replace = no
