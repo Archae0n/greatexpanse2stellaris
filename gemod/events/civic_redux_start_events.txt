@@ -553,11 +553,11 @@ country_event = {
 			if {
 				limit = {
 					NOT = {is_planet_class = pc_habitat}
-					planet_size > 15
+					planet_size < 16
 				}
 				while = {
 					limit = {
-						planet_size > 15
+						planet_size < 16
 					}
 					change_planet_size = 1
 				}			
@@ -577,11 +577,11 @@ country_event = {
 			if {
 				limit = {
 					NOT = {is_planet_class = pc_habitat}
-					planet_size < 21
+					planet_size > 21
 				}
 				while = {
 					limit = {
-						planet_size < 21
+						planet_size > 21
 					}
 					change_planet_size = -1
 				}			
