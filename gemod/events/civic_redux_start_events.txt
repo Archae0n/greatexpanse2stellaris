@@ -540,26 +540,51 @@ country_event = {
 			
 			if = { #We want at least 16 tiles on our planet
 				limit = {
-					planet_size < 16
+					is_planet_class = pc_habitat
+					planet_size < 12
 				}
 				while = {
 					limit = {
-						planet_size < 16
+						planet_size < 12
 					}
 					change_planet_size = 1
 				}
 			}
-				
-			if = { #We want 21 tiles on the planet max, for balance
+			if {
 				limit = {
-					planet_size > 21
+					NOT = {is_planet_class = pc_habitat}
+					planet_size > 15
 				}
 				while = {
 					limit = {
-						planet_size > 21
+						planet_size > 15
+					}
+					change_planet_size = 1
+				}			
+			}
+			if = { #We want 21 tiles on the planet max, for balance
+				limit = {
+					planet_size > 12
+					is_planet_class = pc_habitat
+				}
+				while = {
+					limit = {
+						planet_size > 12
 					}
 					change_planet_size = -1
 				}
+			}
+			if {
+				limit = {
+					NOT = {is_planet_class = pc_habitat}
+					planet_size < 21
+				}
+				while = {
+					limit = {
+						planet_size < 21
+					}
+					change_planet_size = -1
+				}			
 			}
 			
 			every_tile = { #Add more resources to the planet!
