@@ -34,7 +34,7 @@ trait_gpm_high_status = {
 	modifier = {
 		country_trust_growth = 0.15
 	}	
-	opposites = { "trait_repugnant" }
+	opposites = { "trait_repugnant" "trait_charismatic" }
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_GPM_HIGH_STATUS_EFFECT
 }
