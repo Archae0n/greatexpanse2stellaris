@@ -44,9 +44,9 @@ trait_governor_grand_carnival = {
 	icon = "gfx/interface/icons/traits/leader_traits/trait_governor_grand_carnival.dds"
 
 	modifier = {
-		pop_growth_speed = 0.35
-		pop_happiness = 0.05
-		pop_resource_output = -0.15
+		pop_growth_speed = 0.75
+		pop_happiness = 0.20
+		pop_resource_output = -0.50
 		}
 		
 	leader_trait = yes
@@ -90,6 +90,9 @@ trait_robot_governor_negawatt_revolution = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_governor_negawatt_revolution.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		pop_robot_upkeep_mult = -0.10
@@ -107,6 +110,9 @@ trait_robot_governor_logistic_growth = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_governor_logistic_growth.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		pop_robot_build_speed_mult = 0.10
@@ -125,6 +131,9 @@ trait_robot_governor_post_scarcity = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_governor_post_scarcity.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		pop_consumer_goods_mult = -0.10
@@ -142,6 +151,9 @@ trait_robot_governor_power_protocols = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_governor_power_protocols.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		tile_resource_energy_mult = 0.30
@@ -158,6 +170,9 @@ trait_robot_governor_industry_protocols = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_governor_industry_protocols.dds"
+	
+	allowed_archetypes = { ROBOT MACHINE }
+	allowed_classes = { ROBOT MACHINE }
 
 	modifier = {
 		tile_resource_minerals_mult = 0.30

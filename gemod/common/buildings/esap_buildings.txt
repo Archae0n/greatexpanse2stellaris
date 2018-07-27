@@ -66,6 +66,12 @@ building_esap_adv_buildings_minerals = {
 	base_buildtime = 720
 
 	potential = {
+		owner = {
+			Or = {
+				has_ascension_perk = ap_esap_adv_buildings
+				has_ascension_perk = ap_esap_adv_buildings_machine
+			}
+		}
 		planet = {
 			NOT = { is_planet_class = pc_habitat }
 		}
@@ -116,7 +122,8 @@ building_esap_adv_buildings_minerals = {
 		energy = 4
 	}	
 	
-	prerequisites = { "tech_fe_ancient_factory" }
+	prerequisites = {
+	}
 
 	ai_weight = {
 		factor = 12
@@ -128,6 +135,12 @@ building_esap_adv_buildings_energy = {
 	base_buildtime = 720
 
 	potential = {
+		owner = {
+			Or = {
+				has_ascension_perk = ap_esap_adv_buildings
+				has_ascension_perk = ap_esap_adv_buildings_machine
+			}
+		}
 		planet = {
 			NOT = { is_planet_class = pc_habitat }
 		}
@@ -183,7 +196,8 @@ building_esap_adv_buildings_energy = {
 		}
 	}
 	
-	prerequisites = { "tech_fe_dark_matter_power_plant" }
+	prerequisites = {
+	}
 
 	ai_weight = {
 		factor = 12
@@ -195,6 +209,12 @@ building_esap_adv_buildings_food = {
 	base_buildtime = 720
 
 	potential = {
+		owner = {
+			has_ascension_perk = ap_esap_adv_buildings
+			Not = {
+				has_authority = auth_machine_intelligence			
+			}
+		}
 		planet = {
 			NOT = { is_planet_class = pc_habitat }
 		}
@@ -244,9 +264,7 @@ building_esap_adv_buildings_food = {
 	required_resources = {
 		energy = 4
 	}
-	
-	prerequisites = { "tech_fe_agri_processing_complex" }
-	
+
 	ai_weight = {
 		factor = 12
 	}

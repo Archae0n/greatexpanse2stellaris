@@ -1,3 +1,7 @@
+############################################################
+###                 Frontier Settlement                  ###
+############################################################
+
 nhsc_building_frontier_settlement = {
 	base_buildtime = 90
 	planet_unique = yes
@@ -51,7 +55,15 @@ nhsc_building_frontier_settlement = {
 			}
 		}		
 	}
+
+	ai_allow = {
+		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
+	}
 }
+
+############################################################
+###                    Frontier Farm                     ###
+############################################################
 
 nhsc_building_frontier_farm = {
 	base_buildtime = 120
@@ -107,7 +119,15 @@ nhsc_building_frontier_farm = {
 			}
 		}		
 	}
+
+	ai_allow = {
+		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
+	}
 }
+
+############################################################
+###                    Frontier Mine                     ###
+############################################################
 
 nhsc_building_frontier_mine = {
 	base_buildtime = 120
@@ -173,7 +193,15 @@ nhsc_building_frontier_mine = {
 			}
 		}		
 	}
+
+	ai_allow = {
+		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
+	}
 }
+
+############################################################
+###                Frontier Power Station                ###
+############################################################
 
 nhsc_building_frontier_power_station = {
 	base_buildtime = 120
@@ -234,6 +262,10 @@ nhsc_building_frontier_power_station = {
 				}
 			}
 		}		
+	}
+
+	ai_allow = {
+		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
 	}
 }
 

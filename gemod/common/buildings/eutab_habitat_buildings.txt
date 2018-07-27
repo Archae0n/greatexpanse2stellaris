@@ -154,9 +154,9 @@ building_eutab_hab_lab_phy = {
 	}
 	
 	produced_resources = {
-		engineering_research = 3
-		physics_research = 5
-		society_research = 3
+		engineering_research = 2
+		physics_research = 4
+		society_research = 2
 	}
 	
 	required_resources = {
@@ -189,9 +189,9 @@ building_eutab_hab_lab_eng = {
 	}
 	
 	produced_resources = {
-		engineering_research = 5
-		physics_research = 3
-		society_research = 3
+		engineering_research = 4
+		physics_research = 2
+		society_research = 2
 	}
 	
 	required_resources = {
@@ -224,9 +224,9 @@ building_eutab_hab_lab_soc = {
 	}
 	
 	produced_resources = {
-		engineering_research = 3
-		physics_research = 3
-		society_research = 5
+		engineering_research = 2
+		physics_research = 2
+		society_research = 4
 	}
 	
 	required_resources = {
