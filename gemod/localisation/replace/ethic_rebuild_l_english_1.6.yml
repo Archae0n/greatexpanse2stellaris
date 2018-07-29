@@ -709,7 +709,7 @@ building_mecha_monastery_desc:0 " "
  
 civic_elite_troops:0 "Elite Militaries"
  civic_elite_troops_desc:0 "This society has a long and extensive martial history. Soldiers, naval crews, and pilots are looked upon highly by society and are exceptionally well trained and funded. Years of rigorous combat training build upon centuries of strategic development to make this society's military personnel a cut above the rest."
-
+ 
 civic_par_monarchy:0 "Parliamentary Monarchy"
  civic_par_monarchy_desc:0 "This society is ruled by an executive monarchy that shares many of its duties and powers with an elected parliament."
  
@@ -752,7 +752,6 @@ civic_spiritual_harmony_desc:0 "This society is deeply in tune with nature and t
  
  civic_imperial_incentive:0 "Imperial Ascendency" 
  civic_imperial_incentive_desc:0 "Unlike a traditional society with a strict hierarchial structure, the Ruler(s) of this Empire give an incentive to lower classes to join the military's ground pounders. While not entirely egalitarian, this incentive offers some hope for those of low status to have a slightly better life. They are rewarded by rising up to a higher social status or gaining titles, the promise of free land and loot from conquered enemies, forgiveness for wrongdoings, or improved conditions or even freedom from slavery. This causes much of the lower class to feel they have a stake in the Empire's wars of conquest." 
- 
  
  civic_monarchy:0 "Monarchy"
  civic_monarchy_desc:0 "A monarchy is a form of government in which a group, usually a family called the dynasty, embodies the country's national identity and one of its members, called the monarch, exercises a role of sovereignty." 
@@ -975,7 +974,7 @@ allow_policy_free_market:0 "Unlocks §YUtopian Market§! economic policy."
 requires_civic_socialism:0 "$TRIGGER_FAIL$Requires the active §YSocialism§! government civic, §YFanatic Collectivist§! and §Ynon-Fanatic Authoritarian§! ethic."
 allow_policy_planned_economy:0 "Unlocks §YUtopian Welfare§! economic policy."
 requires_finish_unity:1 "$TRIGGER_FAIL$Requires to finish §YUnity§! traditions."
-allows_new_babylon:0 "Provides an opportunity (an Edict) to transform any of your Worlds (just one) into §YGalactic Wonder: New Babylon§!. The Edict is only available if the number of different species in your Empire is more than 3. The planet size will be increased up to 10 tiles (no more than 25 in total), and will be given a constant modifier, increasing §YAlien Migration Attraction§!, §YHabitability§!, §YUnity§!, §YSociety Research§! and §YEnergy§!."
+allows_new_babylon:0 "Provides an opportunity (an Edict) to transform any of your Worlds (just one) into §YGalactic Wonder: New Babylon§!. The Edict is only available if the number of different species in your Empire is more than 3. The planet size will be increased up to 10 tiles (no more than 25 in total), and will be given a constant modifier, increasing §YAlien Migration Attraction§!, §YHabitability§!, §YUnity§!, §YSociety Research§!, §YEnergy§! and potential §YUnrest§!, and reducing it's §YGovernment Ethic Attraction§!."
 allow_fanatic_purifiers:0 "Cannot engage in §YDiplomacy§! with other species! §YXeno Pops§! will always be purged. Gain §YUnity§! for purging §YXeno Pops§!. Can only use §YCede Planet§! and §YCleanse Planet§! war demands. May use §Y$GROUND_SUPPORT_STANCE_ARMAGEDDON$§! bombardment stance."
 allows_anarchy_utopia:0 "Unlocks §YEconomy Focus§! policy: §YPost-Industrial Economy§!."
 
@@ -1165,6 +1164,10 @@ NO_INDUSTRIAL_FOCUS_DESC:0 "Setting §YEconomy Focus§! policy to §YSuperior In
 STRONG_RESEARCH_FOCUS:0 "Superior Research Focus"
 NO_STRONG_RESEARCH_FOCUS:0 "Superior Research Focus"
 STRONG_RESEARCH_FOCUS_DESC:0 "Setting §YEconomy Focus§! policy to §YSuperior Research§! will please the [Root.GetName]."
+
+ECOLOGIST_GAIA_WORLDS:0 "Gaia World"
+ECOLOGIST_NO_GAIA_WORLDS:0 "Gaia World"
+ECOLOGIST_GAIA_WORLDS_DESC:0 "Having a §YGaia§! planet within our borders will please the [Root.GetName]."
 
 ECOLOGIST_GAIA_WORLDS:0 "Gaia World"
 ECOLOGIST_NO_GAIA_WORLDS:0 "Gaia World"
@@ -1416,7 +1419,6 @@ civic_philosopher_king_desc:0 "The Ruler is viewed as an enlightened protector t
  civic_religious_utopia:0 "Religious Utopia"
  civic_religious_utopia_desc:0 "This theocratic government goes far beyond mere devotion and has made literally all aspects of civilian life run by religious principles. This society is filled to the brim with expressions of their faith that it leads to a very strongly unified culture." 
  
- 
  civic_industrial_economy:0 "Distributism"
  civic_industrial_economy_desc:0 "This society believes in the idea that the common people should have the inalienable right to own the means of production for goods and services that are necessary for survival. If the common person owns the means of production, they will not be under the thumb of tyranny from either the State or wealthy corporations. Thus this society promotes the ideal of ownership of property and frowns upon centralized power and ownership of the means of production by both the State or wealthy corporations. "  
 
@@ -1492,7 +1494,9 @@ civic_federalist_desc:0 "Focuses on expansion through the peaceful development o
 triggered_opinion_federalism:0 "Federal Leaders"
  
 civic_hegemon:0 "Imperialist"
-civic_hegemon_desc:0 "Imperialist deals with it's Subjects from a position of domination and strength, obligating them with significant contributions to the Empire. Subjects can colonize and expand outside their borders. "
+civic_hegemon_desc:0 "Imperialist deals with it's Subjects from a position of domination and strength, obligating them with significant contributions to the Empire. Subjects can colonize and expand outside their borders. " 
+ 
+triggered_opinion_federalism:0 "Federal Leaders" "
 
  ethic_capitalism:0 "Individualist"
  ethic_fanatic_capitalism:0 "Fanatic Individualist"
@@ -1555,17 +1559,20 @@ civic_exalted_priesthood_desc: "The form of government in which society is ruled
 #############
  
  
- #
+
+ edict_industrial_development:0 "Industrial Infrastructure Development"
+ edict_industrial_development_desc:0 " "
+ 
+ edict_social_infrastructure:0 "Social Infrastructure Development"
+ edict_social_infrastructure_desc:0 " " 
+ 
  
  
  
  shipsize_research_station_construction_speed_mult:0 "Research Station Build Speed"
- 
+
  shipsize_science_construction_speed_mult:0 "Science Ship Build Speed" 
  
-
- 
-
  
  edict_voice_planet:0 "Voice of the Planet"
  edict_voice_planet_desc:0 "And we talked to the Planet, and She talked back to us, and She told us about her Fear, her Pain, her Grief. Now we know. And we can help."
@@ -1573,6 +1580,8 @@ civic_exalted_priesthood_desc: "The form of government in which society is ruled
 
 
  ############
+ 
+ 
  
  
  
@@ -1686,7 +1695,6 @@ XENOIST_NO_PURITY_DESC:0 "Adoption of §YPurity§! traditions displeases the [Ro
  
 allow_edict_doctrine_loyalty:0 "Unlocks country edict §YDoctrine: Thought Control§!: increase §YGovernment Ethic Attraction§!, §YArmy Morale§!, reduce potential §YUnrest§!." 
 
- 
 gov_timocracy:0 "Timocracy"
 gov_timocracy_desc:0 "This government is a form of "People's Aristocracy" - an elitist form of Republic, which has shut down most of the rights of a wider part of its population to restrain the citizenry and statuses to chosen ones."
 
@@ -1774,6 +1782,8 @@ RT_DICTATOR:0 "Dictator"
 RT_PRESIDENT:0 "President"
 RT_OPTIMATE:0 "Optimate"
 RT_HIGH_PROTECTOR:0 "High Protector"
+
+tr_domination_finish_effect:0 " "
 
 country_subjects_resource_unity_mult:0 "£unity Unity per Subject"
 country_subjects_resource_unity_max_mult:0 "£unity Unity per Subject max effect"
