@@ -8,7 +8,7 @@ habitat_cbshing_origins_voidborne = {
 	entity_offset = { x = -7 y = -7 }
 	build_time = 720
 	build_cost = {
-		minerals = 3000
+		minerals = 1750
 		#influence = 50
 	}
 	construction_blocks_others = no
