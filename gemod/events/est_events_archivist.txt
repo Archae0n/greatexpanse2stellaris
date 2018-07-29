@@ -386,21 +386,21 @@ country_event = {
 		}
 		Not = {
 			has_country_flag = flag_est_got_recent_librarian
-			has_country_flag = flag_est_made_recent_librarian_roll
+#			has_country_flag = flag_est_made_recent_librarian_roll
 		}
 	}
 
 	immediate = {
-		set_timed_country_flag = {
-			flag = flag_est_made_recent_librarian_roll
-			days = 7
-		}	
+#		set_timed_country_flag = {
+#			flag = flag_est_made_recent_librarian_roll
+#			days = 7
+#		}	
 		random_list = {
 			3 = {}
 			1 = {
 				set_timed_country_flag = {
 					flag = flag_est_got_recent_librarian
-					days = 90
+					days = 30
 				}	
 				from = {
 					random_list = {
@@ -466,21 +466,21 @@ country_event = {
 		}
 		Not = {
 			has_country_flag = flag_est_got_recent_keeper
-			has_country_flag = flag_est_made_recent_keeper_roll
+#			has_country_flag = flag_est_made_recent_keeper_roll
 		}
 	}
 
 	immediate = {
-		set_timed_country_flag = {
-			flag = flag_est_made_recent_keeper_roll
-			days = 7
+#		set_timed_country_flag = {
+#			flag = flag_est_made_recent_keeper_roll
+#			days = 7
 		}	
 		random_list = {
 			3 = {}
 			1 = {
 				set_timed_country_flag = {
 					flag = flag_est_got_recent_keeper
-					days = 90
+					days = 30
 				}	
 				from = {
 					random_list = {
