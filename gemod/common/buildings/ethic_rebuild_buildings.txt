@@ -36,8 +36,247 @@
 
 @natural_equilibrium_happiness = 0.02
 
+building_mecha_monastery = {
+	tags = { planet_unique_building }
+	
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 260
+	}
+	
+	produced_resources = {
+		unity = 2
+		engineering_research = 3
+	}
+	
+	planet_modifier = {
+		pop_robot_production_output = 0.05	
+		tile_resource_engineering_research_mult = 0.15
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	
+	potential = { 	
+		owner = {
+			OR = {
+				has_valid_civic = civic_machine_cult	
+			}
+		}
+	}
+
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	
+
+	ai_weight = {
+		factor = 10
+	}
+	
+
+}
+
 
 #NEW BUILDINGS
+
+building_biofuel_plant = {
+	tags = { planet_unique_building }
+
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+
+	produced_resources = {
+        food = 2
+     	energy = 4
+        society_research = 2
+	}
+
+
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_society_research_add = 1
+	}	
+	
+	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
+		owner = {
+			has_tradition = tr_harmony_finish
+		}
+	}	
+
+	
+	allow = {
+	
+	custom_tooltip = {
+			text = "requirement_farmland"	
+            tile = {
+               has_resource = {
+                 type = food
+              amount > 1
+          }
+        }	
+			
+			
+
+		}			
+	
+		
+	
+
+	}
+	
+	ai_replace = no
+	ai_special_building = yes
+}
+
+
+
+
+#Bio-materials
+building_biomaterials_plant = {
+	tags = { planet_unique_building }
+	
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 1
+	}	
+
+	produced_resources = {
+        food = 2
+     	minerals = 5
+        society_research = 2
+	}
+
+
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+		tile_building_resource_society_research_add = 1
+	}	
+	
+	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
+		owner = {
+			has_tradition = tr_harmony_finish
+		}
+	}	
+
+	
+	allow = {
+	
+	custom_tooltip = {
+			text = "requirement_farmland"	
+            tile = {
+               has_resource = {
+                 type = food
+              amount > 1
+          }
+        }	
+		}			
+            
+	
+
+		
+	
+
+	}
+	
+	ai_replace = no
+	ai_special_building = yes
+}
+
+
+
+
+
+
+building_thermal_borehole = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 400
+		energy = 50
+	}
+	
+	produced_resources = {
+                engineering_research = 3
+	            energy = 6
+		        minerals = 7
+
+	}
+
+	
+	adjacency_bonus = {
+		tile_building_resource_engineering_research_add = 1
+	}	
+
+	planet_modifier = {
+                pop_environment_tolerance = -0.03
+				tile_resource_minerals_mult = 0.05
+	}
+	
+
+	potential = {
+		owner = {
+			has_tradition = tr_prosperity_finish
+		}
+	}
+
+	prerequisites = {
+		"tech_mining_network_3"
+	}	
+	
+	allow = {
+	
+		custom_tooltip = {
+			text = "requirement_energy"
+            tile = {
+			  OR = {
+               has_resource = {
+               type = energy
+               amount > 1
+               }			   
+			  } 
+            }	
+		}	
+		
+
+	}
+	
+	ai_replace = no
+}
+
+
 
 
 ########################
@@ -50,8 +289,11 @@
 
 
 building_global_pds_1 = {
+	tags = { military_building }
+
 	base_buildtime = 500
 	planet_unique = yes
+	immune_to_bombardment = yes
 	
 	cost = { 
 		minerals = 500
@@ -60,6 +302,10 @@ building_global_pds_1 = {
 	required_resources = {
 		energy = 5
 		minerals = 4
+	}
+	
+	produced_resources = {
+		unity = 1
 	}
 	
 	planet_modifier = {
@@ -79,10 +325,12 @@ building_global_pds_1 = {
 	
 
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		planet = {
 		exists = owner
 			owner = {
-				has_tradition = "tr_purity_never_surrender"
+				has_tradition = tr_purity_never_surrender
 			}
 			NOT = { is_planet_class = pc_habitat }	
 		}
@@ -109,7 +357,7 @@ building_global_pds_1 = {
 			}				
 		}
 		fromfrom = {
-			has_tradition = "tr_purity_never_surrender"
+			has_tradition = tr_purity_never_surrender
 		}
 	}
 	
@@ -120,6 +368,8 @@ building_global_pds_1 = {
 
 
 building_research_coordination  = {
+	tags = { research_resource_building }
+	
 	base_buildtime = 660
 	planet_unique = yes
 		
@@ -128,11 +378,18 @@ building_research_coordination  = {
 	}
 	
 	required_resources = {
-		energy = 10
+		energy = 2
 	}
 	
+	produced_resources = {
+		physics_research = 2
+		society_research = 2
+		engineering_research = 2
+	}
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		owner = {
 			has_tradition = tr_discovery_science_division
 		}
@@ -180,6 +437,8 @@ building_research_coordination  = {
 
 
 building_deep_space_scanner = {
+	tags = { research_resource_building }
+
 	base_buildtime = 560
 	planet_unique = yes
 		
@@ -219,8 +478,13 @@ building_deep_space_scanner = {
 	}
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		owner = {
-			has_valid_civic = civic_exploration
+			OR = {
+				has_valid_civic = civic_exploration
+				has_valid_civic = civic_hive_explorer
+			}
 		}
 	}	
 		
@@ -230,6 +494,8 @@ building_deep_space_scanner = {
 
 
 building_food_bazaar = {
+	tags = { planet_unique_building }
+
 	base_buildtime = 350
 	planet_unique = yes
 		
@@ -237,9 +503,15 @@ building_food_bazaar = {
 		minerals = 250
 	}
 	
-	
+	produced_resources = {
+		food = 3
+		energy = 1
+		unity = 1
+	}
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		owner = {
 			has_tradition = tr_harmony_finish
 		}
@@ -287,15 +559,19 @@ building_food_bazaar = {
 
 building_soil_enrich = {
 	base_buildtime = 150
+	planet_unique = yes
 		
 	cost = {
-		minerals = 100
+		minerals = 260
 	}
 	
 	required_resources = {
 		energy = 1
 	}
 	
+	produced_resources = {
+		food = 4
+	}
 	
 	potential = {
 		owner = {
@@ -319,6 +595,7 @@ building_soil_enrich = {
 
 #Colliseum
 building_colliseum = {
+	tags = { unity_resource_building }
 
 	base_buildtime = 365
 	planet_unique = yes
@@ -328,9 +605,14 @@ building_colliseum = {
 	}
 	
 	required_resources = {
-		minerals = 3
-		food = 3
+		minerals = 2
+		food = 2
 	}	
+	
+	produced_resources = {
+		unity = 4
+		energy = 3
+	}
 	
 	army_modifier = {
 				 army_damage_mult = 0.15
@@ -391,7 +673,10 @@ building_colliseum = {
 #Resort
 
 building_resort = {
+	tags = { unity_resource_building }
+	
 	base_buildtime = 250
+	
 	
 	cost = {
 		minerals = 250
@@ -400,6 +685,8 @@ building_resort = {
 
 	
 	produced_resources = {
+		unity = 2
+		energy = 2
 	}
 	
 	planet_modifier = {
@@ -409,7 +696,8 @@ building_resort = {
 	}
 	
 	potential = {
-		
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		planet = {
 		exists = owner
 			owner = {
@@ -459,6 +747,8 @@ building_resort = {
 
 # Royal Library
 building_royal_library = {
+	tags = { unity_resource_building }
+
 	base_buildtime = 500
 	built_for_ruler = yes
 	planet_unique = yes
@@ -479,10 +769,15 @@ building_royal_library = {
 
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		planet = {
 		exists = owner
 			owner = {
-				has_valid_civic = civic_philosopher_king
+				OR = {
+					has_valid_civic = civic_par_monarchy
+					has_valid_civic = civic_philosopher_king
+				}
 			}
 		}
 	}
@@ -518,6 +813,8 @@ building_royal_library = {
 
 # 
 building_collosal_monument = {
+	tags = { planet_unique_building }
+
 	base_buildtime = 500
 	built_for_ruler = yes
 	planet_unique = yes
@@ -527,6 +824,9 @@ building_collosal_monument = {
 		influence = 50 
 	}
 		
+	produced_resources = {
+		unity = 3
+	}
 	
 	planet_modifier = {
 		        pop_citizen_happiness = 0.05
@@ -538,6 +838,8 @@ building_collosal_monument = {
 	}
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		planet = {
 		exists = owner
 			owner = {
@@ -582,6 +884,8 @@ building_collosal_monument = {
 
 
 building_comm_hub = {
+	tags = { military_building }
+	
 	base_buildtime = 780
 	empire_unique = yes
 	
@@ -591,7 +895,7 @@ building_comm_hub = {
 	}
 	
 	required_resources = {
-		energy = 10
+		energy = 7
 	}
 	
 	country_modifier = {
@@ -620,6 +924,8 @@ building_comm_hub = {
 	}
 	
 	potential = {
+		planet_is_not_virtual = yes
+		planet_is_habitat = no
 		planet = {
 		exists = owner
 			owner = {
