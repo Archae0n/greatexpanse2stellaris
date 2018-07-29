@@ -1,0 +1,197 @@
+### Arch's Ringworld
+
+@base_moon_distance = 10
+
+arch_system_system_initializer = {
+	class = "sc_binary_11"
+	
+	usage = custom_empire
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 90
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 180
+	}
+
+	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 30 max = 35 }
+		has_ring = no
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_energy_deposit
+			}
+		}
+    }
+
+	change_orbit = 260
+
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = 0
+      	orbit_angle = { min = 90 max = 270 }
+        size = { min = 20 max = 30 }
+        has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+		#flags = { starting_mining_target }
+		flags = { starting_deposit }
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_energy_deposit
+			}
+		}
+    }
+
+	change_orbit = -260
+
+	change_orbit = 40
+
+	planet = {
+		class = ideal_planet_class
+		home_planet = yes
+		orbit_angle = -30
+		orbit_distance = 0
+		size = { min = 16 max = 20 }
+		tile_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+			}
+		init_effect = {
+			generate_start_buildings_and_blockers = yes			
+		}
+	}
+
+	## 2 Mining Asteroids
+
+	change_orbit = 50
+
+	planet = {
+		class = pc_asteroid
+		orbit_angle = { min = 90 max = 120}
+		orbit_distance = 0
+		size = { min = 4 max = 7 }
+		tile_blockers = none
+		modifiers = none
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+	planet = {
+		class = pc_asteroid
+		orbit_angle = { min = 90 max = 120}
+		orbit_distance = 0
+		size = { min = 4 max = 7 }
+		tile_blockers = none
+		modifiers = none
+		#flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+
+	## 2 Research Asteroids
+
+	change_orbit = 90
+
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = { min = 90 max = 120}
+		orbit_distance = 0
+		size = { min = 4 max = 7 }
+		tile_blockers = none
+		modifiers = none
+		#flags = { starting_research_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				random_List = {
+					33 = {add_deposit = d_rich_engineering_deposit}
+					33 = {add_deposit = d_rich_physics_deposit}
+					33 = {add_deposit = d_rich_society_deposit}
+				}
+			}
+		}
+	}
+	planet = {
+		class = pc_ice_asteroid
+		orbit_angle = { min = 90 max = 120}
+		orbit_distance = 0
+		size = { min = 4 max = 7 }
+		tile_blockers = none
+		modifiers = none
+		flags = { starting_research_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				random_List = {
+					33 = {add_deposit = d_rich_engineering_deposit}
+					33 = {add_deposit = d_rich_physics_deposit}
+					33 = {add_deposit = d_rich_society_deposit}
+				}
+			}
+		}
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

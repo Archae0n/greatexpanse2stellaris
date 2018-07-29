@@ -1,0 +1,10 @@
+### Chain for the Switch between Engi and Phys Research
+
+alpha_gate_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_drifting_gateway
+}
+alpha_nexus_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_drifting_gateway
+}

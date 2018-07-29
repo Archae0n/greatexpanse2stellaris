@@ -1,0 +1,11 @@
+tb_stercus_ruins = {
+	picture = tb_city_ruins
+	cost = {
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}

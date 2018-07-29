@@ -1,0 +1,24 @@
+tech_alpha_gate = {
+	area = engineering
+	cost = 2000
+	tier = 2
+	is_rare = yes
+	category = { voidcraft }
+	levels = -1
+	weight = 70
+
+	potential = {
+		has_country_flag = owns_alpha_cluster
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+
+	weight_groups = {
+		#repeatable
+	}
+	mod_weight_if_group_picked = {
+		#repeatable = 0
+	}
+}

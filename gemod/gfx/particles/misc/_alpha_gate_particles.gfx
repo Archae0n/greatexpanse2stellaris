@@ -1,0 +1,8 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "alpha_gate_portal_effect"
+		type = "alpha_gate_portal_effect"
+		scale = 1.0
+	}		
+}

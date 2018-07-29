@@ -1,0 +1,973 @@
+### Antus - Molten  - Planet Cyphus Cthonian Modifier- Minerals
+alpha_cluster_antus = {
+    class = "sc_m_giant"
+
+    name = "Antus System"
+
+    asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+    asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 180
+	}
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+
+    }
+
+    flags = { alpha_cluster_antus }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 30 max = 40 }
+		has_ring = no
+	}
+
+    change_orbit = 60
+
+    planet = {
+        class = pc_molten_blue
+        name = "Cyphus"
+        size = { min = 16 max = 22 }
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        tile_blockers = none
+        #modifiers = pm_chthonian
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_vast_mineral_deposit
+            }
+        }
+    }
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_vast_mineral_deposit
+            }
+        }
+    }
+    change_orbit = 0
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_vast_mineral_deposit
+            }
+        }
+    }
+    change_orbit = 80
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_vast_mineral_deposit
+            }
+        }
+    }
+    change_orbit = 0
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_vast_mineral_deposit
+            }
+        }
+    }
+}
+### Belen - Shrouded Planet Alaxel - Black Hole - Void Spawn - Society
+alpha_cluster_belen = {
+    class = "sc_black_hole"
+
+    name = "Belen System"
+
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 120
+	}
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 160
+	}
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 200
+	}
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+		create_cloud_country = yes
+		random_system_planet = {
+			limit = { is_star = yes }
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_rich_energy_deposit
+			}
+			event_target:cloud_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = cloud_power
+						}
+					}
+					add_modifier = {
+						modifier = cloud_power
+						days = -1
+					}
+				}
+				set_aggro_range = 500
+				create_fleet = {
+					name = "NAME_Void_Cloud"
+					effect = {
+						set_owner = event_target:cloud_country
+						create_ship = {
+							name = ""
+							design = "NAME_Cloud_Entity"
+						}
+						set_location = PREVPREV
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+					}
+				}
+			}
+		}		
+	}
+
+    flags = { alpha_cluster_belen }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+    change_orbit = 80
+
+    planet = {
+        class = pc_shrouded
+        name = "Alaxel"
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        size = { min = 16 max = 22}
+
+        tile_blockers = none
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_society_deposit
+            }
+        }
+    }
+}
+## Emlen - Machine - Planet Stercus - Physics System
+alpha_cluster_emlen = {
+    class = "sc_neutron_star"
+
+    name = "Emlen System"
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+
+    }
+
+    flags = { alpha_cluster_emlen }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+    change_orbit = 60
+
+    planet = {
+        class = pc_machine
+        name = "Stercus"
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        size = { min = 16 max = 22}
+
+        tile_blockers = none
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes
+                add_deposit = d_enormous2_physics_deposit
+            }
+            every_tile = {
+                set_blocker = "tb_stercus_ruins"
+            }
+        }
+    }
+}
+### Murella & Murilla - Planet Usnea und Alenta - Toxic / Infested - Binary Star - Energy System
+alpha_cluster_m_m = {
+    class = "sc_alpha_binary_0"
+
+    name = "Murella and Murilla System"
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+
+    }
+
+    flags = { alpha_cluster_m_m }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+
+        init_effect = {
+                prevent_anomaly = yes
+            }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+                add_deposit = d_enormous2_energy_deposit
+            }
+        }
+        
+        moon = {
+            class = pc_toxic
+            name = "Usnea"
+            orbit_angle = { min = 90 max = 270 }
+            orbit_distance = 50
+            size = 16
+
+            tile_blockers = none
+            modifiers = none
+
+            init_effect = {
+                prevent_anomaly = yes
+            }
+            init_effect = {
+                orbital_deposit_tile = {
+                    clear_deposits = yes 
+                    add_deposit = d_vast_energy_deposit
+                }
+            }
+        }
+	}
+
+    change_orbit = 240
+
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+
+        init_effect = {
+                prevent_anomaly = yes
+            }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+                add_deposit = d_enormous2_energy_deposit
+            }
+        }
+
+        moon = {
+            class = pc_infested
+            name = "Alenta"
+            orbit_angle = { min = 90 max = 270 }
+            orbit_distance = 50
+            size = 16
+
+            tile_blockers = none
+            modifiers = none
+
+            init_effect = {
+                prevent_anomaly = yes
+            }
+            init_effect = {
+                orbital_deposit_tile = {
+                    clear_deposits = yes 
+                    add_deposit = d_vast_energy_deposit
+                }
+            }
+        }
+	}
+}
+### Myr Tariniel - Shattered - Planet Selitos - Minerals - Add Crystaline Entities
+alpha_cluster_myr = {
+    class = "sc_f"
+
+    name = "Myr Tariniel System"
+
+    asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 40
+	}
+    asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 80
+	}
+    asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 120
+	}
+    asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 160
+	}
+    asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 200
+	}
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+		create_crystal_country = yes
+		random_system_planet = {
+			limit = { is_star = no }
+			event_target:crystal_country = {
+				create_fleet = {
+					name = "NAME_Sapphire_Lurkers"
+					effect = {
+						set_owner = event_target:crystal_country
+						while = {
+							count = 7
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Crystal_Entity_Blue"
+							}
+						}
+						while = {
+							count = 9
+							create_ship = {
+								name = ""
+								design = "NAME_Medium_Crystal_Entity_Blue"
+							}
+						}
+						while = {
+							count = 20
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Crystal_Entity_Blue"
+							}
+						}
+						set_location = PREVPREV
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 150
+					}
+				}
+			}
+		}
+	}
+
+    flags = { alpha_cluster_myr }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_mineral_deposit
+            }
+        }
+    }
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_mineral_deposit
+            }
+        }
+    }
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_shattered
+        name = "Selitos"
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        size = { min = 16 max = 22}
+
+        tile_blockers = none
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_mineral_deposit
+            }
+        }
+    }
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_mineral_deposit
+            }
+        }
+    }
+
+    change_orbit = 40
+
+    planet = {
+        class = pc_asteroid
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous2_mineral_deposit
+            }
+        }
+    }
+}
+### Vaeret - Frozen - Planet Ferule  - Engineering
+alpha_cluster_vaeret = {
+    class = "sc_pulsar"
+
+    name = "Vaeret System"
+
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 60
+	}
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 80
+	}
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 160
+	}
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 200
+	}
+
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+		create_amoeba_country = yes
+		random_system_planet = {
+			limit = { is_star = no }
+			event_target:amoeba_country = {
+				create_fleet = {
+					name = "NAME_Space_Amoeba"
+					settings = {
+						garrison = yes
+					}
+					effect = {
+						set_owner = event_target:amoeba_country
+						while = {
+							count = 4
+							create_ship = {
+								name = ""
+								design = "NAME_Small_Space_Organism_Teal"
+							}
+						}
+						while = {
+							count = 1
+							create_ship = {
+								name = ""
+								design = "NAME_Large_Space_Organism_Teal"
+							}
+						}
+						set_location = PREVPREV
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 100
+					}
+				}
+			}
+		}
+	}
+
+    flags = { alpha_cluster_vaeret }
+    flags = { alpha_cluster }
+    flags = { empire_cluster }
+
+    ### Star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+    change_orbit = 120
+
+    planet = {
+        class = pc_frozen
+        name = "Ferule"
+        orbit_angle = { min = 90 max = 270 }
+        orbit_distance = 0
+        size = { min = 16 max = 22}
+
+        tile_blockers = none
+        modifiers = none
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            orbital_deposit_tile = {
+                clear_deposits = yes 
+				add_deposit = d_enormous3_engineering_deposit
+            }
+        }
+    }
+}
+### Tinusa - Ideal Planet Class - Planet Tinue - Home System
+alpha_cluster_tinusa = {
+    class = "sc_t"
+
+    name = "Faeriniel System"
+
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 80
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 90
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 100
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 110
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 120
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 130
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 140
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 150
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 160
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 170
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 180
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 190
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 200
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 210
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 220
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 230
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 240
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 260
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 270
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 280
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 290
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 310
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 320
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 330
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 340
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 360
+	}
+
+    usage = custom_empire
+    usage_odds = 0
+    max_instances = 1
+    
+    init_effect = {
+        spawn_megastructure = {
+			type = alpha_gate
+			orbit_angle = 180
+			orbit_distance = 70
+			location = solar_system
+		}
+    }
+
+    flags = { alpha_cluster_tinusa }
+	flags = { alpha_cluster_nexus }
+	flags = { alpha_cluster }	
+    flags = { empire_home_system }
+
+    ### Star
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        size = { min = 12 max = 18 }
+		has_ring = no
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				set_deposit = d_vast_energy_deposit
+			}
+		}
+	}
+
+    # Orbit 50
+	change_orbit = 50
+
+	planet = {
+		class = ideal_planet_class
+        name = "Tinue"
+		home_planet = yes
+		tile_blockers = none
+		modifiers = none
+		size = 22
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+		has_ring = yes
+
+		flags = { planet_tinusa }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			generate_start_buildings_and_blockers = yes			
+		}
+		
+		change_orbit = 10
+
+		moon = {
+			name = "Auri"
+			class = pc_broken
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					set_deposit = d_vast_energy_deposit
+				}
+			}
+		}
+	}
+
+	# Orbit 140 to 170
+	planet = {
+		class = pc_ice_asteroid
+		name = "Fela"
+		orbit_angle = { min = 90 max = 120}
+		orbit_distance = { min = 90 max = 120}
+		size = { min = 3 max = 5 }
+		tile_blockers = none
+		modifiers = none
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				set_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+
+	# Orbit 140 to 170
+	planet = {
+		class = pc_ice_asteroid
+		name = "Wilem"
+		orbit_angle = { min = 50 max = 70 }
+		orbit_distance = { min = 50 max = 70 }
+		size = { min = 3 max = 5 }
+		tile_blockers = none
+		modifiers = none
+		flags = { starting_research_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				random_List = {
+					33 = {set_deposit = d_rich_engineering_deposit}
+					33 = {set_deposit = d_rich_physics_deposit}
+					33 = {set_deposit = d_rich_society_deposit}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_ice_asteroid
+		name = "Simmon"
+		orbit_angle = { min = 50 max = 70 }
+		orbit_distance = { min = 50 max = 70 }
+		size = { min = 3 max = 5 }
+		tile_blockers = none
+		modifiers = none
+		#flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				set_deposit = d_vast_mineral_deposit
+			}
+		}
+	}
+
+	planet = {
+		class = pc_ice_asteroid
+		name = "Manet"
+		orbit_angle = { min = 50 max = 70 }
+		orbit_distance = { min = 50 max = 70 }
+		size = { min = 3 max = 5 }
+		tile_blockers = none
+		modifiers = none
+		#flags = { starting_research_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				random_List = {
+					33 = {set_deposit = d_rich_engineering_deposit}
+					33 = {set_deposit = d_rich_physics_deposit}
+					33 = {set_deposit = d_rich_society_deposit}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1011 @@
+### Alpha Gate Events
+
+### Set Namespace alpha_gate
+
+namespace = alpha_gate
+
+### First Event: spawning 6 Alpha-Gates in the Galaxy
+
+event = {
+    id = alpha_gate.1
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    immediate = {
+        random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+		}
+		random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+		}
+		random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+		}
+		random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+		}
+		random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+		}
+		random_system = {
+            limit = { 
+                NOR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = empire_cluster
+                    has_star_flag = fe_cluster
+					has_star_flag = lgate
+					has_star_flag = alpha_gateway_system
+                }
+            }
+			spawn_megastructure = {
+				type = alpha_gate
+				orbit_angle = 225
+				orbit_distance = 30
+				location = solar_system
+			}
+        set_star_flag = alpha_gateway_system
+        }
+    }
+}
+
+### Second Event: spawn Alpha-Cluster in the Rim
+
+event = {
+	id = alpha_gate.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		set_spawn_system_batch = begin
+		# batch-processes the spawn_system effects between "begin" and "end",
+		# so caches are recalculated only once rather than for every system spawned
+		# can also be used when removing and adding hyperlanes
+		no_scope = {
+			# makes system positions originate from galactic core
+			spawn_system = {
+				min_distance >= 555
+				max_distance <= 555
+				min_orientation_angle = 45
+				max_orientation_angle = 45
+				initializer = alpha_cluster_tinusa
+			}
+            spawn_system = {
+				min_distance >= 565
+				max_distance <= 565
+				min_orientation_angle = 45
+				max_orientation_angle = 45
+				initializer = alpha_cluster_antus
+			}
+            spawn_system = {
+				min_distance >= 560
+				max_distance <= 560
+				min_orientation_angle = 46
+				max_orientation_angle = 46
+				initializer = alpha_cluster_belen
+			}
+            spawn_system = {
+				min_distance >= 550
+				max_distance <= 550
+				min_orientation_angle = 46
+				max_orientation_angle = 46
+				initializer = alpha_cluster_emlen
+			}
+            spawn_system = {
+				min_distance >= 545
+				max_distance <= 545
+				min_orientation_angle = 45
+				max_orientation_angle = 45
+				initializer = alpha_cluster_m_m
+			}
+            spawn_system = {
+				min_distance >= 550
+				max_distance <= 550
+				min_orientation_angle = 44
+				max_orientation_angle = 44
+				initializer = alpha_cluster_myr
+			}
+            spawn_system = {
+				min_distance >= 560
+				max_distance <= 560
+				min_orientation_angle = 44
+				max_orientation_angle = 44
+				initializer = alpha_cluster_vaeret
+			}
+		}
+		
+		random_system = {
+			limit = { has_star_flag = alpha_cluster_antus }
+			save_global_event_target_as = alpha_cluster_antus
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_belen }
+			save_global_event_target_as = alpha_cluster_belen
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_emlen }
+			save_global_event_target_as = alpha_cluster_emlen
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_m_m }
+			save_global_event_target_as = alpha_cluster_m_m
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_myr }
+			save_global_event_target_as = alpha_cluster_myr
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_vaeret }
+			save_global_event_target_as = alpha_cluster_vaeret
+		}
+        random_system = {
+			limit = { has_star_flag = alpha_cluster_tinusa }
+			save_global_event_target_as = alpha_cluster_tinusa
+		}
+	
+		# clear all hyperlanes to and within the cluster
+		every_system = {
+			limit = { has_star_flag = alpha_cluster }
+			isolate_system = yes
+		}
+	
+		# add hyperlanes
+		event_target:alpha_cluster_antus = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_antus
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+		event_target:alpha_cluster_belen = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_belen
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+        event_target:alpha_cluster_emlen = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_emlen
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+        event_target:alpha_cluster_m_m = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_m_m
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+        event_target:alpha_cluster_myr = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_myr
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+        event_target:alpha_cluster_vaeret = {
+			add_hyperlane = {
+				from = event_target:alpha_cluster_vaeret
+				to = event_target:alpha_cluster_tinusa
+			}
+		}
+		set_spawn_system_batch = end
+	}
+}
+
+### Third Event: Encountering First Alpha Gate, comes from on_entering_system
+
+ship_event = {
+	id = alpha_gate.3
+	title = "alpha_gate.3.name"
+
+    trigger = {
+		owner = {
+			NOR = { 
+                has_country_flag = encountered_first_alpha_gateway
+                has_event_chain = "alpha_cluster_chain"
+            }
+		}
+		FROM = {
+			has_star_flag = alpha_gateway_system
+			any_system_megastructure = { is_megastructure_type = alpha_gate }
+		}
+	}
+
+    ### Description for having seen a L-Gate, but not a Gateway
+
+	desc = {
+		text = alpha_gate.3.desc
+		trigger = {
+            owner = { has_country_flag = encountered_first_lgate }
+			NOT = { 
+				owner = { has_country_flag = encountered_first_gateway }
+			}
+		}
+	}
+
+    ### Description for having seen a gateway, but not a L-Gate
+
+	desc = {
+		text = alpha_gate.3.b.desc
+		trigger = {
+            owner = { has_country_flag = encountered_first_gateway }
+			NOT = { 
+				owner = { has_country_flag = encountered_first_lgate }
+			}
+		}
+	}
+
+    ### Description for having seen neither a gateway nor a L-Gate
+
+    desc = {
+		text = alpha_gate.3.c.desc
+		trigger = {
+            NOR = {
+			    owner = { has_country_flag = encountered_first_lgate }
+                owner = { has_country_flag = encountered_first_gateway }
+            }
+        }
+	}
+
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = { save_event_target_as = alpha_gateway_system }
+		owner = {
+			set_country_flag = encountered_first_alpha_gateway
+			add_seen_bypass_type = alpha_gate
+		}
+	}	
+	
+	option = {
+		name = INTRIGUING
+	}
+}
+
+### Fourth Event: Comes from on on_building_starbase_outpost
+
+ship_event = {
+	id = alpha_gate.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = { exists = owner }
+			owner = { 
+				country_event = { id = alpha_gate.99 days = 5}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = alpha_gate.99
+	title = "alpha_gate.99.name"
+
+    trigger = {
+		owner = {
+            has_country_flag = encountered_first_alpha_gateway
+			NOT = {
+                has_country_flag = "completed_alpha_chain"
+            }
+		}
+	}
+
+    ### Description
+
+	desc = alpha_gate.99.b.desc
+
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_system_within_border = {
+			limit = { has_star_flag = alpha_gateway_system }
+			log = "Was_here_to_check"
+			random_system_megastructure = {
+				limit = { is_megastructure_type = alpha_gate }
+				save_event_target_as = temp
+				log = "saved_event_target"
+			}
+		}
+		if = {
+            limit = { exists = event_target:temp }
+            enable_special_project = {
+                name = "alpha_gate_1_project"
+                location = event_target:temp
+                owner = root
+            }
+        }
+		if = {
+            limit = { exists = event_target:temp }
+            enable_special_project = {
+                name = "alpha_gate_2_project"
+                location = event_target:temp
+                owner = root
+            }
+        }
+		begin_event_chain = {
+			event_chain = "alpha_gate_chain"
+			target = root
+		}
+	}
+	option = {
+		name = INTRIGUING
+		hidden_effect = {
+			set_country_flag = owns_alpha_gate
+		}
+	}
+}
+
+### Fifth Event: On System Ownership Loss, comes from on_starbase_transfer
+
+country_event = {
+	id = alpha_gate.5
+	title = alpha_gate.5.name
+	desc = alpha_gate.5.desc
+
+	picture = GFX_evt_drifting_gateway
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+            has_country_flag = encountered_first_alpha_gateway
+			NOT = {
+                has_country_flag = "completed_alpha_chain"
+            }
+		}
+	}
+	immediate = {
+		if = {
+			random_system_within_border = {
+				limit = {
+					has_megastructure = alpha_gate
+				}
+			}
+			save_event_target_as = new_alpha_gate_site
+			abort_special_project = {
+				type = "alpha_gate_1_project"
+			}
+			abort_special_project = {
+				type = "alpha_gate_2_project"
+			}
+			enable_special_project = {
+				name = "alpha_gate_1_project"
+				location = event_target:new_alpha_gate_site
+				owner = root
+			}
+			enable_special_project = {
+				name = "alpha_gate_2_project"
+				location = event_target:new_alpha_gate_site
+				owner = root
+			}
+		}
+		else = {
+			remove_country_flag = owns_alpha_gate
+			end_event_chain = "alpha_gate_chain"
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+### Sixth Event: On System Ownership Win, comes from on_starbase_transfer
+
+country_event = {
+	id = alpha_gate.6
+	title = alpha_gate.6.name
+	desc = alpha_gate.6.desc
+
+	picture = GFX_evt_drifting_gateway
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+            has_country_flag = encountered_first_alpha_gateway
+			NOT = {
+                has_country_flag = "completed_alpha_chain"
+            }
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = owns_alpha_gate
+			}
+		}
+		else = {
+			country_event = { id = alpha_gate.99 }
+		}
+	}
+	option = {
+		name = GOOD
+	}
+}
+
+### Seventh Event Research Alpha-Gate Physics
+
+country_event = {
+    id = alpha_gate.7
+    title = "alpha_gate.7.name"
+    desc = {
+		text = alpha_gate.7.desc
+	}
+    picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = FROM
+	
+	is_triggered_only = yes
+    
+    immediate = {        
+        set_country_flag = finished_alpha_gate_chain
+    }
+    option = {
+        name = UNFORTUNATE
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier4researchreward
+            min = @tier4researchmin
+            max = @tier4researchmax
+        }
+    }
+}
+
+### Eight Event Research Alpha-Gate Engineering
+
+country_event = {
+    id = alpha_gate.8
+    title = "alpha_gate.8.name"
+    desc = {
+		text = alpha_gate.8.desc
+	}
+    picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = FROM
+	
+	is_triggered_only = yes
+
+    immediate = {        
+        set_country_flag = finished_alpha_gate_chain
+    }
+    option = {
+        name = UNFORTUNATE
+        add_monthly_resource_mult = {
+            resource = engineering_research
+            value = @tier4researchreward
+            min = @tier4researchmin
+            max = @tier4researchmax
+        }
+    }
+}
+
+### Nineth Event Restore Alpha Nexus
+
+country_event = {
+	id = alpha_gate.9
+	title = "alpha_gate.9.name"
+	desc = "alpha_gate.9.desc"
+
+	picture = GFX_evt_drifting_gateway
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			country_event = { id = alpha_gate.10 }
+		}
+		every_country = {
+			limit = {
+				has_country_flag = owns_alpha_nexus
+			}
+			end_event_chain = "alpha_gate_chain"						
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+### Tenth Event Notification of Start Repair on Alpha Gateways
+
+country_event = {
+	id = alpha_gate.10
+	title = "alpha_gate.10.name"
+	#desc = "alpha_gate.10.desc"
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_alien_signal
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	desc = {
+		text = alpha_gate.10.desc
+		trigger = {
+			owner = { has_country_flag = encountered_first_alpha_gateway }
+			NOT = { has_country_flag = owns_alpha_nexus }
+		}
+	}
+	desc = {
+		text = alpha_gate.10a.desc
+		trigger = {
+			NOT = { has_country_flag = owns_alpha_nexus }
+		}
+	}
+	
+	immediate = {
+		country_event = { id = alpha_gate.11 days = 900 random = 600 }
+	}
+
+	option = {
+		name = WORRYING
+	}
+}
+
+### Eleventh Event Repair Gateways
+
+country_event = {
+	id = alpha_gate.11
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		random_megastructure = {
+			limit = {
+				is_megastructure_type = alpha_gate
+				NOT = { has_megastructure_flag = alpha_gate_activated }
+			}
+			activate_gateway = this
+			set_megastructure_flag = alpha_gate_activated
+		}
+		country_event = { id = alpha_gate.12 }
+	}
+}
+
+### Twelveth Event Notification Gateways repaired
+
+country_event = {
+	id = alpha_gate.12
+	title = "alpha_gate.12.name"
+	desc = "alpha_gate.12.desc"
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_alien_signal
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			if = {
+				limit = { 
+					has_country_flag = alpha_gate_chain 
+				}
+			}	
+			end_event_chain = "alpha_gate_chain"
+		}
+		set_global_flag = alpha_gates_activated_globally
+	}
+
+	option = { name = alpha_gate.12.a }
+
+}
+
+### Event to Enable Alpha Nexus Special Project
+
+country_event = {
+	id = alpha_gate.98
+	title = "alpha_gate.98.name"
+
+    #trigger = {
+	#	owner = {
+    #       has_country_flag = owns_alpha_nexus
+	#		NOT = {
+    #            has_country_flag = "completed_nexus_chain"
+    #        }
+	#	}
+	#}
+
+    ### Description
+
+	desc = alpha_gate.98.desc
+
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_system = {
+			limit = { has_star_flag = alpha_cluster_nexus }
+			random_system_megastructure = {
+				limit = { is_megastructure_type = alpha_gate }
+				save_event_target_as = temp2
+			}
+		}
+		if = {
+            limit = { exists = event_target:temp2 }
+            enable_special_project = {
+                name = "alpha_nexus_project"
+                location = event_target:temp2
+                owner = root
+            }
+        }
+		begin_event_chain = {
+			event_chain = "alpha_nexus_chain"
+			target = root
+		}
+	}
+	option = {
+		name = EXCELLENT
+		hidden_effect = {
+			set_country_flag = owns_alpha_nexus
+			set_country_flag = owns_alpha_gate
+		}
+	}
+}
+
+### Fire Country event
+
+event = {
+	id = alpha_gate.96
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = { 
+				has_valid_civic = civic_alpha_gateway 
+			}
+			log = "searched for civic_alpha_gateway country"
+			country_event = { id = alpha_gate.97 }
+		}
+		
+	}
+}
+
+### Move Empire with Civic Alpha Gate to the Alpha Cluster
+
+country_event = {
+	id = alpha_gate.97
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_valid_civic = civic_alpha_gateway
+			}
+			save_event_target_as = alpha_nexus_country
+		}
+		random_system_within_border = {
+			limit = {
+				has_star_flag = empire_home_system
+			}
+			save_event_target_as = original_cap_system
+		}
+		random_system =  {
+			limit = {
+				has_star_flag = alpha_cluster_tinusa
+			}
+			save_event_target_as = new_cap_system
+			### Starbase
+			create_starbase = {
+				size = starbase_starport
+				module = shipyard
+				building = crew_quarters
+				owner = event_target:alpha_nexus_country
+			}
+			### Science Ship
+			create_fleet = {
+				effect = {
+					set_owner = event_target:alpha_nexus_country
+	
+					create_ship = {
+						name = random
+						random_existing_design = science
+					}
+	
+					set_fleet_stance = evasive				
+					#set_location = capital_star
+					set_location = event_target:new_cap_system.star
+
+					owner = {
+						create_leader = {
+							type = scientist
+							sub_type = survey
+							name = random
+							species = owner_main_species
+						}
+					}
+					set_leader = last_created_leader
+				}			
+			}
+			### Construction Ship
+			create_fleet = {
+				effect = {
+					set_owner = event_target:alpha_nexus_country
+	
+					create_ship = {
+						name = random
+						random_existing_design = constructor
+					}
+	
+					set_fleet_stance = evasive				
+					#set_location = capital_star
+					set_location = event_target:new_cap_system.star
+				}			
+			}
+			### Navy
+			create_fleet = {
+				set_take_point = yes
+				effect = {
+					set_owner = event_target:alpha_nexus_country
+					
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+					#set_location = root.star
+					set_location = event_target:new_cap_system.star
+				}
+			}
+		}
+		#find homeworld and save it
+		random_owned_planet ={
+			limit = { is_capital = yes }
+			save_event_target_as = cap_to_nuke
+		}
+		random_owned_pop = {
+			limit = { is_exact_same_species = owner_species }
+			species = { 
+				this = { save_event_target_as = new_alpha_species }
+			}
+		}	
+		random_planet = {
+			limit = { has_planet_flag = planet_tinusa }
+			change_pc = pc_arctic
+			reset_planet = yes
+			set_owner = event_target:alpha_nexus_country
+			reset_start_buildings_and_blockers_alpha_gate = yes
+			set_capital = yes
+			save_event_target_as = new_cap
+		}
+		#change species to be alpha_gate species
+		random_owned_pop = {
+			limit = { is_exact_same_species = owner_species }
+			species = { 
+				set_species_homeworld = event_target:new_cap
+			}
+		}
+		every_owned_pop = {
+			limit = { is_exact_same_species = owner_species }
+			#changes_species = event_target:new_alpha_species
+			modify_species = {
+				species = this
+				ideal_planet_class = pc_arctic
+				base = none # makes this replace parent species
+			}
+		}
+		change_dominant_species = { species = owner_species change_all = yes }
+
+		random_planet = {
+			limit = { has_planet_flag = planet_tinusa }
+			random_tile = {
+				limit = {
+					has_building = building_capital_1
+				}
+				create_pop = {
+					species = owner_species #was event_target:new_alpha_species
+				}
+			}
+		}
+
+		# Nuke other colonies gained from advanced empire, etc
+		every_owned_planet = {
+			limit = { is_capital = no }
+			every_tile = { 
+				kill_pop = yes 
+				remove_building = yes
+			}
+		}
+		#Nuke old homeworld planet
+		random_owned_planet ={
+			limit = { is_same_value = event_target:cap_to_nuke }
+			random_list = {
+				18 = { change_pc = pc_barren }
+				18 = { change_pc = pc_molten }
+				18 = { change_pc = pc_barren_cold }
+				18 = { change_pc = pc_toxic }
+				18 = { change_pc = pc_frozen }
+				5 = { change_pc = pc_broken }
+				5 = { change_pc = pc_shattered }
+			}
+			if = {
+				limit = { 
+					NOR = {
+						is_planet_class = pc_broken
+						is_planet_class = pc_shattered
+					}
+				}
+				add_modifier = { modifier = "terraforming_candidate" days = -1 }
+			}
+		}
+
+		### Clean-Up old home system
+
+		
+		event_target:original_cap_system = {
+			every_fleet_in_system = {
+				destroy_fleet = this
+			}
+		}
+		random_country = {
+			limit = {
+				has_valid_civic = civic_alpha_gateway
+			}
+			country_event = { id = alpha_gate.98 }
+		}
+	}
+}
+
+### Add this to events:
+
+country_event = {
+	id = alpha_gate.88
+	title = "alpha_gate.88.name"
+	desc = "alpha_gate.88.desc"
+	picture = GFX_evt_megastructure_construction
+	show_sound = event_radio_chatter
+	location = from
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { save_event_target_as = alpha_gate_system }
+	}
+	
+	option = {
+		name = GOOD
+	}
+}
+# New Gateway Constructed
+country_event = {
+	id = alpha_gate.87
+	title = "alpha_gate.87.name"
+	desc = "alpha_gate.87.desc"
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = from
+	
+	is_triggered_only = yes
+
+	immediate = {
+		from = { save_event_target_as = alpha_gate_system }
+	}	
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+### Add Technology Option and Techs to Civic + Stuff
+
+event = {
+	id = alpha_gate.70
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_valid_civic = civic_alpha_gateway
+			}
+			give_technology = { 
+				message = no 
+				tech = tech_alpha_gate
+			}
+			add_research_option = tech_mega_engineering
+			add_research_option = tech_mine_living_metal
+		}
+	}
+}

@@ -1,0 +1,33 @@
+### Binary Star for Arch 2 Neutron Stars
+
+sc_binary_11 = {
+    class             = a_neutron_star
+    icon              = e_binary_star
+    planet            = {
+                        key = pc_neutron_star
+                        class = neutron_star
+                    }
+    planet            = {
+                        key = pc_neutron_star
+                        class = neutron_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 1 max = 1 }
+}
+
+### Trinary Star for Kru
+
+sc_binary_12 = {
+    class             = sc_m
+    icon              = d_binary_star
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+                    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 1 max = 1 }
+}

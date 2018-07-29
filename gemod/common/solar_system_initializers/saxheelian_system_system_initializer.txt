@@ -1,0 +1,331 @@
+### Variables
+
+#@distance = 50
+@Name_sun = "L'neenna Llou"
+@Name_gas_giant = "Eellah Whee"
+@name_molten_world = "Nn'nnoulla Waineen Llou"
+@name_barren_world = "H'lainnee Noull Lou"
+@Name_moon_1 = "Lna Waineell"
+@Name_moon_2 = "Eellah Al"
+@Name_moon_3 = "Wouh Wou'een Ailou"
+@Name_moon_4 = "Nweewou Ouwai Wou"
+
+#To Fill
+@name_asteroid = "Lailleenn"
+@name_gas_giant_2 = "Ouwa Llhou"
+@name_gas_giant_2_moon_1 = "Ouwall Nneeh"
+@name_gas_giant_2_moon_2 = "Nnail Llee'all"
+@name_random_planet = "Eennai L'wouwou"
+@name_random_planet_moon = "Aiheew"
+
+
+
+### Saxheelian System
+saxheelian_system_system_initializer = {
+	name = "Huleeta Beleen System"
+	
+	class = "sc_g" 
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 240
+	}
+
+	usage = custom_empire
+	usage_odds = 100
+	max_instances = 1
+
+	flags = { saxheelian_system }
+
+	### Distance 0 Star
+
+	planet = {
+		class = star
+		size = 60
+		orbit_distance = 0
+
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			set_name = @Name_sun
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_energy_deposit # add 3 energy
+				}
+			}
+		}
+	
+	change_orbit = 100
+	### Distance 100 Toxic/Molten/Barren Terraforming Candidate
+
+	planet = {
+		random_List = {
+			33 = { class = pc_molten}
+			33 = { class = pc_barren}
+			33 = { class = pc_toxic}
+			}
+		size = { min = 12 max = 16}
+		orbit_distance = 0
+		orbit_angle = { min = 60 max = 120 }
+
+		moon = {
+			count = 1
+			class = random_non_colonizable
+			orbit_distance = {min = 6 max = 12 }
+			size = {min = 2 max = 4}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+				}
+			}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @name_random_planet_moon
+			}
+
+		}
+		init_effect = {
+			set_name = @name_random_planet
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				}
+			}
+		init_effect = {
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+	
+	change_orbit = 40
+	### Distance 140 Mining Planet
+	
+	planet = {
+		name = @name_barren_world
+		class = "pc_barren"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 50
+		tile_blockers = none
+		modifiers = none
+		flags = { starting_mining_target }
+		flags = { starting_deposit }
+
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_mineral_deposit # 3 minerals
+			}
+		}
+	}
+
+	change_orbit = 40
+	### Distance 180 Mining Planet
+	
+	planet = {
+		name = @name_molten_world
+		class = "pc_molten"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 42
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_mineral_deposit # 3 minerals
+			}
+		}
+	}
+	
+	change_orbit = 60
+	### Distance 240 Asteroid
+
+	planet = {
+		name = @name_asteroid
+		class = "pc_asteroid"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 8
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+			}
+		}
+	}
+
+	change_orbit = 100
+	### Distance 340 Home Planet
+
+	planet = {
+		class = "pc_gas_giant"
+		name = @Name_gas_giant
+		orbit_angle = { min = 120 max = 270 }
+		orbit_distance = 0
+		has_ring = no
+		size = 50
+
+		moon = {
+			count = 1
+			orbit_distance = {min = 20 max = 32}
+			size = {min = 2 max = 4}
+			flags = { starting_research_target }
+			flags = { starting_deposit }
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					random_List = {
+						33 = {add_deposit = d_rich_engineering_deposit}
+						33 = {add_deposit = d_rich_physics_deposit}
+						33 = {add_deposit = d_rich_society_deposit}
+						}
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @Name_moon_1
+				}
+			}
+		moon = {
+			count = 1
+			orbit_distance = {min = 8 max = 12}
+			size = {min = 2 max = 5}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @Name_moon_2
+				}
+			}
+		### This is the starting planet
+		moon = {
+			count = 1
+			orbit_distance = {min = 8 max = 12}
+			size = 16
+			starting_planet = yes
+			class = ideal_planet_class
+			name = "Houwain Churas"
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = "Houwain Churas"
+				generate_start_buildings_and_blockers = yes		
+				}
+			}
+		moon = {
+			count = 1
+			orbit_distance = {min = 8 max = 12}
+			size = {min = 2 max = 3}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					random_List = {
+						33 = {add_deposit = d_rich_engineering_deposit}
+						33 = {add_deposit = d_rich_physics_deposit}
+						33 = {add_deposit = d_rich_society_deposit}
+						}
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @Name_moon_3
+				}
+			}
+		moon = {
+			count = 1
+			orbit_distance = {min = 8 max = 12}
+			size = {min = 2 max = 6}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @Name_moon_4
+				}
+		}
+		init_effect = {
+			prevent_anomaly = yes
+			set_name = @Name_gas_giant
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+				add_deposit = d_vast_energy_deposit # add 3 energy
+			}
+		}
+	}
+	
+	change_orbit = 120
+	### Distance 460
+
+	planet = {
+		name = @name_gas_giant_2
+		class = "pc_gas_giant"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 44
+		tile_blockers = none
+		modifiers = none
+		
+		moon = {
+			count = 1
+			class = random_non_colonizable
+			orbit_distance = {min = 14 max = 18 }
+			size = {min = 4 max = 10 }
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @name_gas_giant_2_moon_1
+			}
+		}
+		moon = {
+			count = 1
+			class = random_non_colonizable
+			orbit_distance = {min = 4 max = 10 }
+			size = {min = 2 max = 6}
+			init_effect = {
+				orbital_deposit_tile = {
+					clear_deposits = yes # will not work without this deposit clearing
+					}
+				}
+			init_effect = {
+				prevent_anomaly = yes
+				set_name = @name_gas_giant_2_moon_2
+				}
+		}
+		init_effect = {
+			prevent_anomaly = yes
+			set_name = @name_gas_giant_2
+		}
+		init_effect = {
+			prevent_anomaly = yes
+			orbital_deposit_tile = {
+				clear_deposits = yes # will not work without this deposit clearing
+			}
+		}
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "rawa_system_initializer"
+		}
+	init_effect = {
+		set_name = "Huleeta Beleen System"
+		}
+}

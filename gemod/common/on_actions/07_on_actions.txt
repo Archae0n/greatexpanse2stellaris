@@ -1,0 +1,42 @@
+### Event to spawn 6 Alpha-Gates
+
+on_game_start = {
+    events = {
+        alpha_gate.1
+        alpha_gate.2
+        alpha_gate.96
+        alpha_gate.70
+    }    
+}
+
+### Event to fire the First Event when Entering an Alpha-Gate System
+
+on_entering_system = {
+    events = { 
+	    alpha_gate.3
+	}
+}
+
+### Enable Event Chain on Building an Outpost
+
+on_building_starbase_outpost = {
+    events = {
+        alpha_gate.4
+	}
+}
+
+### Enable/ Disable Event Chain based on System Ownership >>> Check This <<<
+
+on_starbase_transfer = {
+	THIS = {
+        events = {
+		alpha_gate.6
+	    }
+    }
+    FROM = {
+        events = {
+		alpha_gate.5
+	}
+    }
+    
+}
