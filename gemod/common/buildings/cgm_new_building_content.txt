@@ -737,7 +737,7 @@ building_economic_district_1 = {
 	is_listed = yes
 	base_buildtime = @non_restricted_t1_time
 	cost = { minerals = @non_restricted_t1_cost }
-	required_resources = { minerals = @economic_district_upkeep_1 }
+	required_resources = { minerals = 0 }
 	 #requirements and upgrade
 	potential = {
 		new_building_content_enabled = yes
@@ -813,7 +813,7 @@ building_economic_district_2_direct_build = {
 	tags = { standard_resource_building }
 	base_buildtime = 345
 	cost = { minerals = 120 }
-	required_resources = { minerals = @economic_district_upkeep_2 }
+	required_resources = { minerals = 0 }
 	 #requirements and upgrade
 	potential = {
 		new_building_content_enabled = yes
@@ -854,7 +854,7 @@ building_economic_district_2 = {
 	is_listed = no
 	base_buildtime = @non_restricted_t2_time
 	cost = { minerals = @non_restricted_t2_cost }
-	required_resources = { minerals = @economic_district_upkeep_2 }
+	required_resources = { minerals = 0 }
 	show_tech_unlock_if = { new_building_content_enabled = yes }
 	 #requirements and upgrade
 	potential = { new_building_content_enabled = yes planet_is_not_virtual = yes }
@@ -869,7 +869,7 @@ building_economic_district_3_direct_build = {
 	tags = { standard_resource_building }
 	base_buildtime = 480
 	cost = { minerals = 240 }
-	required_resources = { minerals = @economic_district_upkeep_3 }
+	required_resources = { minerals = 0 }
 	 #requirements and upgrade
 	potential = {
 		new_building_content_enabled = yes
@@ -910,7 +910,7 @@ building_economic_district_3 = {
 	is_listed = no
 	base_buildtime = @non_restricted_t3_time
 	cost = { minerals = @non_restricted_t3_cost }
-	required_resources = { minerals = @economic_district_upkeep_3 }
+	required_resources = { minerals = 0 }
 	show_tech_unlock_if = { new_building_content_enabled = yes }
 	 #requirements and upgrade
 	potential = { new_building_content_enabled = yes planet_is_not_virtual = yes }
@@ -925,7 +925,7 @@ building_economic_district_4_direct_build = {
 	tags = { standard_resource_building }
 	base_buildtime = 615
 	cost = { minerals = 400 }
-	required_resources = { minerals = @economic_district_upkeep_4 }
+	required_resources = { minerals = 0 }
 	 #requirements and upgrade
 	potential = {
 		new_building_content_enabled = yes
@@ -966,7 +966,7 @@ building_economic_district_4 = {
 	is_listed = no
 	base_buildtime = @non_restricted_t4_time
 	cost = { minerals = @non_restricted_t4_cost }
-	required_resources = { minerals = @economic_district_upkeep_4 }
+	required_resources = { minerals = 0 }
 	show_tech_unlock_if = { new_building_content_enabled = yes }
 	 #requirements and upgrade
 	potential = { new_building_content_enabled = yes planet_is_not_virtual = yes }
@@ -981,7 +981,7 @@ building_economic_district_5_direct_build = {
 	tags = { standard_resource_building }
 	base_buildtime = 750
 	cost = { minerals = 600 }
-	required_resources = { minerals = @economic_district_upkeep_5 }
+	required_resources = { minerals = 0 }
 	 #requirements and upgrade
 	potential = {
 		new_building_content_enabled = yes
@@ -1000,7 +1000,7 @@ building_economic_district_5_direct_build = {
 	allow = { requires_capital_2_or_hab = yes }
 	prerequisites = { "tech_power_plant_5" }
 	 #resource output and modifiers
-	produced_resources = { energy = @non_restricted_t5_output }
+	produced_resources = { energy = 0 }
 	triggered_planet_modifier = {
 		key = "capital_3_tile_resource_bonus_modifier"
 		potential = { planet = { has_capital_3 = yes } }
@@ -1020,7 +1020,7 @@ building_economic_district_5 = {
 	is_listed = no
 	base_buildtime = @non_restricted_t5_time
 	cost = { minerals = @non_restricted_t5_cost }
-	required_resources = { minerals = @economic_district_upkeep_5 }
+	required_resources = { minerals = 0 }
 	show_tech_unlock_if = { new_building_content_enabled = yes }
 	 #requirements and upgrade
 	potential = { new_building_content_enabled = yes planet_is_not_virtual = yes }

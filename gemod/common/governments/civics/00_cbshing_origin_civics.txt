@@ -37,7 +37,7 @@ civic_cbshing_codominant_evolution = {
 				#value = civic_cbshing_nuclear_vault
 				#value = civic_cbshing_nuked_start
 				#value = civic_cbshing_nuclear_mutation
-				value = civic_cbshing_voidborne
+				#value = civic_cbshing_voidborne
 				
 				#value = civic_cbshing_codominant_mechanists
 				#value = civic_cbshing_syncretic_mechanists
@@ -479,7 +479,7 @@ civic_cbshing_voidborne = {
 				value = civic_post_apocalyptic
 				value = civic_life_seeded
 				
-				value = civic_cbshing_codominant_evolution
+				#value = civic_cbshing_codominant_evolution
 				value = civic_cbshing_lost_colony
 				#value = civic_cbshing_alien_message
 				value = civic_cbshing_eco_disaster
