@@ -366,11 +366,14 @@ country_event = {
 	title = "alpha_gate.99.name"
 
     trigger = {
-		owner = {
-            has_country_flag = encountered_first_alpha_gateway
-			NOT = {
-                has_country_flag = "completed_alpha_chain"
-            }
+		AND = {
+			NOT = { has_global_flag = alpha_gates_activated_globally }
+			owner = {
+				has_country_flag = encountered_first_alpha_gateway
+				NOT = {
+					has_country_flag = "completed_alpha_chain"
+				}
+			}
 		}
 	}
 
@@ -488,11 +491,14 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		owner = {
-            has_country_flag = encountered_first_alpha_gateway
-			NOT = {
-                has_country_flag = "completed_alpha_chain"
-            }
+		AND = {
+			NOT = { has_global_flag = alpha_gates_activated_globally }
+			owner = {
+				has_country_flag = encountered_first_alpha_gateway
+				NOT = {
+					has_country_flag = "completed_alpha_chain"
+				}
+			}
 		}
 	}
 	immediate = {
