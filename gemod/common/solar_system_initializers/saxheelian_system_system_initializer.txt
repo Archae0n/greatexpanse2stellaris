@@ -321,10 +321,10 @@ saxheelian_system_system_initializer = {
 		}
 	}
 
-	neighbor_system = {
-		distance = { min = 10 max = 50 }
-		initializer = "rawa_system_initializer"
-		}
+	#neighbor_system = {
+	#	distance = { min = 10 max = 50 }
+	#	initializer = "rawa_system_initializer"
+	#	}
 	init_effect = {
 		set_name = "Huleeta Beleen System"
 		}
