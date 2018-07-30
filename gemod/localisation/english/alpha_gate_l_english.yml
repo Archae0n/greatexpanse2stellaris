@@ -57,3 +57,6 @@
  alpha_gate.88.desc:0 "We finished our preparations to build another Alpha Gateway. We can no redirect our ressources to actually build the Gateway."
  alpha_gate.87.name:0 "Alpha Gateway Construction finished!"
  alpha_gate.87.desc:0 "How is the road to Tinue? Short and prosperous!"
+ tb_stercus_ruins:0 "Planetary Machine World Ruins"
+ tb_stercus_ruins.desc:0 "The planetary machine infrastructure has been obliterated into shambles. The once advanced structures now are interlocked in ways that makes it impossible to remove them without damaging the crust of the planet itself."
+ ALPHA_GATE_GALACTIC:0 "Alpha Gate"
