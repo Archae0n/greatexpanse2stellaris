@@ -1,6 +1,6 @@
 trait_roadblock_1  = {
 	cost = -3
-	opposites = { "trait_carnivorous" "trait_autotrophic" "trait_cannibalistic" }
+	opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 	}
@@ -8,8 +8,21 @@ trait_roadblock_1  = {
 
 trait_roadblock_2  = {
 	cost = -3
-	opposites = { "trait_carnivorous" "trait_autotrophic" "trait_cannibalistic" }
+	opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
 	}
-D	modifier = {
+}
+
+trait_saxheelian = {
+	cost = 2
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		leader_age = 750
+		tile_resource_society_research_mult = 0.45
+		pop_food_req_mult = 0.25
+		species_leader_exp_gain = -0.25
+		pop_growth_speed = -0.15
+		pop_environment_tolerance = -0.25
+	}
 }
