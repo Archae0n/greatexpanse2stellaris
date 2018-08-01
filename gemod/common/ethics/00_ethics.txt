@@ -21,9 +21,9 @@ ethic_fanatic_authoritarian = {
 	
 	country_modifier = {
 		country_resource_influence_add = 1.15
-		planet_unrest_mult = -0.20	
+		planet_unrest_mult = -0.15	
 		pop_slave_resource_output = 0.10
-		country_resource_energy_mult = -0.03		
+		tile_resource_energy_mult  = -0.08		
 	}
 	
 	tags = {
@@ -560,10 +560,9 @@ ethic_fanatic_xenophobe = {
 	country_modifier = {		
 		country_claim_influence_cost_mult = -0.20
 		rivalry_influence_gain = 0.2
-		country_starbase_influence_cost_mult = -0.25									  
+		country_starbase_influence_cost_mult = -0.15									  
 		shipclass_military_station_damage_mult = 0.25
 		diplomacy_influence_cost = 0.5	
-		
 	}
 	
 	random_weight = {
@@ -590,7 +589,7 @@ ethic_xenophobe = {
 	country_modifier = {
 		country_claim_influence_cost_mult = -0.1
 		rivalry_influence_gain = 0.15
-		country_starbase_influence_cost_mult = -0.15									 
+		country_starbase_influence_cost_mult = -0.1									 
 	}
 	
 	random_weight = {
@@ -938,10 +937,8 @@ ethic_fanatic_xenophile = {
 	}
 	
 	country_modifier = {
-
-		country_border_friction_mult = -0.5
-		diplomacy_influence_cost = -0.35		
-		country_trust_growth = 0.35
+		country_resource_unity_mult = 0.30
+		diplomacy_influence_cost = -0.40		
 		rivalry_influence_gain = -0.35			
 	}
 	
@@ -967,7 +964,7 @@ ethic_xenophile = {
 	}
 	
 	country_modifier = {
-		country_border_friction_mult = -0.25
+		country_resource_unity_mult = 0.10
 		diplomacy_influence_cost = -0.25
 	}
 	
@@ -1257,9 +1254,9 @@ ethic_fanatic_militarist = {
 	
 	country_modifier = {
 		army_damage_mult = 0.15
-		ship_fire_rate_mult = 0.20
+		ship_weapon_damage = 0.15
 		country_war_exhaustion_mult = -0.2
-        country_trust_growth = -0.33
+         ship_upkeep_mult  = 0.1
 	}
 	
 	# more common ethic
@@ -1281,7 +1278,7 @@ ethic_militarist = {
 	
 	country_modifier = {
 		army_damage_mult = 0.1
-		ship_fire_rate_mult = 0.10
+		ship_weapon_damage = 0.1
 		country_war_exhaustion_mult = -0.1
 	}
 	
@@ -1620,10 +1617,9 @@ ethic_fanatic_pacifist = {
 	
 	country_modifier = {
 		pop_resource_output = 0.1
-		country_core_sector_system_cap = 3
+		country_core_sector_system_cap = 5
 		country_resource_unity_mult = 0.15		
-		country_naval_cap_mult = -0.1
-		
+		country_naval_cap_mult = -0.15
 	}
 	
 	random_weight = {
@@ -1874,8 +1870,8 @@ ethic_fanatic_spiritualist = {
 	
 	country_modifier = {
 		country_resource_unity_mult = 0.2
-        edict_cost = -0.15		
-        planet_unrest_mult = -0.20			
+        edict_cost = -0.10
+        planet_unrest_mult = -0.15			
 		all_technology_research_speed = -0.04		
 	}
 	
@@ -1899,7 +1895,7 @@ ethic_spiritualist = {
 	
 	country_modifier = {
 		country_resource_unity_mult = 0.10
-		edict_cost = -0.075
+		edict_cost = -0.05
 	}
 	
 	random_weight = {
@@ -2155,7 +2151,7 @@ ethic_fanatic_materialist = {
 	}	
 	
 	country_modifier = {
-		all_technology_research_speed = 0.10
+		all_technology_research_speed = 0.15
         num_tech_alternatives_add = 1			
 		pop_robot_upkeep_mult = -0.2	
 		pop_consumer_goods_mult = 0.15
@@ -2182,7 +2178,7 @@ ethic_materialist = {
 	}			
 	
 	country_modifier = {
-		all_technology_research_speed = 0.05
+		all_technology_research_speed = 0.075
 		pop_robot_upkeep_mult = -0.1
 	}	
 	

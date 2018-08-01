@@ -303,7 +303,7 @@ country_event = {
 						has_building = building_power_plant_1
 					}
 					set_building = building_fe_dark_matter_power_plant
-					is_ruined = yes
+					set_ruined = yes
 					clear_deposits = yes
 				}
 				random_tile = {
@@ -312,7 +312,7 @@ country_event = {
 					}
 					kill_pop = yes
 					set_building = building_fe_ancient_factory
-					is_ruined = yes
+					set_ruined = yes
 					clear_deposits = yes
 				}
 				random_tile = {
@@ -320,7 +320,7 @@ country_event = {
 						has_building = building_hydroponics_farm_1
 					}
 					set_building = building_fe_agri_processing_complex
-					is_ruined = yes
+					set_ruined = yes
 					clear_deposits = yes
 				}
 				random_tile = {
@@ -329,7 +329,7 @@ country_event = {
 					}
 					kill_pop = yes
 					set_building = gpm_building_ancient_archives
-					is_ruined = yes
+					set_ruined = yes
 					clear_deposits = yes
 				}
 			}
