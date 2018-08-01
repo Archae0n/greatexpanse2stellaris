@@ -772,22 +772,19 @@ ethic_fanatic_green = {
 	use_for_pops = no
 	
 	tags = {
-		
 	}		
 	
 	country_modifier = {
 		pop_environment_tolerance = 0.1
 		pop_consumer_goods_mult = -0.15
 		terraform_speed_mult = 0.5
-		planet_building_build_speed_mult = -0.15
+		planet_building_build_speed_mult = -0.2
 	}
 	
 	
 	random_weight = {
 		value = 100
 	}	
-	
-
 }
 
 
@@ -806,10 +803,8 @@ ethic_industrial = {
 	}		
 	
 	country_modifier = {
-		tile_resource_minerals_mult = 0.1
-
+		country_resource_minerals_mult = 0.07
 	}
-	
 	
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_INDUSTRIAL_POS
@@ -1078,19 +1073,15 @@ ethic_fanatic_industrial = {
 	use_for_pops = no	
 	
 	country_modifier = {
-		tile_resource_minerals_mult = 0.15
+		country_resource_minerals_mult = 0.12
         planet_building_build_speed_mult = 0.2
 		starbase_shipyard_build_speed_mult = 0.2
-        pop_environment_tolerance = -0.05		
+        pop_environment_tolerance = -0.08		
 	}
-	
-
 	
 	random_weight = {
 		value = 100
-	}	
-	
-
+	}
 }
 
 
@@ -1106,11 +1097,10 @@ ethic_elitist = {
 	fanatic_variant = ethic_fanatic_elitist
 	
 	tags = {
-		
 	}	
 	
 	country_modifier = {
-		leader_skill_levels = 1
+		leader_skill_levels = 2
 		leader_age = 10
 	}
 	
@@ -1350,16 +1340,11 @@ ethic_elitist = {
 			factor = 0.75
 			has_trait = "trait_deviants"
 		}		
-	
 	}	
-	
-
 	
 	random_weight = {
 		value = 100
 	}	
-	
-
 }
 
 
@@ -1373,27 +1358,19 @@ ethic_fanatic_elitist = {
 	regular_variant = ethic_elitist
 
 	tags = {
-
 	}		
 	
 	country_modifier = {
-		leader_skill_levels = 2
+		leader_skill_levels = 3
 		leader_age = 15
-		country_leader_cap = 2
+		country_leader_cap = 3
 		leader_cost = 0.3
 	}
-	
 	
 	random_weight = {
 		value = 100
 	}	
-	
-
 }
-
-
-
-
 
 ethic_pluralist = {
 	cost = 1
@@ -1405,12 +1382,11 @@ ethic_pluralist = {
 	fanatic_variant = ethic_fanatic_pluralist
 	
 	tags = {
-
 	}		
 	
 	country_modifier = {
 	    country_leader_pool_size = 2
-		species_leader_exp_gain = 0.15
+		species_leader_exp_gain = 0.2
 		leader_cost = -0.25  
 	}
 	
@@ -1630,23 +1606,13 @@ ethic_fanatic_pluralist = {
 	
 	country_modifier = {
         country_leader_pool_size = 3
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.35
 		leader_cost = -0.35
 		planet_unrest_mult = 0.2
-
-
-		
-		
 	}
 	
 	
 	random_weight = {
 		value = 100
-	}	
-	
-	
-}	
-
-
-
-
+	}		
+}
