@@ -19,7 +19,7 @@ ship_section_template = {
 		locatorname = "small_gun_02"
 	}
 	
-	medium_utility_slots = 3
+	aux_utility_slots = 2
 	
-	cost = 120
+	cost = 100
 }

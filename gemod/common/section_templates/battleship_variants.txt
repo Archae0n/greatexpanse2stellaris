@@ -43,10 +43,9 @@ ship_section_template = {
 		locatorname = "small_gun_04"
 	}
 	
-	large_utility_slots = 2
-	aux_utility_slots = 2
+	large_utility_slots = 3
 	
-	cost = 240
+	cost = 150
 }
 
 ship_section_template = {
@@ -92,10 +91,9 @@ ship_section_template = {
 		locatorname = "small_gun_02"
 	}
 	
-	large_utility_slots = 2
-	aux_utility_slots = 2
+	large_utility_slots = 3
 	
-	cost = 240
+	cost = 150
 }
 
 #MID
@@ -152,9 +150,9 @@ ship_section_template = {
 
 	}
 	
-	large_utility_slots = 6
+	large_utility_slots = 3
 	
-	cost = 240
+	cost = 150
 }
 
 ship_section_template = {
@@ -199,9 +197,9 @@ ship_section_template = {
 		locatorname = "medium_gun_04"
 	}
 	
-	large_utility_slots = 6
+	large_utility_slots = 3
 	
-	cost = 240
+	cost = 150
 }
 
 ship_section_template = {
@@ -232,9 +230,9 @@ ship_section_template = {
 		locatorname = "small_gun_02"
 	}
 	
-	large_utility_slots = 2
+	aux_utility_slots = 2
 	
-	cost = 240
+	cost = 150
 }
 
 
@@ -273,8 +271,8 @@ ship_section_template = {
 		locatorname = "small_gun_04"
 	}
 	
-	large_utility_slots = 2
+	aux_utility_slots = 2
 	
-	cost = 240
+	cost = 150
 }
 
