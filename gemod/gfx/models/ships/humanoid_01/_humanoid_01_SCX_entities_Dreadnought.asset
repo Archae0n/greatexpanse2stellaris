@@ -1,4 +1,4 @@
-@frame_scale = 1.20
+@frame_scale = 0.50
 @frame_size = 20.0
 
 #########################
