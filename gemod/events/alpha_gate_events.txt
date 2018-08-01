@@ -146,50 +146,50 @@ event = {
 			spawn_system = {
 				min_distance >= 555
 				max_distance <= 555
-				min_orientation_angle = 45
-				max_orientation_angle = 45
+				min_orientation_angle = -45
+				max_orientation_angle = -45
 				initializer = alpha_cluster_tinusa
 			}
             spawn_system = {
 				min_distance >= 565
 				max_distance <= 565
-				min_orientation_angle = 45
-				max_orientation_angle = 45
+				min_orientation_angle = -45
+				max_orientation_angle = -45
 				initializer = alpha_cluster_antus
 			}
             spawn_system = {
 				min_distance >= 560
 				max_distance <= 560
-				min_orientation_angle = 46
-				max_orientation_angle = 46
+				min_orientation_angle = -46
+				max_orientation_angle = -46
 				initializer = alpha_cluster_belen
 			}
             spawn_system = {
 				min_distance >= 550
 				max_distance <= 550
-				min_orientation_angle = 46
-				max_orientation_angle = 46
+				min_orientation_angle = -46
+				max_orientation_angle = -46
 				initializer = alpha_cluster_emlen
 			}
             spawn_system = {
 				min_distance >= 545
 				max_distance <= 545
-				min_orientation_angle = 45
-				max_orientation_angle = 45
+				min_orientation_angle = -45
+				max_orientation_angle = -45
 				initializer = alpha_cluster_m_m
 			}
             spawn_system = {
 				min_distance >= 550
 				max_distance <= 550
-				min_orientation_angle = 44
-				max_orientation_angle = 44
+				min_orientation_angle = -44
+				max_orientation_angle = -44
 				initializer = alpha_cluster_myr
 			}
             spawn_system = {
 				min_distance >= 560
 				max_distance <= 560
-				min_orientation_angle = 44
-				max_orientation_angle = 44
+				min_orientation_angle = -44
+				max_orientation_angle = -44
 				initializer = alpha_cluster_vaeret
 			}
 		}
