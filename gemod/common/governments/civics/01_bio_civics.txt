@@ -869,7 +869,7 @@ civic_cutthroat_politics = {
 	modifier = {
 		country_resource_influence_add = 1
 		max_influence = 500
-		country_election_influence_cost_mult = -0.99
+		country_election_influence_cost_mult = -0.5
 	}
 }
 
