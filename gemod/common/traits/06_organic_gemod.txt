@@ -32,7 +32,6 @@ trait_capsuleer = {
 	initial = no
 	randomized = no
 	allowed_archetypes = { BIOLOGICAL }
-	custom_tooltip = TRAIT_SHROUDBORN_EFFECT
 	immortal_leaders = yes
 	modifier = {
 		tile_resource_minerals_mult = 0.15
