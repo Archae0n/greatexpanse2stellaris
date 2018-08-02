@@ -24,6 +24,12 @@ building_power_plant_1 = {
 	upgrades = { building_power_plant_2 }
 	 #resource output and modifiers
 	produced_resources = { energy = 2 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 0.5 }
+		}
+	}
 	 #ai restrictions and weights
 	ai_allow = {
 		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
@@ -116,6 +122,12 @@ building_power_plant_2_direct_build = {
 	upgrades = { building_power_plant_3 }
 	 #resource output and modifiers
 	produced_resources = { energy = 3 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 1 }
+		}
+	}
 	 #ai restrictions and weights
 	ai_allow = {
 		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
@@ -139,6 +151,12 @@ building_power_plant_2 = {
 	upgrades = { building_power_plant_3 }
 	 #resource output and modifiers
 	produced_resources = { energy = 3 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 1 }
+		}
+	}
 	 #ai restrictions and weights
 }
 building_power_plant_3_direct_build = {
@@ -164,6 +182,12 @@ building_power_plant_3_direct_build = {
 	upgrades = { building_power_plant_4 }
 	 #resource output and modifiers
 	produced_resources = { energy = 4 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 1.5 }
+		}
+	}
 	 #ai restrictions and weights
 	ai_allow = {
 		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
@@ -187,6 +211,12 @@ building_power_plant_3 = {
 	upgrades = { building_power_plant_4 }
 	 #resource output and modifiers
 	produced_resources = { energy = 4 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 1.5 }
+		}
+	}
 	 #ai restrictions and weights
 }
 building_power_plant_4_direct_build = {
@@ -213,6 +243,12 @@ building_power_plant_4_direct_build = {
 	upgrades = { building_power_plant_5 }
 	 #resource output and modifiers
 	produced_resources = { energy = 5 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 2 }
+		}
+	}
 	 #ai restrictions and weights
 	ai_allow = {
 		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }
@@ -236,6 +272,12 @@ building_power_plant_4 = {
 	upgrades = { building_power_plant_5 }
 	 #resource output and modifiers
 	produced_resources = { energy = 5 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 2 }
+		}
+	}
 	 #ai restrictions and weights
 }
 building_power_plant_5_direct_build = {
@@ -255,6 +297,12 @@ building_power_plant_5_direct_build = {
 	destroy_if = { planet_is_capital = no }
 	 #resource output and modifiers
 	produced_resources = { energy = 8 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 2.5 }
+		}
+	}
 	triggered_planet_modifier = {
 		key = "power_plant_5_regular_capital_modifier"
 		potential = { overhauled_building_stats_enabled = yes is_ringworld = no }
@@ -288,6 +336,12 @@ building_power_plant_5 = {
 	destroy_if = { planet_is_capital = no }
 	 #resource output and modifiers
 	produced_resources = { energy = 8 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_commercial_idyll
+			resources = { unity = 2.5 }
+		}
+	}
 	triggered_planet_modifier = {
 		key = "power_plant_5_regular_capital_modifier"
 		potential = { overhauled_building_stats_enabled = yes is_ringworld = no }
@@ -641,6 +695,10 @@ building_hydroponics_farm_1 = {
 			resources = { unity = 1 }
 		}
 		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 1 }
+		}
+		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
 			resources = { minerals = 1 }
 		}
@@ -736,7 +794,11 @@ building_hydroponics_farm_2_direct_build = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 2 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 2 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -771,7 +833,11 @@ building_hydroponics_farm_2 = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 2 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 2 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -809,7 +875,11 @@ building_hydroponics_farm_3_direct_build = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 3 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 3 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -844,7 +914,11 @@ building_hydroponics_farm_3 = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 3 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 3 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -883,7 +957,11 @@ building_hydroponics_farm_4_direct_build = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 4 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 4 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -918,7 +996,11 @@ building_hydroponics_farm_4 = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 4 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 4 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -951,7 +1033,11 @@ building_hydroponics_farm_5_direct_build = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 5 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 5 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish
@@ -997,7 +1083,11 @@ building_hydroponics_farm_5 = {
 	produced_resource_trigger = {
 		modifier = {
 			has_valid_civic = civic_agrarian_idyll
-			resources = { unity = 1 }
+			resources = { unity = 5 }
+		}
+		modifier = {
+			has_valid_civic = civic_photoelectrolysis
+			resources = { energy = 5 }
 		}
 		modifier = {
 			has_swapped_tradition = tr_adaptability_finish

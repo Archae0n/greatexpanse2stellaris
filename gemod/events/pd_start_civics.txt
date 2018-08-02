@@ -9,13 +9,14 @@ country_event = {
 	trigger = { has_civic = civic_city_world }
 
 	immediate = {
-		random_owned_planet ={
-			limit = { is_capital = yes }
+		random_owned_planet = {
+			limit = { 
+				is_capital = yes 
+			}
 			change_pc = pc_city	
-			set_planet_size = 20		
-			add_modifier = {
-				modifier = "city"
-				days = -1
+			set_planet_size = 25
+			every_tile = {
+				clear_deposits = yes
 			}
 		}
 	}

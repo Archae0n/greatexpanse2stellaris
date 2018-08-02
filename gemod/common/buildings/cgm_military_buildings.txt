@@ -188,6 +188,12 @@ building_military_academy = {
 	army_modifier = { army_starting_experience_add = 100 }
 	planet_modifier = { planet_army_build_speed_mult = 0.50 planet_unrest_add = -10 }
 	produced_resources = { engineering_research = 2 society_research = 2 }
+	produced_resource_trigger = {
+		modifier = {
+			has_valid_civic = civic_citizen_service
+			resources = { unity = 5 }
+		}
+	}
 	 #ai restrictions and weights
 	ai_allow = {
 		NOT = { owner = { has_country_flag = cgm_disable_vanilla_building_AI } }

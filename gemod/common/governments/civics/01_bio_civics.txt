@@ -1,0 +1,837 @@
+# Adventurous Pioneers
+civic_pilgrims = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	random_weight = { base = 5 }
+	modifier = {
+		shipsize_colonizer_build_speed_mult = 0.30
+		planet_colony_development_speed_mult = 1
+	}
+}
+
+#Age of Steel
+
+#Agrarian Idyll - Pacifist/Ecologist - Unity from farms
+civic_agrarian_idyll = {
+	description = "civic_tooltip_agrarian_idyll_effects"
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_green
+				value = ethic_green
+			}
+			NOR = {
+				text = civic_tooltip_not_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_trade_league
+				value = civic_corporate_dominion
+				value = civic_syncretic_evolution
+				value = civic_post_apocalyptic
+			}
+		}		
+	}
+	random_weight = { base = 5 }
+}
+
+#Agrarian Photoelectronics
+civic_photoelectrolysis = {
+	modification = no
+	playable = {
+	}
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_materialist
+		}
+		civics = {
+			value = civic_agrarian_idyll
+		}
+	}
+	random_weight = {
+		base = 1
+	}
+	description = "civic_tooltip_photoelectrolysis_effects"
+	modifier = {
+	}
+}
+
+civic_cbshing_alien_message = {
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				#text = civic_tooltip_not_xenophobe
+				#value = ethic_xenophobe
+				#value = ethic_fanatic_xenophobe
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	
+		civics = {
+			NOR = {
+				value = civic_syncretic_evolution
+				#value = civic_agrarian_idyll
+				#value = civic_post_apocalyptic
+				#value = civic_life_seeded
+				
+				value = civic_cbshing_codominant_evolution
+				value = civic_cbshing_lost_colony
+				#value = civic_cbshing_eco_shift
+				#value = civic_cbshing_eternal_leader
+				value = civic_cbshing_nuclear_vault
+				#value = civic_cbshing_nuked_start
+				#value = civic_cbshing_nuclear_mutation
+				#value = civic_cbshing_voidborne
+				
+				#value = civic_cbshing_codominant_mechanists
+				#value = civic_cbshing_syncretic_mechanists
+				#value = civic_cbshing_habitat_life
+				#value = civic_cbshing_ringborne
+				#value = civic_cbshing_gaia_world
+				#value = civic_cbshing_dyson_sphere
+			}
+		}
+	}
+	random_weight = {
+		base = 0.1
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		ship_sensor_range_add = 1
+		pop_other_species_owner_happiness = 0.2
+		diplomacy_influence_cost = -0.25
+	}
+
+	#description = "civic_tooltip_cbshing_alien_message_effects"
+	#used when starting a new game to initialize home planet
+	#see cbshing_origins_alien_message_start.txt
+}
+
+#Aristocratic Elite
+civic_aristocratic_elite = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_elitist
+				value = ethic_elitist
+				value = ethic_fanatic_elitist
+			}			
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	     governor_skill_levels = 5
+		 leader_governor_cost = -0.5
+		 COUNTRY_SECTOR_CAP_ADD = 3
+	}
+}
+
+#Artisan's Cache
+civic_artisans_cache = {
+	modification = no
+	playable = { 
+        host_has_dlc = "Leviathans Story Pack"
+    }
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = { 
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_curators_cache
+				value = civic_traders_cache
+			}
+		}
+	}
+	random_weight = { 
+		base = 0.9
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Leviathans Story Pack" }
+		}
+	}
+	description = "civic_tooltip_artisans_cache_effects"
+	modifier = {
+	}
+}
+
+#Ascetic
+civic_asceticism = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = { 
+			NOR = { 
+				value = civic_trade_league 
+				value = civic_consumerism 
+				value = civic_corporate_dominion
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		pop_happiness = 0.1
+		pop_food_req_mult = -0.25
+		pop_consumer_goods_mult = -0.25
+	}
+}
+
+#Barbaric Despoilers
+civic_barbaric_despoilers = {
+	playable = { host_has_dlc = "Apocalypse" }
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_fanatic_militarist
+				value = ethic_militarist
+			}
+			OR = {
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}	
+			NOR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+			}
+		}		
+	}
+	random_weight = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_barbaric_despoilers_effects"
+}
+
+#Beautiful Architecture
+civic_beautiful_architecture = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = {
+		   NOR = { 
+				value = civic_functional_architecture
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		pop_citizen_happiness = 0.1
+		COUNTRY_ENGINEERING_TECH_RESEARCH_SPEED = 0.1
+		planet_building_build_speed_mult = -0.1
+		planet_building_build_cost_mult = 0.1
+	}
+}
+
+#Big Brother
+civic_big_brother = { #Big Brother - This stratified society strictly adheres to their founding beliefs. Correction facilities are commonplace in many of the cities, and non-conformists and enemies of the state have been known to disappear.
+	playable = {
+	}
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			value = ethic_fanatic_authoritarian
+			value = ethic_xenophobe
+		}
+	}
+	random_weight = {
+		base = 1
+	}
+	description = civic_tooltip_big_brother_effects 
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.35
+	}
+}
+
+# Big Game Hunters
+civic_big_game_hunters = { 
+	playable = {
+        host_has_dlc = "Leviathans Story Pack"
+    }
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist_militarist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		authority = {
+			OR = {
+				text = civic_tooltip_oli_imp
+				value = auth_oligarchic
+				value = auth_imperial
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Leviathans Story Pack" }
+		}
+	}
+
+	description = "civic_tooltip_big_game_hunters_effects"
+	modifier = {
+		#Bonus Unity when fighting any of these!
+		damage_vs_country_type_guardian_dragon_mult = 0.15
+		damage_vs_country_type_guardian_stellarite_mult = 0.15
+		damage_vs_country_type_guardian_sphere_mult = 0.15
+		damage_vs_country_type_guardian_horror_mult = 0.15
+		damage_vs_country_type_guardian_dreadnought_mult = 0.15
+		damage_vs_country_type_guardian_hiver_mult = 0.15
+		
+		damage_vs_country_type_tiyanki_mult = 0.15
+		damage_vs_country_type_amoeba_mult = 0.15
+		damage_vs_country_type_crystal_mult = 0.15
+		damage_vs_country_type_drone_mult = 0.15
+		damage_vs_country_type_cloud_mult = 0.15
+		ship_fire_rate_mult = 0.2
+	}
+}
+
+#Big Government
+
+#Bonds of Unity
+civic_bonds_of_unity = {
+	playable = {
+	}
+	potential = {
+	}
+	random_weight = {
+		base = 1
+	}
+	modifier = {
+		tradition_cost_num_colonies_mult = -0.25
+		tradition_cost_num_systems_mult =  -0.25
+	}
+}
+
+#Breaker of Shackles
+
+#Chosen
+
+#Citizen's Service
+civic_citizen_service = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+		   NOR = { 
+			value = civic_private_military
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+	            country_naval_cap_mult = 0.2
+				country_command_limit_add = 10
+				category_military_theory_research_speed_mult = 0.25
+				leader_general_cost = -0.25
+	}
+}
+
+#Climate Shift
+civic_cbshing_eco_shift = {
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = {
+			NOR = {
+				#value = civic_syncretic_evolution
+				value = civic_agrarian_idyll
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				
+				#value = civic_cbshing_codominant_evolution
+				value = civic_cbshing_lost_colony
+				#value = civic_cbshing_alien_message
+				value = civic_cbshing_eco_disaster
+				#value = civic_cbshing_eternal_leader
+				value = civic_cbshing_nuclear_vault
+				#value = civic_cbshing_nuked_start
+				value = civic_cbshing_nuclear_mutation
+				value = civic_cbshing_voidborne
+				
+				#value = civic_cbshing_codominant_mechanists
+				#value = civic_cbshing_syncretic_mechanists
+				#value = civic_cbshing_habitat_life
+				#value = civic_cbshing_ringborne
+				#value = civic_cbshing_gaia_world
+				#value = civic_cbshing_dyson_sphere
+			}
+		}
+	}
+	random_weight = {
+		base = 0.2
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		pop_environment_tolerance = 0.2
+		edict_length_mult = 0.10
+		#planet_colony_development_speed_mult = 0.25
+	}
+
+	#description = "civic_tooltip_cbshing_eco_shift_effects"
+	#used when starting a new game to initialize home planet
+	#see cbshing_origins_eco_shift_start.txt
+}
+
+#Code Optimizers
+
+#Codominant Evolution
+civic_cbshing_codominant_evolution = {
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_mechanists
+				value = civic_fanatic_purifiers
+				value = civic_agrarian_idyll
+				value = civic_syncretic_evolution
+				value = civic_inwards_perfection
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+
+				#value = civic_cbshing_lost_colony
+				value = civic_cbshing_alien_message
+				#value = civic_cbshing_eco_disaster
+				#value = civic_cbshing_eco_shift
+				#value = civic_cbshing_eternal_leader
+				#value = civic_cbshing_nuclear_vault
+				#value = civic_cbshing_nuked_start
+				#value = civic_cbshing_nuclear_mutation
+				#value = civic_cbshing_voidborne
+				
+				#value = civic_cbshing_codominant_mechanists
+				#value = civic_cbshing_syncretic_mechanists
+				#value = civic_cbshing_habitat_life
+				#value = civic_cbshing_ringborne
+				#value = civic_cbshing_gaia_world
+				#value = civic_cbshing_dyson_sphere
+			}
+		}
+	}
+	random_weight = {
+		base = 0.5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = {
+		pop_growth_speed = 0.25
+	}
+
+	description = civic_tooltip_cbshing_codominant_evolution_effects
+	has_secondary_species = {	# see game_start.11
+		title = civic_cbshing_codominant_evolution_secondary_species
+	}
+}
+
+#Command Economics
+
+#Commercial Idyll
+civic_commercial_idyll = {
+	playable = {}
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_egalitarian
+		}
+		civics = {
+			NOR = {
+				value = civic_agrarian_idyll
+				value = civic_industrial_idyll
+				value = civic_technological_idyll
+				value = civic_syncretic_evolution
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	description = civic_tooltip_commercial_idyll_effects
+	modifier = {
+	}
+}
+
+#Constitutional Monarchy
+civic_constitutional_monarchy = {
+	playable = {    }
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian_authoritarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		authority = {
+			OR = {
+				text = civic_tooltip_dem_imp
+				value = auth_democratic
+				value = auth_imperial
+			}
+		}
+	}
+	random_weight = {
+		base = 1
+	}
+	description = "civic_tooltip_constitutional_monarchy_effects"
+	modifier = {
+		country_resource_influence_add = 1
+		slave_food_output = 0.1
+		slave_mineral_output = 0.1
+	}
+}
+
+#Consumerism
+civic_consumerism = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_socialism
+				value = ethic_fanatic_green
+				value = ethic_fanatic_spiritualist
+			}
+			OR = {
+				text = civic_tooltip_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
+													
+		}
+		civics = {
+		   NOR = { 
+		            value = civic_keepers_harmony
+					value = civic_asceticism
+					value = civic_environmentalist
+					value = civic_spiritual_harmony
+					}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+				pop_happiness = 0.1
+				tile_resource_energy_mult = 0.1
+				tile_resource_food_mult	= 0.1
+				tile_resource_mineral_mult = 0.1
+	}
+}
+
+civic_corporate_dominion = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		authority = {
+			value = auth_oligarchic
+		}
+		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}   
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		
+		}
+		civics = {
+		   NOR = { 
+		            value = civic_empire_bureau
+					value = civic_public_works
+					value = civic_agrarian_idyll
+					value = civic_asceticism
+					value = civic_labour_unions
+					value = civic_free_market
+					value = civic_drone_brotherhood
+					}
+		}
+	}
+random_weight = { base = 3 }
+	# unlocks colony_ship_rushed
+	description = "civic_tooltip_corporate_dominion_effects"
+}
+
+#Corporate Military
+
+#Corvee System
+civic_corvee_system = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_pluralist
+				value = ethic_fanatic_pluralist
+			}
+		}
+		civics = {
+		    NOR = { 
+				value = civic_imperial_incentive
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		pop_resettlement_cost_mult = -2
+		country_resource_influence_add = 1
+	}
+}
+
+# Crystal World
+civic_crystal_world = {
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				value = civic_city_world
+				value = civic_floating_world
+				value = civic_graveyard_world
+				value = civic_mushroom_world
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_crystal_world_effects"
+	traits = {
+		trait = trait_crystal_miner
+	}
+}
+
+# Curator's Cache
+civic_curators_cache = {
+	modification = no 
+	playable = { 
+        host_has_dlc = "Leviathans Story Pack"
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = { 
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_traders_cache
+				value = civic_artisans_cache
+			}
+		}
+	}
+	random_weight = { #What are the odds the AI will pick it?
+		base = 0.9
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Leviathans Story Pack" }
+		}
+	}
+
+	description = "civic_tooltip_curators_cache_effects"
+	modifier = { 
+		#Begin the game with the research institute
+	}
+}
+
+#Cutthroat Politics
+civic_cutthroat_politics = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	random_weight = { base = 5 }
+	modifier = {
+		country_resource_influence_add = 1
+		max_influence = 500
+		country_election_influence_cost_mult = -0.99
+	}
+}
+
+# Ecumenopolis World
+civic_city_world = {
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				value = civic_agrarian_idyll
+				value = civic_floating_world
+				value = civic_crystal_world
+				value = civic_graveyard_world
+				value = civic_mushroom_world
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 1 
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_city_world_effects"
+}
+
+# Floating World
+civic_floating_world = {
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				value = civic_city_world
+				value = civic_crystal_world
+				value = civic_graveyard_world
+				value = civic_mushroom_world
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_floating_world_effects"
+	modifier = {
+		planet_clear_blocker_time_mult = 10
+		planet_clear_blocker_cost_mult = 10
+		pop_robot_production_output = -0.5
+		country_physics_tech_research_speed = 0.1
+	}
+}

@@ -643,8 +643,8 @@ civic_bonds_of_unity = { #Bonds of Unity - We venture out into the great unknown
 	}
 	
 	modifier = {
-		tradition_cost_num_colonies_mult = -0.2
-		tradition_cost_num_systems_mult =  -0.1
+		tradition_cost_num_colonies_mult = -0.25
+		tradition_cost_num_systems_mult =  -0.25
 	}
 }
 

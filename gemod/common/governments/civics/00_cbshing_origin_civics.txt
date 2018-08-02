@@ -14,58 +14,6 @@
 #		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
 #	}
 #}
-civic_cbshing_codominant_evolution = {
-	modification = no
-	playable = { host_has_dlc = "Utopia" }
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		civics = {
-			NOR = {
-				value = civic_mechanists
-				value = civic_fanatic_purifiers
-				value = civic_agrarian_idyll
-				value = civic_syncretic_evolution
-				value = civic_inwards_perfection
-				value = civic_post_apocalyptic
-				value = civic_life_seeded
-
-				#value = civic_cbshing_lost_colony
-				value = civic_cbshing_alien_message
-				#value = civic_cbshing_eco_disaster
-				#value = civic_cbshing_eco_shift
-				#value = civic_cbshing_eternal_leader
-				#value = civic_cbshing_nuclear_vault
-				#value = civic_cbshing_nuked_start
-				#value = civic_cbshing_nuclear_mutation
-				#value = civic_cbshing_voidborne
-				
-				#value = civic_cbshing_codominant_mechanists
-				#value = civic_cbshing_syncretic_mechanists
-				#value = civic_cbshing_habitat_life
-				#value = civic_cbshing_ringborne
-				#value = civic_cbshing_gaia_world
-				#value = civic_cbshing_dyson_sphere
-			}
-		}
-	}
-	random_weight = {
-		base = 0.5
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Utopia" }
-		}
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-
-	description = civic_tooltip_cbshing_codominant_evolution_effects
-	has_secondary_species = {	# see game_start.11
-		title = civic_cbshing_codominant_evolution_secondary_species
-	}
-}
 
 civic_cbshing_lost_colony = {
 	modification = no
@@ -116,65 +64,6 @@ civic_cbshing_lost_colony = {
 	#see cbshing_origins_colony_start.txt
 }
 
-civic_cbshing_alien_message = {
-	modification = no
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		ethics = {
-			OR = {
-				#text = civic_tooltip_not_xenophobe
-				#value = ethic_xenophobe
-				#value = ethic_fanatic_xenophobe
-				text = civic_tooltip_xenophile
-				value = ethic_xenophile
-				value = ethic_fanatic_xenophile
-			}
-		}
-	
-		civics = {
-			NOR = {
-				value = civic_syncretic_evolution
-				#value = civic_agrarian_idyll
-				#value = civic_post_apocalyptic
-				#value = civic_life_seeded
-				
-				value = civic_cbshing_codominant_evolution
-				value = civic_cbshing_lost_colony
-				#value = civic_cbshing_eco_shift
-				#value = civic_cbshing_eternal_leader
-				value = civic_cbshing_nuclear_vault
-				#value = civic_cbshing_nuked_start
-				#value = civic_cbshing_nuclear_mutation
-				#value = civic_cbshing_voidborne
-				
-				#value = civic_cbshing_codominant_mechanists
-				#value = civic_cbshing_syncretic_mechanists
-				#value = civic_cbshing_habitat_life
-				#value = civic_cbshing_ringborne
-				#value = civic_cbshing_gaia_world
-				#value = civic_cbshing_dyson_sphere
-			}
-		}
-	}
-	random_weight = {
-		base = 0.1
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-	modifier = { 
-		#pop_ethic_xenophile_attraction_mult = 0.5 
-		#country_sensor_range_mult = 0.25
-		ship_sensor_range_add = 1
-		pop_other_species_owner_happiness = 0.05
-	}
-
-	#description = "civic_tooltip_cbshing_alien_message_effects"
-	#used when starting a new game to initialize home planet
-	#see cbshing_origins_alien_message_start.txt
-}
 
 civic_cbshing_eco_disaster = {
 	modification = no
@@ -224,55 +113,6 @@ civic_cbshing_eco_disaster = {
 	#description = "civic_tooltip_cbshing_eco_disaster_effects"
 	#used when starting a new game to initialize home planet
 	#see cbshing_origins_eco_disaster_event.txt
-}
-
-civic_cbshing_eco_shift = {
-	modification = no
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		civics = {
-			NOR = {
-				#value = civic_syncretic_evolution
-				value = civic_agrarian_idyll
-				value = civic_post_apocalyptic
-				value = civic_life_seeded
-				
-				#value = civic_cbshing_codominant_evolution
-				value = civic_cbshing_lost_colony
-				#value = civic_cbshing_alien_message
-				value = civic_cbshing_eco_disaster
-				#value = civic_cbshing_eternal_leader
-				value = civic_cbshing_nuclear_vault
-				#value = civic_cbshing_nuked_start
-				value = civic_cbshing_nuclear_mutation
-				value = civic_cbshing_voidborne
-				
-				#value = civic_cbshing_codominant_mechanists
-				#value = civic_cbshing_syncretic_mechanists
-				#value = civic_cbshing_habitat_life
-				#value = civic_cbshing_ringborne
-				#value = civic_cbshing_gaia_world
-				#value = civic_cbshing_dyson_sphere
-			}
-		}
-	}
-	random_weight = {
-		base = 0.2
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-	modifier = { 
-		pop_environment_tolerance = 0.05 
-		edict_length_mult = 0.10
-		#planet_colony_development_speed_mult = 0.25
-	}
-
-	#description = "civic_tooltip_cbshing_eco_shift_effects"
-	#used when starting a new game to initialize home planet
-	#see cbshing_origins_eco_shift_start.txt
 }
 
 civic_cbshing_eternal_leader = {

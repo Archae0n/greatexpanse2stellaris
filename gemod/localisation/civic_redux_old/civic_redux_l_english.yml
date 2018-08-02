@@ -622,7 +622,7 @@
  #Update 1
  civic_constitutional_monarchy:0 "Constitutional Monarchy"
  civic_constitutional_monarchy_desc:0 "This society recognises both a democratically elected parliament and an autocratic leader as the head of their government."
- civic_tooltip_constitutional_monarchy_effects:0 "Your Empire does not suffer a Diplomatic Malus when negotiating with the Ethic not chosen for this civic.\n§YDemocratic Crusaders§! will recognise you as a Democratic society if you are an Imperial nation.\n§G5%§! Citizen Pop Happiness.\n§G5%§! Slave Output."
+ civic_tooltip_constitutional_monarchy_effects:0 "Your Empire does not suffer a Diplomatic Malus when negotiating with the Ethic not chosen for this civic.\n§YDemocratic Crusaders§! will recognise you as a Democratic society if you are an Imperial nation.\n§G5%§! Citizen Pop Happiness.\n§G10%§! Slave Output."
  START_SCREEN_PART_TWO_CONSTITUTIONAL_MONARCHY:0 "For years we have been struggling with the identity of our nation, ruled by both a powerful sovereign and a republic chosen by the people. This back and forth between the two sides - often leading to rebellions - was eventually quashed by a decree that both shall rule with equal rights and obligations."
  
  civic_alluring_diplomats:0 "Alluring Diplomats"
