@@ -721,7 +721,7 @@ civic_crystal_world = {
 civic_curators_cache = {
 	modification = no 
 	playable = { 
-        host_has_dlc = "Leviathans Story Pack"
+        always = false
 	}
 	potential = { 
         ethics = {

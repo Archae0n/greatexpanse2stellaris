@@ -71,38 +71,38 @@ country_event = {
 		country_event = { id = BuildableDreadnought.4 }
 	}
 	
-	option = {
-		name = Executor
-		country_event = { id = BuildableDreadnought.5 }
-	}
+	#option = {
+	#	name = Executor
+	#	country_event = { id = BuildableDreadnought.5 }
+	#}
 
-	option = {
-		name = "I want to leave it to chance"
-		random_list = {
-			25 = {
-				give_technology = { tech = tech_buildable_dreadnought }
-			}			
-			25 = {
-				give_technology = { tech = tech_build_dreadnought_m }
-			}
-			25 = {
-				give_technology = { tech = tech_carrier_dreadnought }
-			}
-			25 = {
-				give_technology = { tech = tech_buildable_executor }
-				give_technology = { tech = tech_artillery_executor }
-			}			
-			25 = {
-				give_technology = { tech = tech_buildable_executor }
-				give_technology = { tech = tech_build_executor_m }
-			}
-			25 = {
-				give_technology = { tech = tech_buildable_executor }
-				give_technology = { tech = tech_carrier_executor }
-			}
-		}
-		set_country_flag = picked_dreadnought
-	}
+	#option = {
+	#	name = "I want to leave it to chance"
+	#	random_list = {
+	#		25 = {
+	#			give_technology = { tech = tech_buildable_dreadnought }
+	#		}			
+	#		25 = {
+	#			give_technology = { tech = tech_build_dreadnought_m }
+	#		}
+	#		25 = {
+	#			give_technology = { tech = tech_carrier_dreadnought }
+	#		}
+	#		25 = {
+	#			give_technology = { tech = tech_buildable_executor }
+	#			give_technology = { tech = tech_artillery_executor }
+	#		}			
+	#		25 = {
+	#			give_technology = { tech = tech_buildable_executor }
+	#			give_technology = { tech = tech_build_executor_m }
+	#		}
+	#		25 = {
+	#			give_technology = { tech = tech_buildable_executor }
+	#			give_technology = { tech = tech_carrier_executor }
+	#		}
+	#	}
+	#	set_country_flag = picked_dreadnought
+	#}
 }
 
 country_event = {
@@ -146,11 +146,11 @@ country_event = {
 		set_country_flag = picked_dreadnought
 	}
 	
-	option = {
-		name = "Take me back to the GFX"
-		remove_country_flag = dreadnought_pick_fired
-		country_event = { id = BuildableDreadnought.3 }
-	}
+	#option = {
+	#	name = "Take me back to the GFX"
+	#	remove_country_flag = dreadnought_pick_fired
+	#	country_event = { id = BuildableDreadnought.3 }
+	#}
 	
 }	
 	
