@@ -370,9 +370,7 @@ civic_power = {
 civic_republic = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
-	
 		ethics = {			
-						
 			OR = {
 			    value = ethic_fanatic_pluralist
 				value = ethic_pluralist
@@ -385,7 +383,6 @@ civic_republic = {
 				value = ethic_fanatic_elitist
 			}
 		}
-		
 		civics = {
 		   NOR = { 
 					value = civic_timocracy
@@ -402,7 +399,6 @@ civic_republic = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-	
 		country_leader_pool_size = 2
 		leader_cost = -0.15
 		pop_citizen_happiness = 0.03
@@ -414,8 +410,6 @@ civic_republic = {
 		TRADITION_COST_NUM_COLONIES_MULT = -0.05
 		country_election_influence_cost_mult = 1
 		edict_cost = 0.05
-	
-	           
 	}
 }
 
@@ -604,91 +598,6 @@ civic_nationalism = {
 	}
 }
 
-civic_cyber_dictatorship = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		authority = {
-			OR = {
-				value = auth_democratic
-				value = auth_oligarchic
-				value = auth_dictatorial
-				value = auth_imperial
-			}
-		}
-		civics = {
-		   NOR = { 
-		            value = civic_beacon_of_liberty
-					value = civic_enlightment
-					value = civic_industrial_economy
-					value = civic_republic
-					value = civic_military_demos_cratos
-					}
-        }
-		ethics = {
-		
-			NOR = {
-				value = ethic_fanatic_egalitarian
-			}		
-
-		}
-    }
-	random_weight = { base = 5 }
-	modifier = {
-		POP_NON_SLAVE_RESOURCE_OUTPUT = 0.035
-		pop_government_ethic_attraction = 0.20	
-		governor_skill_levels = 1
-		country_society_tech_research_speed = 0.07
-		PLANET_UNREST_ADD = -10
-		country_piracy_risk_mult = -0.10
-		country_resource_unity_mult = -0.13
-	}
-}
-
-civic_enlightment = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_egalitarian
-				value = ethic_egalitarian
-				value = ethic_fanatic_egalitarian
-			}
-			OR = {
-				value = ethic_fanatic_materialist
-			}
-			NOR = {
-				value = ethic_elitist
-				value = ethic_fanatic_elitist
-			}
-		}
-		civics = {
-		   NOR = { 
-					value = civic_machine_cult
-					value = civic_empire_bureau
-					value = civic_cyber_dictatorship
-			}
-		}
-	}
-	random_weight = { base = 25 }
-	modifier = {
-	
-		all_technology_research_speed = 0.10
-		country_society_tech_research_speed = 0.05
-		shipsize_research_station_build_cost_mult = -0.15
-        shipsize_research_station_upkeep_mult = -0.15
-		ship_anomaly_research_speed_mult = 0.20
-		ship_anomaly_generation_chance_mult = 0.10
-		country_resource_unity_mult = 0.03
-		species_leader_exp_gain = 0.15
-		leader_skill_levels = 1
-		pop_ethic_egalitarian_attraction_mult = 0.15
-		pop_ethic_materialist_attraction_mult = 0.15
-		edict_cost = 0.25
-		edict_length_mult = -0.15
-		country_resource_influence_mult = -0.15
-	}
-}
-
 civic_industrial_cult = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
@@ -746,19 +655,6 @@ civic_mass_media = {
 		pop_citizen_happiness = 0.02
 		country_resource_unity_mult = -0.06
 		pop_consumer_goods_mult = 0.04
-	}
-}
-
-civic_terraforming = {
-	modification = no
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	random_weight = { base = 5 }
-	modifier = {
-		terraforming_cost_mult = -0.15
-		terraform_speed_mult = 0.20
-		PLANET_CLEAR_BLOCKER_TIME_MULT = -0.25
-		planet_clear_blocker_cost_mult = -0.20
-		category_new_worlds_research_speed_mult = 0.25
 	}
 }
 
@@ -1213,37 +1109,6 @@ civic_feudal_realm = {
 	}
 }
 
-civic_elite_troops = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_militarist
-				value = ethic_militarist
-				value = ethic_fanatic_militarist
-			}
-		}
-		civics = {
-		   NOR = { 
-		            value = civic_private_military
-					}
-		}
-	}
-	random_weight = { base = 5 }
-	modifier = {
-		army_damage_mult = 0.15
-		army_morale = 0.10
-		ship_fire_rate_mult = 0.05
-		SHIP_ACCURACY_ADD = 3
-		SHIP_TRACKING_ADD = 3
-		weapon_type_strike_craft_weapon_fire_rate_mult = 0.05
-		army_starting_experience_add = 75
-		ARMY_EXPERIENCE_GAIN_MULT = 0.30
-		SHIP_EXPERIENCE_GAIN_MULT = 0.30
-		general_skill_levels = 2
-	}
-}
-
 civic_warrior_culture = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
@@ -1272,71 +1137,6 @@ civic_warrior_culture = {
 	}
 }
 
-civic_distinguished_admiralty = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_militarist
-				value = ethic_militarist
-				value = ethic_fanatic_militarist
-			}
-		}
-		civics = {
-		   NOR = { 
-		            value = civic_private_military
-					}
-		}
-	}
-	random_weight = { base = 5 }
-	modifier = {
-		admiral_skill_levels = 2
-		country_leader_cap = 2
-		LEADER_ADMIRAL_COST = -0.25
-		SHIP_EVASION_MULT = 0.04
-		SHIP_EVASION_ADD = 3
-		SHIP_EXPERIENCE_GAIN_MULT = 0.20
-	}
-}
-
-civic_cutthroat_politics = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	random_weight = { base = 5 }
-	modifier = {
-		country_resource_influence_add = 1
-		edict_length_mult = 0.10
-		max_influence = 100
-	}
-}
-
-civic_shadow_council = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		authority = {
-			OR = {
-				text = civic_tooltip_dem_oli_dic
-				value = auth_democratic
-				value = auth_oligarchic
-				value = auth_dictatorial
-			}
-		}
-		civics = {
-		   NOR = { 
-		            value = civic_executive_committee
-					value = civic_republic
-					value = civic_timocracy
-					}
-        }
-    }
-	random_weight = { base = 5 }
-	modifier = {
-		country_election_influence_cost_mult = -0.80
-		country_resource_influence_add = 0.4
-		max_influence = 100
-		pop_government_ethic_attraction = 0.15
-	}
-}
-
 civic_mining_guilds = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	random_weight = { base = 5 }
@@ -1345,19 +1145,6 @@ civic_mining_guilds = {
 		max_minerals = 3500
 		shipsize_mining_station_build_cost_mult = -0.1
         shipsize_mining_station_upkeep_mult = -0.15
-	}
-}
-
-civic_efficient_bureaucracy = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		civics = { NOR = { value = civic_empire_bureau } }
-	}
-	random_weight = { base = 5 }
-	modifier = {
-		country_core_sector_system_cap = 3
-		tile_resource_energy_mult = 0.03
-		TRADITION_COST_NUM_COLONIES_MULT = -0.05
 	}
 }
 
@@ -1688,44 +1475,6 @@ civic_socialistic = {
 
 #Harmony
 ########
-
-
-
-#Environmental Economics - minerals back on demolishing, acquiring resource on blocker clear
-civic_environmentalist = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-	
-		ethics = {
-				
-			OR = {
-				text = civic_tooltip_green
-				value = ethic_green
-				value = ethic_fanatic_green
-			}
-				
-		}
-			
-			
-	}
-	random_weight = { base = 5 }
-	modifier = {
-
-				pop_consumer_goods_mult = -0.1
-				planet_building_cost_mult = -0.05
-                planet_building_upkeep_mult = -0.10
-                planet_clear_blocker_cost_mult = -0.25					
-                terraforming_cost_mult = -0.15				
-				category_biology_research_speed_mult = 0.15	
-				category_new_worlds_research_speed_mult = 0.15
-				planet_building_build_speed_mult = -0.12
-
-                		
-	           
-	}
-}
-
-
 
 
 
@@ -2386,52 +2135,6 @@ civic_commonwealth = {
 
 
 
-
-#Defenders of Faith - can learn Divine Crusade edict
-civic_defenders_faith = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-
-		ethics = {
-			OR = {
-				text = civic_tooltip_spiritualist
-				value = ethic_spiritualist
-				value = ethic_fanatic_spiritualist
-			}
-			
-			NOR = {
-				value = ethic_fanatic_pacifist	
-			}			
-					
-		}
-		civics = {
-		   NOR = { 
-		            value = civic_private_military
-					}
-		}
-	} 
-	random_weight = { base = 5 }
-	modifier = {
-	    
-		     max_rivalries = 1
-			 rivalry_influence_gain = 0.15
-			 planet_army_build_speed_mult = 0.25
-			 PLANET_ARMY_BUILD_COST_MULT = -0.20
-			 army_morale = 0.25
-			 army_morale_damage_mult = 0.15
-			 army_health = 0.2
-			 ARMY_ATTACK_DAMAGE_MULT = 0.10
-			 ARMY_EXPERIENCE_GAIN_MULT = 0.20
-			 COUNTRY_OCCUPATION_ARMIES_ADD = 1		 
-			 pop_ethic_spiritualist_attraction_mult = 0.2		
-	}
-}
-
-
-
-
-
-
 #Discovery
 ###########
 
@@ -2602,31 +2305,6 @@ civic_imperial_cult = {
 }
 
 
-
-
-#Enlightened Leader - Ruler can build Library
-civic_philosopher_king = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-		
-		authority = { OR = { value = auth_imperial value = auth_dictatorial } }
-		
-		civics = { NOR = { value = civic_imperial_cult  value = civic_military_dictatorship } }
-		
-	}
-	random_weight = { base = 5 }
-	modifier = {
-		ruler_skill_levels = 3		
-		country_society_tech_research_speed = 0.15
-		pop_citizen_happiness = 0.03
-	}
-}
-
-
-
-
-
-
 #Warlord 
 civic_military_dictatorship = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
@@ -2707,56 +2385,6 @@ civic_peaceful_republic = {
 			           
 	}
 }
-
-
-
-
-
-
-
-
-
-
-#Cyber Democracy
-civic_cyber_demos_cratos = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-	
-		ethics = {
-			
-			OR = {
-				text = civic_tooltip_materialist
-				value = ethic_materialist
-				value = ethic_fanatic_materialist
-			}			
-			
-
-			
-		}
-		
-        authority = { OR { value = auth_direct_democratic  } }
-		
-        civics = { NOR = { value = civic_military_demos_cratos  value = civic_peaceful_republic  value = civic_timocracy } }
-		
-	}
-	random_weight = { base = 5 }
-	
-	modifier = {
-		
-		country_core_sector_system_cap = 4
-		category_computing_research_speed_mult = 0.45
-		category_statecraft_research_speed_mult = 0.45
-		pop_citizen_happiness = 0.06
-		TRADITION_COST_NUM_COLONIES_MULT = -0.075
-		country_resource_influence_mult = -0.10
-		
-
-
-
-		
-	}
-}
-
 
 
 #Martial Democracy
@@ -2909,85 +2537,6 @@ civic_peoples_republic = {
 ############
 
 
-#Divine Circle
-civic_divine_council = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-	
-	
-	
-	ethics = {		
-			OR = {
-				text = civic_tooltip_spiritualist
-				value = ethic_spiritualist
-				value = ethic_fanatic_spiritualist
-			}			
-		}
-		
-		authority = { value = auth_oligarchic }
-		
-        civics = { NOR = { value = civic_tribals value = civic_military_junta  value = civic_science_directorate value = civic_ambassadors_assembly value = civic_executive_committee  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }			
-		
-		
-	}
-	random_weight = { base = 5 }
-	
-	modifier = {
-
-		leader_skill_levels = 1
-		TRADITION_COST_NUM_COLONIES_MULT = -0.05
-		edict_length_mult = 0.05
-		country_resource_influence_add = 0.25
-		pop_government_ethic_attraction = 0.10
-		tradition_cost_num_founder_pops_mult = -0.15
-		pop_ethic_elitist_attraction_mult = 0.1
-		pop_ethic_spiritualist_attraction_mult = 0.2
-
-
-		
-	}
-}
-
-
-#Elders Ring 
-civic_tribals = {
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	possible = {
-	
-		ethics = {
-	
-			OR = {
-				text = civic_tooltip_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-			}			
-		}
-		authority = { value = auth_oligarchic }
-		
-	  
-        civics = { NOR = { value = civic_divine_council value = civic_military_junta  value = civic_science_directorate value = civic_ambassadors_assembly value = civic_executive_committee  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }		
-		
-	}
-	
-	can_build_ruler_military_station = yes
-	
-	random_weight = { base = 5 }
-	modifier = {
-	
-	    leader_skill_levels = 1
-		leader_age = 15
-	    rivalry_influence_gain = 0.20
-		country_resource_influence_mult = 0.05
-		species_leader_exp_gain = 0.15
-		pop_ethic_elitist_attraction_mult = 0.1
-
-
-
-
-                		
-	           
-	}
-}
 
 
 
