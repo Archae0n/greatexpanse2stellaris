@@ -1,0 +1,11 @@
+on_game_start = {
+	events = {
+		cap_removal.1
+	}
+}
+
+on_leader_level_up = {
+	events = {
+		cap_removal.2
+	}
+}

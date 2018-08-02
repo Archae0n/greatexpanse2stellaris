@@ -1,0 +1,163 @@
+### Cap Removal Events
+
+### Set Namespace cap_removal
+
+namespace = cap_removal
+
+### First Event: Remove Soft Cap and make Ruler Max at game start
+
+event = {
+    id = cap_removal.1
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+    immediate = {
+		every_country = {
+			if = {
+				limit = {
+					has_valid_civic = civic_imperial_cult
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = ruler
+							}
+						add_trait = leader_trait_ruler_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_meritocracy
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = scientist
+							}
+						add_trait = leader_trait_scientist_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_noble_aristocracy
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = ruler
+							}
+						add_trait = leader_trait_ruler_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_distinguished_admiralty
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = admiral
+							}
+						add_trait = leader_trait_admiral_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_aristocratic_elite
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = governor
+							}
+						add_trait = leader_trait_governor_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			} 
+		}   
+	}
+}
+
+### Second Event Check if Leader has removed softcap or not
+
+event = {
+	id = cap_removal.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					has_valid_civic = civic_meritocracy
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = scientist
+							}
+						add_trait = leader_trait_scientist_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_noble_aristocracy
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = ruler
+							}
+						add_trait = leader_trait_ruler_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_distinguished_admiralty
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = admiral
+							}
+						add_trait = leader_trait_admiral_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_aristocratic_elite
+					}
+				every_owned_leader = {
+					if = {	
+						limit = {
+							leader_class = governor
+							}
+						add_trait = leader_trait_governor_cap_removal
+						#modifier = { leader_skill_levels = 40 }
+					}
+				}
+			} 
+		}   
+	}
+}
