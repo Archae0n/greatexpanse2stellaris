@@ -16,3 +16,10 @@
  
  trait_saxheelian:0 "Saxheelian"
  trait_saxheelian_desc:0 "§LA collective of species from the Triangulum and now Andromeda galaxies, the Saxheelians as a whole are biological masters. They use advanced organic technology in all facets of their day to day lives and long ago achieved the perfection of biological immortality. With vastly increased intelligence, physical strength, and other notable abilities, all species who call themselves Saxheelians are nothing short of remarkable. However, this has had downsides; Haleelians, the most numerous, are massive creatures and require an extremely long time to grow. Others require intensely specific environments, or decades of childhood before they are valuable members of society. This complexity is expressed in an increased need for food, a reduced overall speed of population growth, and a large reduction of general habitability. In exchange, the Saxheelians gain an increased average lifespan and an increase in society output to represent their biological affinity. §!\n"
+ 
+ civic_capsuleer:0 "Capsuleer Society"
+ civic_capsuleer_desc:0"With an integrated network uplink via our implants, this allows us to easily man ships, train one-man armies, and allows us to live ridiculously long life spans."
+ 
+ trait_capsuleer:0 "Capsuleer"
+ trait_capsuleer_desc:0 "test"
+ 

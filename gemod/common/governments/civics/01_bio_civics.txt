@@ -472,6 +472,41 @@ civic_citizen_service = {
 	}
 }
 
+#Capsuleer (Night's Civic)
+civic_capsuleer = {
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			AND = {
+				value = ethic_capitalism
+				value = ethic_militarist
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	
+	modifier = {
+		country_naval_cap_mult = 0.2
+		country_command_limit_add = 20
+		ship_upkeep_mult = 0.1
+		admiral_skill_levels = 2
+		subject_tribute_mult = 0.15
+	}
+	
+	traits = {
+		trait = trait_capsuleer
+	}
+}
+
 #Climate Shift
 civic_cbshing_eco_shift = {
 	modification = no
