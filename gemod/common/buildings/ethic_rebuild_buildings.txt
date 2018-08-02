@@ -447,37 +447,23 @@ building_resort = {
 	
 }
 
-
-
-
-
-
-
-
-
-
-
 # Royal Library
 building_royal_library = {
-	base_buildtime = 500
-	built_for_ruler = yes
+	base_buildtime = 240
 	planet_unique = yes
 	
 	cost = { 
-		minerals = 450 
+		minerals = 200
 	}
 	
 	produced_resources = {	           
-			   unity = 3	 
-	}	
+			   unity = 3
+			}	
 	
 	planet_modifier = {
-				pop_government_ethic_attraction = 0.1
+				pop_government_ethic_attraction = 0.25
 				tile_resource_society_research_mult = 0.25
 	}
-	
-
-	
 	potential = {
 		planet = {
 		exists = owner
@@ -488,25 +474,9 @@ building_royal_library = {
 	}
 	
 	allow = {
-		exists = ruler
-		ruler = {
-			NOT = { has_leader_flag = built_monument }
-		}
 	}
 	
-	on_queued = {
-		ruler = {
-			set_leader_flag = built_monument
-		}
-	}
-	
-	on_unqueued = {
-		ruler = {
-			remove_leader_flag = built_monument
-		}
-	}
-	
-	ai_weight = {
+		ai_weight = {
 		weight = 1000
 	}		
 	

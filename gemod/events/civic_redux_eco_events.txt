@@ -16,9 +16,7 @@ planet_event = {
 		owner = {
 			add_monthly_resource_mult = {
 				resource = unity
-				value = 3
-				min = 6
-				max = 300
+				value = 50
 			}
 		}
 	}

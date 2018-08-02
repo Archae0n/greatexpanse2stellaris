@@ -252,7 +252,7 @@
  
  civic_age_of_steel:0 "Age Of Steel"
  civic_age_of_steel_desc:0 "<LOADING CIVIC SUBROUTINES>\n<PLEASE WAIT>\n\nThis society has fully embraced the Machine Age and co-exist with th§RAS*$£&HD^%$NFGRG*§!\n\n§R<ERROR ACCESSING CIVIC INFORMATION>§!"
- civic_tooltip_age_of_steel_effects:0 "Permanent§Y HUGE§! bonus with the §YSynthetic§! Ascension Path"
+ civic_tooltip_age_of_steel_effects:0 "When Flesh is Weak is taken, you gain §G20%§! Robot Build Speed, §G-20%§! Robot Upkeep, and §G-20%§! Robot Build Cost. When Synthetic Ascension is taken, the bonuses are doubled.\n\nIn addition, increases your Robot Pop Production by §G5%§!."
  
  civic_roboticists:0 "Roboticists"
  civic_roboticists_desc:0 "This society demonstrates remarkable knowledge about robotics and its potential applications."
@@ -499,11 +499,11 @@
  #Launch
  civic_big_game_hunters:0 "Big Game Hunters"
  civic_big_game_hunters_desc:0 "To this nation, there is nothing quite like the thrill of the hunt. From tracking the prey, to chasing their quarry, to - finally - the moment of the kill."
- civic_tooltip_big_game_hunters_effects:0 "Damage to §YSpaceborne Organics§! and §YGuardians§! increased by §G25%§!\nKilling §YSpaceborne Organics§! or §YGuardians§! grants £unity  Unity."
+ civic_tooltip_big_game_hunters_effects:0 "Damage to §YSpaceborne Organics§! and §YGuardians§! increased by §G25%§!\nKilling §YSpaceborne Organics§! or §YGuardians§! grants £unity  Unity.\n§G+20§! §YFire Rate§!"
  
  civic_dark_influence:0 "Dark Influence"
- civic_dark_influence_desc:0 "Something about the way this government is run, and the people who run within it, is... off..."
- civic_tooltip_dark_influence_effects:0 "£starbase §YStarbase Capacity§! increased by §G2§!\n§YArmy Health, Damage§! and §YMorale§! increased by §G15%§!\n§YPop Growth Speed§! increased by §G15%§!\nYou must regularly sacrifice your £pop  Pops, lest you face the wrath of the §YDark Ones...§!"
+ civic_dark_influence_desc:0 "This government has submitted to their dark gods, who must feed their hunger in order to not upset them, lest they shall invoke their wrath."
+ civic_tooltip_dark_influence_effects:0 "Starbase Capacity: §G+2§!\nArmy Health: §G+25%§!\nArmy Damage: §G+25%§!\nArmy Morale: §G+25%§!\n£pop  Pop Growth Speed: §G+25%§!\n\nYou must regularly sacrifice your £pop  Pops. In return, the §YDark Ones§! will grant you additional bonuses."
  
  civic_elder_gods_promise:0 "Promise Of An Elder God"
  civic_elder_gods_promise_desc:0 "Evil spirits and dark gods control and empower the government. This much they know. But how far are you willing to go for true power? Would you make a deal with an Elder God?"
@@ -523,7 +523,7 @@
  
  civic_photoelectrolysis:0 "Agrarian Photoelectronics"
  civic_photoelectrolysis_desc:0 "Harnessing a rare and secret form of technology, a method of obtaining Energy Credits from the food this society grows has been discovered!"
- civic_tooltip_photoelectrolysis_effects:0 "£building  §YFarms§! you build have no Upkeep and produce additional £energy  §YEnergy§!"
+ civic_tooltip_photoelectrolysis_effects:0 "£building  §YFarms§! also produce additional £energy  §YEnergy§! based on its level."
  
  civic_earthen_connection:0 "Earthen Connection"
  civic_earthen_connection_desc:0 "This society carries with their colony ships a portion of their homeworld, filled with rich nutrients to help them survive the alien and potentially hostile climate."
@@ -531,7 +531,7 @@
  
  civic_divine_transcendence:0 "Divine Transcendence"
  civic_divine_transcendence_desc:0 "Through harnessing the raw power of the universe this society has prepared itself for uplifting into mystical beings akin to gods..."
- civic_tooltip_divine_transcendence_effects:0 "You unlock a permanent Buff Effect for each §YAscension Perk§! you have unlocked."
+ civic_tooltip_divine_transcendence_effects:0 "Grants a permanent buff based on the numbers of ascension perks unlocked up to 8 perks, starting with §G+10%§! £happiness  §YHappiness§!,  then §G15%§! §YGoverning Ethics Attraction§! on the second, §G+15%§! £unity  §YUnity§! on the third, §G+20%§! §YEdict Length§! on the fourth, §G+20§! §YLeader Lifespan§! fifth, §G+2§! §YCore System Cap§! sixth, and finally §G+1§! £influence  §YInfluence§! on the seventh. At the eighth perk, all bonuses are doubled."
  
  civic_mandate_of_heaven:0 "Mandate Of Heaven"
  civic_mandate_of_heaven_desc:0 "Our ruler has been chosen by the gods themselves, and all authority on state and leadership rest with them."
@@ -558,7 +558,7 @@
  
  civic_eco_warriors:0 "Eco-Warriors"
  civic_eco_warriors_desc:0 "No matter where, no matter when. When the stability of the natural world is threatened, this society will fight to restore it to its former glory."
- civic_tooltip_eco_warriors_effects:0 "Tile Blocker Clear Cost and Time reduced by §G25%§!\nClearing a Tile Blocker rewards £unity  §YUnity§!"
+ civic_tooltip_eco_warriors_effects:0 "Begins the game with nearly every £blocker  §YTile Blocker§! technology unlocked, and you also gain a §G-25%§! £blocker  §YTile Blocker§! cost to clearing them. Whenever a £blocker  §YTile Blocker§! is cleared, gain §G50§! £unity  Unity."
  
  civic_pit_fighters:0 "Pit Fighters"
  civic_pit_fighters_desc:0 "This society has always held a strong warrior tradition, which transitioned into the highest levels of government. The Fighting Pits remain as a vessel for entertainment and training for warriors."

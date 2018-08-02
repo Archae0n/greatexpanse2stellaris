@@ -127,41 +127,6 @@ civic_focus_of_knowledge = {
 	}
 }
 
-civic_digital_life = {
-	modification = no
-	
-	potential = { 
-        ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-    }
-	
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_egalitarian
-				value = ethic_fanatic_egalitarian
-				value = ethic_egalitarian
-			}
-		}
-	}
-	
-	random_weight = {
-		base = 1
-	}
-	
-	#description = "civic_tooltip_digital_life_effects"
-	modifier = {
-		pop_citizen_happiness = 0.05
-		pop_government_ethic_attraction = 0.1
-		country_resource_unity_mult = 0.15
-		planet_building_upkeep_mult = 0.1
-		country_resource_energy_mult = -0.05
-	}
-}
-
 civic_test_subjects = {
 	modification = no
 	
@@ -258,51 +223,6 @@ civic_awakened_minds = {
 	description = "civic_tooltip_awakened_minds_effects"
 	modifier = {
 		#num_tech_alternatives_add = 1
-	}
-}
-
-civic_age_of_steel = {
-	modification = no
-	
-	playable = {
-		AND = {
-			host_has_dlc = "Utopia"
-			host_has_dlc = "Synthetic Dawn Story Pack"
-		}
-	}
-	
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_materialist
-				value = ethic_fanatic_materialist
-				value = ethic_materialist
-			}
-		}
-	}
-	
-	random_weight = {
-		base = 1
-		modifier = {
-			factor = 0
-			NOR = { 
-				host_has_dlc = "Utopia"
-				host_has_dlc = "Synthetic Dawn Story Pack"
-			}
-		}
-	}
-	
-	description = "civic_tooltip_age_of_steel_effects"
-	modifier = {
-		
 	}
 }
 

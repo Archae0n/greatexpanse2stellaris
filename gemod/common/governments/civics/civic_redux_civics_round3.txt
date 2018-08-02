@@ -143,39 +143,6 @@ civic_free_love = { #Free Love - This society diesn't care who their citizens ar
 	}
 }
 
-civic_big_brother = { #Big Brother - This stratified society strictly adheres to their founding beliefs. Correction facilities are commonplace in many of the cities, and non-conformists and enemies of the state have been known to disappear.
-	modification = yes
-	
-	playable = {
-	
-	}
-	
-	potential = {
-        ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-    }
-	
-	possible = {
-		ethics = {
-			value = ethic_fanatic_authoritarian
-			value = ethic_xenophobe
-		}
-	}
-	
-	random_weight = {
-		base = 1
-	}
-	
-	description = civic_tooltip_big_brother_effects #Unique Building: Correction Facility. Grants Governing Ethics Attraction, and a Unique Planet Edict that will execute a Pop that is either a Xeno or does not have your Governing Ethics.
-	
-	modifier = {
-		pop_government_ethic_attraction = 0.2
-	}
-}
-
 civic_interstellar_dominion = { #Interstellar Dominion - This society governs over a large number of subjugated states acquired through conquest. They will not allow any of their subjects to become full citizens - their place is to serve.
 	modification = yes
 	

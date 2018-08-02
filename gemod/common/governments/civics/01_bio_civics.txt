@@ -9,6 +9,45 @@ civic_pilgrims = {
 }
 
 #Age of Steel
+civic_age_of_steel = {
+	modification = no
+	playable = {
+		AND = {
+			host_has_dlc = "Utopia"
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+	}
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+		}
+	}
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOR = { 
+				host_has_dlc = "Utopia"
+				host_has_dlc = "Synthetic Dawn Story Pack"
+			}
+		}
+	}
+	description = "civic_tooltip_age_of_steel_effects"
+	modifier = {
+		pop_robot_production_output = 0.05
+	}
+}
 
 #Agrarian Idyll - Pacifist/Ecologist - Unity from farms
 civic_agrarian_idyll = {
@@ -378,6 +417,32 @@ civic_bonds_of_unity = {
 }
 
 #Breaker of Shackles
+civic_broken_shackles = {
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_egalitarian
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+	}
+	random_weight = {
+		base = 100
+		modifier = {
+			factor = 0
+			always = yes
+		}
+	}
+
+	description = civic_tooltip_broken_shackles_effects
+	#Has scripted effects
+}
 
 #Chosen
 
@@ -722,6 +787,7 @@ civic_curators_cache = {
 	modification = no 
 	playable = { 
         host_has_dlc = "Leviathans Story Pack"
+	}
 	potential = { 
         ethics = {
 			NOT = {
@@ -774,6 +840,400 @@ civic_cutthroat_politics = {
 	}
 }
 
+#Cyber Brainwashing
+civic_cyber_dictatorship = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		authority = {
+			OR = {
+				value = auth_democratic
+				value = auth_oligarchic
+				value = auth_dictatorial
+				value = auth_imperial
+			}
+		}
+		civics = {
+		   NOR = { 
+		            value = civic_beacon_of_liberty
+					value = civic_enlightment
+					value = civic_industrial_economy
+					value = civic_republic
+					value = civic_military_demos_cratos
+					}
+        }
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+				value = ethic_pluralist
+				value = ethic_fanatic_pluralist
+			}		
+		}
+    }
+	random_weight = { base = 5 }
+	modifier = {
+		POP_NON_SLAVE_RESOURCE_OUTPUT = 0.1
+		pop_government_ethic_attraction = 0.35
+		PLANET_UNREST_ADD = -25
+		country_resource_unity_mult = -0.25
+	}
+}
+
+# Cyber Democracy
+civic_cyber_demos_cratos = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+        authority = { OR { value = auth_direct_democratic  } }
+        civics = { NOR = { value = civic_military_demos_cratos  value = civic_peaceful_republic  value = civic_timocracy } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		country_core_sector_system_cap = 4
+		category_computing_research_speed_mult = 0.45
+		category_statecraft_research_speed_mult = 0.45
+		pop_citizen_happiness = 0.1
+		country_resource_influence_mult = -0.10
+	}
+}
+
+# Dark Influence
+civic_dark_influence = { #Dark Influence - Something about the way this government is run, and the people who run within it, is... off.
+	modification = no
+	playable = {
+    }
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	random_weight = {
+		base = 1
+	}
+
+	description = "civic_tooltip_dark_influence_effects"
+	modifier = {
+		country_starbase_capacity_add = 2
+		pop_growth_speed = 0.15
+		army_health = 0.25
+		army_damage_mult = 0.25
+		army_morale = 0.25
+	}
+}
+
+#Defenders of Faith
+civic_defenders_faith = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+			
+			NOR = {
+				value = ethic_fanatic_pacifist	
+			}			
+					
+		}
+		civics = {
+		   NOR = { 
+		            value = civic_private_military
+					}
+		}
+	} 
+	random_weight = { base = 5 }
+	modifier = {
+	    max_rivalries = 3
+		rivalry_influence_gain = 0.4
+		country_war_exhaustion_mult = -0.25
+	}
+}
+
+#Dependable Allies
+civic_dependable_allies = {
+	modification = yes
+	
+	playable = {
+	}
+	potential = {
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	}
+	random_weight = {
+		base = 1
+	}
+	modifier = {
+		country_federation_member_resource_unity_mult = 0.1
+		country_federation_member_resource_unity_max_mult = 0.4
+	}
+}
+
+#Destructive Tendencies
+civic_destructive_tendencies = {
+	modification = yes
+	playable = {
+	}
+	
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	
+	possible = {
+		ethics = {
+			value = ethic_fanatic_militarist
+			NOT = {
+				value = ethic_xenophile
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	description = civic_tooltip_destructive_tendencies_effects #Can use the Armageddon Bombardment Stance.
+	modifier = {
+		ship_weapon_damage = 0.1
+	}
+}
+
+#Digital Life
+civic_digital_life = {	
+	potential = { 
+        ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+    }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	#description = "civic_tooltip_digital_life_effects"
+	modifier = {
+		pop_citizen_happiness = 0.05
+		pop_government_ethic_attraction = 0.1
+		country_resource_unity_mult = 0.15
+		planet_building_upkeep_mult = 0.1
+		country_resource_energy_mult = -0.05
+	}
+}
+
+#Distinguished Admiralty
+civic_distinguished_admiralty = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+		   NOR = { 
+		            value = civic_private_military
+					}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		admiral_skill_levels = 2
+		country_leader_cap = 2
+		LEADER_ADMIRAL_COST = -0.25
+		SHIP_EVASION_MULT = 0.04
+		SHIP_EVASION_ADD = 3
+		SHIP_EXPERIENCE_GAIN_MULT = 0.20
+	}
+}
+
+#Distributism
+
+#Divine Circle
+civic_divine_council = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {		
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}			
+		}
+		authority = { value = auth_oligarchic }
+		
+        civics = { NOR = { value = civic_tribals value = civic_military_junta  value = civic_science_directorate value = civic_ambassadors_assembly value = civic_executive_committee  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }
+	}
+	random_weight = { base = 5 }
+	
+	modifier = {
+		leader_skill_levels = 3
+		TRADITION_COST_NUM_COLONIES_MULT = -0.25
+		edict_length_mult = 0.25
+		pop_ethic_elitist_attraction_mult = 0.35
+		pop_ethic_spiritualist_attraction_mult = 0.35
+	}
+}
+
+#Divine Transcendence
+civic_divine_transcendence = {
+	modification = no
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_spiritualist
+		}
+	}
+	
+	random_weight = {
+		base = 1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+	}
+	
+	description = "civic_tooltip_divine_transcendence_effects"
+	modifier = {
+		#For each Ascension Perk unlocked you gain a beneficial effect, up to 8. (Utopia Only)
+	}
+}
+
+#Eco-Warriors
+civic_eco_warriors = { 
+	modification = no
+	playable = {
+	}
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			text = civic_tooltip_green
+			value = ethic_fanatic_green
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}
+	
+	description = civic_tooltip_eco_warriors_effects
+	
+	modifier = {
+		planet_clear_blocker_cost_mult = -0.25
+	}
+}
+
+# Ecological Disaster
+civic_cbshing_eco_disaster = {
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = {
+			NOR = {
+				#value = civic_syncretic_evolution
+				value = civic_agrarian_idyll
+				value = civic_post_apocalyptic
+				value = civic_life_seeded
+				
+				#value = civic_cbshing_codominant_evolution
+				value = civic_cbshing_lost_colony
+				#value = civic_cbshing_alien_message
+				value = civic_cbshing_eco_shift
+				#value = civic_cbshing_eternal_leader
+				value = civic_cbshing_nuclear_vault
+				#value = civic_cbshing_nuked_start
+				value = civic_cbshing_nuclear_mutation
+				value = civic_cbshing_voidborne
+				
+				#value = civic_cbshing_codominant_mechanists
+				#value = civic_cbshing_syncretic_mechanists
+				#value = civic_cbshing_habitat_life
+				#value = civic_cbshing_ringborne
+				#value = civic_cbshing_gaia_world
+				#value = civic_cbshing_dyson_sphere
+			}
+		}
+	}
+	random_weight = {
+		base = 0.1
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		pop_migration_speed = 0.25
+		country_society_tech_research_speed = 0.25
+		category_new_worlds_research_speed_mult = 0.2
+		#shipsize_colonizer_build_cost_mult = -0.3
+	}
+
+	#description = "civic_tooltip_cbshing_eco_disaster_effects"
+	#used when starting a new game to initialize home planet
+	#see cbshing_origins_eco_disaster_event.txt
+}
+
 # Ecumenopolis World
 civic_city_world = {
 	potential = { 
@@ -802,6 +1262,171 @@ civic_city_world = {
 		}
 	}
 	description = "civic_tooltip_city_world_effects"
+}
+
+# Efficient Bureaucracy
+civic_efficient_bureaucracy = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = { NOR = { value = civic_empire_bureau } }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		country_core_sector_system_cap = 5
+		tradition_cost_num_systems_mult = -0.15
+	}
+}
+
+#Elders Ring 
+civic_tribals = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}			
+		}
+		authority = { value = auth_oligarchic }
+        civics = { NOR = { value = civic_divine_council value = civic_military_junta  value = civic_science_directorate value = civic_ambassadors_assembly value = civic_executive_committee  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }		
+	}
+	
+	random_weight = { base = 5 }
+	modifier = {
+	    leader_skill_levels = 3
+		leader_age = 15
+	    rivalry_influence_gain = 0.20
+		species_leader_exp_gain = 0.25
+		pop_ethic_elitist_attraction_mult = 0.25
+	}
+}
+
+#Elite Military
+civic_elite_troops = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+		   NOR = { 
+		        value = civic_private_military
+				}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+		ship_fire_rate_mult = 0.05
+		SHIP_ACCURACY_ADD = 3
+		SHIP_TRACKING_ADD = 3
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.05
+		army_starting_experience_add = 75
+		ARMY_EXPERIENCE_GAIN_MULT = 0.30
+		SHIP_EXPERIENCE_GAIN_MULT = 0.30
+		general_skill_levels = 2
+		army_upkeep_mult = 0.15
+		ship_upkeep_mult = 0.15
+	}
+}
+
+#Enlightened Leader
+civic_philosopher_king = {
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		authority = { OR = { value = auth_imperial value = auth_dictatorial } }
+		civics = { NOR = { value = civic_imperial_cult  value = civic_military_dictatorship } }
+	}
+	random_weight = { base = 5 }
+	description = "civic_philosopher_king_effects"
+	modifier = {
+		ruler_skill_levels = 5
+	}
+}
+
+#Enlightenment
+civic_enlightment = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			OR = {
+				value = ethic_fanatic_materialist
+			}
+			NOR = {
+				value = ethic_elitist
+				value = ethic_fanatic_elitist
+			}
+		}
+		civics = {
+		   NOR = { 
+					value = civic_machine_cult
+					value = civic_empire_bureau
+					value = civic_cyber_dictatorship
+			}
+		}
+	}
+	random_weight = { base = 25 }
+	modifier = {
+		all_technology_research_speed = 0.10
+		country_society_tech_research_speed = 0.05
+		shipsize_research_station_build_cost_mult = -0.15
+        shipsize_research_station_upkeep_mult = -0.15
+		ship_anomaly_research_speed_mult = 0.20
+		ship_anomaly_generation_chance_mult = 0.10
+		species_leader_exp_gain = 0.15
+		pop_ethic_egalitarian_attraction_mult = 0.15
+		pop_ethic_materialist_attraction_mult = 0.15
+		edict_cost = 0.25
+		edict_length_mult = -0.15
+		country_resource_influence_mult = -0.15
+	}
+}
+
+#Environmental Economics
+civic_environmentalist = {
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_green
+				value = ethic_green
+				value = ethic_fanatic_green
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		pop_consumer_goods_mult = -0.1
+		planet_building_cost_mult = -0.1
+        planet_building_upkeep_mult = -0.1
+        planet_clear_blocker_cost_mult = -0.1
+	}
+}
+
+# Environmental Engineers
+civic_terraforming = {
+	modification = no
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	random_weight = { base = 5 }
+	modifier = {
+		terraforming_cost_mult = -0.15
+		terraform_speed_mult = 0.20
+		PLANET_CLEAR_BLOCKER_TIME_MULT = -0.25
+		planet_clear_blocker_cost_mult = -0.20
+		category_new_worlds_research_speed_mult = 0.25
+	}
 }
 
 # Floating World
