@@ -658,19 +658,6 @@ civic_mass_media = {
 	}
 }
 
-civic_terraforming = {
-	modification = no
-	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
-	random_weight = { base = 5 }
-	modifier = {
-		terraforming_cost_mult = -0.15
-		terraform_speed_mult = 0.20
-		PLANET_CLEAR_BLOCKER_TIME_MULT = -0.25
-		planet_clear_blocker_cost_mult = -0.20
-		category_new_worlds_research_speed_mult = 0.25
-	}
-}
-
 civic_spiritual_harmony = {
 	modification = no
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
