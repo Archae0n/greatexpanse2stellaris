@@ -17,6 +17,7 @@
 trait_saxheelian = {
 	cost = 2
 	allowed_archetypes = { BIOLOGICAL }
+	modification = no
 	modifier = {
 		leader_age = 750
 		tile_resource_society_research_mult = 0.45
@@ -31,6 +32,7 @@ trait_capsuleer = {
 	cost = 4
 	initial = no
 	randomized = no
+	modification = no
 	allowed_archetypes = { BIOLOGICAL }
 	immortal_leaders = yes
 	modifier = {
@@ -41,4 +43,30 @@ trait_capsuleer = {
 		pop_consumer_goods_mult = 0.3
 		pop_growth_speed = -0.1
 	}
+}
+
+trait_spice_influence = {
+	icon = 	"gfx/interface/icons/traits/trait_hydrophobic.dds"
+	cost = 1
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		leader_age = 70
+		species_leader_exp_gain = -0.15
+		leader_cost = 0.2
+	}
+}
+
+trait_broman = {
+    icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
+    cost = 4
+    modification = no
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        leader_age = 200
+        tile_resource_society_research_mult = 0.20
+        tile_resource_physics_research_mult = 0.20
+        tile_resource_engineering_research_mult = 0.20
+        army_damage_mult = -0.25
+        army_morale = -0.25
+    }
 }
