@@ -52,7 +52,7 @@ country_event = {
 			last_created_fleet = {
 				set_owner = event_target:DiplomaticCountry
 				create_ship_design = {
-					design = "Diplomat"
+					design = "Ambassador"
 				}
 				create_ship = {
 					name = "Eloquence"

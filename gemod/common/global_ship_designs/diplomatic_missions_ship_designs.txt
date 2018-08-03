@@ -4,7 +4,7 @@
 ##########################################################################
 
 ship_design = {
-	name = "Diplomat"
+	name = "Ambassador"
 	ship_size = diplomatic_ship
 	section = {
 		template = "CORVETTE_MID_S3"
