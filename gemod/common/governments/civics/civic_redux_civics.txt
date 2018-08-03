@@ -521,16 +521,11 @@ civic_manifest_destiny = { #Manifest Destiny - Our rights to the heavens and all
 
 civic_quantum_masters = { #Quantum Masters - The scientists of this society have harnessed the power of the building blocks of the universe and of artificial intelligence - and the applications for their research have pushed them towards greatness.
 	modification = yes
-	
 	playable = {
-	
 	}
-	
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
+	potential = { 
+		authority = { 
+			value = auth_machine_intelligence 
 		}
 	}
 	

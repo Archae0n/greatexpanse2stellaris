@@ -1,0 +1,48 @@
+leader_trait_ruler_cap_removal = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/cap_removal.dds"
+	modifier = {
+		ruler_skill_levels = 40
+	}
+	leader_trait = yes
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+leader_trait_governor_cap_removal = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/cap_removal.dds"
+	modifier = {
+		governor_skill_levels = 40
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+leader_trait_scientist_cap_removal = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/cap_removal.dds"
+	modifier = {
+		scientist_skill_levels = 40
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+leader_trait_admiral_cap_removal = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/cap_removal.dds"
+	modifier = {
+		admiral_skill_levels = 40
+	}
+	leader_trait = yes
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
