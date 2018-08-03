@@ -17,7 +17,85 @@ country_event = {
 			set_planet_size = 25
 			every_tile = {
 				clear_deposits = yes
+				remove_blocker = yes
+				if = {
+					limit = {
+						has_building = yes
+						NOR = {
+							has_building = building_colony_shelter
+							has_building = building_capital_1
+							has_building = building_capital_2
+							has_building = building_capital_3
+							has_building = building_deployment_post
+							has_building = building_machine_capital_1
+							has_building = building_machine_capital_2
+							has_building = building_machine_capital_3
+							has_building = building_hab_capital
+						}
+					}
+					remove_building = yes
+
+				}								
 			}
+			random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = archology
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = archology
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = discovery_complex
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = manufactoring_district
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = manufactoring_district
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = building_hydroponics_farm_5
+				}
+				random_tile = {
+					limit = {
+						has_building = no
+						has_pop = yes
+					}
+					clear_deposits = yes
+					set_building = building_hydroponics_farm_5
+				}
+			
+			
+			
 		}
 	}
 }

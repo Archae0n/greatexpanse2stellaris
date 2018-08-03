@@ -5118,7 +5118,6 @@ country_event = {
 			2 = { 
 				if = {
 					limit = {
-						is_multiplayer = no 
 						NOT = { has_global_flag = end_of_the_cycle }
 					}
 					country_event = { id = utopia.3308 }  # The End of the Cycle - extremely rare

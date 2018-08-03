@@ -304,7 +304,8 @@ gpm_building_precursor_factory = {
 	}
 	
 	produced_resources = {
-		minerals = 7
+		minerals = 10
+		engineering_research = 3		
 	}
 	
 	prerequisites = {
@@ -327,7 +328,8 @@ gpm_building_precursor_power_plant = {
 	}
 	
 	produced_resources = {
-		energy = 6
+		energy = 10
+		physics_research = 3		
 	}
 	
 	prerequisites = {
@@ -347,6 +349,7 @@ gpm_building_precursor_processing_complex = {
 	
 	produced_resources = {
 		food = 10
+		society_research = 3			
 	}
 	
 	required_resources = {
