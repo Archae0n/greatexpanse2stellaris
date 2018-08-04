@@ -4,3 +4,5 @@
  civic_tooltip_civic_sms:1 " £physics Hyperdrive Tier 2 \n £physics Hyperdrive Tier 3 \n £physics Wormhole Exploration \n £physics Gateway Restoration \n £physics Gateway Construction \n §Y$MOD_PLANET_BUILDING_UPKEEP_MULT$§! increased by §G+15%§!.\n §Y$MOD_SHIP_UPKEEP_MULT$§! increased by §G+15%§!."
  fallen_colony_science_boost:0 "Fallen Caches of Technology"
  precursor_colony_science_boost:0 "Ancient Archives of Technology"
+ trait_robot_inefficient:0 "Inefficient Machinery"
+ trait_robot_inefficient_desc: "§LThis design of machinery exerts more energy performing regular tasks than normal, potentially due to an instability in their programming, or an unconsidered factor in their design§!\n"

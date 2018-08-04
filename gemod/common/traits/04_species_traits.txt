@@ -704,9 +704,8 @@ trait_sadistic = {
 	opposites = { "trait_syncretic_proles" "trait_hive_mind" "trait_unbound" "trait_decadent" "trait_charismatic" "trait_sanguine" "trait_nerve_stapled" }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_other_species_happiness = -0.1
-		pop_eff_wo_slaves = -0.1
-		army_collateral_damage_mult = 0.25
+		pop_other_species_happiness = -0.05
+		army_collateral_damage_mult = 0.66
 	}
 }
 

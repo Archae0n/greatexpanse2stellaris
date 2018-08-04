@@ -240,6 +240,14 @@ trait_robot_propaganda_machines = {
 		tile_resource_unity_mult = 0.15
 	}
 }
+trait_robot_inefficient = {
+	cost = -1
+	opposites = {"trait_robot_efficient_processors"}
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		pop_robot_upkeep_mult = 0.10
+	}
+}
 
 trait_robot_awoken = {
 	allowed_archetypes = { MACHINE }
