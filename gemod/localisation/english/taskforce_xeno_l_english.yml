@@ -1,0 +1,85 @@
+﻿l_english:
+ civic_taskforce_xeno:0 "Taskforce Xeno"
+ civic_taskforce_xeno_desc:0 "In its late primitive era, this society underwent an invasion by hostile alien forces. While the intent behind the alien invasion was unclear, it was enough to unite the squabbling primitive nations together against a common foe. Through extreme efforts of reverse-engineering captured technology, this society managed to drive away its invaders. Now their planet is left in ruins and their population prone to xenophobia."
+ 
+ ##Technology
+ 
+ tech_taskforce_xeno_alien_protocol:0 "Doctrine: Advanced Alien Countermeasures"
+ tech_taskforce_xeno_alien_protocol_desc:0 "Even the most advanced empires imaginable still only have a finite amount of resources. With ever more looming threats on the horizon, a theory of technological advancement combined with unconventional and reverse-engineered weapons technology can be used to bridge the gap between what was once clear predator and prey on the galactic stage."
+ tech_galactic_taskforce_xeno:0 "Galactic Taskforce Xeno "
+ tech_galactic_taskforce_xeno_desc:0 "Taskforce Xeno has become little more than a ceremonial defense force for our capital. It is time to revitalize this illustrious organization into a special operations unit that fights Xeno's at home and abroad."
+ 
+ ##Event titles, events, discs
+ 
+ taskforce_xeno_start.100.name:0 "The Xeno Invasion"
+ taskforce_xeno_start.100.desc:0 "The [Root.Capital.GetName] Invasion as it would come to be known occurred several decades ago. A then-unknown alien empire fell upon the unsuspecting [Root.GetAllianceName] homeworld, their motives were at the time unknown. At the time they were a primitive atomic era civilization comprising various nation states."
+ taskforce_xeno_start.100.a:0 "A council of nations was assembled..."
+ taskforce_xeno_start.100.b:0 "We were instantly overwhelmed §RGame Over!§!\n"
+ taskforce_xeno_start.100.c:0 "We all know the histories, let's not go over this again!"
+ 
+ taskforce_xeno_start.101.name:0 "End of the War"
+ taskforce_xeno_start.101.desc:0 "After years of war, the hostile alien invaders were repelled from [Root.System.GetName]. While our work managed to save billions of lives and we acquired many highly advanced technologies, this victory came at a cost, and many cities' infrastructures throughout the world are completely destroyed."
+ taskforce_xeno_start.101.a:0 "Let us work to rebuild!"
+ 
+ taskforce_xeno_start.102.name:0 "The Centre Cannot Hold"
+ taskforce_xeno_start.102.desc:0 "The darkness drops again; but now I know that countless centuries of stony sleep were vexed to nightmare by a rocking cradle, and what rough beast, its hour come round at last..."
+ taskforce_xeno_start.102.a:0 "Slouches towards [Root.Capital.GetName] to be born? [Root.Capital.GetName] to Ashes"
+
+ taskforce_xeno_start.106.name:0 "Taskforce Xeno"
+ taskforce_xeno_start.106.desc:0 "This council has chosen to activate Taskforce Xeno." Historians will debate for centuries the impact of those simple words, spoken by the council of nations formed in response to the Xeno threat. At first, we were outgunned, outmanned and out planned, and we needed to make an all-out stand."
+ taskforce_xeno_start.106.a:0 "Clear the Skies!"
+ taskforce_xeno_start.106.b:0 "Deploy to Xeno Hotspots"
+ taskforce_xeno_start.106.c:0 "Protect Planetary VIPs"
+ 
+ taskforce_xeno_start.107.name:0 "Terror Bombing"
+ taskforce_xeno_start.107.desc:0 "Cities burn, trade breaks down and fear is rampant. The Xenos attempted to spread destruction and chaos throughout [Root.Capital.GetName]. It was a time of hard choices and compromises, we had limited resources and were pushed to the brink."
+ taskforce_xeno_start.107.a:0 "Protect Key Infrastructure"
+ taskforce_xeno_start.107.b:0 "Prioritise International Cooperation"
+ taskforce_xeno_start.107.c:0 "Defend our Population Centres"
+
+ taskforce_xeno_start.108.name:0 "Reverse Engineering"
+ taskforce_xeno_start.108.desc:0 "The Xenos found We were not conquered so easily, we built up our defenses, learned to adapt and charged them in blood for every inch of [Root.Capital.GetName]. The tide began to turn once we captured and began reverse engineering the Xeno's technology. The greatest minds our civilization stood united in defense of all [Root.GetNamePlural]."
+ taskforce_xeno_start.108.a:0 "Breakthrough in Xeno Systems"
+ taskforce_xeno_start.108.b:0 "Breakthrough in Xeno Biology"
+ taskforce_xeno_start.108.c:0 "Breakthrough in Xeno Engineering"
+ 
+ taskforce_xeno_start.109.name:0 "Turning The Tide"
+ taskforce_xeno_start.109.desc:0 "Desperate, and unnable to mount a resistance on their own, many nations of [Root.Capital.GetName] ceeded their authority. Transfonrming the fragmented nations of our world into the [Root.Owner.GetName]. United under a single banner we finally stood a fighting chance, and the tide began to turn against the Xenos"
+ taskforce_xeno_start.109.a:0 "Target their Mainframe" 
+ taskforce_xeno_start.109.b:0 "Initiate Thermosphere Bombardment"
+ taskforce_xeno_start.109.c:0 "Strike their Sattelite Network"
+
+ taskforce_xeno_start.110.name:0 "Once More into the Breach!"
+ taskforce_xeno_start.110.desc:0 "We cleared the Xeno's of our homeworld one battle at a time. Street by street and day by day we began to push them back. Finally, they began to withdraw. Our sacrifices were not in vain, through luck and ingenuity we made a crack in their armor. The jewel of their fleet, the flagship from which they've been conducting the invasion was exposed. One final offensive was mounted, and the cry of Elan was heard!"
+ taskforce_xeno_start.110.a:0 "They give in an inch, we take a mile!" 
+
+ 
+ ##Modifiers
+ 
+ taskforce_xeno_is_reconstructing:0 "Planetary Reconstruction"
+ taskforce_xeno_interceptors:0 "Taskforce Xeno: Interceptors"
+ taskforce_xeno_elan:0 "Taskforce Xeno: Special Operations"
+ taskforce_xeno_unity:0 "Taskforce Xeno: Executive Protection"
+ 
+ ##Buildings
+  
+ building_taskforce_headquarters:0 "Taskforce Xeno Headquarters"
+ building_taskforce_headquarters_desc:0 "§YCannot be rebuilt once destroyed§!\n This was the original headquarters of Taskforce Xeno. Now it acts as a major planetary fortification and memorial for our triumphs and losses."
+ building_galactic_taskforce_headquarters:0 "Taskforce Xeno Galactic Headquarters"
+ building_galactic_taskforce_headquarters_desc:0 " §YCannot be rebuilt once destroyed§!\n The headquarters from which our modern Taskforce Xeno defends this planet, but also trains new special forces ready to face the Xeno threat wherever it may be."
+   
+ ##Armys
+   
+ taskforce_xeno_defense_army:0 "Taskforce Xeno"
+ taskforce_xeno_defense_army_plural:0 "Taskforce Xeno"
+ taskforce_xeno_defense_army_desc:0 "Taskforce Xeno Defense Army"
+ 
+ taskforce_xeno_army:0 "TFX Special Forces"
+ taskforce_xeno_army_plural:0 "TFX Special Forces"
+ taskforce_xeno_army_desc:0 "Taskforce Xeno Special Forces"
+ 
+ ##Developer Events
+ 
+ taskforce_xeno_story.1.name:0 "FE Invaders Found"
+ taskforce_xeno_story.1.desc:0 "[From.From.GetName] are the Invaders, or maybe [This.GetName] or [Recipient.GetName]"
+ taskforce_xeno_story.1.a:0 "Very Good"

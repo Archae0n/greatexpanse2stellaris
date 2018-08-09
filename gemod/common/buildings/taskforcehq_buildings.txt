@@ -1,0 +1,59 @@
+building_taskforce_headquarters = {
+	is_listed = no
+	taskforce_xeno_defense_army = 4
+	protects_from_bombardment = yes
+	empire_unique = yes
+	
+	upgrades = {
+		building_galactic_taskforce_headquarters
+	}
+	
+	produced_resources = {
+		energy = 1
+		unity = 2
+		engineering_research = 1
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_unity_add = 1
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 1.0
+		army_defense_damage_mult = 1.0
+		pop_fortification_defense = 0.5
+	}
+}
+
+building_galactic_taskforce_headquarters = {
+	is_listed = no
+	protects_from_bombardment = yes
+	empire_unique = yes
+	base_buildtime = 670
+	
+	cost = {
+		minerals = 500
+	}
+	
+	produced_resources = {
+		energy = 2
+		unity = 5
+		engineering_research = 2
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_unity_add = 2
+	}
+	
+	planet_modifier = {
+		army_defense_morale_mult = 1.0
+		army_defense_damage_mult = 1.0
+		pop_fortification_defense = 0.5
+		tile_resource_society_research_mult = 0.1
+		tile_resource_engineering_research_mult = 0.1
+		tile_resource_physics_research_mult = 0.1
+	}
+	prerequisites = {
+		"tech_galactic_taskforce_xeno"
+	}
+}

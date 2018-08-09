@@ -1,0 +1,27 @@
+##Beginning of the game event modifier
+taskforce_xeno_is_reconstructing = {
+	country_colony_influence_cost_mult = -0.5
+	country_resource_unity_mult = 0.25
+	country_resource_influence_add = -0.5
+	country_resource_influence_mult = -0.1
+	country_resource_minerals_mult = -0.1
+	country_resource_energy_mult = -0.1
+	country_resource_food_mult = -0.2
+	planet_building_cost_mult = 0.15
+	pop_happiness = -0.20
+	pop_ethic_xenophobe_attraction_mult = 0.50
+}
+taskforce_xeno_interceptors = {
+	ship_evasion_mult = 0.10
+	ship_weapon_damage = 0.10
+}
+
+taskforce_xeno_elan = {
+	planet_army_build_speed_mult  = 0.20
+	army_morale = 0.10
+}
+
+taskforce_xeno_unity = {
+	country_resource_unity_mult = 0.05
+	leader_cost = -0.10
+}

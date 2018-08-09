@@ -1,0 +1,51 @@
+#Defensive armies can't transport of the planet
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+#morale_damage = 1		# average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+#building spawned armies can't be built normally, but only created from pops working buildings
+
+# Taskforce Xeno Armies
+#taskforce_xeno_defense_army = {
+#	defensive = yes
+#	is_building_spawned = yes
+#	health = 2.50
+#	damage = 3.00
+#	morale = 2.50
+#	collateral_damage = 0.0
+#	war_exhaustion = 0.0 # No WE from defense armies
+#	icon_frame = 1
+#	
+#	allow = {
+#		has_building = "building_taskforce_headqauters"
+#		is_capital
+#	}
+#	potential = {
+#		has_building = "building_taskforce_headqauters"	
+#		is_capital
+#	}
+#}
+
+taskforce_xeno_army = {
+	health = 2.00
+	damage = 2.00
+	morale = 2.00
+	collateral_damage = 0.1
+	war_exhaustion = 0.1
+	icon_frame = 1
+	
+	prerequisites = { "tech_galactic_taskforce_xeno" }
+	
+	allow = {
+			has_building = "building_galactic_taskforce_headquarters"
+	}
+	
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sapient = no
+			}
+		}
+	}
+}

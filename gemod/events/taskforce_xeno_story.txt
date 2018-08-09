@@ -1,0 +1,39 @@
+
+namespace = taskforce_xeno_story
+
+#IN PROGRESS
+#
+##Activates upon FC with an alien empire- may unintentionally trigger with subsequent FC?
+#country_event = {
+#	id = taskforce_xeno_story.1	
+
+############# FE INVADERS SETUP 1 - Sets FE Invaders
+event = {
+	id = taskforce_xeno_story.1
+	title = "taskforce_xeno_story.1.name"
+    desc = "taskforce_xeno_story.1.desc"
+	hide_window = yes
+	is_triggered_only = yes
+	picture = GFX_evt_fallen_empire
+	
+	immediate = {
+
+		every_country = {
+			limit = {
+				has_civic = civic_empire_in_decline
+				NOT = { has_country_flag = fe_invaders }
+			}
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = fe_invaders } } }
+				random_empire = {
+					limit = {
+							has_civic = civic_empire_in_decline
+					}
+					set_country_flag = tfx_fe_invaders
+						owner_species = { save_global_event_target_as = tfx_species_invaders }
+				}
+			}
+		}
+	}
+}
+

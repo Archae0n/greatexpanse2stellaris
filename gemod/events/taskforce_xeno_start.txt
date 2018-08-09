@@ -1,0 +1,489 @@
+namespace = taskforce_xeno_start
+
+############# TASKFORCE XENO SETUP
+country_event = {
+	id = taskforce_xeno_start.100
+    title = "taskforce_xeno_start.100.name"
+    desc = "taskforce_xeno_start.100.desc"
+    picture = GFX_evt_atmospheric_entry
+	is_triggered_only = yes
+	
+	trigger = {
+		has_civic = civic_taskforce_xeno
+	}
+
+	immediate = {
+		country_event = { id = taskforce_xeno_start.103 }
+	}
+
+	limit = {
+		has_civic = civic_taskforce_xeno	
+	}
+	
+    option = {
+		name = taskforce_xeno_start.100.a
+		
+		hidden_effect = {
+			capital_scope = { planet_event = { id = taskforce_xeno_start.106 } }
+		}
+
+		ai_chance = {
+			factor = 0
+		}	
+	}
+	
+	option = {
+		name = taskforce_xeno_start.100.b
+		custom_tooltip = "covenant.cycle.tooltip"
+		 				
+		hidden_effect = {
+			capital_scope = { planet_event = { id = taskforce_xeno_start.102 } }
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+    option = {
+		name = taskforce_xeno_start.100.c	
+
+		hidden_effect = {
+			capital_scope = { planet_event = { id = taskforce_xeno_start.101 } }
+		}
+
+		ai_chance = {
+			factor = 100
+		}	
+	}	
+}
+############# TASKFORCE XENO DEFAULT VICTORY EVENT
+planet_event = {
+	id = taskforce_xeno_start.101
+    title = "taskforce_xeno_start.101.name"
+    desc = "taskforce_xeno_start.101.desc"
+    picture = GFX_evt_tfx_victory
+
+	is_triggered_only = yes
+	
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+
+    option = {
+		name = taskforce_xeno_start.101.a
+
+		hidden_effect = {
+
+		random_tile = {
+			limit = {
+				has_building = no
+				has_blocker = no
+			}
+			set_blocker = tb_crater
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+			}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+			}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+			}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+			}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+			}	
+		random_tile = {
+			limit = {
+				has_blocker = yes
+				not = { has_building = "building_taskforce_headquarters" }
+				}
+				remove_blocker = yes
+				clear_deposits = yes
+				set_building = "building_taskforce_headquarters"
+			}
+		}
+		owner = { 
+			add_modifier = {
+				modifier = taskforce_xeno_is_reconstructing
+				days = 3650
+				}
+		}
+	}
+}
+
+############# TASKFORCE XENO SURRENDER
+planet_event = {
+	id = taskforce_xeno_start.102
+	title = "taskforce_xeno_start.102.name"
+	desc = "taskforce_xeno_start.102.desc"
+	picture = GFX_evt_tfx_surrender
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+    option = {
+		name = taskforce_xeno_start.102.a
+			
+		while = { count = 10 limit = { num_pops > 0  } random_pop = { kill_pop = yes } } 
+	}
+}
+
+############# TASKFORCE XENO TECH LOADING (Replace)
+country_event = {
+	id = taskforce_xeno_start.103
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_civic = civic_taskforce_xeno
+			}
+
+	effect = {
+			give_technology = { message = no tech = tech_strike_craft_1 }
+			give_technology = { message = no tech = tech_thrusters_2 }
+			give_technology = { message = no tech = tech_space_defense_station_2 }
+			give_technology = { message = no tech = tech_ship_armor_1 }
+			give_technology = { message = no tech = tech_biolab_1 }
+			give_technology = { message = no tech = tech_genome_mapping }
+			give_technology = { message = no tech = tech_engineering_lab_1 }
+			give_technology = { message = no tech = tech_physics_lab_1 }
+			give_technology = { message = no tech = tech_taskforce_xeno_alien_protocol }
+			give_technology = { message = no tech = tech_combat_training }
+			set_country_flag = is_taskforce_xeno
+				}
+		}
+	}
+}
+
+############# - Placeholder event (deleteing it seems to break event chain, why i dont know)
+planet_event = {
+	id = taskforce_xeno_start.105
+	title = "taskforce_xeno_start.105.name"
+	desc = "taskforce_xeno_start.105.desc"
+	picture = GFX_evt_ground_combat
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+    option = {
+		name = taskforce_xeno_start.101.a
+			
+	}
+	option = {
+		name = taskforce_xeno_start.101.b
+			
+	}
+	option = {
+		name = taskforce_xeno_start.101.c
+			
+	}
+}
+
+############# TASKFORCE XENO ACTIVATED
+
+planet_event = {
+	id = taskforce_xeno_start.106
+	title = "taskforce_xeno_start.106.name"
+	desc = "taskforce_xeno_start.106.desc"
+	picture = GFX_evt_tfx_deployed
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+		has_country_flag = tfx_story_1
+	}
+
+	immediate = {
+		random_tile = {
+			limit = {
+				has_blocker = yes
+				not = { has_building = "building_taskforce_headquarters" }
+				}
+				remove_blocker = yes
+				set_building = "building_taskforce_headquarters"
+		}
+	}
+	
+    option = {
+		name = taskforce_xeno_start.106.a
+
+		owner = { 
+			add_modifier = { modifier = taskforce_xeno_interceptors } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.107 } }
+	}		 
+	option = {
+		name = taskforce_xeno_start.106.b
+
+		owner = { 
+			add_modifier = { modifier = taskforce_xeno_elan } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.107 } }
+	}		 
+	option = {
+		name = taskforce_xeno_start.106.c
+
+		owner = { 
+			add_modifier = { modifier = taskforce_xeno_unity } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.107 } }
+	}		 
+}
+
+############# TASKFORCE TERROR BOMBING
+
+planet_event = {
+	id = taskforce_xeno_start.107
+	title = "taskforce_xeno_start.107.name"
+	desc = "taskforce_xeno_start.107.desc"
+	picture = GFX_evt_ground_combat
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+		has_country_flag = tfx_story_2
+	}
+	
+    option = {
+		name = taskforce_xeno_start.107.a
+
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.108 } }
+		random_pop = {
+            kill_pop = yes
+        }
+        random_pop = {
+            kill_pop = yes
+        }		 
+	}
+	option = {
+		name = taskforce_xeno_start.107.b
+
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.108 } }
+		random_pop = {
+            kill_pop = yes
+        }
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}	
+	}
+	option = {
+		name = taskforce_xeno_start.107.c
+		
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.108 } }
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}		 
+	}
+}
+
+############# TASKFORCE XENO REVERSE ENG
+
+planet_event = {
+	id = taskforce_xeno_start.108
+	title = "taskforce_xeno_start.108.name"
+	desc = "taskforce_xeno_start.108.desc"
+	picture = GFX_evt_tfx_reverse_eng
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+    option = {
+		name = taskforce_xeno_start.108.a
+
+		owner = {  give_technology = { tech = "tech_plasma_3" message = yes } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.109 } }
+		}		 
+	option = {
+		name = taskforce_xeno_start.108.b
+
+		owner = {  give_technology = { tech = "tech_psionic_theory" message = yes } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.109 } }
+		}		 
+	option = {
+		name = taskforce_xeno_start.108.c	 
+
+		owner = {  give_technology = { tech = "tech_construction_templates" message = yes } }
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.109 } }
+	}
+}
+
+############# TASKFORCE XENO TAKING THE FIGHT
+
+planet_event = {
+	id = taskforce_xeno_start.109
+	title = "taskforce_xeno_start.109.name"
+	desc = "taskforce_xeno_start.109.desc"
+	picture = GFX_evt_small_space_battle
+	location = capital_scope
+
+	is_triggered_only = yes
+
+    option = {
+		name = taskforce_xeno_start.109.a
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.110 } }
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}	
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}
+		}		 
+	option = {
+		name = taskforce_xeno_start.109.b
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.110 } }
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}	
+		}		 
+	option = {
+		name = taskforce_xeno_start.109.c
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.110 } }
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}	 
+	}
+}
+
+############# TASKFORCE XENO MOTHERSHIP DOWN
+
+planet_event = {
+	id = taskforce_xeno_start.110
+	title = "taskforce_xeno_start.110.name"
+	desc = "taskforce_xeno_start.110.desc"
+	picture = GFX_evt_debris
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+    option = {
+		name = taskforce_xeno_start.110.a
+		hidden_effect = { planet_event = { id = taskforce_xeno_start.111 } }
+		
+		random_tile = {
+			limit = {
+				has_building = yes
+				is_ruined = no
+				}
+			set_ruined = yes
+		}
+	}		 
+}
+
+############# TASKFORCE XENO CUSTOM VICTORY
+
+planet_event = {
+	id = taskforce_xeno_start.111
+	title = "taskforce_xeno_start.101.name"
+	desc = "taskforce_xeno_start.101.desc"
+    picture = GFX_evt_tfx_victory
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	limit = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+    option = {
+		name = taskforce_xeno_start.101.a
+
+		owner = { 
+			add_modifier = {
+				modifier = taskforce_xeno_is_reconstructing
+				days = 3650
+				}
+		}
+	}		 
+}

@@ -1,0 +1,135 @@
+#Added tech: "Doctrine: Taskforce Xeno Protocols"
+tech_taskforce_xeno_alien_protocol = {
+	area = society
+	cost = 1800
+	tier = 2
+	is_rare = yes
+	category = { military_theory }
+	weight = 40
+	
+	potential = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.25
+	}
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0.4
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0.2
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.3
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_military_theory"
+				}
+			}
+		}
+	}
+	ai_weight = { 
+		factor = 30 #very rare tech
+	}
+}
+tech_galactic_taskforce_xeno = {
+	area = society
+	cost = 2400
+	tier = 2
+	is_rare = yes
+	category = { military_theory }
+	weight = 40
+	
+	# unlocks Taskforce Xeno Army
+	
+	potential = {
+		has_civic = civic_taskforce_xeno
+	}
+	
+	modifier = {
+		army_morale = 0.05
+	}
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_pacifist
+			}
+		}
+		modifier = {
+			factor = 0.4
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0.2
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.3
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_military_theory"
+				}
+			}
+		}
+	}
+	ai_weight = { 
+		factor = 30 #very rare tech
+	}
+}		

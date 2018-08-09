@@ -1,0 +1,34 @@
+Update to Version 1.1
+-"Realisitic Ships Support"
+-"Ship Classes Extended Support"
+-Some minor Rescaling
+
+Update to Version 1.11
+-Fixed a Crash to Desktop related to the Event misfirering.
+
+Update to Version 1.12
+-Update to remove the Event for the RS Heavy Dreadnought Tech since it is now included in RS. Big Thanks to Tal Ara'nh for this!
+
+Update to Version 1.2
+-"New Ship Classes & More Support"
+
+Update to Version 1.3
+-Added missing model for Wormhole Stations
+-Fixed Construction Entity of the Orbservation Station
+-Added Support for "ISBS: Doomsday Weapons & Ships"
+-Added Support for "Titan Ship Class"
+-Added Support for "Overloaded Command Ship"
+-Fixed Dublicate Entity Error with NSC Forntier Outpost
+-Provided Patch for "Downscaled Ships"
+
+Update to Version 1.4
+-Update to Stellaris 2.0
+-Added models for the new Ships and Stations intruduced in the 2.0 update and the Apocalypse Dlc.
+-Changed the Particle effects off all ships to custom made ones.
+
+Update to Verison 1.4.1
+-Update to Stellaris 2.1.1
+-Fixed some missing models.
+
+Update to Version 1.4.2
+- EAC: At War support added.

@@ -1,0 +1,12 @@
+## executes taskforce xeno tech event on start of game
+on_game_start_country = {
+	events = {
+		taskforce_xeno_start.100
+	}
+}
+
+on_press_begin = {
+	events = {
+		taskforce_xeno_story.1
+	}
+}

@@ -1,0 +1,29 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_evt_tfx_victory"
+		texturefile = "gfx/event_pictures/tfx_victory.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+		spriteType = {
+		name = "GFX_evt_tfx_surrender"
+		texturefile = "gfx/event_pictures/tfx_surrender.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+	spriteType = {
+		name = "GFX_evt_tfx_deployed"
+		texturefile = "gfx/event_pictures/tfx_deployed.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+	spriteType = {
+		name = "GFX_evt_tfx_reverse_eng"
+		texturefile = "gfx/event_pictures/tfx_reverse_eng.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+}
