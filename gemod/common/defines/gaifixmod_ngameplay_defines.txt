@@ -1,8 +1,0 @@
-	NGameplay = {
-		OCCUPATION_BASE_VALUE 					= 5		# Base value of occupied system, used for calculating relative occupation score of empire
-		OCCUPATION_PLANET_VALUE 				= 11	# Per planet in system
-		OCCUPATION_POP_VALUE 					= 0.10	# Per pop in system
-		OCCUPATION_STARBASE_VALUE 				= 10	# If starbase is upgraded
-		
-		STARBASE_AUTO_CONTROL_DISTANCE			= 500	# Distance at which a fleet can seize control of a disabled starbase
-	}
