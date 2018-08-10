@@ -1489,7 +1489,8 @@ civic_floating_world = {
 	modifier = {
 		planet_clear_blocker_time_mult = 10
 		planet_clear_blocker_cost_mult = 10
-		pop_robot_production_output = -0.5
+		#this is fucking stupid, especially for synthevo empires
+		#pop_robot_production_output = -0.5 
 		country_physics_tech_research_speed = 0.1
 	}
 }

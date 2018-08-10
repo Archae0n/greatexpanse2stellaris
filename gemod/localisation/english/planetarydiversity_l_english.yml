@@ -620,7 +620,7 @@ trait_pc_mushroom_preference_desc:0 "$trait_pc_arctic_preference_desc$"
 
  civic_floating_world:0 "Floating World"
  civic_floating_world_desc:0 "The dominant species of this planet has evolved on the floating islands of this unique world. As a result, we have invented new technology, allowing us to warp necessary resources to our buildings and important locations, giving us more control over the many worlds."
- civic_tooltip_floating_world_effects:0 "The people of this world evolved on a §Y$pc_floating$§!.\n\nStarts with §YFloating Preference§!, granting us §G100%§! Habitability across worlds, but we also gain §R+1000%§!  £blocker  Tile Blocker cost. Robots also have difficulty adapting to Floating Worlds, gaining a §R50%§! reduction to their production.\n\nWe gain §G10%§! £physics  Physics research speed as well, due to our knowledge of the warping technology." 
+ civic_tooltip_floating_world_effects:0 "The people of this world evolved on a §Y$pc_floating$§!.\n\nStarts with §YFloating Preference§!, granting us §G100%§! Habitability across worlds, but we also gain §R+1000%§!  £blocker  Tile Blocker cost.\nWe gain §G10%§! £physics  Physics research speed as well, due to our knowledge of the warping technology." 
  trait_floating:0 "Floating World People"
  trait_floating_desc:0 "Members of this species evolved on a plant with floating islands."
  civic_crystal_world:0 "Crystal World"
