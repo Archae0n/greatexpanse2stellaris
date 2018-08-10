@@ -356,12 +356,12 @@ citizenship_limited = {
 
 	potential = {
 		exists = from
-		from = {
-			NOR = {
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
-			}
-		}
+		#from = {
+		#	NOR = {
+		#		has_authority = auth_hive_mind
+		#		has_authority = auth_machine_intelligence
+		#	}
+		#}
 	}
 
 	allow = {

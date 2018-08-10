@@ -388,7 +388,7 @@ entity = {
 		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
  
-    scale = 0.3
+    scale = 0.3 #dss 1.0
 	game_data = {
 		size = @corvette_scale
 		emissive_recolor_crunch = 5.0
@@ -437,27 +437,28 @@ entity = {
 	state = { name = "death" state_time = 5 }
 }
 
-entity = {
-	name = "humanoid_01_corvette_S1_entity"
-	pdxmesh = "humanoid_01_corvette_M1S1_mesh"
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 5
-		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_1_45_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-	}
-	state = { name = "moving" state_time = 5
-		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
-		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-	}
-	state = { name = "death" state_time = 5 }
-}
+#entity = {
+#	name = "humanoid_01_corvette_S1_entity"
+#	pdxmesh = "mammalian_01_corvette_S1_mesh"
+#	
+#	default_state = "idle"
+#	state = { name = "idle" state_time = 5
+#		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_1_45_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_0_65_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+#	}
+#	state = { name = "moving" state_time = 5
+#		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_0_65_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+#		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+#	}
+#	state = { name = "death" state_time = 5 }
+#}
+
 
 
 ###################            DESTROYER             ########################
