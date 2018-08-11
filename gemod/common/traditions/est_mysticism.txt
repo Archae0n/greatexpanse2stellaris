@@ -28,7 +28,7 @@ tr_est_mysticism_adopt = {
 		}	
 		modifier = {
 			factor = 2
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 		}	
 		modifier = {
 			factor = 2
@@ -78,7 +78,7 @@ tr_est_mysticism_1 = {
 		inherit_name = yes
 		trigger = {
 			has_authority = auth_democratic
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 		}
 
 		modifier = {
@@ -101,7 +101,7 @@ tr_est_mysticism_1 = {
 				And = {
 					has_authority = auth_democratic
 					Not = {
-						has_civic = civic_shadow_council
+						has_civic = civic_cutthroat_politics
 					}
 				}
 				has_authority = auth_oligarchic

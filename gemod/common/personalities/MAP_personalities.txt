@@ -113,7 +113,7 @@ map_patronizing_colonizers = {
 			OR = {
 				has_civic = "civic_distinguished_admiralty"
 				has_civic = "civic_corporate_dominion"
-				has_civic = "civic_shadow_council"
+				has_civic = "civic_cutthroat_politics"
 				has_civic = "civic_parliamentary_system"
 				has_civic = "civic_nationalistic_zeal"
 			}
@@ -2808,7 +2808,7 @@ map_quiet_cultists = {
 			has_ethic = "ethic_authoritarian"
 			has_ethic = "ethic_fanatic_authoritarian"
 			has_civic = "civic_exalted_priesthood"
-			has_civic = "civic_shadow_council"
+			has_civic = "civic_cutthroat_politics"
 		}
 		NOT = {
 			has_ethic = "ethic_xenophile"
@@ -3503,7 +3503,7 @@ map_insidious_opportunists = {
 		OR = {
 			has_civic = "civic_cutthroat_politics"
 			has_civic = "civic_parliamentary_system"
-			has_civic = "civic_shadow_council"
+			has_civic = "civic_cutthroat_politics"
 			has_civic = "civic_corporate_dominion"
 		}
 		NOT = { has_civic = "civic_idealistic_foundation" }
@@ -4092,7 +4092,7 @@ map_total_nutcases = {
 			factor = 1
 			OR = {	
 				has_civic = "civic_cutthroat_politics"
-				has_civic = "civic_shadow_council"
+				has_civic = "civic_cutthroat_politics"
 			}			
 		}	
 	}

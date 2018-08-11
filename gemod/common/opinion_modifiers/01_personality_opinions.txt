@@ -412,7 +412,7 @@ opinion_from_personality = {
 			OR = {
 				FROM = { has_trait = "trait_charismatic" }
 				FROM = { has_civic = "civic_cutthroat_politics" }
-				FROM = { has_civic = "civic_shadow_council" }
+				FROM = { has_civic = "civic_cutthroat_politics" }
 			}
 			has_ai_personality = map_insidious_opportunists
 		}

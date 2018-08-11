@@ -14013,7 +14013,7 @@ greetings = {
 					has_ethic = ethic_fanatic_xenophile
 					has_trait = trait_charismatic
 					has_civic = civic_cutthroat_politics
-					has_civic = civic_shadow_council
+					has_civic = civic_cutthroat_politics
 					has_civic = civic_parliamentary_system
 				}
 				NOT = { has_trait = trait_repugnant }

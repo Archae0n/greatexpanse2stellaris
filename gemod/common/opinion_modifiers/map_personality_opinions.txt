@@ -401,7 +401,7 @@
 #			OR = {
 #				FROM = { has_trait = "trait_charismatic" }
 #				FROM = { has_trait = "civic_cutthroat_politics" }
-#				FROM = { has_trait = "civic_shadow_council" }
+#				FROM = { has_trait = "civic_cutthroat_politics" }
 #			}
 #			has_ai_personality = map_insidious_opportunists
 #		}

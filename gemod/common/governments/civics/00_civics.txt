@@ -387,7 +387,7 @@ civic_republic = {
 		   NOR = { 
 					value = civic_timocracy
 					value = civic_noble_aristocracy
-					value = civic_shadow_council
+					value = civic_cutthroat_politics
 					value = civic_cyber_dictatorship
 					value = civic_trade_league
 					value = civic_private_military
@@ -2460,7 +2460,7 @@ civic_timocracy = {
 		civics = {
 		   NOR = { 
 		            value = civic_republic
-					value = civic_shadow_council
+					value = civic_cutthroat_politics
 					}
 		}
 		
@@ -2648,7 +2648,7 @@ civic_executive_committee = {
 		authority = { value = auth_oligarchic }
 	
 		
-        civics = { NOR = {  value = civic_shadow_council value = civic_science_directorate value = civic_ambassadors_assembly value = civic_divine_council value = civic_tribals value = civic_military_junta  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }			
+        civics = { NOR = {  value = civic_cutthroat_politics value = civic_science_directorate value = civic_ambassadors_assembly value = civic_divine_council value = civic_tribals value = civic_military_junta  value = civic_tribal_aristocracy  value = civic_noble_aristocracy } }			
 		
 	}
 	random_weight = { base = 5 }

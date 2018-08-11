@@ -468,7 +468,7 @@ civic_national_humiliation = {
 
 civic_societal_turmoil = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_shadow_council.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_cutthroat_politics.dds"
 	potential = {
 		country_type = { value = lost_empire }
 	}

@@ -36,7 +36,7 @@ tech_fallen_technologies_2 = {
 		
 	weight = 25
 	
-	prerequisites = { "tech_fallen_technologies_1" "tech_matter_generator" "tech_thrusters_4" "tech_mega_engineering" }
+	prerequisites = { "tech_fallen_technologies_1" "tech_matter_generator" "nhsc_tech_advzeropointreactor_3" "tech_mega_engineering" }
 	
 	modifier = {
 		planet_building_build_speed_mult = 0.25

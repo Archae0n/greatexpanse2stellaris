@@ -1,36 +1,55 @@
-namespace = ship_numbers
+namespace = rebalance
 
 # This fires when the game starts up
 event = {
-	id = ship_numbers.1
+	id = rebalance.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		every_country = {
-			limit = {
-			is_country_type = default
-					NOT = { has_technology = "ship_numbers_tech" }
+			limit = { is_country_type = default	}
+			add_modifier = {
+				modifier = "optimized_ships"
+				days = -1
 			}
-			give_technology =  { tech = "ship_numbers_tech" message = no }
+			
 		}
 	}
 }
 
-# This fires every time a country researches anything,
-# because I could not find an event that fires when
-# either a primitive colony advances to space age or
-# other random empires suddenly pop in to existence.
+# This fires when the game starts up
+event = {
+	id = rebalance.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = fallen_empire }
+			add_modifier = {
+				modifier = "optimized_ships"
+				days = -1
+			}
+			
+		}
+	}
+}
+
+
 
 country_event = {
-	id = ship_numbers.2
+	id = rebalance.2
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		is_country_type = default
-		NOT = { has_technology = "ship_numbers_tech" }
+		NOT = { has_modifier = "optimized_ships" }
 	}
 	immediate = {
-		 give_technology = { tech = "ship_numbers_tech" message = no }
+		 add_modifier = {
+			modifier = "optimized_ships"
+			days = -1
+		}
 	}
 }

@@ -819,7 +819,7 @@ civic_crystal_world = {
 civic_curators_cache = {
 	modification = no 
 	playable = { 
-        always = false
+        always = no
 	}
 	potential = { 
         ethics = {

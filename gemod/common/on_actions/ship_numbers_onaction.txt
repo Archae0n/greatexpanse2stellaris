@@ -1,13 +1,14 @@
 # Triggers when the game starts
 on_game_start = {
 	events = {
-		ship_numbers.1
+		rebalance.1
+		rebalance.3
 	}
 }
 
-# A country has increased the level of a tech
-on_tech_increased = {
+# No scope, like on_game_start
+on_monthly_pulse = {
 	events = {
-		ship_numbers.2
+		rebalance.2
 	}
 }

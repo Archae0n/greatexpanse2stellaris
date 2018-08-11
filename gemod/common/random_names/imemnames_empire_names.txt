@@ -1173,7 +1173,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1209,7 +1209,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1245,7 +1245,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1281,7 +1281,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1353,7 +1353,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1371,7 +1371,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1425,7 +1425,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1443,7 +1443,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -1461,7 +1461,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_civic = civic_shadow_council
+			has_civic = civic_cutthroat_politics
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
