@@ -1,5 +1,81 @@
 # See traditions/README.txt for format
 
+ap_enigmatic_engineering = {
+	potential = {
+		host_has_dlc = "Apocalypse"
+		NOT = {
+			has_ascension_perk = ap_enigmatic_engineering
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+	}
+	
+	on_enabled = {
+		custom_tooltip = "no_rev_engineering"
+	}
+	
+	modifier = {		
+		ship_sensor_range_add = 2
+		ship_hyperlane_range_add = 4
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_nihilistic_acquisition = {
+	potential = {
+		host_has_dlc = "Apocalypse"
+		NOT = {
+			has_ascension_perk = ap_nihilistic_acquisition
+		}
+		NOT = { has_valid_civic = civic_barbaric_despoilers }
+	}
+	
+	on_enabled = {
+		custom_tooltip = "allow_raiding"
+	}
+	
+	possible = {	
+		OR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = slaver }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
 ap_colossus = {
 	potential = {
 		host_has_dlc = "Apocalypse"
@@ -25,20 +101,29 @@ ap_colossus = {
 	}
 	
 	ai_weight = {
-		factor = 100
+		factor = 10
 		modifier = {
-			factor = 0
-			NOR = {
+			factor = 10
+			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
-				has_ethic = ethic_fanatic_xenophobe
-				has_ethic = ethic_fanatic_militarist
 			}
+		}	
+		modifier = {
+			factor = 0.1
+			is_xenophile = yes
 		}
 		modifier = {
-			weight = 500
-			factor = 50
-			num_ascension_perks > 7
+			factor = 0.25
+			is_pacifist = yes
+		}
+		modifier = {
+			factor = 2
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 	}
 }
