@@ -1000,7 +1000,7 @@ building_economic_district_5_direct_build = {
 	allow = { requires_capital_2_or_hab = yes }
 	prerequisites = { "tech_power_plant_5" }
 	 #resource output and modifiers
-	produced_resources = { energy = 0 }
+	produced_resources = { energy = @non_restricted_t5_output }
 	triggered_planet_modifier = {
 		key = "capital_3_tile_resource_bonus_modifier"
 		potential = { planet = { has_capital_3 = yes } }

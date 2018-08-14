@@ -1,1 +1,44 @@
 # See traditions/README.txt for format
+
+ap_colossus = {
+	potential = {
+		host_has_dlc = "Apocalypse"
+		NOT = {
+			has_ascension_perk = ap_colossus
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = enable_colossus_project
+		custom_tooltip = describe_colossus_project
+		hidden_effect = {
+			country_event = { id = apoc.100 }
+		}
+	}
+
+	possible = {
+		has_technology = tech_titans
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			weight = 500
+			factor = 50
+			num_ascension_perks > 7
+		}
+	}
+}
