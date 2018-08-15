@@ -6657,31 +6657,24 @@ ship_event = {
 #	}
 #}
 
-#planet_event = {
-#	id = action.55
-#	hide_window = yes
-#	is_triggered_only = yes
-#
-#	immediate = {
-#		owner = {
-#			if = {
-#				limit = {
-#					has_country_flag = has_colonization_fever
-#					NOT = { has_modifier = colonization_fever}
-#				}		
-#			add_modifier = { modifier = colonization_fever days = 3600 }
-#			}
-#			if = {
-#				limit = {
-#					has_modifier = colonization_fever
-#				}
-#				remove_modifier = "colonization_fever"
-#				add_modifier = { modifier = colonization_fever days = 3600 } 
-#			}
-#		}
-#	}
-#}
+# Tradition Discovery - gain unity on tech unlock
+country_event = {
+	id = action.55
+	hide_window = yes
+	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				has_tradition = tr_discovery_faith_in_science
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 3
+			}
+		}
+	}
+}
 
 pop_event = {
 	id = action.58
