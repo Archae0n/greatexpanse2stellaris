@@ -72,8 +72,8 @@ objectTypes = {
 	
 	####### small ships  #######	
 	pdxmesh = {
-		name = "mem_ancient_01_bomber_mesh"
-		file = "gfx/models/ships/mammalian/mammalian_01_bomber.mesh"
+		name = "mem_ancient_01_fighter_mesh"
+		file = "gfx/models/ships/mem_ancient/mem_ancient_01_fighter.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -90,8 +90,8 @@ objectTypes = {
 	}
 	
 	pdxmesh = {
-		name = "mem_ancient_01_fighter_entity"
-		file = "gfx/models/ships/mammalian/mammalian_01_fighter.mesh"
+		name = "mem_ancient_01_fighter_mesh"
+		file = "gfx/models/ships/mem_ancient/mem_ancient_01_fighter.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"

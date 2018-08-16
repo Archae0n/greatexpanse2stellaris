@@ -1454,7 +1454,7 @@ entity = {
 
 entity = {
 	name = "mem_ancient_01_bomber_entity"	
-	pdxmesh = "mem_ancient_01_bomber_mesh"
+	pdxmesh = "mem_ancient_01_fighter_mesh"
 	scale = 0.6
 	
 	game_data = {
