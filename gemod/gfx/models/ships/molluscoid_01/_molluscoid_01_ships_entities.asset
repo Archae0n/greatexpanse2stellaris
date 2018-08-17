@@ -585,7 +585,7 @@ entity = {
 entity = {
 	name = "molluscoid_01_destroyer_bow_S3_entity"
 	pdxmesh = "molluscoid_01_destroyer_bow_S3_mesh"
-	scale = 0.43 #DSS 1.3
+	scale = 1.3
 }
 
 # STERN

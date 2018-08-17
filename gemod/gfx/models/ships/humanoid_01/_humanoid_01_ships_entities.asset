@@ -36,17 +36,17 @@ entity = {
 	state = { name = "stop" animation = "miss" looping = no }
 	
 	
-	scale = 0.9
+	scale = 0.9 #dss 1.25
 }
 
 entity = {
 	name = "humanoid_01_turret_energy_torpedo_entity"
-	pdxmesh = "humanoid_01_turret_projectile_medium_mesh"
+	pdxmesh = "humanoid_01_turret_projectile_large_mesh"
 	
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 0.85
 }
 
 entity = {
@@ -56,7 +56,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 0.85
 }
 
 entity = {
@@ -66,7 +66,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -76,7 +76,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.85
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -86,7 +86,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.9
+	scale = 0.9 #DSS 1.0
 }
 
 entity = {
@@ -96,7 +96,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -106,7 +106,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -116,7 +116,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.9
+	scale = 0.9 #DSS 1.0
 }
 
 	
@@ -129,7 +129,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.9
+	scale = 0.9 #DSS 1.0
 }
 
 
@@ -143,7 +143,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -153,7 +153,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -163,7 +163,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.9
+	scale = 0.9 #DSS 1.0
 }
 
 
@@ -184,7 +184,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -194,7 +194,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -204,7 +204,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 1.0
 }
 
 # Space Cloud Weapons
@@ -216,7 +216,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.85
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -226,7 +226,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.4
+	scale = 0.4 #DSS 0.5
 }
 
 # Crystal Weapons
@@ -238,7 +238,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 1.0
 }
 
 entity = {
@@ -248,7 +248,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -258,7 +258,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 # Mining Drone Weapons
@@ -270,7 +270,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 1.0
 }
 
 entity = {
@@ -280,7 +280,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 # Space Whale Weapons
@@ -292,7 +292,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 1.0
 }
 
 entity = {
@@ -302,7 +302,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -312,7 +312,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.65
+	scale = 0.65 #DSS 1.0
 }
 
 # Swarm Weapons
@@ -324,7 +324,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 entity = {
@@ -334,7 +334,7 @@ entity = {
 	state = { name = "idle"	}
 	state = { name = "attack" looping = no next_state = "idle"
 	}
-	scale = 0.55
+	scale = 0.55 #DSS 0.85
 }
 
 
@@ -460,7 +460,6 @@ entity = {
 #}
 
 
-
 ###################            DESTROYER             ########################
 
 # FRAME
@@ -517,7 +516,7 @@ entity = {
 		event = { time = 12.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-    scale = 0.35
+    scale = 0.35 #dss 1.0
 	
 	game_data = {
 		size = @destroyer_scale
@@ -695,7 +694,7 @@ entity = {
 		event = { time = 16.56 node = "ship_main" particle = "large_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-	scale = 0.35
+	scale = 0.35 #DSS 1.0
 	
 	game_data = {
 		size = @cruiser_scale
@@ -976,7 +975,7 @@ entity = {
 		event = { time = 16.5 node = "ship_main" particle = "large_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-	scale = 0.35
+	scale = 0.45 #DSS 1.0
 	
 	game_data = {
 		size = @battleship_scale
@@ -1330,7 +1329,7 @@ entity = {
 entity = {
 	name = "humanoid_01_bomber_entity"	
 	pdxmesh = "humanoid_01_bomber_mesh"
-	scale = 0.2
+	scale = 0.2 #DSS 0.6
 	
 	game_data = {
 		emissive_recolor_crunch = 3.0
@@ -1340,7 +1339,7 @@ entity = {
 entity = {
 	name = "humanoid_01_droppod_entity"	
 	pdxmesh = "humanoid_01_droppod_mesh"
-	scale = 0.4
+	scale = 0.4 #DSS 0.85
 	
 	game_data = {
 		emissive_recolor_crunch = 3.0
@@ -1350,7 +1349,7 @@ entity = {
 entity = {
 	name = "humanoid_01_fighter_entity"	
 	pdxmesh = "humanoid_01_fighter_mesh"
-	scale = 0.2
+	scale = 0.2 #DSS 0.6
 	
 	game_data = {
 		emissive_recolor_crunch = 3.0
@@ -1376,7 +1375,7 @@ entity = {
 		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" }
 	}
 	
-	scale = 1.0
+	scale = 0.25 #DSS 1.0
 	
 	game_data = {
 		size = @constructor_scale
@@ -1583,7 +1582,7 @@ entity = {
 				event = { time = 2.6 node = "explosion_locator_04" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 				event = { time = 3.9 node = "explosion_locator_05" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 			}
-			scale = 1.25
+			scale = 0.55 #DSS 1.25
 			
 			game_data = {
 				trail_locators = {
@@ -1623,6 +1622,7 @@ entity = {
 	}
 	
 	game_data = {
+		size = 10 #DSS
 		emissive_recolor_crunch = 5.0
 	}
 
@@ -1631,9 +1631,10 @@ entity = {
 entity = {
 	name = "humanoid_01_science_ship_entity"
 	pdxmesh = "humanoid_01_science_ship_mesh"
+	locator = { name = "root" position = { 0 0 0 } }
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle"
+	state = { name = "idle" state_time = 5
 		event = { time = 0.0 node = "engine_small_01" particle = "mammalian_01_1_5_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
 		event = { time = 0.0 node = "engine_small_02" particle = "mammalian_01_1_5_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
 		event = { time = 0.0 node = "engine_small_03" particle = "mammalian_01_1_5_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
@@ -1645,7 +1646,7 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
-	state = { name = "moving" animation = "idle"
+	state = { name = "moving" state_time = 5
 		event = { time = 0.0 node = "engine_small_01" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" keep_particle = yes trigger_once = yes }
 		event = { time = 0.0 node = "engine_small_02" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" keep_particle = yes trigger_once = yes }
 		event = { time = 0.0 node = "engine_small_03" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" keep_particle = yes trigger_once = yes }
@@ -1657,7 +1658,7 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
-	state = { name = "death" chance = 1 looping = no animation = "idle"
+	state = { name = "death" chance = 1 looping = no state_time = 5
 	
 		event = { time = 0.0 node = "explosion_locator_01" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 		event = { time = 1.6 node = "explosion_locator_02" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
@@ -1666,7 +1667,7 @@ entity = {
 		event = { time = 3.9 node = "explosion_locator_05" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	
 	}
-	scale = 0.35
+	scale = 0.35 #DSS 1.0
 	
 	game_data = {
 		trail_locators = {
@@ -1674,6 +1675,18 @@ entity = {
 			"engine_small_02" = 		{ width = @small_trail_W 	lenght = @small_trail_L   	}
 		}
 	}
+	
+	attach = { root = "humanoid_01_science_ship_sphere_entity" }
+}
+
+entity = {
+	name = "humanoid_01_science_ship_sphere_entity"
+	pdxmesh = "humanoid_01_science_ship_sphere_mesh"
+	
+	get_state_from_parent = no
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
 }
 
 
@@ -1691,7 +1704,7 @@ entity = {
 		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" }
 	}
  
-	scale = 0.25
+	scale = 0.25 #0.6 #DSS 1.0
 	game_data = {
 		size = @transport_scale
 		emissive_recolor_crunch = 5.0
@@ -1850,16 +1863,7 @@ entity = {
 	scale = 1.0
 }
 
-entity = {
-	name = "humanoid_01_orbital_station_turret_section_entity"
-	pdxmesh = "humanoid_01_orbital_station_turret_section_mesh"
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 5
-		event = { time = 0.0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0.0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-	}
-}
+
 
 entity = {
 	name = "humanoid_01_orbital_station_hydroponics_section_entity"
@@ -1883,7 +1887,7 @@ entity = {
 	attach = { "part6" 		 		= "humanoid_01_orbital_station_habitat_section_entity" }
 	attach = { "part7" 		 		= "humanoid_01_orbital_station_habitat_section_entity" }
 	
-	scale = 0.75
+	scale = 0.75 #1.5 DSS
 	
 	default_state = "habitat_idle"
 	state = { name = "habitat_idle" looping = yes }
@@ -2095,7 +2099,7 @@ entity = {
 		event = { time = 3.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
-	scale = 1.5
+	scale = 0.75 #dss1.5
 	game_data = {
 		size = @mining_station
 		emissive_recolor_crunch = 5.0
@@ -2129,7 +2133,7 @@ entity = {
 		event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
-	scale = 0.75
+	scale = 0.75 #dss1.5
 	
 	game_data = {
 		size = @terraforming_station
@@ -2165,7 +2169,7 @@ entity = {
 		
 		event = { time = 3.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
-	scale = 0.7
+	scale = 0.7 #dss1.4
 	
 	game_data = {
 		size = @research_station
@@ -2233,7 +2237,7 @@ entity = {
 		
 		event = { time = 3.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
-	scale = 0.7
+	scale = 0.7 #dss1.4
 	
 	game_data = {
 		size = @research_station
@@ -2283,9 +2287,9 @@ entity = {
 		event = { time = 4.9 particle = "large_player_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
-	scale = 0.6
+	scale = 0.6 #DSS1.2
 	game_data = {
-		size = @military_station_large
+		size = 20 # DSS
 		emissive_recolor_crunch = 5.0
 	}
 }
@@ -2313,7 +2317,7 @@ entity = {
 		event = { time = 3.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
-	scale = 0.6
+	scale = 0.6 #DSS1.2
 	
 	game_data = {
 		emissive_recolor_crunch = 5.0
@@ -2338,7 +2342,7 @@ entity = {
 		event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
-	scale = 0.6
+	scale = 0.6 #DSS1.2
 	
 	game_data = {
 		emissive_recolor_crunch = 5.0
@@ -2382,7 +2386,7 @@ entity = {
 		event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 
-	scale = 0.5
+	scale = 0.5 #dss1.0
 	
 	game_data = {
 		emissive_recolor_crunch = 5.0
@@ -2391,7 +2395,7 @@ entity = {
 
 entity = {
 	name = "humanoid_01_outpost_station_section_entity"
-	pdxmesh = "humanoid_01_military_station_small_mesh"
+	pdxmesh = "humanoid_01_military_station_medium_mesh"
 	
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
