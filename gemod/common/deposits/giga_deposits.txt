@@ -124,3 +124,17 @@ d_gigagreenaurium_deposit = {
 		}
 	}
 }
+
+d_pouchkinn_deposit = {
+	resources = {
+		physics_research = 25
+	}
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 0
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

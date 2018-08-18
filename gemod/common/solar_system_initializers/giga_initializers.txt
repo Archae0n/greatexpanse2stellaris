@@ -1,3 +1,137 @@
+#Scientist in orbital
+cat_orbital_initializer = {
+	name = Tyaur
+	class = "rl_standard_stars"
+	usage = misc_system_init
+
+	flags = { pouchkinn_system }
+	
+	usage_odds = {
+		base = 0
+		modifier = {
+			host_has_dlc = "Utopia"
+			add = 100
+		}
+	}
+
+	max_instances = 1
+	scaled_spawn_chance = 5
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		has_ring = no
+	}
+	
+	planet = {
+		count = 1
+		size = { min = 10 max = 25 }
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		size = 16 
+		class = pc_gigaorbital_ring
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		init_effect = {
+			save_event_target_as = pouchkinn_planet
+			set_planet_flag = cat_orbital_elysium
+			add_modifier = {
+				modifier = "orbital_elysium"
+				days = -1
+			}
+			add_modifier = {
+				modifier = "strange_pouchkinn_lab"
+				days = -1
+			}
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+			create_country = {
+				name = "Pouchkguard"
+				type = faction
+			}
+			last_created_country = {
+				set_country_flag = pouchkinn_country
+				create_fleet = {
+					name = "Pouchkinn Guard"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = PREV
+						set_fleet_flag = pouchkinn_fleet						
+						create_ship = {
+							name = "Defensive Drone A"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone B"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone C"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone D"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone E"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone F"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone G"
+							design = "Pouchkguard"
+						}
+						create_ship = {
+							name = "Defensive Drone H"
+							design = "Pouchkguard"
+						}
+						set_location = event_target:pouchkinn_planet
+					}
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = pc_gas_giant
+		count = 1
+		orbit_distance = 0
+		orbit_angle = 0
+		change_orbit = @base_moon_distance
+	}
+		
+	planet = {
+		count = { min = 4 max = 7 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}
+
 # Ruined Square World
 square_world_init_01 = {
 	class = "rl_standard_stars"

@@ -22,6 +22,8 @@ on_megastructure_built = {
 		gigaringworld.1000
 		gigaringworld.2000
 		gigaringworld.4000
+		gigaeng.18000
+		gigainterstellar.1000
 	}
 }
 
@@ -101,6 +103,9 @@ on_megastructure_upgraded = {
 		gigaringworld.4001
 		gigaringworld.4002
 		gigaringworld.4003
+		gigainterstellar.1002
+		gigainterstellar.1003
+		gigainterstellar.1004
 	}
 }
 
@@ -108,6 +113,7 @@ on_entering_system = {
 	events = {
 		spegigaeng.1003
 		gigagaia.1000
+		pouchkinn.20
 	}
 }
 
@@ -116,6 +122,7 @@ on_planet_surveyed = {
 		spegigaeng.5000
 		crystalgiga.1
 		spegigaeng.1100
+		pouchkinn.21
 	}
 }
 
@@ -128,11 +135,30 @@ on_game_start = {
 on_colonized = {
 	events = {
 		gigagaia.1002
+		pouchkinn.1
 	}
 }
 
 on_five_year_pulse = {
 	events = {
 		giga_crisis_trigger.1
+	}
+}
+
+on_planet_defenders_win = {
+	events = {
+		pouchkinn.5
+	}
+}
+
+on_planet_defenders_lose = {
+	events = {
+		pouchkinn.41
+	}
+}
+
+on_planet_attackers_win = {
+	events = {
+		pouchkinn.42
 	}
 }

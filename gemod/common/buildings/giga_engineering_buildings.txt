@@ -768,3 +768,26 @@ building_kugelblitz_tower = {
 		factor = 1
 	}
 }
+
+building_cheese_depot = {
+	is_listed = no
+	base_buildtime = 100
+	
+	cost = {
+		minerals = 100
+	}
+
+	allow = {
+		always = no
+	}
+	
+	produced_resources = {
+		food = 7
+	}	
+	
+	prerequisites = {
+	}
+	
+	ai_replace = no
+	event_building = yes
+}

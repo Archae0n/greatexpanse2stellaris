@@ -1331,3 +1331,23 @@ country_event = {
 		message = yes
 	}
 }
+
+country_event = {
+	id = gigaeng.18000
+	title = gigaeng.18000.name
+	desc = gigaeng.18000.desc
+	picture = GFX_evt_colony_settlement
+	show_sound = event_mystic_reveal
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_megastructure_type = orbital_ring_habitat_0}
+	}
+	
+	option = {
+		name = gigaeng.18000.a
+		message = yes
+	}
+}

@@ -1,0 +1,399 @@
+namespace = masterclearance
+
+# Subterranean City Contstruction
+planet_event = {
+	id = masterclearance.1 
+	title = "masterclearance.1.name"
+	desc = "masterclearance.1.desc"
+	picture = GFX_evt_underground_construction
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+	
+	option = {
+		name = "masterclearance.fortress.name"
+		custom_tooltip = "masterclearance.fortress.tooltip"
+		hidden_effect = {
+			planet_event = { 
+				id = masterclearance.2 
+				days = 1800
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = { 
+					owner = { has_ethic = ethic_militarist }
+					owner = { has_ethic = ethic_fanatic_militarist }
+				}
+			}
+		}
+	}
+	option = {
+		name = "masterclearance.foundry.name"
+		custom_tooltip = "masterclearance.foundry.tooltip"
+		hidden_effect = {
+			planet_event = { 
+				id = masterclearance.3 
+				days = 1800
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				num_minerals < 15
+			}
+			modifier = {
+				factor = 0
+				NOT = { habitability = { who = owner value = 0.70 } }
+			}
+		}
+	}
+}
+	
+# Subterranean Fortress Built
+planet_event = {
+	id = masterclearance.2 
+	title = "masterclearance.2.name"
+	desc = "masterclearance.2.desc"
+	picture = GFX_evt_underground_city
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+	
+	option = {
+		name = "masterclearance.fortress2.name"
+		custom_tooltip = "masterclearance.fortress2.tooltip"
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_subterranean_fortress"
+			days = -1
+		}
+		remove_planet_flag = land_clearance_construction
+		set_planet_flag = land_clearance_happened_ground
+		if = {
+			limit = { has_planet_flag = land_clearance_happened_sky }
+				if = {
+					limit = {
+						planet_size <= 21
+						}
+					hidden_effect = { change_planet_size = 3 }						
+					}
+				else_if = {
+					limit = { planet_size <= 22 }
+					hidden_effect = { change_planet_size = 2 }
+				}
+				else_if = {	
+					limit = { planet_size <= 24 }
+					hidden_effect = { change_planet_size = 1 }
+				}
+			}
+		else = {
+			if = {
+				limit = { planet_size <= 18 }
+				hidden_effect = { change_planet_size = 3 }						
+			}
+			else_if = {
+				limit = { planet_size <= 22	}
+				hidden_effect = { change_planet_size = 2 }			
+				}
+			else_if = {
+				limit = { planet_size <= 24	}
+				hidden_effect = { change_planet_size = 1 }
+			}
+		}
+		if = {
+			limit = {
+			has_planet_flag = land_clearance_extra
+			}
+			hidden_effect = { 
+				change_planet_size = 1 
+				remove_planet_flag = land_clearance_extra
+			}
+		}
+	}
+}
+
+
+	
+# Subterranean Foundry Built
+planet_event = {
+	id = masterclearance.3 
+	title = "masterclearance.3.name"
+	desc = "masterclearance.3.desc"
+	picture = GFX_evt_underground_foundry
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+	
+	option = {
+		name = "masterclearance.foundry2.name"
+		custom_tooltip = "masterclearance.foundry2.tooltip"
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_subterranean_foundry"
+			days = -1
+		}
+		remove_planet_flag = land_clearance_construction
+		set_planet_flag = land_clearance_happened_ground
+		if = {
+			limit = { has_planet_flag = land_clearance_happened_sky }
+				if = {
+					limit = {
+						planet_size <= 21
+						}
+					hidden_effect = { change_planet_size = 3 }						
+					}
+				else_if = {
+					limit = { planet_size <= 22 }
+					hidden_effect = { change_planet_size = 2 }
+				}
+				else_if = {	
+					limit = { planet_size <= 24 }
+					hidden_effect = { change_planet_size = 1 }
+				}
+			}
+		else = {
+			if = {
+				limit = { planet_size <= 18 }
+				hidden_effect = { change_planet_size = 3 }						
+			}
+			else_if = {
+				limit = { planet_size <= 22	}
+				hidden_effect = { change_planet_size = 2 }			
+				}
+			else_if = {
+				limit = { planet_size <= 24	}
+				hidden_effect = { change_planet_size = 1 }
+			}
+		}
+		if = {
+			limit = {
+			has_planet_flag = land_clearance_extra
+			}
+			hidden_effect = { 
+				change_planet_size = 1 
+				remove_planet_flag = land_clearance_extra
+			}
+		}
+	}	
+}
+
+# Floating Island Contstruction
+planet_event = {
+	id = masterclearance.10 
+	title = "masterclearance.sky.name"
+	desc = "masterclearance.sky.desc"
+	picture = GFX_evt_sky_city
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+	
+	option = {
+		name = "masterclearance.skymall.name"
+		custom_tooltip = "masterclearance.skymall.tooltip"
+		hidden_effect = {
+			planet_event = { 
+				id = masterclearance.12
+				days = 1800
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = { 
+					owner = { has_ethic = ethic_materialist }
+					owner = { has_ethic = ethic_fanatic_materialist }
+				}
+			}
+			modifier = {
+				factor = 0
+				num_energy < 15
+			}
+		}
+	}
+	option = {
+		name = "masterclearance.skygreen.name"
+		custom_tooltip = "masterclearance.skygreen.tooltip"
+		hidden_effect = {
+			planet_event = { 
+				id = masterclearance.13
+				days = 1800
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "masterclearance.skyestate.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = one_percent_already
+				owner = { 
+					NOT = { has_country_flag = sky_estate }
+				}
+			}
+		}
+		custom_tooltip = "masterclearance.skyestate.tooltip"
+		hidden_effect = {
+			planet_event = { 
+				id = masterclearance.14
+				days = 1800
+			}
+			owner = { set_country_flag = sky_estate }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Skymall Built
+planet_event = {
+	id = masterclearance.12
+	title = "masterclearance.skymallbuilt.name"
+	desc = "masterclearance.skymallbuilt.desc"
+	picture = GFX_evt_sky_mall
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+			
+	option = {
+		name = "masterclearance.skymallbuilt2.name"
+		custom_tooltip = "masterclearance.skymallbuilt2.tooltip"
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_sky_mall"
+			days = -1
+		}
+		remove_planet_flag = land_clearance_construction
+		set_planet_flag = land_clearance_happened_sky
+		if = {
+			limit = { planet_size <= 21	}
+			hidden_effect = { change_planet_size = 3 }	
+		}					
+		else_if = {
+			limit = { planet_size <= 23 }
+			hidden_effect = { change_planet_size = 2 }
+		}
+		else_if = {	
+			limit = { planet_size <= 24	}
+			hidden_effect = { change_planet_size = 1 }
+		}
+		if = {
+			limit = {
+			has_planet_flag = land_clearance_extra
+			}
+			hidden_effect = { 
+				change_planet_size = 1 
+				remove_planet_flag = land_clearance_extra
+			}
+		}
+	}
+}
+
+# Sky Green Built
+planet_event = {
+	id = masterclearance.13
+	title = "masterclearance.skygreenbuilt.name"
+	desc = "masterclearance.skygreenbuilt.desc"
+	picture = GFX_evt_sky_green
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+			
+	option = {
+		name = "masterclearance.skygreenbuilt2.name"
+		custom_tooltip = "masterclearance.skygreenbuilt2.tooltip"
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_sky_green"
+			days = -1
+		}
+		remove_planet_flag = land_clearance_construction
+		set_planet_flag = land_clearance_happened_sky
+		if = {
+			limit = { planet_size <= 21	}
+			hidden_effect = { change_planet_size = 3 }	
+		}					
+		else_if = {
+			limit = { planet_size <= 23 }
+			hidden_effect = { change_planet_size = 2 }
+		}
+		else_if = {	
+			limit = { planet_size <= 24	}
+			hidden_effect = { change_planet_size = 1 }
+		}
+		if = {
+			limit = {
+			has_planet_flag = land_clearance_extra
+			}
+			hidden_effect = { 
+				change_planet_size = 1 
+				remove_planet_flag = land_clearance_extra
+			}
+		}
+	}
+}
+
+# Sky Estate Built
+planet_event = {
+	id = masterclearance.14
+	title = "masterclearance.skyestatebuilt.name"
+	desc = "masterclearance.skyestatebuilt.desc"
+	picture = GFX_evt_sky_estate
+	show_sound = event_cityscape
+	hide_window = no
+	location = ROOT
+	is_triggered_only = yes
+			
+	option = {
+		name = "masterclearance.skyestatebuilt2.name"
+		custom_tooltip = "masterclearance.skyestatebuilt2.tooltip"
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_sky_estate"
+			days = -1
+		}
+		remove_planet_flag = land_clearance_construction
+		set_planet_flag = land_clearance_happened_sky
+		if = {
+			limit = { planet_size <= 21	}
+			hidden_effect = { change_planet_size = 3 }	
+		}					
+		else_if = {
+			limit = { planet_size <= 23 }
+			hidden_effect = { change_planet_size = 2 }
+		}
+		else_if = {	
+			limit = { planet_size <= 24	}
+			hidden_effect = { change_planet_size = 1 }
+		}
+		if = {
+			limit = {
+			has_planet_flag = land_clearance_extra
+			}
+			hidden_effect = { 
+				change_planet_size = 1 
+				remove_planet_flag = land_clearance_extra
+			}
+		}
+	}
+}
+
+

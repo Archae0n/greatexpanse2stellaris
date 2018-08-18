@@ -1578,3 +1578,211 @@ tech_gargantuan_ringworld = {
 		}
 	}
 }
+
+tech_orbital_elysium = {
+	cost = 12500
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" }
+	weight = 35
+	
+	prereqfor_desc = {
+		feature = {
+			title = "unlock_orbital_elysium"
+			desc = "unlock_orbital_elysium_desc"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				host_has_dlc = "Utopia" 
+			}
+		}
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_voidborn }
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_voidborn }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_military_academy_megastructure = {
+	cost = 10000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" }
+	weight = 35
+	
+	prereqfor_desc = {
+		feature = {
+			title = "military_academy"
+			desc = "military_academy_desc"
+		}
+	}
+	
+	modifier = {
+		country_naval_cap_add = 50
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				host_has_dlc = "Utopia" 
+			}
+		}
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_galactic_force_projection }
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_galactic_force_projection }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_interstellar_habitat = {
+	cost = 15000
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" }
+	weight = 35
+	
+	prereqfor_desc = {
+		feature = {
+			title = "unlock_interstellar_habitat"
+			desc = "unlock_interstellar_habitat_desc"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				host_has_dlc = "Utopia" 
+			}
+		}
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_voidborn }
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_voidborn }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_interstellar_ringworld = {
+	cost = 25000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" "tech_interstellar_habitat" "tech_ringworld_heating_systems" "tech_giga_penrose_ringworld" }
+	weight = 35
+	
+	prereqfor_desc = {
+		feature = {
+			title = "interstellar_ringworld"
+			desc = "interstellar_ringworld_desc"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				host_has_dlc = "Utopia" 
+			}
+		}
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_galactic_wonders }
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+            factor = 0
+            NOT = { has_ascension_perk =  ap_galactic_wonders }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

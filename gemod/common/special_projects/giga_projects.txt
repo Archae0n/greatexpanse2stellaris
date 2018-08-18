@@ -206,3 +206,59 @@ special_project = {
 	on_fail = {
 	}
 }
+
+special_project = {
+	key = "ORBITAL_ELYSIUM_PROJECT"
+	days_to_research = 25
+	picture = GFX_evt_ground_combat
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 1
+	}
+	
+	on_success = {
+		owner = {
+			every_planet_within_border = {
+				limit = {
+					has_planet_flag = cat_orbital_elysium
+				}
+				planet_event = { id = pouchkinn.4 }
+			}
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ORBITAL_ELYSIUM_TWO_PROJECT"
+	days_to_research = 50
+	picture = GFX_evt_ship_under_attack
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		owner = {
+			every_planet_within_border = {
+				limit = {
+					has_planet_flag = cat_orbital_elysium
+				}
+				planet_event = { id = pouchkinn.6 }
+			}
+		}
+	}
+	
+	on_fail = {
+	}
+}

@@ -5,6 +5,13 @@ pm_lifeless_temperate = {
 	modifier = "lifeless_temperate"
 }
 
+pm_orbital_elysium = {
+	spawn_chance = {
+	}
+	
+	modifier = "orbital_elysium"
+}
+
 pm_restored_barren_world = {
 	spawn_chance = {
 	}

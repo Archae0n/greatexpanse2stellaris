@@ -1,0 +1,176 @@
+# Land Clearance Underground
+planet_edict = {
+	name = "land_clearance_2"
+	cost = { influence = 150 energy = 1000 }
+	length = 0
+	
+	potential = {
+		habitable_structure = no
+		not = { is_planet_class = pc_gas_giant_habitable }
+		not = { is_planet_class = pc_molten_habitable }
+		not = { is_planet_class = pc_asteroid_habitable }
+		not = { has_modifier = underground_caverns }
+		owner = {
+			has_ascension_perk = ap_mastery_of_nature
+		}
+		NOT = { has_planet_flag = land_clearance_happened_ground }
+	}
+	allow = {
+		if = {
+			limit= { has_planet_flag = land_clearance_construction }
+			custom_tooltip = {
+				fail_text = land_clearance_construction_first
+				NOT = { has_planet_flag = land_clearance_construction }
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { has_planet_flag = land_clearance_construction }
+				planet_size <= 24
+			}
+			custom_tooltip = {
+				fail_text = land_clearance_first
+				has_planet_flag = land_clearance_happened
+			}
+		}
+	}
+	effect = {
+		add_modifier = {
+			modifier = "pm_subterranean_construction"
+			days = 1800
+		}
+		if = {
+			limit = { has_planet_flag = land_clearance_happened_sky }
+				if = {
+					limit = { planet_size <= 21 }
+					custom_tooltip = masterclearance_increase_size_3
+				}	
+				else_if = {
+					limit = { planet_size <= 22 }
+					custom_tooltip = masterclearance_increase_size_2
+				}
+				else_if = {
+					limit = { planet_size <= 24 }
+					custom_tooltip = masterclearance_increase_size_1
+				}
+				else = { custom_tooltip = masterclearance_increase_size_0 }
+			}
+		else = {
+			if = {
+				limit = { planet_size <= 18 }
+				custom_tooltip = masterclearance_increase_size_3
+			}
+			else_if = {
+				limit = { planet_size <= 22 }
+				custom_tooltip = masterclearance_increase_size_2
+			}	
+			else_if = {
+				limit = { planet_size <= 24 }
+				custom_tooltip = masterclearance_increase_size_1
+			}
+			else = { custom_tooltip = masterclearance_increase_size_0 }
+		}
+		hidden_effect = {
+			set_planet_flag = land_clearance_construction
+			planet_event = {
+				id = masterclearance.1 
+			}
+		}
+	}
+	ai_weight = {
+		weight = 8
+		modifier = {
+			factor = 0
+			free_pop_tiles > 1
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				influence < 500
+			}
+		}
+	}
+}
+
+
+# Land Clearance Sky
+planet_edict = {
+	name = "land_clearance_3"
+	cost = { influence = 200 energy = 2000}
+	length = 0
+	
+	potential = {
+		not = { is_planet_class = pc_gas_giant_habitable }
+		not = { is_planet_class = pc_molten_habitable }
+		not = { is_planet_class = pc_toxic_habitable }
+		not = { is_planet_class = pc_asteroid_habitable }
+		not = { is_planet_class = pc_barren_habitable }
+		not = { has_modifier = high_gravity }
+		OR = { 
+			habitable_structure = no
+			is_planet_class = pc_ringworld_habitable
+		}
+		owner = {
+			has_ascension_perk = ap_mastery_of_nature
+		}
+		NOT = { has_planet_flag = land_clearance_happened_sky }
+	}	
+	allow = {
+		if = {
+			limit= { has_planet_flag = land_clearance_construction }
+			custom_tooltip = {
+				fail_text = land_clearance_construction_first
+				NOT = { has_planet_flag = land_clearance_construction }
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { has_planet_flag = land_clearance_construction }
+				planet_size <= 24
+			}
+			custom_tooltip = {
+				fail_text = land_clearance_first
+				has_planet_flag = land_clearance_happened
+			}
+		}
+	}
+	effect = {
+		add_modifier = {
+			modifier = "pm_sky_construction"
+			days = 1800
+		}
+		if = {
+			limit = { planet_size <= 21 }
+			custom_tooltip = masterclearance_increase_size_3
+		}
+		else_if = {
+			limit = { planet_size <= 23 }
+			custom_tooltip = masterclearance_increase_size_2
+		}	
+		else_if = {
+			limit = { planet_size <= 24 }
+			custom_tooltip = masterclearance_increase_size_1
+		}
+		else = { custom_tooltip = masterclearance_increase_size_0 }
+		hidden_effect = { 
+			set_planet_flag = land_clearance_construction
+			planet_event = { 
+				id = masterclearance.10 
+			}			
+		}
+	}
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0
+			free_pop_tiles > 1
+		}
+		modifier = {
+			owner = {
+				influence < 500
+			}
+			factor = 0
+		}
+	}
+}
+

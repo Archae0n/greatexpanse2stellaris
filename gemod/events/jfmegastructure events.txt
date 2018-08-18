@@ -1,0 +1,400 @@
+namespace = jfmega
+
+country_event = {
+	id = jfmega.1
+	title = "jfmega.1.name"
+	desc = "jfmega.1.desc"
+	picture = GFX_evt_federation_fleet
+	show_sound = event_dyson_sphere_build_start
+	
+	is_triggered_only = yes
+	
+	location = FROMFROM
+	
+	option = {
+		name = Excellent.
+	}
+	
+}
+	
+country_event = {
+	id = jfmega.2
+	title = "jfmega.2.name"
+	desc = "jfmega.2.desc"
+	picture = GFX_evt_federation_fleet
+	show_sound = event_dyson_sphere_build_upgrade_frame
+	
+	is_triggered_only = yes
+	
+	location = FROMFROM
+	
+	option = {
+		name = Excellent.
+	}
+	
+}
+	
+country_event = {
+	id = jfmega.3
+	title = "jfmega.3.name"
+	desc = "jfmega.3.desc"
+	picture = GFX_evt_federation_fleet
+	show_sound = event_dyson_sphere_build_upgrade_frame
+	
+	is_triggered_only = yes	
+	
+	location = FROMFROM
+	
+	option = {
+		name = Excellent.
+	}
+	
+}
+
+country_event = {
+	id = jfmega.4
+	title = "jfmega.4.name"
+	desc = "jfmega.4.desc"
+	picture = GFX_evt_federation_fleet
+	show_sound = event_dyson_sphere_build_upgrade_frame
+	
+	is_triggered_only = yes	
+	
+	location = FROMFROM
+	
+	option = {
+		name = Excellent.
+	}
+	
+}
+
+country_event = {
+	id = jfmega.5
+	title = "jfmega.5.name"
+	desc = "jfmega.5.desc"
+	picture = GFX_evt_federation_fleet
+	show_sound = event_dyson_sphere_build_upgrade_frame
+	
+	is_triggered_only = yes	
+	
+	location = FROMFROM
+	
+	option = {
+		name = Excellent.
+	}
+}
+
+event = {
+    id = jfmega.6
+    hide_window = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			country_event = { id = jfmega.7 days = 1 }
+			country_event = { id = jfmega.8 days = 1 }
+			country_event = { id = jfmega.9 days = 1 }
+		}
+	}
+}
+
+country_event = {
+    id = jfmega.7
+    hide_window = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_galactic_force_projection
+	}
+	
+	immediate = {
+		remove_modifier = ob_1
+		remove_modifier = ob_2 
+		remove_modifier = ob_3
+		remove_modifier = ob_4 
+		remove_modifier = ob_5 
+		remove_modifier = ob_6
+		remove_modifier = ob_7
+		remove_modifier = ob_8 
+		remove_modifier = ob_9 
+		remove_modifier = ob_10 
+		remove_modifier = ob_11
+		remove_modifier = ob_12 
+		remove_modifier = ob_13 
+		remove_modifier = ob_14
+		remove_modifier = ob_15
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 15
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_15 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 14
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_14 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 13
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_13 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 12
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_12 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 11
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_11 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 10
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_10 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 9
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_9 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 8
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_8 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 7
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_7 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 6
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_6 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 5
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_5 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 4
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_4 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 3
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_3 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 2
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_2 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 1
+					is_megastructure_type = military_academy_2
+				}
+			}
+			add_modifier = { modifier = ob_1 }
+			break = yes
+		}
+	}
+}
+country_event = {
+    id = jfmega.8
+    hide_window = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_galactic_force_projection
+	}
+	
+	immediate = {
+		remove_modifier = ma_1
+		remove_modifier = ma_2 
+		remove_modifier = ma_3
+		remove_modifier = ma_4 
+		remove_modifier = ma_5 
+		remove_modifier = ma_6
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 6
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_6 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 5
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_5 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 4
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_4 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 3
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_3 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 2
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_2 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 1
+					is_megastructure_type = military_academy_3
+				}
+			}
+			add_modifier = { modifier = ma_1 }
+			break = yes
+		}
+	}
+}
+country_event = {
+    id = jfmega.9
+    hide_window = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = ap_galactic_force_projection
+	}
+	
+	immediate = {
+		remove_modifier = ad_1
+		remove_modifier = ad_2 
+		remove_modifier = ad_3
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 3
+					is_megastructure_type = military_academy_4
+				}
+			}
+			add_modifier = { modifier = ad_3 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 2
+					is_megastructure_type = military_academy_4
+				}
+			}
+			add_modifier = { modifier = ad_2 }
+			break = yes
+		}
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					count = 1
+					is_megastructure_type = military_academy_4
+				}
+			}
+			add_modifier = { modifier = ad_1 }
+			break = yes
+		}
+	}
+}

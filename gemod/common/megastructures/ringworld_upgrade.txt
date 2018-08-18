@@ -36,12 +36,20 @@ ringworld_upgrade_0 = {
 				is_planet_class = pc_ringworld_tech
 			}
 			custom_tooltip = {
+				fail_text = "cant_upgrade_this"
+				NOT = { has_planet_flag = cant_upgrade }
+			}
+			custom_tooltip = {
 				fail_text = "requires_built_ringworld"
 				solar_system = { has_star_flag = ring_world_built }
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_anomaly"
 				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_upgrade"
+				NOT = { has_planet_flag = has_ringworld_upgrade }
 			}
 			custom_tooltip = {
 				fail_text = "requires_not_star"
@@ -59,6 +67,7 @@ ringworld_upgrade_0 = {
 	on_build_complete = {
 		fromfrom.planet = {
 			set_planet_flag = has_megastructure
+			set_planet_flag = has_ringworld_upgrade
 		}
 	}
 }
@@ -82,6 +91,7 @@ ringworld_upgrade_1 = {
 	
 	on_build_complete = {
 		fromfrom.planet = {
+			remove_planet_flag = has_ringworld_upgrade
 			change_pc = pc_ringworld_habitable
 			set_planet_entity = {
 				entity = "ringworld_habitable_entity_01_entity"

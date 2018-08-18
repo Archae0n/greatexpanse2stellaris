@@ -7,7 +7,7 @@ browndwarf_init = {
 	usage = misc_system_init
 	usage_odds = 1.5
 
-	flags = { brown_dwarf_system }
+	flags = { brown_dwarf_system dyson_sphere_built }
 	
 	planet = {
 		count = 1
@@ -66,4 +66,277 @@ browndwarf_init = {
 			orbit_distance = { min = 5 max = 7 }
 		}
 	}
+}
+
+spacehabitat_init = {
+	class = "sc_habitat"
+	
+	name = "Interstellar Habitat"
+	
+	usage = misc_system_init
+	usage_odds = 0
+
+	flags = { habitat_system }
+	
+	init_effect = {
+		spawn_megastructure = { type = "interstellar_habitat_2" }
+	}
+	
+	planet = {
+		count = 1
+		class = pc_interstellar_habitat
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+		init_effect = {
+			set_planet_flag = has_giga
+			set_planet_flag = habitat
+			set_planet_flag = megastructure
+			set_planet_flag = has_megastructure
+			add_modifier = {
+				modifier = "interstellar_habitat"
+				days = -1
+			}
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	
+	change_orbit = 45
+}
+
+spacehabitatarch_init = {
+	class = "sc_habitat"
+	
+	name = "Interstellar Habitat"
+	
+	usage = misc_system_init
+	usage_odds = 0
+
+	flags = { habitat_system dyson_sphere_built }
+	
+	init_effect = {
+		spawn_megastructure = { type = "interstellar_habitat_3" }
+		every_system_megastructure = {
+			limit = {
+				exists = this
+				is_megastructure_type = interstellar_habitat_4
+			}
+			remove_megastructure = this
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = pc_interstellar_habitat
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+		init_effect = {
+			set_planet_flag = has_giga
+			set_planet_flag = habitat
+			set_planet_flag = megastructure
+			set_planet_flag = has_megastructure
+			add_modifier = {
+				modifier = "interstellar_habitat"
+				days = -1
+			}
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "The Cheese Archives"
+		orbit_angle = 75
+		orbit_distance = 45
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				set_building = "building_cheese_depot"
+			}
+		}
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_interstellar_ringworld_habitable"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			while = {
+				limit = {
+					any_tile = { has_blocker = yes }
+				}
+				random_tile = {
+					limit = { has_blocker = yes }
+					remove_blocker = yes
+				}
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Interstellar Ringworld Segment"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	change_orbit = 45
 }

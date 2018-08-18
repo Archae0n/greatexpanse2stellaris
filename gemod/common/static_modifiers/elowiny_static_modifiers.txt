@@ -13,6 +13,51 @@ lifeless_temperate = {
 	icon_frame = 2
 }
 
+strange_pouchkinn_lab = {
+	tile_resource_physics_research_mult = 0.10
+	tile_resource_society_research_mult = 0.10
+	tile_resource_engineering_research_mult = 0.10
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_strange_pouchkinn_lab.dds"
+	icon_frame = 2
+}
+
+strange_pouchkinn_lab_activated = {
+	tile_resource_physics_research_mult = 0.50
+	tile_resource_society_research_mult = 0.25
+	tile_resource_engineering_research_mult = 0.25
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_strange_pouchkinn_lab.dds"
+	icon_frame = 1
+}
+
+orbital_elysium_catastrophe = {
+	pop_citizen_happiness = -0.05
+	tile_resource_unity_mult = -0.05
+}
+
+pouchkinn_power = {
+	ship_weapon_damage = 1.15
+	ship_fire_rate_mult = 1.15
+}
+
+orbital_elysium = {
+	pop_citizen_happiness = 0.10
+	tile_resource_unity_mult = 0.10
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_orbital_elysium.dds"
+	icon_frame = 1
+}
+
+interstellar_habitat = {
+	pop_citizen_happiness = -0.05
+	tile_resource_energy_mult = -0.10
+	tile_resource_physics_research_mult = 0.10
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_habitat.dds"
+	icon_frame = 2
+}
+
 giga_brown_dwarf = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_giga_brown_dwarf.dds"
 	icon_frame = 1

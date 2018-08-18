@@ -330,7 +330,7 @@ planet_event = {
 				set_planet_flag = found_strategic_deposit
 				set_planet_flag = found_fossil_fuels
 			}
-			1 = {
+			10 = {
 				modifier = {
 					factor = 0
 					has_planet_flag = found_strategic_deposit												

@@ -1,0 +1,90 @@
+﻿l_english:  
+ ###################################################
+ # Edicts
+ ###################################################
+ 
+ edict_land_clearance_2:0 "Subterranean Expansion"
+ edict_land_clearance_2_desc:0 "We need more room for our people. Lay plans for an underground metropolis. Windows are overrated. §G Provides bonus minerals or defense§!"
+ edict_land_clearance_3:0 "Sky Islands"
+ edict_land_clearance_3_desc:0 "We will live in the sky and look down upon those beneath us, no matter the expense. §G Provides bonus energy, unity, or influence§!"
+ 
+ masterclearance_increase_size_0:0 "Permanently increases the size of the planet by §R0§! tiles. §Y $TIME_DELAY$.§!"
+ masterclearance_increase_size_1:0 "Permanently increases the size of the planet by at least §G1§! tile. §Y $TIME_DELAY$.§!"
+ masterclearance_increase_size_2:0 "Permanently increases the size of the planet by at least §G2§! tiles. §Y $TIME_DELAY$.§!"
+ masterclearance_increase_size_3:0 "Permanently increases the size of the planet by at least §G3§! tiles. §Y $TIME_DELAY$.§!"
+ land_clearance_first:0 "We should clear all easy to reach land before we consider such a grand project."
+ one_percent_already:0 "The wealthiest members of our society already have a home. They request never to be bothered again."
+ land_clearance_construction_first:0 "Our top engineers are already busy with a major construction project. You do want our best engineers for such a ambitious project don't you?"
+ 
+ ###################################################
+ # Planet Modifiers
+ ###################################################
+ 
+ pm_subterranean_construction:0 "Subterranean Construction"
+ pm_subterranean_construction_desc:0 "A massive excavation project is underway to expand our colony underground. Public notice: we are not responsible for minor earthquakes or sinkholes, live here at your own risk"
+ pm_subterranean_fortress:0 "Subterranean Fortress"
+ pm_subterranean_fortress_desc:0 "An extensive network of fortified bunkers and artificial caverns protect key personnel from harm."
+ pm_subterranean_foundry:0 "Subterranean Foundry"
+ pm_subterranean_foundry_desc:0 "Production forges powered by heat from the planetary core. Slightly volatile when venting, minimal risk of global inferno."
+ pm_sky_construction:"Flying Fabrication"
+ pm_sky_construction_desc:0 "A massive scaffold holds up what will become a floating city. This physics defying structure inspires awe in the populace."
+ pm_sky_mall:0 "Sky Mall"
+ pm_sky_mall_desc:0 "An orgy of capitalism floats above this planet. It comes with a catalog found in the backseat pocket of all planetary transport pods."
+ pm_sky_green:0 "Sky Green"
+ pm_sky_green_desc:0 "Vacation in the sky on our idyllic floating island, the view is out of this world."
+ pm_sky_estate:0 "Sky Estate"
+ pm_sky_estate_desc:0 "The richest of the rich live out their secluded lives on a bejewelled island floating among the clouds. 99% of the population think this is unfair" 
+ 
+ 
+ ###################################################
+ # Events
+ ###################################################
+ 
+ masterclearance.1.name:0 "Plans for a Subterranean Complex on [Root.Planet.GetName]"
+ masterclearance.1.desc:0 "Our grand excavation project is underway! While some residents may complain of local tremors and ground displacement, the occasional collapsed city block is a small price to pay for progress. Now, what should our subterranean city become? \n\nOur Generals have proposed a nearly impenetrable underground fortress with enough food and capacity to shelter the more important members of society should our world ever suffer from orbital bombardment. However our head of engineering has proposed a radical geothermal foundry that could revolutionize planetary production methods. \n\nA few fringe environmental groups have raised objections to this idea on the grounds that upsetting planetary tectonics might have unforeseen consequences, while local representatives of the artisan troupe have petitioned that the sulfur fumes of the forges would ruin their olfactory artwork. However, these naysayers are of little importance, so what shall we build?"
+ masterclearance.fortress.name:0 "Open an underground Fortress"
+ masterclearance.fortress.tooltip:0 "Defense is the best defense. \n\n§Y$ON_COMPLETION$:§! \n§G-20%§! $MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$ \n§G+50%§! $MOD_ARMY_DAMAGE_MULT$"
+ masterclearance.foundry.name:0 "Establish a great Foundry"
+ masterclearance.foundry.tooltip:0 "Delve too greedily and too deep. \n\n§Y$ON_COMPLETION$:§! \n§G+50%§! £minerals \n§R-15%§! $MOD_POP_ENVIRONMENT_TOLERANCE$ \n§R+25%§! $MOD_POP_FOOD_REQ_MULT$ \n§R+25%§! $MOD_POP_ROBOT_UPKEEP_MULT$"
+ masterclearance.2.name:0 "Subterranean Fortress Complete, [Root.Planet.GetName] Secured"
+ masterclearance.2.desc:0 "Our grand excavation project is complete. It marks a new era for [Root.Planet.GetName], thousands of our citizens can now live out their entire lives and never see the sun. Some should probably still go outside, but the important point is they no longer have to.\n\nLocal military commanders boast that the fortress blast doors could withstand a direct gigacannon impact. They have quieted down after our Fleet Admiral offered to personally test this theory, but there is little doubt that should any ordinance breach our atmosphere, the safest place to be is underground."
+ masterclearance.fortress2.name:0 "Open the blast doors"
+ masterclearance.fortress2.tooltip:0 "Keep your gigacannon in its battleship, Admiral. \n\n§G-20%§! $MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$ \n§G+50%§! $MOD_ARMY_DEFENSE_DAMAGE_MULT$ \n§Y $NEW_TILES$"
+ masterclearance.3.name:0 "Subterranean Foundry Makes [Root.Planet.GetName] Great Again"
+ masterclearance.3.desc:0 "Our grand excavation project is complete. The magma forges are running at full capacity, and fleet command is eagerly ordering up a new line of forge-formed cruisers, expecting local shipyards to be unable to keep pace with the new influx of minerals. \n\nUnsurprisingly, the local artisan troupe has mobilized a full olfactory protest near the foundry entrance, wearing what appear to be gas masks in solidarity. However, the latest newsletter spoke of "artisanal protesting" as their next big project, so it is hard to take such antics seriously. Engineering reports that Foundry integrity is within expected parameters, and residents are almost certainly safe."
+ masterclearance.foundry2.name:0 "Almost Certainly?"
+ masterclearance.foundry2.tooltip:0 "At least the earthquakes won't affect my sky island. \n\n§G+50%§! £minerals \n§R-15%§! $MOD_POP_ENVIRONMENT_TOLERANCE$ \n§R+25%§! $MOD_POP_FOOD_REQ_MULT$ \n§R+25%§! $MOD_POP_ROBOT_UPKEEP_MULT$ \n§Y $NEW_TILES$"
+ masterclearance.sky.name:0 "[Root.Planet.GetName] to Launch City in the Sky"
+ masterclearance.sky.desc:0 "While we set off for the stars long ago, the last corner of untouched living space on [Root.Planet.GetName] lies between the cluttered ground and the great void. Today our scientists say we can inhabit the place our ancestors believed was home the gods. \n\nThere are many dreams for what this cloud city could be. Merchants, traders and corporate representatives have proposed a Sky Mall, described as an incredibly lucrative venture. Members of the Faction for a Better Tomorrow, a local activist group have released plans for a floating greenspace, an idealistic paradise accessible to all citizens. Last, a group of extraordinarily wealthy individuals that style themselves as the glorious 1% propose a series of personal estates that will isolate them from the grubby masses. They pledge increased support the government, yet such an elitist action would doubtless lead to social strife. What shall we build?"
+ masterclearance.skymall.name:0 "Build a shiny Sky Mall"
+ masterclearance.skymall.tooltip:0 "Step 1. Build Island 2. Profit. \n\n§Y$ON_COMPLETION$:§! \n§G+20%§! £energy \n§R+20%§! $MOD_POP_CONSUMER_GOODS_MULT$§!"
+ masterclearance.skymallbuilt.name:0 "Sky Mall Opens Near You!"
+ masterclearance.skymallbuilt.desc:0 "With the launch of SkyMall-[Root.Planet.GetName](TM), our citizens are open to a whole new realms of material extravagance. Corporate profits shatter all predicted benchmarks, and it is unclear how [Root.Owner.GetSpeciesClassPlural] before managed life without every known product conveniently available just above their heads."
+ masterclearance.skymallbuilt2.name:0 "Cant I just order through the shroud.net?"
+ masterclearance.skymallbuilt2.tooltip:0 "Yes but they overcharge for shipping. \n\n§G+20%§! £energy \n§R+20%§! $MOD_POP_CONSUMER_GOODS_MULT$ \n§Y $NEW_TILES$"
+ masterclearance.skygreen.name:0 "Found a beautiful Sky Green"
+ masterclearance.skygreen.tooltip:0 "Next level nature. \n\n§Y$ON_COMPLETION$:§! \n§G+20%§! $MOD_POP_HAPPINESS$ \n§G+20% £unity \n§R-5 £energy"
+ masterclearance.skygreenbuilt.name:0 "New Sky Green Literally Eclipses all other Parks"
+ masterclearance.skygreenbuilt.desc:0 "Our floating Paradise in the sky is now open. Residents have free access to spacious green terraces, recreation fields, and gorgeous benches that overlook the clouds. All benches come with conveniently-spaced armrests that make it impossible for most vertebrate species to sleep. Stuck behind the tedium of a terminal or a dull boss? Dreaming of the perfect vacation? Now it is easier than ever to get your head out of the clouds, and just go there instead!"
+ masterclearance.skygreenbuilt2.name:0 "Wait, We dont charge an entrance fee?"
+ masterclearance.skygreenbuilt2.tooltip:0 "Filthy Capitalist. \n\n§G+20%§! $MOD_POP_HAPPINESS$ \n§G+20%§! £unity \n§R-5§! £energy \n§Y $NEW_TILES$"
+ masterclearance.skyestate.name:0 "Establish cloud Estates for the elite"
+ masterclearance.skyestate.tooltip:0 "Surely something will trickle down. \n\n§Y$ON_COMPLETION$:§! \n§G+1§! £influence \n§R-50%§! $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$ \n§Y $EMPIRE_UNIQUE_BUILDING$§!"
+ masterclearance.skyestatebuilt.name:0 "Wealth Gap becomes Air Gap in [Root.Owner.GetName]"
+ masterclearance.skyestatebuilt.desc:0 "With the completion of the new cloud estate, the local elite have vowed never to set foot on [Root.Planet.GetName] again. Local authorities have relatively little sway with these cloud dwellers, and they are sure to do all that is in their considerable wealth and power to keep their high position. Some even threatenly proclaim that it is in our empire's best interests are to keep them happy, whatever that means. Down below, the rabble complain how this perfectly symbolizes the inherent inequality of the syst- but honestly, you cannot hear them from up here."
+ masterclearance.skyestatebuilt2.name:0 "Do I get a house too?"
+ masterclearance.skyestatebuilt2.tooltip:0 "Of course. \n\n§G+1§! £influence \n§R-50%§! $MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$ \n§Y $EMPIRE_UNIQUE_BUILDING$ \n§Y $NEW_TILES$"
+ 
+ ###################################################
+ # Repeated References for Translation
+ ###################################################
+ 
+ ON_COMPLETION:0 "On completion"
+ NEW_TILES:0 "New tiles available"
+ TIME_DELAY:0 "Will take some time to complete"
+
+ #Patchnotes
+
+ #New Event chain for Foundries. Will trigger for previously built foundries. The chain is a nerf, but only a brutal one if you let it. Or if you are incredibly unlucky. This is Fine.
+ #AI slightly less afraid of building Foundries. AI will not get foundry event chain on the off chance they do build a foundry, because they cannot be trusted
+ #Open an Underground Fortress tooltip now properly displays +50% Defense Army Damage, not +50% Army Damage. This has always been the effect, but now the tooltip isnt a liar

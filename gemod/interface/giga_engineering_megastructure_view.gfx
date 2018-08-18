@@ -51,4 +51,8 @@ spriteTypes = {
 		name = "GFX_megastructure_greenaurium"
 		textureFile = "gfx/interface/planetview/mega_greenaurium.dds"
 	}
+	spriteType = {
+		name = "GFX_megastructure_military_academy_background"
+		textureFile = "gfx/interface/planetview/mega_ships.dds"
+	}
 }

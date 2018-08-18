@@ -1,0 +1,90 @@
+spriteTypes = {
+	
+	##################################################################
+	# Image Credit: The Underground City Vesgorat by Noba			 #
+	##################################################################
+	
+	# Underground City
+	spriteType = {
+		name = "GFX_evt_underground_city"
+		texturefile = "gfx/event_pictures/underground_city.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Infernum by JJasso on Deviant Art				 #
+	##################################################################
+	
+	# Underground Foundary
+	spriteType = {
+		name = "GFX_evt_underground_foundry"
+		texturefile = "gfx/event_pictures/underground_foundry.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Underground City by nkabuto on Deviant Art		 #
+	##################################################################
+	
+	# Underground Construction
+	spriteType = {
+		name = "GFX_evt_underground_construction"
+		texturefile = "gfx/event_pictures/underground_construction.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Sky City by Denjoo							 #
+	##################################################################
+	
+	# Sky City
+	spriteType = {
+		name = "GFX_evt_sky_city"
+		texturefile = "gfx/event_pictures/sky_city.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Concept Art by Andy Park						 #
+	##################################################################
+	
+	# Sky Green
+	spriteType = {
+		name = "GFX_evt_sky_green"
+		texturefile = "gfx/event_pictures/sky_green.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Floating Island by RhexFiremind 				 #
+	##################################################################
+	
+	# Sky Estate
+	spriteType = {
+		name = "GFX_evt_sky_estate"
+		texturefile = "gfx/event_pictures/sky_estate.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+	##################################################################
+	# Image Credit: Floating City Alex Andreyev						 #
+	##################################################################
+	
+	# Sky Mall
+	spriteType = {
+		name = "GFX_evt_sky_mall"
+		texturefile = "gfx/event_pictures/sky_mall.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+	
+}
+
+
+	

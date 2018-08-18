@@ -5,7 +5,7 @@ objectTypes = {
 		file = "gfx/models/planets/disk.mesh"
 	
 	}
-
+	
 	pdxmesh = {
 		name = "asteroid_greenaurium_large_01_mesh"
 		file = "gfx/models/planets/distant_stars_planets/asteroid_crystal_large_01.mesh"
