@@ -19,7 +19,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "mem_ancient_01_destroyer_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_destroyer.mesh"
-		scale = 3.0
+		scale = 2.0
 		meshsettings = {
 			shader = "PdxMeshShip"
 			
@@ -33,7 +33,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "mem_ancient_01_cruiser_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_cruiser.mesh"
-		scale = 4.0
+		scale = 3.0
 		meshsettings = {
 			shader = "PdxMeshShip"
 			
@@ -47,7 +47,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "mem_ancient_01_battleship_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_battleship.mesh"
-		scale = 5.0
+		scale = 3.0
 		meshsettings = {
 			shader = "PdxMeshShip"
 			
@@ -61,7 +61,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "mem_ancient_01_titan_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_titan.mesh"
-		scale = 7.8
+		scale = 5.8
 		meshsettings = {
 			shader = "PdxMeshShip"
 			
@@ -69,6 +69,20 @@ objectTypes = {
 		#texture_diffuse = "1x512.dds"
 		}
 	}
+
+		#######  Carrier  #######
+
+	pdxmesh = {
+		name = "mem_ancient_01_carrier_mesh"
+		file = "gfx/models/ships/mem_ancient/mem_ancient_01_carrier.mesh"
+		scale = 4.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		
+		#Mipmap tweaking
+		#texture_diffuse = "512x512.dds"
+		}
+}
 	
 	####### small ships  #######	
 	pdxmesh = {
@@ -137,7 +151,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "mem_ancient_01_transport_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_cargo.mesh"
-		scale = 5.0
+		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
 		}
@@ -146,7 +160,7 @@ objectTypes = {
 		pdxmesh = {
 		name = "mem_ancient_01_colony_mesh"
 		file = "gfx/models/ships/mem_ancient/mem_ancient_01_cargo.mesh"
-		scale = 7.0
+		scale = 3.0
 		meshsettings = {
 		shader = "PdxMeshShip"
 			#Mipmap tweaking

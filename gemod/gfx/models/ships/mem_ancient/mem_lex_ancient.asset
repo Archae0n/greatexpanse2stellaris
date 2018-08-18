@@ -396,7 +396,7 @@ entity = {
 		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
  
-    scale = 1.0
+    scale = 0.4
 	game_data = {
 		size = @corvette_scale
 	}
@@ -510,7 +510,7 @@ entity = {
 		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
 	}
 	
-    scale = 1.0
+    scale = 0.5
 	
 	game_data = {
 		size = @destroyer_scale
@@ -703,7 +703,7 @@ entity = {
 		event = { time = 0.0 node = "root" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-	scale = 1.0
+	scale = 0.6
 	
 	game_data = {
 		size = @cruiser_scale
@@ -954,7 +954,7 @@ entity = {
 		event = { time = 0.0 particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-	scale = 1.0
+	scale = 0.65
 	
 	game_data = {
 		size = @battleship_scale
@@ -1696,7 +1696,7 @@ entity = {
 			event = { time = 3.9 node = "science_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 			event = { time = 4.1 node = "science_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 		}
-		scale = 0.78
+		scale = 1
 	}
 	
 	entity = {
