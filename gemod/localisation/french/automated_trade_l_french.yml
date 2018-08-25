@@ -1,0 +1,90 @@
+﻿##########################################################################
+# Localisation for Automated Trade events
+#
+# Written by ScepraX
+# Supplied by [url=http://steamcommunity.com/profiles/76561198004549521]khyinn[/url]
+##########################################################################
+
+l_french:
+
+# Names
+AUTOMATED_TRADE_FREIGHTER:0 "Cargo"
+AUTOMATED_TRADE_TANKER:0 "Ravitailleur"
+AUTOMATED_TRADE_PASSENGER_LINER:0 "Transport de Passagers"
+
+automated_trade_freighter:0 "Cargo"
+automated_trade_freighter_plural:0 "Cargos"
+automated_trade_tanker:0 "Ravitailleur"
+automated_trade_tanker_plural:0 "Ravitailleurs"
+automated_trade_passenger_liner:0 "Transport de Passagers"
+automated_trade_passenger_liner_plural:0 "Transports de Passagers"
+
+# Components
+AUTOMATED_TRADE_FISSION_REACTOR:1 "$FISSION_REACTOR$"
+AUTOMATED_TRADE_FUSION_REACTOR:1 "$FUSION_REACTOR$"
+AUTOMATED_TRADE_COLD_FUSION_REACTOR:1 "$COLD_FUSION_REACTOR$"
+AUTOMATED_TRADE_ANTIMATTER_REACTOR:1 "$ANTIMATTER_REACTOR$"
+AUTOMATED_TRADE_ZERO_POINT_REACTOR:1 "$ZERO_POINT_REACTOR$"
+AUTOMATED_TRADE_DARK_MATTER_REACTOR:1 "$DARK_MATTER_REACTOR$"
+
+AUTOMATED_TRADE_SHIP_THRUSTER_1:0 "$SHIP_THRUSTER_1$"
+AUTOMATED_TRADE_SHIP_THRUSTER_1_DESC:0 "$SHIP_THRUSTER_1_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2:0 "$SHIP_THRUSTER_2$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2_DESC:0 "$SHIP_THRUSTER_2_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3:0 "$SHIP_THRUSTER_3$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3_DESC:0 "$SHIP_THRUSTER_3_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4:0 "$SHIP_THRUSTER_4$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4_DESC:0 "$SHIP_THRUSTER_4_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5:0 "$SHIP_THRUSTER_5$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5_DESC:0 "$SHIP_THRUSTER_5_DESC$"
+
+####################################
+# Policy Settings
+####################################
+
+# Automated Trade Policy Settings
+policy_automated_trade:0 "Commerce Automatisé"
+policy_automated_trade_desc:0 "Gestion du Commerce Automatisé.\n"
+automated_trade_0:0 "Désactivé"
+automated_trade_0_name:0 "Commerce Automatisé: Désactivé"
+automated_trade_0_desc:0 "Le Commerce Automatisé est désactivé.\n"
+automated_trade_10:0 "Vaisseaux max: 10"
+automated_trade_10_name:0 "Commerce Automatisé: 10"
+automated_trade_10_desc:0 "10 vaisseaux de commerce au maximum.\n"
+automated_trade_20_name:0 "Commerce Automatisé: 20"
+automated_trade_20_desc:0 "20 vaisseaux de commerce au maximum.\n"
+automated_trade_30:0 "Vaisseaux max: 30"
+automated_trade_30_name:0 "Commerce Automatisé: 30"
+automated_trade_30_desc:0 "30 vaisseaux de commerce au maximum.\n"
+automated_trade_40:0 "Vaisseaux max: 40"
+automated_trade_40_name:0 "Commerce Automatisé: 40"
+automated_trade_40_desc:0 "40 vaisseaux de commerce au maximum.\n"
+automated_trade_50:0 "Vaisseaux max: 50"
+automated_trade_50_name:0 "Commerce Automatisé: 50"
+automated_trade_50_desc:0 "50 vaisseaux de commerce au maximum.\n"
+automated_trade_75:0 "Vaisseaux max: 75"
+automated_trade_75_name:0 "Commerce Automatisé: 75"
+automated_trade_75_desc:0 "75 vaisseaux de commerce au maximum.\n"
+automated_trade_100:0 "Vaisseaux max: 100"
+automated_trade_100_name:0 "Commerce Automatisé: 100"
+automated_trade_100_desc:0 "100 vaisseaux de commerce au maximum.\n"
+automated_trade_150:0 "Vaisseaux max: 150"
+automated_trade_150_name:0 "Commerce Automatisé: 150"
+automated_trade_150_desc:0 "150 vaisseaux de commerce au maximum.\n"
+automated_trade_200:0 "Vaisseaux max: 200"
+automated_trade_200_name:0 "Commerce Automatisé: 200"
+automated_trade_200_desc:0 "200 vaisseaux de commerce au maximum.\n"
+automated_trade_300:0 "Vaisseaux max: 300"
+automated_trade_300_name:0 "Commerce Automatisé: 300"
+automated_trade_300_desc:0 "300 vaisseaux de commerce au maximum.\n"
+automated_trade_400:0 "Vaisseaux max: 400"
+automated_trade_400_name:0 "Commerce Automatisé: 400"
+automated_trade_400_desc:0 "400 vaisseaux de commerce au maximum.\n"
+automated_trade_500:0 "Vaisseaux max: 500"
+automated_trade_500_name:0 "Commerce Automatisé: 500"
+automated_trade_500_desc:0 "500 vaisseaux de commerce au maximum.\n"
+automated_trade_666:0 "Vaisseaux illimités"
+automated_trade_666_name:0 "Commerce Automatisé: Illimité"
+automated_trade_666_desc:0 "Vaisseaux de commerce automatisé illimités.\n"
+
+

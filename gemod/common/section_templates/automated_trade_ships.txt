@@ -1,0 +1,41 @@
+##########################################################################
+# Section Templates for Automated Trade events
+#
+# Written by ScepraX
+##########################################################################
+
+# Freighter
+ship_section_template = {
+	key = "AUTOMATED_TRADE_FREIGHTER_SECTION"
+	ship_size = automated_trade_freighter
+	fits_on_slot = mid
+	entity = "cargo_transport_containers_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+}
+
+# Tanker
+ship_section_template = {
+	key = "AUTOMATED_TRADE_TANKER_SECTION"
+	ship_size = automated_trade_tanker
+	fits_on_slot = mid
+	entity = "cargo_transport_tanker_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+}
+
+# Passenger Liner
+ship_section_template = {
+	key = "AUTOMATED_TRADE_PASSENGER_LINER_SECTION"
+	ship_size = automated_trade_passenger_liner
+	fits_on_slot = mid
+	entity = "abandoned_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+}

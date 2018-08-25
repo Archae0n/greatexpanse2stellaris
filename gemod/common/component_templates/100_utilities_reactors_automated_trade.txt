@@ -1,0 +1,169 @@
+##########################################################################
+# Reactor Components for Automated Trade events
+#
+# Written by ScepraX
+##########################################################################
+
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+#############
+#	POWER	#
+#############
+
+@corvette_power_1 = 75
+@corvette_power_2 = 100
+@corvette_power_3 = 130
+@corvette_power_4 = 170
+@corvette_power_5 = 220
+@corvette_power_6 = 285
+
+@corvette_power_7 = 375
+@corvette_power_8 = 520
+
+#############
+#	COST	#
+#############
+
+@corvette_cost_1 = 20
+@corvette_cost_2 = 25
+@corvette_cost_3 = 30
+@corvette_cost_4 = 35
+@corvette_cost_5 = 40
+@corvette_cost_6 = 45
+
+@corvette_cost_7 = 50
+@corvette_cost_8 = 55
+
+#############
+#  REACTORS #
+#############
+
+########################
+# Fission Reactors
+########################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @corvette_power_1
+	cost = @corvette_cost_1
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_FUSION_REACTOR"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+########################
+# Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @corvette_power_2
+	cost = @corvette_cost_2
+	
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_COLD_FUSION_REACTOR"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+########################
+# Cold Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @corvette_power_3
+	cost = @corvette_cost_3
+	
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_ANTIMATTER_REACTOR"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+########################
+# Antimatter Reactors
+########################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @corvette_power_4
+	cost = @corvette_cost_4
+	
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_ZERO_POINT_REACTOR"
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+########################
+# Zero-Point Reactors
+########################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @corvette_power_5
+	cost = @corvette_cost_5
+	
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_DARK_MATTER_REACTOR"
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+####################
+# Engimatic Reactors
+####################
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @corvette_power_6
+	cost = @corvette_cost_6
+	
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	
+	ai_weight = {
+		weight = 6
+	}
+}

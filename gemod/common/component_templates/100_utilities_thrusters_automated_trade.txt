@@ -1,0 +1,141 @@
+##########################################################################
+# Thruster Components for Automated Trade events
+#
+# Written by ScepraX
+##########################################################################
+
+# Icons set here are the ones show in the actual slot.
+
+@cost1 = 3
+@cost2 = 6
+@cost3 = 9
+@cost4 = 12
+@cost5 = 15
+
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+@power_5 = -30
+
+#############
+# THRUSTERS #
+#############
+
+### 1
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @power_1
+	cost = @cost1
+	
+	modifier = {
+	}
+		
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### 2
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @power_2
+	cost = @cost2
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 5
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+### 3
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @power_3
+	cost = @cost3
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+### 4
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @power_4
+	cost = @cost4
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	upgrades_to = "AUTOMATED_TRADE_SHIP_THRUSTER_5"
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+### 5
+
+utility_component_template = {
+	key = "AUTOMATED_TRADE_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @power_5
+	cost = @cost5
+	modifier = {
+		ship_base_speed_mult = 1.00
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { automated_trade_freighter automated_trade_tanker automated_trade_passenger_liner }
+	
+	ai_weight = {
+		weight = 5
+	}
+}

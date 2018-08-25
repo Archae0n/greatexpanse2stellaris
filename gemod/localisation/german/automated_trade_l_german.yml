@@ -1,0 +1,90 @@
+﻿##########################################################################
+# Localisation for Automated Trade events
+#
+# Written by ScepraX
+# Supplied by [url=http://steamcommunity.com/profiles/76561197983796245]Noobier[/url]
+##########################################################################
+
+l_german:
+
+# Names
+AUTOMATED_TRADE_FREIGHTER:0 "Frachter"
+AUTOMATED_TRADE_TANKER:0 "Tanker"
+AUTOMATED_TRADE_PASSENGER_LINER:0 "Passagierschiff"
+
+automated_trade_freighter:0 "Frachter"
+automated_trade_freighter_plural:0 "Frachter"
+automated_trade_tanker:0 "Tanker"
+automated_trade_tanker_plural:0 "Tanker"
+automated_trade_passenger_liner:0 "Passagierschiff"
+automated_trade_passenger_liner_plural:0 "Passagierschiffe"
+
+# Components
+AUTOMATED_TRADE_FISSION_REACTOR:1 "$FISSION_REACTOR$"
+AUTOMATED_TRADE_FUSION_REACTOR:1 "$FUSION_REACTOR$"
+AUTOMATED_TRADE_COLD_FUSION_REACTOR:1 "$COLD_FUSION_REACTOR$"
+AUTOMATED_TRADE_ANTIMATTER_REACTOR:1 "$ANTIMATTER_REACTOR$"
+AUTOMATED_TRADE_ZERO_POINT_REACTOR:1 "$ZERO_POINT_REACTOR$"
+AUTOMATED_TRADE_DARK_MATTER_REACTOR:1 "$DARK_MATTER_REACTOR$"
+
+AUTOMATED_TRADE_SHIP_THRUSTER_1:0 "$SHIP_THRUSTER_1$"
+AUTOMATED_TRADE_SHIP_THRUSTER_1_DESC:0 "$SHIP_THRUSTER_1_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2:0 "$SHIP_THRUSTER_2$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2_DESC:0 "$SHIP_THRUSTER_2_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3:0 "$SHIP_THRUSTER_3$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3_DESC:0 "$SHIP_THRUSTER_3_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4:0 "$SHIP_THRUSTER_4$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4_DESC:0 "$SHIP_THRUSTER_4_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5:0 "$SHIP_THRUSTER_5$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5_DESC:0 "$SHIP_THRUSTER_5_DESC$"
+
+####################################
+# Policy Settings
+####################################
+
+# Automated Trade Policy Settings
+policy_automated_trade:0 "Automatischer Handel"
+policy_automated_trade_desc:0 "Einstellung des automatischen Handels.\n"
+automated_trade_0:0 "Deaktiviert"
+automated_trade_0_name:0 "Automatischer Handel: Deaktiviert"
+automated_trade_0_desc:0 "Automatischer Handel ist deaktiviert.\n"
+automated_trade_10:0 "Maximale Schiffe: 10"
+automated_trade_10_name:0 "Automatischer Handel: 10"
+automated_trade_10_desc:0 "Maximum von 10 Handelsschiffen.\n"
+automated_trade_20:0 "Maximale Schiffe: 20"
+automated_trade_20_name:0 "Automatischer Handel: 20"
+automated_trade_20_desc:0 "Maximum von 20 Handelsschiffen.\n"
+automated_trade_30:0 "Maximale Schiffe: 30"
+automated_trade_30_name:0 "Automatischer Handel: 30"
+automated_trade_30_desc:0 "Maximum von 30 Handelsschiffen.\n"
+automated_trade_40:0 "Maximale Schiffe: 40"
+automated_trade_40_name:0 "Automatischer Handel: 40"
+automated_trade_40_desc:0 "Maximum von 40 Handelsschiffen.\n"
+automated_trade_50:0 "Maximale Schiffe: 50"
+automated_trade_50_name:0 "Automatischer Handel: 50"
+automated_trade_50_desc:0 "Maximum von 50 Handelsschiffen.\n"
+automated_trade_75:0 "Maximale Schiffe: 75"
+automated_trade_75_name:0 "Automatischer Handel: 75"
+automated_trade_75_desc:0 "Maximum von 75 Handelsschiffen.\n"
+automated_trade_100:0 "Maximale Schiffe: 100"
+automated_trade_100_name:0 "Automatischer Handel: 100"
+automated_trade_100_desc:0 "Maximum von 100 Handelsschiffen.\n"
+automated_trade_150:0 "Maximale Schiffe: 150"
+automated_trade_150_name:0 "Automatischer Handel: 150"
+automated_trade_150_desc:0 "Maximum von 150 Handelsschiffen.\n"
+automated_trade_200:0 "Maximale Schiffe: 200"
+automated_trade_200_name:0 "Automatischer Handel: 200"
+automated_trade_200_desc:0 "Maximum von 200 Handelsschiffen.\n"
+automated_trade_300:0 "Maximale Schiffe: 300"
+automated_trade_300_name:0 "Automatischer Handel: 300"
+automated_trade_300_desc:0 "Maximum von 300 Handelsschiffen.\n"
+automated_trade_400:0 "Maximale Schiffe: 400"
+automated_trade_400_name:0 "Automatischer Handel: 400"
+automated_trade_400_desc:0 "Maximum von 400 Handelsschiffen.\n"
+automated_trade_500:0 "Maximale Schiffe: 500"
+automated_trade_500_name:0 "Automatischer Handel: 500"
+automated_trade_500_desc:0 "Maximum von 500 Handelsschiffen.\n"
+automated_trade_666:0 "Unbegrenzte Schiffsanzahl"
+automated_trade_666_name:0 "Automatischer Handel: Unbegrenzt"
+automated_trade_666_desc:0 "Unbegrenzte Anzahl von Handelsschiffen.\n"
+

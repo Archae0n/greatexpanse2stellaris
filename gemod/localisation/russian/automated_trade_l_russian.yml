@@ -1,0 +1,91 @@
+﻿##########################################################################
+# Localisation for Automated Trade events
+#
+# Written by ScepraX
+# Supplied by [KaMyHяKи] Kpoxa
+##########################################################################
+
+l_russian:
+
+# Names
+AUTOMATED_TRADE_FREIGHTER:0 "Фрахтователь"
+AUTOMATED_TRADE_TANKER:0 "Автоцистерна"
+AUTOMATED_TRADE_PASSENGER_LINER:0 "Пассажирский лайнер"
+
+automated_trade_freighter:0 "Фрахтователь"
+automated_trade_freighter_plural:0 "Дорожный транспорт"
+automated_trade_tanker:0 "Автоцистерна"
+automated_trade_tanker_plural:0 "Танкеры"
+automated_trade_passenger_liner:0 "Пассажирский лайнер"
+automated_trade_passenger_liner_plural:0 "Пассажирские вкладыши"
+
+# Components
+AUTOMATED_TRADE_FISSION_REACTOR:1 "$FISSION_REACTOR$"
+AUTOMATED_TRADE_FUSION_REACTOR:1 "$FUSION_REACTOR$"
+AUTOMATED_TRADE_COLD_FUSION_REACTOR:1 "$COLD_FUSION_REACTOR$"
+AUTOMATED_TRADE_ANTIMATTER_REACTOR:1 "$ANTIMATTER_REACTOR$"
+AUTOMATED_TRADE_ZERO_POINT_REACTOR:1 "$ZERO_POINT_REACTOR$"
+AUTOMATED_TRADE_DARK_MATTER_REACTOR:1 "$DARK_MATTER_REACTOR$"
+
+AUTOMATED_TRADE_SHIP_THRUSTER_1:0 "$SHIP_THRUSTER_1$"
+AUTOMATED_TRADE_SHIP_THRUSTER_1_DESC:0 "$SHIP_THRUSTER_1_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2:0 "$SHIP_THRUSTER_2$"
+AUTOMATED_TRADE_SHIP_THRUSTER_2_DESC:0 "$SHIP_THRUSTER_2_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3:0 "$SHIP_THRUSTER_3$"
+AUTOMATED_TRADE_SHIP_THRUSTER_3_DESC:0 "$SHIP_THRUSTER_3_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4:0 "$SHIP_THRUSTER_4$"
+AUTOMATED_TRADE_SHIP_THRUSTER_4_DESC:0 "$SHIP_THRUSTER_4_DESC$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5:0 "$SHIP_THRUSTER_5$"
+AUTOMATED_TRADE_SHIP_THRUSTER_5_DESC:0 "$SHIP_THRUSTER_5_DESC$"
+
+####################################
+# Policy Settings
+####################################
+
+# Automated Trade Policy Settings
+policy_automated_trade:0 "Автоматизированная торговля"
+policy_automated_trade_desc:0 "Управление автоматизированной торговлей.\n"
+automated_trade_0:0 "Выключить"
+automated_trade_0_name:0 "Автоматизированная торговля: Выключена"
+automated_trade_0_desc:0 "Автоматизированная торговля выключена.\n"
+automated_trade_10:0 "Максимум кораблей: 10"
+automated_trade_10_name:0 "Автоматизированная торговля: 10"
+automated_trade_10_desc:0 "Максимум 10 торговых кораблей.\n"
+automated_trade_20:0 "Максимум кораблей: 20"
+automated_trade_20_name:0 "Автоматизированная торговля: 20"
+automated_trade_20_desc:0 "Максимум 20 торговых кораблей.\n"
+automated_trade_30:0 "Максимум кораблей: 30"
+automated_trade_30_name:0 "Автоматизированная торговля: 30"
+automated_trade_30_desc:0 "Максимум 30 торговых кораблей.\n"
+automated_trade_40:0 "Максимум кораблей: 40"
+automated_trade_40_name:0 "Автоматизированная торговля: 40"
+automated_trade_40_desc:0 "Максимум 40 торговых кораблей.\n"
+automated_trade_50:0 "Максимум кораблей: 50"
+automated_trade_50_name:0 "Автоматизированная торговля: 50"
+automated_trade_50_desc:0 "Максимум 50 торговых кораблей.\n"
+automated_trade_75:0 "Максимум кораблей: 75"
+automated_trade_75_name:0 "Автоматизированная торговля: 75"
+automated_trade_75_desc:0 "Максимум 75 торговых кораблей.\n"
+automated_trade_100:0 "Максимум кораблей: 100"
+automated_trade_100_name:0 "Автоматизированная торговля: 100"
+automated_trade_100_desc:0 "Максимум 100 торговых кораблей.\n"
+automated_trade_150:0 "Максимум кораблей: 150"
+automated_trade_150_name:0 "Автоматизированная торговля: 150"
+automated_trade_150_desc:0 "Максимум 150 торговых кораблей.\n"
+automated_trade_200:0 "Максимум кораблей: 200"
+automated_trade_200_name:0 "Автоматизированная торговля: 200"
+automated_trade_200_desc:0 "Максимум 200 торговых кораблей.\n"
+automated_trade_300:0 "Максимум кораблей: 300"
+automated_trade_300_name:0 "Автоматизированная торговля: 300"
+automated_trade_300_desc:0 "Максимум 300 торговых кораблей.\n"
+automated_trade_400:0 "Максимум кораблей: 400"
+automated_trade_400_name:0 "Автоматизированная торговля: 400"
+automated_trade_400_desc:0 "Максимум 400 торговых кораблей.\n"
+automated_trade_500:0 "Максимум кораблей: 500"
+automated_trade_500_name:0 "Автоматизированная торговля: 500"
+automated_trade_500_desc:0 "Максимум 500 торговых кораблей.\n"
+automated_trade_666:0 "Безлимитный тариф"
+automated_trade_666_name:0 "Автоматизированная торговля: Безлимитный тариф"
+automated_trade_666_desc:0 "Нет ограничения на колличество торговых кораблей.\n"
+
+
