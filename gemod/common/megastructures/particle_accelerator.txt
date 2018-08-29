@@ -116,8 +116,7 @@ particle_accelerator_1 = {
 	}
 	
 	maintenance = {
-		energy = 25
-		minerals = 45
+		energy = 45
 	}
 	
 	monthly_production = {
