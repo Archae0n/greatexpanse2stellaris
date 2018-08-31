@@ -224,9 +224,6 @@ tr_discovery_faith_in_science = {
 	on_enabled = {
 		set_country_flag = faith_in_science
 	}
-	modifier = {
-		country_resource_unity_mult = 0.10
-	}
 
 	tradition_swap = {
 		name = tr_discovery_faith_in_science_machine

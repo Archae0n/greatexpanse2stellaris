@@ -6,3 +6,5 @@
  precursor_colony_science_boost:0 "Ancient Archives of Technology"
  trait_robot_inefficient:0 "Inefficient Machinery"
  trait_robot_inefficient_desc: "§LThis design of machinery exerts more energy performing regular tasks than normal, potentially due to an instability in their programming, or an unconsidered factor in their design§!\n"
+ the_orbital_project:0 "The Orbital Project"
+ the_orbital_project_desc:0 "Abbreviated TOP, such project allows the empire to bolster other empires via claiming systems and taking advantage of bonuses in order to support other empires in construction of orbitals."
