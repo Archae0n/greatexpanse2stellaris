@@ -1,0 +1,142 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_fieldfrigate_mesh"
+		file = "gfx/models/ships/beast_01/beast_fieldfrigate.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main3:page0Shape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:head_topShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_head_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:bulbtopsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_bulbtops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:bulbfrontShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_bulbfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:page2Shape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_page2.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:body_sidesShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_body_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:shoulder_topsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_shoulder_tops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:waist_backsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_waist_backs.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:top_vent_frontsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_top_vent_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:stack_frontsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_stack_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:bot_vent_frontsShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_bot_vent_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:page1Shape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:belly_botShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_belly_bot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:top_vent_topShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_top_vent_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:engine_portShape"
+			index = 0
+			texture_diffuse = "beast_fieldfrigate_engine_port.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

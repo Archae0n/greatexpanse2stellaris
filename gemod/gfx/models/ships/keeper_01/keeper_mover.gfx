@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "keeper_mover_mesh"
+		file = "gfx/models/ships/keeper_01/keeper_mover.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main3:Kpr_Mover_TEXShape"
+			index = 0
+			texture_diffuse = "keeper_mover.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

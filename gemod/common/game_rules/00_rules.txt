@@ -195,7 +195,11 @@ can_auto_migrate_pop = {
 	is_enslaved = no
 	is_being_purged = no
 	has_migration_control = no
-	is_robot_pop = no
+	AND = { 
+		is_robot_pop = no
+		has_trait = "trait_robotic_3"
+		owner = { has_policy_flag = ai_full_rights }		
+	}	
 	OR = {
 		NOT = { has_trait = trait_self_modified }
 		is_same_species = root

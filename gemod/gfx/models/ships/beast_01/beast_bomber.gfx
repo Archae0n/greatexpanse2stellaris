@@ -1,0 +1,232 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_bomber_mesh"
+		file = "gfx/models/ships/beast_01/beast_bomber.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main:chinsidesShape"
+			index = 0
+			texture_diffuse = "beast_bomberchinsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bottomsideShape"
+			index = 0
+			texture_diffuse = "beast_bomberbombsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:backsidesShape"
+			index = 0
+			texture_diffuse = "beast_bomberbacksides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:necksidesShape"
+			index = 0
+			texture_diffuse = "beast_bombernecksides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:chinbottomShape"
+			index = 0
+			texture_diffuse = "beast_bomberchinbottom.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:backtopShape"
+			index = 0
+			texture_diffuse = "beast_bomberbacktop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:babywingsShape"
+			index = 0
+			texture_diffuse = "beast_bomberbabywings.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:topfin_sidesShape"
+			index = 0
+			texture_diffuse = "beast_bombertopfin_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bottombackShape"
+			index = 0
+			texture_diffuse = "beast_bomberbottomback.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:engine_backShape"
+			index = 0
+			texture_diffuse = "beast_bomberengine_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:vertarmsidesShape"
+			index = 0
+			texture_diffuse = "beast_bombervertarmsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bombbackShape"
+			index = 0
+			texture_diffuse = "beast_bomberbombback.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bombtopShape"
+			index = 0
+			texture_diffuse = "beast_bomberbombtop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:venttopsShape"
+			index = 0
+			texture_diffuse = "beast_bomberventtops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:ventbackShape"
+			index = 0
+			texture_diffuse = "beast_bomberventback.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bombfaceShape"
+			index = 0
+			texture_diffuse = "beast_bomberbombface.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:armlipsShape"
+			index = 0
+			texture_diffuse = "beast_bomberarmlips.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:ventsidesShape"
+			index = 0
+			texture_diffuse = "beast_bomberventsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:ventsidesintShape"
+			index = 0
+			texture_diffuse = "beast_bomberventsidesint.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:underarmsidesShape"
+			index = 0
+			texture_diffuse = "beast_bomberunderarmsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:page0Shape"
+			index = 0
+			texture_diffuse = "beast_bomberpage0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:nosetipShape"
+			index = 0
+			texture_diffuse = "beast_bombernosetip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:nosetopsShape"
+			index = 0
+			texture_diffuse = "beast_bombernosetops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:neckbottomShape"
+			index = 0
+			texture_diffuse = "beast_bomberneckbottom.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:ventfrontShape"
+			index = 0
+			texture_diffuse = "beast_bomberventfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

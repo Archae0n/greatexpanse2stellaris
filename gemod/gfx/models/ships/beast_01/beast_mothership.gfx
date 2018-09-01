@@ -1,0 +1,151 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_mothership_mesh"
+		file = "gfx/models/ships/beast_01/beast_mothership.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main3:SMO_mothership_ribsShape"
+			index = 0
+			texture_diffuse = "beast_mothership_mothership_ribs.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_lowspine_sidesShape"
+			index = 0
+			texture_diffuse = "beast_mothership_lowspine_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_dock_int_wallsShape"
+			index = 0
+			texture_diffuse = "beast_mothership_smo_dock_int_walls.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_gen_btmShape"
+			index = 0
+			texture_diffuse = "beast_mothership_gen_btm.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_gen_topShape"
+			index = 0
+			texture_diffuse = "beast_mothership_gen_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_gen_sidesShape"
+			index = 0
+			texture_diffuse = "beast_mothership_gen_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:BMOinnerwallShape"
+			index = 0
+			texture_diffuse = "beast_mothership_bmoinnerwall.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:INSIDEBAYShape"
+			index = 0
+			texture_diffuse = "beast_mothership_insidebay.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:STUMPShape"
+			index = 0
+			texture_diffuse = "beast_mothership_stump.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_dock_ent_sidesShape"
+			index = 0
+			texture_diffuse = "beast_mothership_smo_dock_ent_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:BEASTFRONTShape"
+			index = 0
+			texture_diffuse = "beast_mothership_beastfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_dock_backShape"
+			index = 0
+			texture_diffuse = "beast_mothership_smo_dock_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:page0Shape"
+			index = 0
+			texture_diffuse = "beast_mothership_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_dock_topShape"
+			index = 0
+			texture_diffuse = "beast_mothership_smo_dock_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_englwr_sidesShape"
+			index = 0
+			texture_diffuse = "beast_mothership_englwr_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main3:SMO_englwr_faceShape"
+			index = 0
+			texture_diffuse = "beast_mothership_englwr_face.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

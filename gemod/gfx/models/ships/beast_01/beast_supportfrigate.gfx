@@ -1,0 +1,232 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_supportfrigate_mesh"
+		file = "gfx/models/ships/beast_01/beast_supportfrigate.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "turret:turret_topShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_turret_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:turret_backShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_turret_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:turret_frontShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_turret_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:turret_sidesShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_turret_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turretmuzzle:barrel_tipShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_barrel_tip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turretmuzzle:barrel_sidesShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_barrel_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:head_sidesShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_head_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:rearedgemidShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_rearedgemid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:fronttopedgeShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_fronttopedge.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:page0Shape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:page1Shape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:frontedgemidShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_frontedgemid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:shoulder_frontShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_shoulder_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:body_sidesShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_body_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:waist_backsShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_waist_backs.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:page2Shape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_page2.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:turretbaseShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_turretbase.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:ear_frontShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_ear_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:ear_tipShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_ear_tip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:head_botShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_head_bot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:bot_vent_frontsShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_bot_vent_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:engine_topShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_engine_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:belly_botShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_belly_bot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:top_vent_topShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_top_vent_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:engine_portShape"
+			index = 0
+			texture_diffuse = "beast_supportfrigate_engine_port.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

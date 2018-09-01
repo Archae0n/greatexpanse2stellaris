@@ -1813,6 +1813,7 @@ living_standard_utopian = {
 	pop_modifier = {
 		pop_happiness = 0.2
 		pop_consumer_goods_add = 2.0
+		pop_resource_output = 0.1
 	}
 	
 	potential = {
@@ -1834,6 +1835,8 @@ living_standard_utopian = {
 			  OR = {
 				has_ethic = ethic_socialism
 				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			  }		  
 
 			}

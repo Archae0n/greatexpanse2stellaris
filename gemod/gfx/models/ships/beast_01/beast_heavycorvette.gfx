@@ -1,0 +1,223 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_heavycorvette_mesh"
+		file = "gfx/models/ships/beast_01/beast_heavycorvette.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "turret:gunsidesShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_gunsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:gunrearShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_gunrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:gunbotfrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_gunbotfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret:guntopShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_guntop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:botfrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_botfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:botconduitsShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_botconduits.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:botrearShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_botrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:enginebackShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_engineback.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:toprearShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_toprear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:topconduitsShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_topconduits.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:botmidShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_botmid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:topmiddleShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_topmiddle.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:topfrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_topfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:rearfacingmidShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_rearfacingmid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:cockpitsideShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_cockpitside.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:cockpittopShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_cockpittop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:cockpitfrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_cockpitfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:fronttipShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_fronttip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:frontfacingmidShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_frontfacingmid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:sideconduitShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_sideconduit.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:siderearShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_siderear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:frontofsidemidShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_frontofsidemid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:sidemidShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_sidemid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main4:sidefrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycorvette_sidefront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

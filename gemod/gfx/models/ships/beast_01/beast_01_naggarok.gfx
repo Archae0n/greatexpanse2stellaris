@@ -1,0 +1,88 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_01_naggarok_mesh"
+		file = "gfx/models/ships/beast_01/beast_01_naggarok.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main1:page0Shape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_missileShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_missile.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_db_lengthShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_length.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_noseShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_nose.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:page1Shape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_topShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_shieldtop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_engtopbotShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_shield.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_enginesidesShape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_enginesides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rko0_shield2Shape"
+			index = 0
+			texture_diffuse = "beast_01_naggarok_shield2.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

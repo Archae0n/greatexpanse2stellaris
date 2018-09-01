@@ -1,0 +1,88 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_cloakedfighter_mesh"
+		file = "gfx/models/ships/beast_01/beast_cloakedfighter.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main2:sidemidShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_sidemid_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:sidebotShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_sidebot_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:bot_of_sidemidShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_bot_of_sidemid_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:top_of_sidemidShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_top_of_sidemid_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:sidetopShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_sidetop_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:gun_faceShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_gun_face_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:frontShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_front_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:sidebottipShape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_sidebottip_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:page0Shape"
+			index = 0
+			texture_diffuse = "beast_cloakedfighter_page0_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

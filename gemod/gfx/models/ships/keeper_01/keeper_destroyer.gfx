@@ -1,0 +1,25 @@
+objectTypes = {
+	pdxmesh = {
+		name = "keeper_destroyer_mesh"
+		file = "gfx/models/ships/keeper_01/keeper_destroyer.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "torpedo:Kpr_Destroyer_A_TEXShape"
+			index = 0
+			texture_diffuse = "keeper_destroyer_A.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:Kpr_Destroyer_B_TEXShape"
+			index = 0
+			texture_diffuse = "keeper_destroyer_B.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

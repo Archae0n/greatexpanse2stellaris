@@ -1,0 +1,241 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_multiguncorvette_mesh"
+		file = "gfx/models/ships/beast_01/beast_multiguncorvette.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "front1:guntipShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_guntip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "front1:frontgunsidesShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_frontgunsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "left1:sidegunsidesShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_sidegunsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "left1:sideguninnerShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_sideguninner.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:frontgunmountsShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_frontgunmounts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:armupperedgeShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_armupperedge.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:page0Shape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:page1Shape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:armlowerrearShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_armlowerrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:armupperfrontShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_armupperfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:sidesShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:frontupperShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_frontupper.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:topmidShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_topmid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:rearcentertolowerarmsShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_rearcentretolowerarms.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:engine_backShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_engine_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:topventfrontShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_topventfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:side_of_ventShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_side_of_vent.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:topventrearShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_topventrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:rear_to_topmidShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_rear_to_topmid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:toprearShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_toprear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:botrearendShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_botrearend.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:botrearShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_botrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:topfrontShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_topfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:sidesinsertShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_sidesinsert.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:botfrontShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_botfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "root:sideinsertplateShape"
+			index = 0
+			texture_diffuse = "beast_multiguncorvette_sideinsertplate.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

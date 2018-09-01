@@ -1,0 +1,61 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_missiledestroyer_mesh"
+		file = "gfx/models/ships/beast_01/beast_missiledestroyer.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main:frontlowerantennaShape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_frontlowerantenna.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:frontupperantennaShape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_frontupperantenna.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:page1Shape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:page0Shape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:page2Shape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_page2.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:engineShape"
+			index = 0
+			texture_diffuse = "beast_missiledestroyer_engine.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

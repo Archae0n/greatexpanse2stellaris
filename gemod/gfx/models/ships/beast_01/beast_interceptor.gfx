@@ -1,0 +1,61 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_interceptor_mesh"
+		file = "gfx/models/ships/beast_01/beast_interceptor.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main2:page1Shape"
+			index = 0
+			texture_diffuse = "beast_interceptor_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:page0Shape"
+			index = 0
+			texture_diffuse = "beast_interceptor_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:page2Shape"
+			index = 0
+			texture_diffuse = "beast_interceptor_page2.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:notch_frontsShape"
+			index = 0
+			texture_diffuse = "beast_interceptor_notch_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:page3Shape"
+			index = 0
+			texture_diffuse = "beast_interceptor_page3.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main2:nose_topShape"
+			index = 0
+			texture_diffuse = "beast_interceptor_nose_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

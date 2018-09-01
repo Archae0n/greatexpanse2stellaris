@@ -2771,6 +2771,8 @@ ap_galactic_wonders = {
 		custom_tooltip = "allow_think_tank"
 		custom_tooltip = "allow_dysons_sphere"
 		custom_tooltip = "allow_ring_world"
+		custom_tooltip = "ms_allow_portsandlifts"
+		custom_tooltip = "ms_allow_system_forge"		
 	}
 	
 	possible = {

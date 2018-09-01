@@ -1,0 +1,250 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_ionarrayfrigate_mesh"
+		file = "gfx/models/ships/beast_01/beast_ionarrayfrigate.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "panel_front1Shape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_panel_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "panel_base1Shape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_panel_base.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "panel_back1Shape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_panel_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "strutleft:strut_insidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_strut_insides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "strutleft:strut_outsidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_strut_outsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_strut_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_strut_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:barrel_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_barrel_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:barrel_bottomShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_barrel_bottom_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_bottom_LRShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_bottom_lr_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_back_centerShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_back_center_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_bottom_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_bottom_sides_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_bottomShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_bottom_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_bottomsShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_bottoms_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_mid_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_mid_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_bottom_frontShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_bottom_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_top_LRShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_top_lr.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_top_centerShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_top_center.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:engine_LRShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_engine_lr.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:body_strut_topbottom_LRShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_body_strut_topbottom_lr.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bridge_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_bridge_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bridge_topShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_bridge_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:nose_sidesShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_nose_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:nose_topShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_nose_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:nose_frontShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_nose_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:barrel_topShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_barrel_top_.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main:bridge_frontShape"
+			index = 0
+			texture_diffuse = "beast_ionarrayfrigate_bridge_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

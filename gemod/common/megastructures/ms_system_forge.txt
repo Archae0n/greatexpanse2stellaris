@@ -16,7 +16,7 @@ ms_system_forge_0 = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_municipal_engineering
+		has_ascension_perk = ap_galactic_wonders
 	}
 	
 	possible = {

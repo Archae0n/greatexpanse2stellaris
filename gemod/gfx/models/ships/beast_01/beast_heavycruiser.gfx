@@ -1,0 +1,214 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_heavycruiser_mesh"
+		file = "gfx/models/ships/beast_01/beast_heavycruiser.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "beastgun:spinyShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_spiny.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret1:guntopShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_gun_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret1:gunsidesShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_gun_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret1:gunbackShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_gun_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "turret1:gunfrontShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_gun_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:nose_turret_basesShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_turretbase.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:flap_topsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_flap_tops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:flap_botsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_flap_bots.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:chin_topShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_chin_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:bridge_topsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_bridge_tops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:bridge_sidesShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgeside.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:engine_portShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_engine_port.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:shoulder_topsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_shoulder_tops.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:shoulder_backShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_shoulder_back.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:ear_frontsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_ear_fronts.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:bridge_frontShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_bridge_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:shoulder_sidesShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_shoulder_sides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:nose_frontShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_nose_front.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:ear_tipsShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_ear_tips.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:page0Shape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:topShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_top.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:head_botShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_head_bot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main5:body_bottomShape"
+			index = 0
+			texture_diffuse = "beast_heavycruiser_body_bottom.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

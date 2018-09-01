@@ -1,0 +1,385 @@
+objectTypes = {
+	pdxmesh = {
+		name = "beast_carrier_mesh"
+		file = "gfx/models/ships/beast_01/beast_carrier.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "main1:sidemidmiddleShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sidemidmiddle.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:page0Shape"
+			index = 0
+			texture_diffuse = "beast_carrier_page0.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botfrontShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botfronttipShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botfronttip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:page1Shape"
+			index = 0
+			texture_diffuse = "beast_carrier_page1.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:topmidcentreShape"
+			index = 0
+			texture_diffuse = "beast_carrier_topmidcentre.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:engineportShape"
+			index = 0
+			texture_diffuse = "beast_carrier_engineport.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:frontupperantennaShape"
+			index = 0
+			texture_diffuse = "beast_carrier_frontupperantenna.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:frontofsidemidmiddleShape"
+			index = 0
+			texture_diffuse = "beast_carrier_frontofsidemidmiddle.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botcenterofmidrearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botcentreofmidrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:centralholeedgerearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_centralholeedgerear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:centralholetopShape"
+			index = 0
+			texture_diffuse = "beast_carrier_centralholetop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:centralholerearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_centralholerear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rearofsidemidmiddleShape"
+			index = 0
+			texture_diffuse = "beast_carrier_rearofsidemidmiddle.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:fronttipShape"
+			index = 0
+			texture_diffuse = "beast_carrier_fronttip.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botmidengShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botmideng.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botmidrearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botmidrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:toprearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_toprear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sidemidmiddlerearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sidemidmiddlerear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:centralsidesShape"
+			index = 0
+			texture_diffuse = "beast_carrier_centralsides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:centralholeedgesiderearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_centralholeedgesiderear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgefrontrearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgefrontrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgesideShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgeside.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgesidefrontShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgesidefront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgetopbotShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgetopbot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgeinnersideShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgeinnerside.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgeinnersidebotShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgeinnersidebot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sidefrontShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sidefront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sideholefrontrearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sideholefrontrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sideholeinnersidesShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sideholeinnersides.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sideholetopShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sideholetop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sidemidShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sidemid.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botmidfrontShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botmidfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botmidoutsideShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botmidoutside.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:siderearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_siderear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:sidemidrearShape"
+			index = 0
+			texture_diffuse = "beast_carrier_sidemidrear.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:rearofsidemidbotShape"
+			index = 0
+			texture_diffuse = "beast_carrier_rearofsidemidbot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:botmidcenteredgeShape"
+			index = 0
+			texture_diffuse = "beast_carrier_botmidcentreedge.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:frontofsidemidbotShape"
+			index = 0
+			texture_diffuse = "beast_carrier_frontofsidemidbot.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:otherbridgeShape"
+			index = 0
+			texture_diffuse = "beast_carrier_otherbridge.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:bridgetopShape"
+			index = 0
+			texture_diffuse = "beast_carrier_bridgetop.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+
+		meshsettings = {
+			name = "main1:topfrontShape"
+			index = 0
+			texture_diffuse = "beast_carrier_topfront.dds"
+			texture_normal = "hw_normal.dds"
+			texture_specular = "hw_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}
