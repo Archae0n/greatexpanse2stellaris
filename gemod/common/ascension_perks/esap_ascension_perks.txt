@@ -1455,7 +1455,7 @@ ap_esap_not_colony = {
 
 ap_technological_ascendancy = {
 	modifier = {
-		all_technology_research_speed = 0.20
+		all_technology_research_speed = 0.15
 	}
 	
 	potential = {
@@ -1697,13 +1697,9 @@ ap_mastery_of_nature = {
 ap_esap_nature_1 = {
 	on_enabled = {
 		custom_tooltip = ap_esap_nature_1_tooltip
-		hidden_effect = {
-			every_owned_planet = {
-				planet_event = {
-					id = esap.19
-				}			
-			}
-		}
+	}
+	modifier = {
+		terraform_speed_mult = 1.5
 	}
 
 	possible = {

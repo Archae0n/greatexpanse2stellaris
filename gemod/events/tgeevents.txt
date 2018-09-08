@@ -1,0 +1,29 @@
+namespace = tgeevent
+
+planet_event = {
+	id = tgeevent.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+			has_modifier = tge_biophilia
+			}
+			break = yes
+		}
+		elif = {
+			owner = {
+				NOT = { has_ascension_perk = ap_esap_nature_1 }
+			}
+			break = yes
+		}
+		else = {
+			add_modifier = {
+				modifier = tge_biophilia
+				days = -1
+			}
+		}
+	}
+}

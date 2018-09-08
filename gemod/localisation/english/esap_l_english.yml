@@ -109,7 +109,7 @@
  
  ap_esap_nature_1:0 "Biophilia"
  ap_esap_nature_1_desc:0 "Every planet we settle is unique. By recognizing this we can utilize each one of them to their fullest potential."
- ap_esap_nature_1_tooltip:0 "Every tile one every newly colonized or conquered planet have a §G20%§! chance to generate an additional resource at the end of every year, for §Y10§! years. Also affects every controlled planet when the perk is unlocked."
+ ap_esap_nature_1_tooltip:0 "§G+150%§! Terraforming Speed\n\nIn addition, upon terraforming completion of such planets, they will gain a permanent modifier that increases £happiness  Happiness and £pops  Pop Production Resource by 5%."
  ap_esap_nature_1_req_1:0 "$TRIGGER_FAIL$Requires one of the following Ascension Perks: §Y$ap_mastery_of_nature$§!, §Y$ap_world_shaper$§! or §Y$ap_esap_habitability$§!."
 
  ap_esap_nature_2:0 "Natural Ascendancy"

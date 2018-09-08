@@ -13,8 +13,6 @@ optimized_ships = {
 		country_naval_cap_mult = -0.30
 		shipclass_military_station_damage_mult = 0.3
 		ship_upkeep_mult = 0.25
-		
-
 	icon_frame = 1;	
 }
 

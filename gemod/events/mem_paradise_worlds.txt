@@ -136,9 +136,15 @@ planet_event = {
 	}
 	
 	immediate = {
-		add_modifier = {
-			modifier = mem_paradise_world
-			days = -1
+		if = {
+			limit = { has_modifier = mem_paradise_world }
+			break = yes
+		}
+		else = {
+			add_modifier = {
+				modifier = mem_paradise_world
+				days = -1
+			}
 		}
 		remove_modifier = hazardous_weather
 		remove_modifier = wild_storms

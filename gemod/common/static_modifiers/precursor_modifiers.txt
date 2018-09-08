@@ -19,6 +19,40 @@ strawberry_milkshake = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_atmospheric_aphrodisiac.dds"
 	icon_frame = 1
 	tile_resource_food_mult = 0.25
-	biological_pop_happiness  = 0.1
+	biological_pop_happiness = 0.1
 	pop_resource_output = 0.1
+}
+
+galactic_core_disruption_inner = {
+	ship_shield_mult = -0.25
+	pop_robot_production_output = -0.25
+}
+
+galactic_core_disruption_outer = {
+	ship_shield_mult = -0.1
+	pop_robot_production_output = -0.1
+}
+
+strange_army_reigme = {
+	army_morale = -0.25
+}
+
+tge_biophilia = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_plentiful_deeds.dds"
+	icon_frame = 1
+	biological_pop_happiness = 0.1
+	pop_resource_output = 0.1
+}
+
+taul_research = {
+	country_society_tech_research_speed = -0.1
+}
+
+taul_success = {
+	country_society_tech_research_speed = 0.1
+}
+
+bees = {
+	pop_resource_output = -0.05
+	tile_resource_food_mult = 0.15
 }

@@ -18,5 +18,6 @@ on_yearly_pulse = {
 on_terraforming_complete = {
     events = {
 		mem_paradise_worlds.4
+		tgeevent.1
     }
 }

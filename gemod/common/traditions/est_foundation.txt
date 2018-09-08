@@ -575,68 +575,13 @@ tr_est_foundation_5 = {
 	possible = {
 		has_tradition = tr_est_foundation_1
 	}
-	
-	on_enabled = {
-		set_variable = {
-			which = var_est_foundation_5_tech_count
-			value = 1
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_navy_size_1 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1}
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_navy_size_2 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_navy_size_3 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_navy_size_4 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_fleet_size_1 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_fleet_size_2 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_fleet_size_3 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_fleet_size_4 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		if = {
-			limit = { has_technology = tech_doctrine_fleet_size_5 }
-			change_variable = { which = var_est_foundation_5_tech_count value = 1 }
-		}
-		set_variable = { 
-			which = var_est_foundation_5_core_count 
-			value = 0 
-		}
-		country_event = { 
-			id = est_foundation.7
-		}
-		if = {
-			limit = {
-				Not = {
-					has_global_flag = est_foundation_5_picked_flag
-				}
-			}
-			set_global_flag = est_foundation_5_picked_flag
-		}
+	modifier = {
+		country_naval_cap_mult = 0.10
 	}
 	
 	tradition_swap = {
 		name = tr_est_foundation_5_AI
-		inherit_effects = no
+		inherit_effects = yes
 		inherit_icon = yes
 		inherit_name = yes
 		trigger = {
@@ -645,65 +590,7 @@ tr_est_foundation_5 = {
 				has_ethic = ethic_gestalt_consciousness
 			}
 			is_ai = yes
-		}	
-		modifier = {
-			country_starbase_capacity_add = 1
 		}
-		on_enabled = {
-			if = {
-				limit = {
-					has_technology = tech_doctrine_fleet_size_5
-				}
-				add_modifier = {
-					modifier = "mod_est_foundation_5_AI_5"
-					days = -1				
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						has_technology = tech_doctrine_fleet_size_4
-					}
-					add_modifier = {
-						modifier = "mod_est_foundation_5_AI_4"
-						days = -1				
-					}
-				}
-				else = {
-					if = {
-						limit = {
-							has_technology = tech_doctrine_fleet_size_3
-						}
-						add_modifier = {
-							modifier = "mod_est_foundation_5_AI_3"
-							days = -1				
-						}
-					}
-					else = {
-						if = {
-							limit = {
-								has_technology = tech_doctrine_fleet_size_2
-							}
-							add_modifier = {
-								modifier = "mod_est_foundation_5_AI_2"
-								days = -1				
-							}
-						}
-						else = {
-							if = {
-								limit = {
-									has_technology = tech_doctrine_fleet_size_1
-								}
-								add_modifier = {
-									modifier = "mod_est_foundation_5_AI_1"
-									days = -1				
-								}
-							}
-						}
-					}
-				}
-			}
-		}		
 		weight = {factor =  1}
 	}
 	

@@ -6670,7 +6670,7 @@ country_event = {
 			}
 			add_monthly_resource_mult = {
 				resource = unity
-				value = 3
+				value = 2
 			}
 		}
 	}
