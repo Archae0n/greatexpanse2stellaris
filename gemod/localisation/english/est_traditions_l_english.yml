@@ -410,7 +410,7 @@ tr_est_commerce_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$MOD_COUNTRY_TRADE
 tr_est_commerce_adopt_no_dip_effect:0 "§E$TRADITIONS_ADOPT$:§!\nOur £energy  §YEnergy Credit§! output is increased by §G+10%§!."
 
 tr_est_commerce_1:0 "Economic Boom"
-tr_est_commerce_1_desc:0 "Our £energy  §YEnergy Credit§! output is increased by §G+15%§! while £energy  §YEnergy Credit§! gain is positive."
+tr_est_commerce_1_desc:0 "Our £energy  §YEnergy Credit§! output is increased by §G+10%§! while £energy  §YEnergy Credit§! gain is positive."
 tr_est_commerce_1_delayed:0 "Thanks to our successful fiscal policies our economy is booming. Both our citizen and the businesses have increased power to buy, consume, and produce. These favourable conditions will allow our empire to increase its spending on infrastructure and the military."
 
 tr_est_commerce_2:0 "Encourage Local Economies"
@@ -711,14 +711,14 @@ tradition_est_foundation:0 "Foundation"
 tradition_est_foundation_desc:0 "Others try to spread their empires far and wide. We works towards a deeper and more fundamental goal."
 tr_est_foundation_adopt:0 "Foundation Traditions"
 tr_est_foundation_adopt_desc:0 "$tradition_est_foundation_desc$\n\n$tr_est_foundation_adopt_effect$\n\n$tr_est_foundation_finish_effect$"
-tr_est_foundation_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\nIncreases £engineering  §YEngineering§!, £physics  §YPhysics§! and £society  §YSociety§! output on all our §YCore Worlds§! by §G+10%§!."
+tr_est_foundation_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\nIncreases £engineering  §YEngineering§!, £physics  §YPhysics§! and £society  §YSociety§! output on all our §YCore Worlds§! by §G+5%§!."
 
 tr_est_foundation_1:0 "A Common Cause"
-tr_est_foundation_1_desc:0 "£unity  §YUnity§! output is increased by §G+15%§! on all our §YCore World§!."
+tr_est_foundation_1_desc:0 "£unity  §YUnity§! output is increased by §G+10%§! on all our §YCore World§!."
 tr_est_foundation_1_delayed:0 "We are all united in a common cause. Everyone of us knows that they are an important cog in the machinery that works towards our goal."
 
 tr_est_foundation_2:0 "Centralized Government"
-tr_est_foundation_2_desc:0 "£energy  §YEnergy Credit§!, £engineering  §YEngineering§!, £physics  §YPhysics§! and £society  §YSociety§! output is increased by §G+25%§! on our §GCapital World§!. This is increased to  §G+50%§!/ §G+75%§! if we have researched the §Y$tech_colonial_centralization$§!/§Y$tech_galactic_administration$§! technologies, respective."
+tr_est_foundation_2_desc:0 "£energy  §YEnergy Credit§!, £engineering  §YEngineering§!, £physics  §YPhysics§! and £society  §YSociety§! output is increased by §G+15%§! on our §GCapital World§!. This is increased to  §G+20%§!/ §G+25%§! if we have researched the §Y$tech_colonial_centralization$§!/§Y$tech_galactic_administration$§! technologies, respective."
 tr_est_foundation_2_delayed:0 "Our government is centralized to our capital from which it can govern the relatively few number of worlds that we control."
 
 tr_est_foundation_3:0 "The Grand Design"
@@ -730,7 +730,7 @@ tr_est_foundation_4_desc:0 "§YShip Sensor Range§! increased by §G+1§! and §
 tr_est_foundation_4_delayed:0 "Our Intelligence Gathering Corps travel the galaxy and continuously sends information back home about the state of the galaxy. This information is vital to our cause, or at least to minimize disturbance from the outside."
 
 tr_est_foundation_5:0 "Expanding the Navy"
-tr_est_foundation_5_desc:0 "For every core world we control, increase our §YNaval Capacity§! by §Y1§! plus an additional §Y1§! for every §YFleet Doctrine§! technologies we have researched."
+tr_est_foundation_5_desc:0 "Increase our §YNaval Capacity§! by §G20%§!."
 tr_est_foundation_5_AI_desc:0 "Increase our §YNaval Capacity§! by §G20§! for every §YFleet Doctrin§! technology we have researched.  In addition, §Y$MOD_COUNTRY_STARBASE_CAPACITY_ADD$§! increased by §Y1§!."
 tr_est_foundation_5_delayed:0 "In the galaxy there are those that would hinder us from carrying out our task. We must ensure that we have a strong navy to defend our cause."
 
